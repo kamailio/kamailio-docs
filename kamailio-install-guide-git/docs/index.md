@@ -2,7 +2,7 @@
 
 **Guide to install Kamailio SIP Server v5.0 (devel) from Git repository.**
 
-For more about Kamailio Project visit [kamailio.org](https://www.kamailio.org).
+For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
 ```
 Main author:
@@ -24,7 +24,7 @@ with MySQL support, using a Debian unstable system.*
 
 ## Prerequisites ##
 
-To be able to follow the guidelines from this document you need **root** access.
+To be able to follow the guidelines from this document you need `root` access.
 
 The following packages are required before proceeding to the next steps.
 
@@ -392,3 +392,14 @@ More documentation resources can be found at:
 
   * [www.kamailio.org/w/documentation](https://www.kamailio.org/w/documentation/)
   * [www.kamailio.org/wiki](https://www.kamailio.org/wiki/)
+
+## Contributions ##
+
+Anyone is welcome to contribute to this document. It is recommended to make a
+pull request via:
+
+  * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
+
+Errors and other issues can be reported via the tracker at:
+
+  * [github.com/kamailio/kamailio-docs/issues](https://github.com/kamailio/kamailio-docs/issues)
