@@ -1,0 +1,7 @@
+# vi swaps
+.*.swp
+.*.swo
+# Emacs backup files
+*~
+# Emacs file locks
+.#*
