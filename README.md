@@ -8,7 +8,7 @@ More details about Kamailio at:
 
 ### Content ###
 
-  * __[kamailio-install-guide-git](https://github.com/kamailio/kamailio-docs/kamailio-install-guide-git)__ - Install Kamailio From Git Repository
+  * __[kamailio-install-guide-git](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-git)__ - Install Kamailio From Git Repository
 
 
 ### Support ###
