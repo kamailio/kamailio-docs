@@ -44,7 +44,7 @@ The following packages are required before proceeding to the next steps.
 
 **Important Note**: starting with version `4.3.0`, Kamailio uses the directory
 **/var/run/kamailio/** for creating FIFO and UnixSocket control files. You have
-to complete the section related to installation of init.d script for creating
+to complete the section related to installation of `init.d` script for creating
 `/var/run/kamailio` even if you plan to start Kamailio manually from command line.
 The alternative is to set different paths via parameters of **jsonrpcs**
 and **ctl** modules.
@@ -97,7 +97,7 @@ default, such as lcr, dialplan, presence -- add the modules to
 **include_modules** variable inside the **modules.lst** file.
 
 Alternative is to set `include_modules` variable to specify what extra modules
-to be included for compilation when building Makefile cfg:
+to be included for compilation when building `Makefile` cfg:
 
 ```Shell
 make include_modules="db_mysql dialplan" cfg
@@ -111,9 +111,9 @@ variable to the install path in `make cfg ...` command:
 make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan" cfg
 ```
 
-More hints about Makefile system at:
+More hints about `Makefile` system at:
 
-  * https://www.kamailio.org/wiki/devel/makefile-system
+  * [kamailio.org/wiki/devel/makefile-system](https://www.kamailio.org/wiki/devel/makefile-system)
 
 ## Compile Kamailio ##
 
@@ -154,7 +154,7 @@ These are:
 
 To be able to use the binaries from command line, make sure that
 `/usr/local/sbin` is set in `PATH` environment variable. You can check that with
-`echo $PATH`. If not and you are using 'bash', open `/root/.bash_profile` and
+`echo $PATH`. If not and you are using `bash`, open `/root/.bash_profile` and
 at the end add:
 
 ```Shell
@@ -190,7 +190,7 @@ The configuration file was installed in:
 ```
 
 **NOTE:**: In case you set the PREFIX variable in `make cfg ...` command, then
-replace **/usr/local** in all paths above with the value of PREFIX in order to
+replace **/usr/local** in all paths above with the value of `PREFIX` in order to
 locate the files installed.
 
 ## Create MySQL Database ##
@@ -220,20 +220,20 @@ database used by Kamailio:
 
 You can call this script without any parameter to get some help for the usage.
 You will be asked for the domain name Kamailio is going to serve (e.g.,
-mysipserver.com) and the password of the 'root' MySQL user. The script will
+`mysipserver.com`) and the password of the `root` MySQL user. The script will
 create a database named `kamailio` containing the tables required by Kamailio.
 You can change the default settings in the kamctlrc file mentioned above.
 
 The script will add two users in `MySQL`:
 
-* **kamailio** - (with default password 'kamailiorw') - user which has full
-access rights to 'kamailio' database
+* **kamailio** - (with default password `kamailiorw`) - user which has full
+access rights to `kamailio` database
 
-* **kamailioro** - (with default password 'kamailioro') - user which has
-read-only access rights to 'kamailio' database
+* **kamailioro** - (with default password `kamailioro`) - user which has
+read-only access rights to `kamailio` database
 
-**_Do change the passwords for these two users to something different that the
-default values that come with sources._**
+**_IMPORTANT: do change the passwords for these two users to something different
+that the default values that come with sources._**
 
 ## Edit Configuration File ##
 
@@ -253,7 +253,7 @@ have to add several lines at the top of config file, like:
 #!define WITH_USRLOCDB
 ```
 
-If you changed the password for the 'kamailio' user of MySQL, you have to update
+If you changed the password for the `kamailio` user of MySQL, you have to update
 the value for `db_url` parameters.
 
 You can browse [kamailio.cfg](https://github.com/kamailio/kamailio/blob/master/etc/kamailio.cfg)
@@ -268,26 +268,27 @@ A sample of init.d script for `Kamailio` is provided at:
 /usr/local/src/kamailio-devel/kamailio/pkg/kamailio/deb/debian/kamailio.init
 ```
 
-Just copy the init file into the /etc/init.d/kamailio. Then change the permisions:
+Just copy the init file to `/etc/init.d/kamailio`. Then change the permisions:
 
 ```Shell
   chmod 755 /etc/init.d/kamailio
 ```
 
-then edit the file updating the $DAEMON and $CFGFILE values:
+then edit the file updating the `$DAEMON` and `$CFGFILE` values:
 
 ```Shell
   DAEMON=/usr/local/sbin/kamailio
   CFGFILE=/usr/local/etc/kamailio/kamailio.cfg
 ```
 
-You need also setup a configuration file in the /etc/default/ directory. This file can be found at:
+You need also setup a configuration file in the `/etc/default/` directory.
+This file can be found at:
 
 ```Shell
   /usr/local/src/kamailio-devel/pkg/kamailio/debian/kamailio.default
 ```
 
-You need to rename the file to 'kamailio' after you've copied it. Then edit this
+You need to rename the file to `kamailio` after you've copied it. Then edit this
 file and set `RUN_KAMAILIO=yes`. Edit the other options at your convenience.
 
 Create the directory for pid file:
@@ -296,7 +297,8 @@ Create the directory for pid file:
 mkdir -p /var/run/kamailio
 ```
 
-Default setting is to run Kamailio as user "kamailio" and group "kamailio". For that you need to create the user:
+Default setting is to run Kamailio as user `kamailio` and group `kamailio`.
+For that you need to create the user:
 
 ```Shell
 adduser --quiet --system --group --disabled-password \
