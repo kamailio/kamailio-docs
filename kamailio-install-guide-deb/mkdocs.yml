@@ -1,4 +1,7 @@
 site_name: Install Kamailio On Debian
-theme: mkdocs
+theme: readthedocs
+extra_css: [extra.css]
 pages:
     - 'index.md'
+    - 'support.md'
+    - 'contributions.md'

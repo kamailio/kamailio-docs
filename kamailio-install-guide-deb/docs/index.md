@@ -160,26 +160,3 @@ various `Debian` or `Ubuntu` versions, including nightly builds for stable and
 development versions:
 
   * [https://www.kamailio.org/wiki/packages/debs](DEBS: Debian - Ubuntu)
-
-## Support ##
-
-Questions about how to use Kamailio and the content of kamailio.cfg can be
-addressed via email to:
-
-  * [sr-users@lists.sip-router.org](http://lists.sip-router.org/cgi-bin/mailman/listinfo/sr-users)
-
-More documentation resources can be found at:
-
-  * [www.kamailio.org/w/documentation](https://www.kamailio.org/w/documentation/)
-  * [www.kamailio.org/wiki](https://www.kamailio.org/wiki/)
-
-## Contributions ##
-
-Anyone is welcome to contribute to this document. It is recommended to make a
-pull request via:
-
-  * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
-
-Errors and other issues can be reported via the tracker at:
-
-  * [github.com/kamailio/kamailio-docs/issues](https://github.com/kamailio/kamailio-docs/issues)
