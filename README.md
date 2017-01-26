@@ -6,9 +6,10 @@ More details about Kamailio at:
 
   * [kamailio.org](https://www.kamailio.org)
 
-### Content ###
+### Tutorials ###
 
   * __[kamailio-install-guide-git](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-git)__ - Install Kamailio From Git Repository
+  * __[kamailio-install-guide-deb](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-deb)__ - Install Kamailio On Debian (Rr Ubuntu) Using Packages
 
 
 ### Support ###
