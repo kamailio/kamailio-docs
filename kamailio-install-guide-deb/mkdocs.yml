@@ -1,0 +1,4 @@
+site_name: Install Kamailio On Debian
+theme: mkdocs
+pages:
+    - 'index.md'
