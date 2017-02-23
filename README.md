@@ -2,6 +2,8 @@
 
 Documentation and tutorials for Kamailio SIP server and related tools.
 
+Target: Kamailio v5.1.x (devel)
+
 More details about Kamailio at:
 
   * [kamailio.org](https://www.kamailio.org)

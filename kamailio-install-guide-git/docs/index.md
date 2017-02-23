@@ -1,6 +1,6 @@
-# Kamailio v5.0 - Install Guide #
+# Kamailio v5.1 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.0 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.1 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.0.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.1.0)
 with MySQL support, using a Debian unstable system.*
 
 
@@ -43,7 +43,7 @@ The following packages are required before proceeding to the next steps.
     * __libpcre3__ - apt-get install libpcre3-dev
 
 **Important Note**: starting with version `4.3.0`, Kamailio uses the directory
-**/var/run/kamailio/** for creating FIFO and UnixSocket control files. You have
+**/var/run/kamailio/** for creating FIFO and UnixSocket control files. You may have
 to complete the section related to installation of `init.d` script for creating
 `/var/run/kamailio` even if you plan to start Kamailio manually from command line.
 The alternative is to set different paths via parameters of **jsonrpcs**
@@ -82,6 +82,8 @@ Next step is to enable the MySQL module. Edit **modules.lst** file:
 
 ```Shell
   nano -w modules.lst
+  # or
+  vim modules.lst
 ```
 
 Add **db_mysql** to the variable **include_modules**.
@@ -94,9 +96,13 @@ Save the **modules.lst** and exit.
 
 **NOTE**: this is one mechanism to enable modules which are not compiled by
 default, such as lcr, dialplan, presence -- add the modules to
-**include_modules** variable inside the **modules.lst** file.
+**include_modules** variable inside the **modules.lst** file, like:
 
-Alternative is to set `include_modules` variable to specify what extra modules
+```Shell
+include_modules= db_mysql dialplan
+```
+
+Alternative is to set `include_modules` variable with the list of extra modules
 to be included for compilation when building `Makefile` cfg:
 
 ```Shell
@@ -268,7 +274,7 @@ A sample of init.d script for `Kamailio` is provided at:
 /usr/local/src/kamailio-devel/kamailio/pkg/kamailio/deb/debian/kamailio.init
 ```
 
-Just copy the init file to `/etc/init.d/kamailio`. Then change the permisions:
+Just copy the init file to `/etc/init.d/kamailio`. Then change the permissions:
 
 ```Shell
   chmod 755 /etc/init.d/kamailio
@@ -399,6 +405,8 @@ Anyone is welcome to contribute to this document. It is recommended to make a
 pull request via:
 
   * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
+
+This version of the document is in GIT branch `master`.
 
 Errors and other issues can be reported via the tracker at:
 
