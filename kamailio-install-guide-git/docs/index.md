@@ -1,6 +1,6 @@
 # Kamailio v5.0 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.0 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.0 (stable) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -14,12 +14,10 @@ Support: <sr-users@lists.sip-router.org>
 ## Overview ##
 
 This is a step by step tutorial about how to install and maintain Kamailio SIP
-server development version using the sources downloaded from GIT repository -
-the choice for those willing to write code for Kamailio or to try the new
-features to be released in the future with the next major stable version.
+server v5.0.x using the sources downloaded from GIT repository.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.0.0)
-with MySQL support, using a Debian unstable system.*
+*This document focuses on Kamailio v5.0.x with MySQL support, using a Debian
+stable system.*
 
 
 ## Prerequisites ##
@@ -43,7 +41,7 @@ The following packages are required before proceeding to the next steps.
     * __libpcre3__ - apt-get install libpcre3-dev
 
 **Important Note**: starting with version `4.3.0`, Kamailio uses the directory
-**/var/run/kamailio/** for creating FIFO and UnixSocket control files. You have
+**/var/run/kamailio/** for creating FIFO and UnixSocket control files. You may have
 to complete the section related to installation of `init.d` script for creating
 `/var/run/kamailio` even if you plan to start Kamailio manually from command line.
 The alternative is to set different paths via parameters of **jsonrpcs**
@@ -56,8 +54,8 @@ will be stored.
 
 
 ```Shell
-  mkdir -p /usr/local/src/kamailio-devel
-  cd /usr/local/src/kamailio-devel
+  mkdir -p /usr/local/src/kamailio-5.0
+  cd /usr/local/src/kamailio-5.0
 ```
 
 Download the sources from GIT using the following commands.
@@ -65,6 +63,7 @@ Download the sources from GIT using the following commands.
 ```Shell
   git clone --depth 1 --no-single-branch git://git.kamailio.org/kamailio kamailio
   cd kamailio
+  git checkout -b 5.0 origin/5.0
 ```
 
 _**Note**: if your git client version does not support **--no-single-branch**
@@ -82,6 +81,8 @@ Next step is to enable the MySQL module. Edit **modules.lst** file:
 
 ```Shell
   nano -w modules.lst
+  # or
+  vim modules.lst
 ```
 
 Add **db_mysql** to the variable **include_modules**.
@@ -94,9 +95,13 @@ Save the **modules.lst** and exit.
 
 **NOTE**: this is one mechanism to enable modules which are not compiled by
 default, such as lcr, dialplan, presence -- add the modules to
-**include_modules** variable inside the **modules.lst** file.
+**include_modules** variable inside the **modules.lst** file, like:
 
-Alternative is to set `include_modules` variable to specify what extra modules
+```Shell
+include_modules= db_mysql dialplan
+```
+
+Alternative is to set `include_modules` variable to the extra modules
 to be included for compilation when building `Makefile` cfg:
 
 ```Shell
@@ -104,11 +109,11 @@ make include_modules="db_mysql dialplan" cfg
 ```
 
 **NOTE**: If you want to install everything in one directory (so you can delete
-all installed files at once), say `/usr/local/kamailio-devel`, then set `PREFIX`
+all installed files at once), say `/usr/local/kamailio-5.0`, then set `PREFIX`
 variable to the install path in `make cfg ...` command:
 
 ```Shell
-make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan" cfg
+make PREFIX="/usr/local/kamailio-5.0" include_modules="db_mysql dialplan" cfg
 ```
 
 More hints about `Makefile` system at:
@@ -265,10 +270,10 @@ The init.d script can be used to start/stop the `Kamailio` server in a nicer way
 A sample of init.d script for `Kamailio` is provided at:
 
 ```Shell
-/usr/local/src/kamailio-devel/kamailio/pkg/kamailio/deb/debian/kamailio.init
+/usr/local/src/kamailio-5.0/kamailio/pkg/kamailio/deb/debian/kamailio.init
 ```
 
-Just copy the init file to `/etc/init.d/kamailio`. Then change the permisions:
+Just copy the init file to `/etc/init.d/kamailio`. Then change the permissions:
 
 ```Shell
   chmod 755 /etc/init.d/kamailio
@@ -285,7 +290,7 @@ You need also setup a configuration file in the `/etc/default/` directory.
 This file can be found at:
 
 ```Shell
-  /usr/local/src/kamailio-devel/pkg/kamailio/debian/kamailio.default
+  /usr/local/src/kamailio-5.0/pkg/kamailio/debian/kamailio.default
 ```
 
 You need to rename the file to `kamailio` after you've copied it. Then edit this
@@ -356,14 +361,14 @@ The maintenance process is very simple right now. You have to be user `root` and
 execute following commands:
 
 ```Shell
-  cd /usr/local/src/kamailio-devel/kamailio
+  cd /usr/local/src/kamailio-5.0/kamailio
   git pull origin
   make all
   make install
   /etc/init.d/kamailio restart
 ```
 
-Now you have the latest Kamailio devel running on your system.
+Now you have the latest Kamailio 5.0.x running on your system.
 
 
 ### When To Update ###
@@ -375,10 +380,10 @@ the lines:
 
 ```Shell
 Module: kamailio
-Branch: master
+Branch: 5.0
 ```
 
-then an update has been made to Kamailio devel version and it will be available
+then an update has been made to Kamailio 5.0.x version and it will be available
 to the public GIT in no time.
 
 ## Support ##
@@ -399,6 +404,8 @@ Anyone is welcome to contribute to this document. It is recommended to make a
 pull request via:
 
   * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
+
+This version of the document is in GIT branch '5.0'.
 
 Errors and other issues can be reported via the tracker at:
 
