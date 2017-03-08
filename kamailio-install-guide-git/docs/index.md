@@ -81,9 +81,9 @@ The first step is to generate build config files.
 Next step is to enable the MySQL module. Edit **modules.lst** file:
 
 ```Shell
-  nano -w modules.lst
+  nano -w src/modules.lst
   # or
-  vim modules.lst
+  vim src/modules.lst
 ```
 
 Add **db_mysql** to the variable **include_modules**.
