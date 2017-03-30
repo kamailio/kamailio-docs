@@ -63,7 +63,7 @@ will be stored.
 Download the sources from GIT using the following commands.
 
 ```Shell
-  git clone --depth 1 --no-single-branch git://git.kamailio.org/kamailio kamailio
+  git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
   cd kamailio
 ```
 
