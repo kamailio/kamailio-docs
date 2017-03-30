@@ -290,7 +290,7 @@ You need also setup a configuration file in the `/etc/default/` directory.
 This file can be found at:
 
 ```Shell
-  /usr/local/src/kamailio-5.0/pkg/kamailio/debian/kamailio.default
+  /usr/local/src/kamailio-5.0/kamailio/pkg/kamailio/debian/kamailio.default
 ```
 
 You need to rename the file to `kamailio` after you've copied it. Then edit this
