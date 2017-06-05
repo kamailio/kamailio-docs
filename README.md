@@ -8,6 +8,11 @@ More details about Kamailio at:
 
   * [kamailio.org](https://www.kamailio.org)
 
+__Note__: this repository collects tutorials that need to be updated for each
+major version of Kamailio. The other tutorials are collected at:
+
+  * https://github.com/kamailio/kamailio-tutorials
+
 ### Tutorials ###
 
   * __[kamailio-install-guide-git](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-git)__ - Install Kamailio From Git Repository
