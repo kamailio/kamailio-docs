@@ -1,0 +1,11 @@
+site_name: Kamailio KEMI Framework
+theme: readthedocs
+extra_css: [extra.css]
+pages:
+    - 'Kamailio KEMI Framework': 'index.md'
+    - 'KEMI Interpreters': 'kemi.md'
+    - 'Core Functions': 'core.md'
+    - 'PV And Special Functions': 'kemimods.md'
+    - 'Acc Module Functions': 'acc.md'
+    - 'Support': 'support.md'
+    - 'Contributions': 'contributions.md'

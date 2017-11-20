@@ -1,0 +1,19 @@
+.wy-nav-side {
+	background: #2980B9;
+}
+
+/*
+.wy-side-nav-search {
+	background: #2980B9;
+}
+.rst-versions .rst-current-version {
+	background: #2980B9;
+}
+*/
+
+.wy-side-nav-search {
+	background: #222c32;
+}
+.rst-versions {
+	border-top:solid 10px #222c32;
+}
