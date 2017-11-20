@@ -3,7 +3,8 @@
 The core of Kamailio exports via KEMI:
 
   * several functions directly to `KSR` module (like `KSR.function(params)`), which are mostly
-  the main function from the core and for writing log messages
+  the main function from the core and for writing log messages (some being part of xlog module for
+  native kamailio.cfg language)
   * the `KSR.hdr` submodule, which are the most used functions for managing SIP message headers
 
 Example of using KEMI functions exported to Lua interpreter:
@@ -18,21 +19,41 @@ Exported functions from core directly to KSR module or KSR.hdr submodule are lis
 
 `void KSR.dbg("msg")`
 
+Write a log message to DEBUG level.
+
 ### void KSR.err(...) ###
 
 `void KSR.err("msg")`
+
+Write a log message to ERROR level.
 
 ### void KSR.info(...) ###
 
 `void KSR.info("msg")`
 
+Write a log message to INFO level.
+
 ### oid KSR.log(...) ###
 
 `void KSR.log("level", "msg")`
 
+Write a log message specifying the level value. The level parameter can be:
+
+  * "dbg"
+  * "info"
+  * "warn"
+  * "crit"
+  * "err"
+
+If level value is not matched, then "err" log level is used.
+
 ### KSR.drop(...) ###
 
 `void KSR.drop()`
+
+Set the DROP flag, so at the end of KEMI script execution, the SIP request branch or the SIP response is not forwarded.
+
+Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop() for an alternative with that purpose.
 
 ### KSR.is_myself(...) ###
 
