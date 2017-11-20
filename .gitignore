@@ -1,7 +1,11 @@
 # vi swaps
 .*.swp
 .*.swo
-# Emacs backup files
+# emacs backup files
 *~
-# Emacs file locks
+# emacs file locks
 .#*
+# generated site by mkdocs
+site/
+# macos local files
+.DS_Store
