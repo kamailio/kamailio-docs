@@ -19,11 +19,23 @@ The functions exported by these modules are listed in the next sections.
 
 Return the value of pseudo-variable `pvname`. The returned value can be string or integer.
 
+Example:
+
+```
+KSR.dbg("ruri is: " + KSR.pv.get("$ru") + "\n");
+```
+
 ### KSR.pv.seti(...) ###
 
 `void KSR.pv.seti("pvname", intval)`
 
 Set the value of pseudo-variable `pvname` to integer value provided by parameter `intval`.
+
+Example:
+
+```
+KSR.pv.seti("$var(x)", 10);
+```
 
 ### KSR.pv.sets(...) ###
 
@@ -31,11 +43,23 @@ Set the value of pseudo-variable `pvname` to integer value provided by parameter
 
 Set the value of pseudo-variable `pvname` to string value provided by parameter `strval`.
 
+Example:
+
+```
+KSR.pv.sets("$var(x)", "kamailio");
+```
+
 ### KSR.pv.unset(...) ###
 
 `void KSR.pv.unset("pvname")`
 
 Set the value of pseudo-variable `pvname` to `$null`.
+
+Example:
+
+```
+KSR.pv.unset("$avp(x)");
+```
 
 ### KSR.pv.is_null(...) ###
 
@@ -43,12 +67,26 @@ Set the value of pseudo-variable `pvname` to `$null`.
 
 Return true if pseudo-variable `pvname` is `$null`.
 
+Example:
+
+```
+if(KSR.pv.is_null("$avp(x)")) {
+  ...
+}
+```
+
 ### KSR.x.modf(...) ###
 
 `int KSR.x.modf("fname", params...)`
 
 Execute a function (specified by `fname`) exported by a Kamailio module. Additional parameters must be string and
 they are passed to the Kamailio module function.
+
+Example:
+
+```
+KSR.x.modf("sl_send_reply", "200", "OK");
+```
 
 ### KSR.x.exit(...) ###
 
