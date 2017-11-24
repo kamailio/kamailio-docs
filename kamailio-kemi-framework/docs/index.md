@@ -3,6 +3,8 @@
 ```
 Author: Daniel-Constantin Mierla (miconda@gmail.com)
 
+Contributors: Samuel Förnes
+
 Support: <sr-users@lists.kamailio.org>
 ```
 
@@ -63,7 +65,7 @@ With KEMI routing script, the `kamailio.cfg` keeps only the parts with:
 All of these parts are evaluated only once at startup. Many of the global and module parameters can be changed at
 runtime via `RPC` commands.
 
-The KEMI comes in the picture by allowing that the equivalend of routing blocks to be written in a different scripting
+The KEMI comes in the picture by allowing the equivalent of routing blocks to be written in a different scripting
 language. In other words, the routing blocks are now functions written in a KEMI supported scripting language.
 
 For each new KEMI supported scripting language a module has to be developed for Kamailio, this module linking
