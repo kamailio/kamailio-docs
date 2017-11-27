@@ -9,3 +9,6 @@ pages:
     - 'Module Functions': 'modules.md'
     - 'Support': 'support.md'
     - 'Contributions': 'contributions.md'
+markdown_extensions:
+    - toc:
+        permalink: Link
