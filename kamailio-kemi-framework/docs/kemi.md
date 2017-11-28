@@ -1,6 +1,6 @@
 ## KEMI Interpreters ##
 
-Following KEMI scripting languages can be used to write SIP routing logic for Kamailio:
+The following KEMI scripting languages can be used to write SIP routing logic for Kamailio:
 
   * JavaScript
   * Lua
