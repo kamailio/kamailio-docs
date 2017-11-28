@@ -2,7 +2,7 @@
 
 Documentation and tutorials for Kamailio SIP server and related tools.
 
-Target: Kamailio v5.1.x (devel)
+Target: Kamailio v5.2.x (devel)
 
 More details about Kamailio at:
 
@@ -17,6 +17,7 @@ major version of Kamailio. The other tutorials are collected at:
 
   * __[kamailio-install-guide-git](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-git)__ - Install Kamailio From Git Repository
   * __[kamailio-install-guide-deb](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-install-guide-deb)__ - Install Kamailio On Debian (Or Ubuntu) Using Packages
+  * __[kamailio-kemi-framework](https://github.com/kamailio/kamailio-docs/tree/master/kamailio-kemi-framework)__ - Kamailio KEMI Framework Tutorial
 
 
 ### Support ###
