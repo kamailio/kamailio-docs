@@ -25,8 +25,8 @@ It is implemented by `app_jsdt` module. The JavaScript interpreter is imported i
 To use it, set inside `kamailio.cfg`:
 
 ```
-loadmodule "app_jsdk.so"
-modparam("app_jsdk", "load", "/path/to/script.js")
+loadmodule "app_jsdt.so"
+modparam("app_jsdt", "load", "/path/to/script.js")
 cfgengine "jsdt"
 ```
 
