@@ -1,6 +1,6 @@
 <!-- This file is auto-generated. Any manual modifications will be deleted -->
 # KEMI Module Functions #
-The following sections lists all exported KEMI functions. More information regarding the function can be found by clicking the KEMI declaration which will take you the original modules documentation.
+The following sections lists all exported KEMI functions. More information regarding the function can be found by clicking the KEMI prototype which will take you the original module's documentation.
 
 ## acc
 
@@ -233,6 +233,136 @@ The following sections lists all exported KEMI functions. More information regar
 #### KSR.cfgutils.unlock()
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.unlock'> `int unlock(str "lkey")` </a> 
+
+## core
+
+#### KSR.dbg()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.dbg'> `void dbg(str "txt")` </a> 
+
+#### KSR.drop()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.drop'> `void drop()` </a> 
+
+#### KSR.err()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.err'> `void err(str "txt")` </a> 
+
+#### KSR.force_rport()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.force_rport'> `bool force_rport()` </a> 
+
+#### KSR.forward()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.forward'> `int forward()` </a> 
+
+#### KSR.forward_uri()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.forward_uri'> `int forward_uri(str "vuri")` </a> 
+
+#### KSR.info()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.info'> `void info(str "txt")` </a> 
+
+#### KSR.is_method()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.is_method'> `bool is_method(str "vmethod")` </a> 
+
+#### KSR.is_myself()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.is_myself'> `bool is_myself(str "uri")` </a> 
+
+#### KSR.isbflagset()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.isbflagset'> `bool isbflagset(int flag)` </a> 
+
+#### KSR.isbiflagset()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.isbiflagset'> `bool isbiflagset(int flag, int branch)` </a> 
+
+#### KSR.isdsturiset()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.isdsturiset'> `bool isdsturiset()` </a> 
+
+#### KSR.isflagset()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.isflagset'> `bool isflagset(int flag)` </a> 
+
+#### KSR.issflagset()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.issflagset'> `bool issflagset(int flag)` </a> 
+
+#### KSR.log()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.log'> `void log(str "level", str "txt")` </a> 
+
+#### KSR.resetbflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.resetbflag'> `bool resetbflag(int flag)` </a> 
+
+#### KSR.resetbiflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.resetbiflag'> `bool resetbiflag(int flag, int branch)` </a> 
+
+#### KSR.resetdsturi()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.resetdsturi'> `bool resetdsturi()` </a> 
+
+#### KSR.resetflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.resetflag'> `bool resetflag(int flag)` </a> 
+
+#### KSR.resetsflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.resetsflag'> `bool resetsflag(int flag)` </a> 
+
+#### KSR.set_forward_close()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.set_forward_close'> `bool set_forward_close()` </a> 
+
+#### KSR.set_forward_no_connect()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.set_forward_no_connect'> `bool set_forward_no_connect()` </a> 
+
+#### KSR.set_reply_close()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.set_reply_close'> `bool set_reply_close()` </a> 
+
+#### KSR.set_reply_no_connect()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.set_reply_no_connect'> `bool set_reply_no_connect()` </a> 
+
+#### KSR.setbflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setbflag'> `bool setbflag(int flag)` </a> 
+
+#### KSR.setbiflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setbiflag'> `bool setbiflag(int flag, int branch)` </a> 
+
+#### KSR.setdsturi()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setdsturi'> `bool setdsturi(str "uri")` </a> 
+
+#### KSR.setflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setflag'> `bool setflag(int flag)` </a> 
+
+#### KSR.sethost()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.sethost'> `bool sethost(str "host")` </a> 
+
+#### KSR.setsflag()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setsflag'> `bool setsflag(int flag)` </a> 
+
+#### KSR.seturi()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.seturi'> `bool seturi(str "uri")` </a> 
+
+#### KSR.setuser()
+
+<a target='_blank' href='/docs/modules/devel/modules/core.html#core.f.setuser'> `bool setuser(str "user")` </a> 
 
 ## corex
 
@@ -543,6 +673,36 @@ The following sections lists all exported KEMI functions. More information regar
 #### KSR.geoip2.match()
 
 <a target='_blank' href='/docs/modules/devel/modules/geoip2.html#geoip2.f.match'> `int match(str "tomatch", str "pvclass")` </a> 
+
+## hdr
+
+#### KSR.hdr.append()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.append'> `int append(str "txt")` </a> 
+
+#### KSR.hdr.append_after()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.append_after'> `int append_after(str "txt", str "hname")` </a> 
+
+#### KSR.hdr.append_to_reply()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.append_to_reply'> `int append_to_reply(str "txt")` </a> 
+
+#### KSR.hdr.insert()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.insert'> `int insert(str "txt")` </a> 
+
+#### KSR.hdr.insert_before()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.insert_before'> `int insert_before(str "txt", str "hname")` </a> 
+
+#### KSR.hdr.is_present()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.is_present'> `int is_present(str "hname")` </a> 
+
+#### KSR.hdr.remove()
+
+<a target='_blank' href='/docs/modules/devel/modules/hdr.html#hdr.f.remove'> `int remove(str "hname")` </a> 
 
 ## htable
 
