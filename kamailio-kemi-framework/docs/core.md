@@ -33,7 +33,7 @@ Write a log message to ERROR level.
 
 Write a log message to INFO level.
 
-### oid KSR.log(...) ###
+### void KSR.log(...) ###
 
 `void KSR.log("level", "msg")`
 
