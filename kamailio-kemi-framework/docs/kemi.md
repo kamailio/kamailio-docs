@@ -284,7 +284,7 @@ The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside 
 #!define WITH_CFGPYTHON
 ```
 
-The file `kamailio-basic-kemi-python.py` has to be saved to local disk and the `script_name` parameter for
+The file `kamailio-basic-kemi-python.py` has to be saved to local disk and the `load` parameter for
 `app_python` module inside `kamailio.cfg` has to be updated to point to it. Then run `kamailio` with this `kamailio.cfg`.
 
 The documentation for `app_python` is available at:
@@ -347,7 +347,7 @@ modparam("debugger", "cfgtrace", 1)
  
 ####### Routing Logic ########
  
-modparam("app_python", "script_name", "/etc/kamailio/kamailio.py")
+modparam("app_python", "load", "/etc/kamailio/kamailio.py")
  
 cfgengine "python"
 ```
