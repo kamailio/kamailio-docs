@@ -1,6 +1,6 @@
-# Kamailio v5.1 - Install Guide #
+# Kamailio v5.2 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.1 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.2 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -8,7 +8,7 @@ For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 Main author:
    Daniel-Constantin Mierla
 
-Support: <sr-users@lists.sip-router.org>
+Support: <sr-users@lists.kamailio.org>
 ```
 
 ## Overview ##
@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.1.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.2.0)
 with MySQL support, using a Debian unstable system.*
 
 

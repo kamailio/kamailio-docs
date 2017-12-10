@@ -22,7 +22,7 @@ major version of Kamailio. The other tutorials are collected at:
 
 ### Support ###
 
-Questions about how to use Kamailio and the content of kamailio.cfg can be
+Questions about how to use Kamailio and the content of `kamailio.cfg` can be
 addressed via email to:
 
   * [sr-users@lists.kamailio.org](http://lists.kamailio.org/cgi-bin/mailman/listinfo/sr-users)
