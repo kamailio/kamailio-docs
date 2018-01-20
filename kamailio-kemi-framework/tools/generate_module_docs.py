@@ -84,7 +84,7 @@ class ModuleDocGenerator(object):
             # Generate the output string for the markdown page
             self.markdown_string += "<a target='_blank' href='/docs/modules/devel/modules/" + module + ".html#" \
                                     + module + ".f." + value["name"] + "'> `" + return_value + " " + value["name"] \
-                                    + "(" + params_value + ")` </a> \n\n"
+                                    + "(" + params_value + ")` </a>\n\n"
 
             self.markdown_string += self.read_file_to_string(module + "." + value["name"] + ".md")
         return True
@@ -255,13 +255,13 @@ class KemiFileExportParser(object):
                 exit()
 
             param_string = self.find_c_function_params(filename, val_c_function, val_return)
-            param_string = self.prettify_params_list(param_string, val_params)
+            param_string = self.prettify_params_list(val_function, param_string, val_params)
 
             elements.append({"module": val_module, "name": val_function, "ret": val_return, "params": param_string})
 
         return elements
 
-    def prettify_params_list(self, function_declaration, kemi_types):
+    def prettify_params_list(self, function_name, function_declaration, kemi_types):
         # Validate the quantity and types of declaration vs export
         if function_declaration == "" and len(kemi_types) == 0:
             return ""
@@ -272,14 +272,14 @@ class KemiFileExportParser(object):
             params.pop(0)
 
         if len(params) != len(kemi_types):
-            print "ERR: Mismatching quantity of params. Declaration: ", function_declaration, "KEMI:", kemi_types
+            print "ERR: Mismatching quantity of params. Declaration for", function_name, ":", function_declaration, "KEMI:", kemi_types
             exit()
 
         for declared, type in zip(params, kemi_types):
             declared = declared.replace("*", "")
             declared = declared.strip().split(" ")[0]
             if declared != type:
-                print "ERR: Mismatching type of params: ", function_declaration, " | ", kemi_types, " | Declared: ", declared, " Type: ", type
+                print "ERR: Mismatching type of params for", function_name, ":", function_declaration, " | ", kemi_types, " | Declared: ", declared, " Type: ", type
                 exit()
 
         param_string = ""
