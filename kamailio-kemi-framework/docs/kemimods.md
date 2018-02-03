@@ -9,6 +9,8 @@ module because the get function has to return either integer or string value.
 The `pvname` that appears in the next sections in the function prototypes has to be a valid pseudo-variable name for
  Kamailio native configuration file (for example `$ru`, `$var(x)`, `$shv(z)`, ...).
 
+Note: functions exported by Kamailio's `pv` module are in `KSR.pvx` package.
+
 `KSR.x` submodule provides special functions that need custom code per interpreter.
 
 The functions exported by these modules are listed in the next sections.
