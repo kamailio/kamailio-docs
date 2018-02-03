@@ -56,7 +56,7 @@ class ModuleDocGenerator(object):
         return True
 
     def markdown_section_heading(self, heading):
-        self.markdown_string += "## " + heading + "\n\n"
+        self.markdown_string += "## " + heading + " ##\n\n"
         self.markdown_string += self.read_file_to_string(heading + ".header.md")
         return True
 
@@ -67,7 +67,7 @@ class ModuleDocGenerator(object):
             module_prefix = module + "."
 
         for value in methods:
-            self.markdown_string += "#### KSR." + module_prefix + value["name"] + "()\n\n"
+            self.markdown_string += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
 
             # Sanitize the return values
             if value["return"] == "none":
