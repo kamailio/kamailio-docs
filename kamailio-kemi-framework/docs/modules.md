@@ -102,6 +102,16 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/app_python.html#app_python.f.exec_p1'> `int exec_p1(str "method", str "p1")` </a>
 
+## app_python3 ##
+
+#### KSR.app_python3.exec() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_python3.html#app_python3.f.exec'> `int exec(str "method")` </a>
+
+#### KSR.app_python3.exec_p1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_python3.html#app_python3.f.exec_p1'> `int exec_p1(str "method", str "p1")` </a>
+
 ## app_sqlang ##
 
 #### KSR.app_sqlang.dofile() ####
@@ -913,6 +923,10 @@ The following sections lists all exported KEMI functions. More information regar
 <a target='_blank' href='/docs/modules/devel/modules/log_systemd.html#log_systemd.f.sd_journal_send_xvap'> `int sd_journal_send_xvap(str "xname")` </a>
 
 ## maxfwd ##
+
+#### KSR.maxfwd.is_maxfwd_lt() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/maxfwd.html#maxfwd.f.is_maxfwd_lt'> `int is_maxfwd_lt(int limit)` </a>
 
 #### KSR.maxfwd.process_maxfwd() ####
 
@@ -1950,6 +1964,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textops.in_list() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.in_list'> `int in_list(str "subject", str "list", str "vsep")` </a>
+
+#### KSR.textops.in_list_prefix() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.in_list_prefix'> `int in_list_prefix(str "subject", str "list", str "vsep")` </a>
 
 #### KSR.textops.is_audio_on_hold() ####
 
