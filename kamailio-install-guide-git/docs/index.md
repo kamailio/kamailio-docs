@@ -29,7 +29,7 @@ The following packages are required before proceeding to the next steps.
   * __git__ client: apt-get install git-core - it is recommended to have a recent
   version, if your Linux distro has an old version, you can download newer one
   from [git-scm.com](http://git-scm.com)
-  * __gcc__ compiler: apt-get install gcc
+  * __gcc__ and __g++__ compilers: apt-get install gcc g++
   * __flex__ - apt-get install flex
   * __bison__ - apt-get install bison
   * __libmysqlclient-dev__ - apt-get install libmysqlclient-dev
@@ -46,6 +46,9 @@ to complete the section related to installation of `init.d` script for creating
 `/var/run/kamailio` even if you plan to start Kamailio manually from command line.
 The alternative is to set different paths via parameters of **jsonrpcs**
 and **ctl** modules.
+
+**Note**: __g++__ compiler is needed for couple of modules that link to C++ libraries,
+such as app_sqlang, phonenum or ndb_cassandra.
 
 ## Getting Sources From GIT ##
 
