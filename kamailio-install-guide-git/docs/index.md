@@ -34,7 +34,7 @@ The following packages are required before proceeding to the next steps.
   * __gcc__ and __g++__ compilers: apt-get install gcc g++
   * __flex__ - apt-get install flex
   * __bison__ - apt-get install bison
-  * __libmysqlclient-dev__ - apt-get install libmysqlclient-dev
+  * __libmysqlclient-dev__ - apt-get install libmysqlclient-dev (or: apt install default-libmysqlclient-dev)
   * __make__ - apt-get install make
   * if you want to enable more modules, some of them require extra libraries:
     * __libssl__ - apt-get install libssl-dev
@@ -51,6 +51,14 @@ and **ctl** modules.
 
 **Note**: __g++__ compiler is needed for couple of modules that link to C++ libraries,
 such as app_sqlang, phonenum or ndb_cassandra.
+
+### MySQL Or MariaDB Server ###
+
+To complete all the steps in this tutorial, it is required to have a **MySQL** or **MariaDB** server installed.
+Consult the documentation of **MySQL** or **MariaDB** server for Debian for a proper installation.
+
+For testing purposes, it can just be done with `apt install mysql-server` or `apt install default-mysql-server`.
+During or after installation you may have to complete some configuration steps, such as setting the password for mysql root user or initialize the database system.
 
 ## Getting Sources From GIT ##
 
