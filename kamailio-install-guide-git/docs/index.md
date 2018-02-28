@@ -28,19 +28,19 @@ To be able to follow the guidelines from this document you need `root` access.
 
 The following packages are required before proceeding to the next steps.
 
-  * __git__ client: apt-get install git-core - it is recommended to have a recent
+  * __git__ client: `apt-get install git-core` - it is recommended to have a recent
   version, if your Linux distro has an old version, you can download newer one
   from [git-scm.com](http://git-scm.com)
-  * __gcc__ and __g++__ compilers: apt-get install gcc g++
-  * __flex__ - apt-get install flex
-  * __bison__ - apt-get install bison
-  * __libmysqlclient-dev__ - apt-get install libmysqlclient-dev (or: apt install default-libmysqlclient-dev)
-  * __make__ - apt-get install make
+  * __gcc__ and __g++__ compilers: `apt-get install gcc g++`
+  * __flex__ - `apt-get install flex`
+  * __bison__ - `apt-get install bison`
+  * __libmysqlclient-dev__ - `apt-get install libmysqlclient-dev` (or: `apt install default-libmysqlclient-dev`)
+  * __make__ and __autoconf__ - `apt-get install make autoconf`
   * if you want to enable more modules, some of them require extra libraries:
-    * __libssl__ - apt-get install libssl-dev
-    * __libcurl__ - apt-get install libcurl4-openssl-dev
-    * __libxml2__ - apt-get install libxml2-dev
-    * __libpcre3__ - apt-get install libpcre3-dev
+    * __libssl__ - `apt-get install libssl-dev`
+    * __libcurl__ - `apt-get install libcurl4-openssl-dev`
+    * __libxml2__ - `apt-get install libxml2-dev`
+    * __libpcre3__ - `apt-get install libpcre3-dev`
 
 **Important Note**: starting with version `4.3.0`, Kamailio uses the directory
 **/var/run/kamailio/** for creating FIFO and UnixSocket control files. You may have
@@ -57,7 +57,7 @@ such as app_sqlang, phonenum or ndb_cassandra.
 To complete all the steps in this tutorial, it is required to have a **MySQL** or **MariaDB** server installed.
 Consult the documentation of **MySQL** or **MariaDB** server for Debian for a proper installation.
 
-For testing purposes, it can just be done with `apt install mysql-server` or `apt install default-mysql-server`.
+For testing purposes, it can just be done with `apt-get install mysql-server` or `apt-get install default-mysql-server`.
 During or after installation you may have to complete some configuration steps, such as setting the password for mysql root user or initialize the database system.
 
 ## Getting Sources From GIT ##
