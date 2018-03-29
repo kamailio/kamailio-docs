@@ -96,9 +96,19 @@ KSR.x.modf("sl_send_reply", "200", "OK");
 
 Equivalent of `exit` from native kamailio.cfg scripting language, stop the execution of the SIP routing script.
 
+It is not exported by each KEMI interpreter module, in that case likely the scripting
+language has an `exit` function that can be used for this purpose. In the case there
+is no `exit`, just do `return` from the main KEMI callback functions
+(e.g., for SIP request routing do `return` from `ksr_request_route()`).
+
+For Python, one can use `exit()` or `os.exit()`.
+
 ### KSR.x.drop(...) ###
 
 `void KSR.x.drop()`
 
 Equivalent of `drop` from native kamailio.cfg scripting language, stop the execution of the SIP routing script
 and drop routing further the SIP request branch or response.
+
+If not exported by a KEMI interpreter module, use `KSR.set_drop()` before terminating
+the execution of the KEMI callback function (see the notes for `KSR.x.exit`).
