@@ -419,7 +419,7 @@ cfgengine "sqlang"
 A complete example of using Squirrel as KEMI languages is offered by the next two files:
 
   * [kamailio-basic-kemi.cfg](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi.cfg)
-  * [kamailio-basic-kemi-squirrel.sq](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-squirrel.sq)
+  * [kamailio-basic-kemi-sqlang.sq](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-sqlang.sq)
 
 The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside it add after the first line:
 
