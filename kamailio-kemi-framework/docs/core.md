@@ -47,13 +47,13 @@ Write a log message specifying the level value. The level parameter can be:
 
 If level value is not matched, then "err" log level is used.
 
-### KSR.drop(...) ###
+### KSR.set_drop(...) ###
 
-`void KSR.drop()`
+`void KSR.set_drop()`
 
 Set the DROP flag, so at the end of KEMI script execution, the SIP request branch or the SIP response is not forwarded.
 
-Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop() for an alternative with that purpose.
+Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
 
 ### KSR.is_myself(...) ###
 
