@@ -427,7 +427,7 @@ The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside 
 #!define WITH_CFGSQLANG
 ```
 
-The file `kamailio-basic-kemi-squirrel.sq` has to be saved to local disk and the `load` parameter for `app_sqlang`
+The file `kamailio-basic-kemi-sqlang.sq` has to be saved to local disk and the `load` parameter for `app_sqlang`
 module inside `kamailio.cfg` has to be updated to point to it. Then run `kamailio` with this `kamailio.cfg`.
 
 The documentation for `app_sqlang` is available at:
