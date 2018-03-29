@@ -408,7 +408,7 @@ class kamailio:
 ### Squirrel KEMI Interpreter ###
 
 It is implemented by `app_sqlang` module. The Squirrel language interpreter is imported inside the module from
-[Squirrel](www.squirrel-lang.org) project, therefore it doesn't require to install any external libraries.
+[Squirrel](http://www.squirrel-lang.org) project, therefore it doesn't require to install any external libraries.
 
 ```
 loadmodule "app_sqlang.so"
@@ -419,7 +419,7 @@ cfgengine "sqlang"
 A complete example of using Squirrel as KEMI languages is offered by the next two files:
 
   * [kamailio-basic-kemi.cfg](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi.cfg)
-  * [kamailio-basic-kemi-squirrel.sq](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-squirrel.sq)
+  * [kamailio-basic-kemi-sqlang.sq](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-sqlang.sq)
 
 The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside it add after the first line:
 
@@ -427,7 +427,7 @@ The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside 
 #!define WITH_CFGSQLANG
 ```
 
-The file `kamailio-basic-kemi-squirrel.sq` has to be saved to local disk and the `load` parameter for `app_sqlang`
+The file `kamailio-basic-kemi-sqlang.sq` has to be saved to local disk and the `load` parameter for `app_sqlang`
 module inside `kamailio.cfg` has to be updated to point to it. Then run `kamailio` with this `kamailio.cfg`.
 
 The documentation for `app_sqlang` is available at:
