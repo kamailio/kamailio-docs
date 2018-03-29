@@ -408,7 +408,7 @@ class kamailio:
 ### Squirrel KEMI Interpreter ###
 
 It is implemented by `app_sqlang` module. The Squirrel language interpreter is imported inside the module from
-[Squirrel](www.squirrel-lang.org) project, therefore it doesn't require to install any external libraries.
+[Squirrel](http://www.squirrel-lang.org) project, therefore it doesn't require to install any external libraries.
 
 ```
 loadmodule "app_sqlang.so"
