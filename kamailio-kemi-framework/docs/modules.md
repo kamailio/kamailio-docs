@@ -340,6 +340,18 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.append_branch_uri_q'> `int append_branch_uri_q(str "uri", str "q")` </a>
 
+#### KSR.corex.isxflagset() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.isxflagset'> `int isxflagset(int fval)` </a>
+
+#### KSR.corex.resetxflag() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.resetxflag'> `int resetxflag(int fval)` </a>
+
+#### KSR.corex.setxflag() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.setxflag'> `int setxflag(int fval)` </a>
+
 ## counters ##
 
 #### KSR.counters.add() ####
@@ -460,6 +472,42 @@ The following sections lists all exported KEMI functions. More information regar
 
 ## dispatcher ##
 
+#### KSR.dispatcher.ds_is_from_list() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_from_list'> `int ds_is_from_list(int group)` </a>
+
+#### KSR.dispatcher.ds_is_from_list_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_from_list_mode'> `int ds_is_from_list_mode(int vset, int vmode)` </a>
+
+#### KSR.dispatcher.ds_is_from_list_uri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_from_list_uri'> `int ds_is_from_list_uri(int vset, int vmode, str "vuri")` </a>
+
+#### KSR.dispatcher.ds_is_from_lists() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_from_lists'> `int ds_is_from_lists()` </a>
+
+#### KSR.dispatcher.ds_list_exists() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_list_exists'> `int ds_list_exists(int set)` </a>
+
+#### KSR.dispatcher.ds_load_unset() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_load_unset'> `int ds_load_unset()` </a>
+
+#### KSR.dispatcher.ds_load_update() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_load_update'> `int ds_load_update()` </a>
+
+#### KSR.dispatcher.ds_mark_dst() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_mark_dst'> `int ds_mark_dst()` </a>
+
+#### KSR.dispatcher.ds_mark_dst_state() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_mark_dst_state'> `int ds_mark_dst_state(str "sval")` </a>
+
 #### KSR.dispatcher.ds_next_domain() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_next_domain'> `int ds_next_domain()` </a>
@@ -467,6 +515,10 @@ The following sections lists all exported KEMI functions. More information regar
 #### KSR.dispatcher.ds_next_dst() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_next_dst'> `int ds_next_dst()` </a>
+
+#### KSR.dispatcher.ds_reload() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_reload'> `int ds_reload()` </a>
 
 #### KSR.dispatcher.ds_select() ####
 
@@ -2386,6 +2438,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.tmx.t_flush_flags() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tmx.html#tmx.f.t_flush_flags'> `int t_flush_flags()` </a>
+
+#### KSR.tmx.t_flush_xflags() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tmx.html#tmx.f.t_flush_xflags'> `int t_flush_xflags()` </a>
 
 #### KSR.tmx.t_is_branch_route() ####
 
