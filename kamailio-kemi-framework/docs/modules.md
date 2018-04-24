@@ -348,9 +348,29 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.resetxflag'> `int resetxflag(int fval)` </a>
 
+#### KSR.corex.set_recv_socket() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_recv_socket'> `int set_recv_socket(str "ssock")` </a>
+
+#### KSR.corex.set_send_socket() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_send_socket'> `int set_send_socket(str "ssock")` </a>
+
+#### KSR.corex.set_source_address() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_source_address'> `int set_source_address(str "saddr")` </a>
+
 #### KSR.corex.setxflag() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.setxflag'> `int setxflag(int fval)` </a>
+
+#### KSR.corex.via_add_srvid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.via_add_srvid'> `int via_add_srvid(int fval)` </a>
+
+#### KSR.corex.via_add_xavp_params() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.via_add_xavp_params'> `int via_add_xavp_params(int fval)` </a>
 
 ## counters ##
 
@@ -391,6 +411,14 @@ The following sections lists all exported KEMI functions. More information regar
 #### KSR.dialog.dlg_bye() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_bye'> `int dlg_bye(str "side")` </a>
+
+#### KSR.dialog.dlg_db_load_callid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_db_load_callid'> `int dlg_db_load_callid(str "callid")` </a>
+
+#### KSR.dialog.dlg_db_load_extra() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_db_load_extra'> `int dlg_db_load_extra()` </a>
 
 #### KSR.dialog.dlg_get() ####
 
@@ -1390,6 +1418,10 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_params_explode'> `int xavp_params_explode(str "sparams", str "sxname")` </a>
 
+#### KSR.pvx.xavp_params_implode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_params_implode'> `int xavp_params_implode(str "sxname", str "svname")` </a>
+
 ## rabbitmq ##
 
 #### KSR.rabbitmq.publish() ####
@@ -1871,6 +1903,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_query'> `int sql_query(str "scon", str "squery", str "sres")` </a>
 
+#### KSR.sqlops.sql_query_async() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_query_async'> `int sql_query_async(str "scon", str "squery")` </a>
+
 #### KSR.sqlops.sql_result_free() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_free'> `int sql_result_free(str "sres")` </a>
@@ -1984,6 +2020,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textops.append_body_part_cd() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.append_body_part_cd'> `int append_body_part_cd(str "txt", str "ct", str "cd")` </a>
+
+#### KSR.textops.append_body_part_hex() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.append_body_part_hex'> `int append_body_part_hex(str "txt", str "ct")` </a>
+
+#### KSR.textops.append_body_part_hex_cd() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.append_body_part_hex_cd'> `int append_body_part_hex_cd(str "htxt", str "ct", str "cd")` </a>
 
 #### KSR.textops.cmp_istr() ####
 
