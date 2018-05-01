@@ -2391,6 +2391,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_save_lumps'> `int t_save_lumps()` </a>
 
+#### KSR.tm.t_send_reply() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_send_reply'> `int t_send_reply(int code, str "reason")` </a>
+
 #### KSR.tm.t_set_auto_inv_100() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_set_auto_inv_100'> `int t_set_auto_inv_100(int state)` </a>
