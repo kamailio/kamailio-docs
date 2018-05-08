@@ -15,6 +15,18 @@ KSR.hdr.remove("Route");
 ```
 Exported functions from core directly to KSR module or KSR.hdr submodule are listed in the next sections.
 
+### KSR.add_local_rport() ###
+
+`bool add_local_rport()`
+
+### KSR.add_tcp_alias() ###
+
+`add_tcp_alias(int port)`
+
+### KSR.add_tcp_alias_via() ###
+
+`int add_tcp_alias_via()`
+
 ### void KSR.dbg(...) ###
 
 `void KSR.dbg("msg")`
@@ -27,11 +39,39 @@ Write a log message to DEBUG level.
 
 Write a log message to ERROR level.
 
+### KSR.force_rport() ###
+
+`bool force_rport()`
+
 ### void KSR.info(...) ###
 
 `void KSR.info("msg")`
 
 Write a log message to INFO level.
+
+### KSR.is_method() ###
+
+`bool is_method(str "vmethod")`
+
+### KSR.is_method_in() ###
+
+`bool is_method_in(str "vmethod")`
+
+### KSR.is_myself(...) ###
+
+`bool KSR.is_myself("uri")`
+
+### KSR.is_myself_furi() ###
+
+`bool is_myself_furi()` </a>
+
+### KSR.is_myself_ruri() ###
+
+`bool is_myself_ruri()`
+
+### KSR.is_myself_turi() ###
+
+`bool is_myself_turi()`
 
 ### void KSR.log(...) ###
 
@@ -46,18 +86,6 @@ Write a log message specifying the level value. The level parameter can be:
   * "err"
 
 If level value is not matched, then "err" log level is used.
-
-### KSR.set_drop(...) ###
-
-`void KSR.set_drop()`
-
-Set the DROP flag, so at the end of KEMI script execution, the SIP request branch or the SIP response is not forwarded.
-
-Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
-
-### KSR.is_myself(...) ###
-
-`bool KSR.is_myself("uri")`
 
 ### KSR.setflag(...) ###
 
@@ -131,13 +159,25 @@ Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
 
 `bool KSR.isdsturiset()`
 
-### KSR.is_method(...) ###
-
-`bool KSR.is_method("methods")`
-
 ### KSR.force_rport(...) ###
 
 `bool KSR.force_rport()`
+
+### KSR.set_drop(...) ###
+
+`void KSR.set_drop()`
+
+Set the DROP flag, so at the end of KEMI script execution, the SIP request branch or the SIP response is not forwarded.
+
+Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
+
+### KSR.set_advertised_address() ###
+
+`int set_advertised_address(str "addr")`
+
+### KSR.set_advertised_port() ###
+
+`int set_advertised_port(str "port")`
 
 ### KSR.set_forward_close(...) ###
 
