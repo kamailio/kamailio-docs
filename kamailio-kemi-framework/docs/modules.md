@@ -1803,6 +1803,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sipcapture.html#sipcapture.f.sip_capture'> `int sip_capture()` </a>
 
+#### KSR.sipcapture.sip_capture_forward() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipcapture.html#sipcapture.f.sip_capture_forward'> `int sip_capture_forward(str "puri")` </a>
+
 #### KSR.sipcapture.sip_capture_mode() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sipcapture.html#sipcapture.f.sip_capture_mode'> `int sip_capture_mode(str "_table", str "_cmdata")` </a>
