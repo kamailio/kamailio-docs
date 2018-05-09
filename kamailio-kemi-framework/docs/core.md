@@ -57,6 +57,32 @@ Write a log message to INFO level.
 
 `bool is_method_in(str "vmethod")`
 
+Return true if SIP method of the currently processed message is matching one
+of the corresponding characters given as parameter.
+
+Matching the method is done based on corresponding characters:
+
+  * `I` - INVITE
+  * `A` - ACK
+  * `B` - BYE
+  * `C` - CANCEL
+  * `R` - REGISTER
+  * `M` - MESSAGE
+  * `O` - OPTIONS
+  * `S` - SUBSCRIBE
+  * `P` - PUBLISH
+  * `N` - NOTIFY
+  * `U` - UPDATE
+
+Example:
+
+```
+if KSR.is_method_in("IABC") then
+  -- the method is INVITE, ACK, BYE or CANCEL
+  ...
+end
+```
+
 ### KSR.is_myself(...) ###
 
 `bool KSR.is_myself("uri")`
