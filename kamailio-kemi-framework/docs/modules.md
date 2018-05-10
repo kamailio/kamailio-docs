@@ -340,6 +340,14 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.append_branch_uri_q'> `int append_branch_uri_q(str "uri", str "q")` </a>
 
+#### KSR.corex.has_ruri_user() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.has_ruri_user'> `int has_ruri_user()` </a>
+
+#### KSR.corex.has_user_agent() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.has_user_agent'> `int has_user_agent()` </a>
+
 #### KSR.corex.isxflagset() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.isxflagset'> `int isxflagset(int fval)` </a>
