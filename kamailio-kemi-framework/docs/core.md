@@ -83,6 +83,58 @@ if KSR.is_method_in("IABC") then
 end
 ```
 
+### KSR.is_INVITE() ###
+
+`bool is_INVITE()`
+
+### KSR.is_ACK() ###
+
+`bool is_ACK()`
+
+### KSR.is_BYE() ###
+
+`bool is_BYE()`
+
+### KSR.is_CANCEL() ###
+
+`bool is_CANCEL()`
+
+### KSR.is_REGISTER() ###
+
+`bool is_REGISTER()`
+
+### KSR.is_MESSAGE() ###
+
+`bool is_MESSAGE()`
+
+### KSR.is_SUBSCRIBE() ###
+
+`bool is_SUBSCRIBE()`
+
+### KSR.is_PUBLISH() ###
+
+`bool is_PUBLISH()`
+
+### KSR.is_NOTIFY() ###
+
+`bool is_NOTIFY()`
+
+### KSR.is_OPTIONS() ###
+
+`bool is_OPTIONS()`
+
+### KSR.is_INFO() ###
+
+`bool is_INFO()`
+
+### KSR.is_UPDATE() ###
+
+`bool is_UPDATE()`
+
+### KSR.is_PRACK() ###
+
+`bool is_PRACK()`
+
 ### KSR.is_myself(...) ###
 
 `bool KSR.is_myself("uri")`
