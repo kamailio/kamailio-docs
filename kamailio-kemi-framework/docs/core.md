@@ -19,6 +19,8 @@ Exported functions from core directly to KSR module or KSR.hdr submodule are lis
 
 `bool add_local_rport()`
 
+Set the internal flag to add rport parameter to local generated Via header.
+
 ### KSR.add_tcp_alias() ###
 
 `add_tcp_alias(int port)`
@@ -43,6 +45,9 @@ Write a log message to ERROR level.
 
 `bool force_rport()`
 
+Add rport parameter to the top Via of the incoming request and sent the
+SIP response to source port.
+
 ### void KSR.info(...) ###
 
 `void KSR.info("msg")`
@@ -52,6 +57,15 @@ Write a log message to INFO level.
 ### KSR.is_method() ###
 
 `bool is_method(str "vmethod")`
+
+Return true if the value of the parameter matches the method type of the SIP
+message.
+
+```JavaScript
+if(KSR.is_method("INVITE")) {
+  ...
+}
+```
 
 ### KSR.is_method_in() ###
 
@@ -76,7 +90,7 @@ Matching the method is done based on corresponding characters:
 
 Example:
 
-```
+```Lua
 if KSR.is_method_in("IABC") then
   -- the method is INVITE, ACK, BYE or CANCEL
   ...
@@ -86,6 +100,14 @@ end
 ### KSR.is_INVITE() ###
 
 `bool is_INVITE()`
+
+Return true if the method type of the SIP message is `INVITE`.
+
+```Lua
+if KSR.is_INVITE() then
+  ...
+end
+```
 
 ### KSR.is_ACK() ###
 
@@ -139,17 +161,29 @@ end
 
 `bool KSR.is_myself("uri")`
 
+Return true of the URI address provided as parameter matches a local socket (IP)
+or local domain.
+
 ### KSR.is_myself_furi() ###
 
-`bool is_myself_furi()` </a>
+`bool is_myself_furi()`
+
+Return true if the URI in From header matches a local socket (IP) or local
+domain.
 
 ### KSR.is_myself_ruri() ###
 
 `bool is_myself_ruri()`
 
+Return true if the R-URI matches a local socket (IP) or local
+domain.
+
 ### KSR.is_myself_turi() ###
 
 `bool is_myself_turi()`
+
+Return true if the URI in To header matches a local socket (IP) or local
+domain.
 
 ### void KSR.log(...) ###
 
