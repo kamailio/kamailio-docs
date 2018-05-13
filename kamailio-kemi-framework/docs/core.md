@@ -1,6 +1,6 @@
 ## Core KEMI Functions ##
 
-The core of Kamailio exports via KEMI:
+The exports to KEMI framework from the core of Kamailio:
 
   * several functions directly to `KSR` module (like `KSR.function(params)`), which are mostly
   the main function from the core and for writing log messages (some being part of xlog module for
@@ -31,13 +31,13 @@ Set the internal flag to add rport parameter to local generated Via header.
 
 ### void KSR.dbg(...) ###
 
-`void KSR.dbg("msg")`
+`void KSR.dbg(str "msg")`
 
 Write a log message to DEBUG level.
 
 ### void KSR.err(...) ###
 
-`void KSR.err("msg")`
+`void KSR.err(str "msg")`
 
 Write a log message to ERROR level.
 
@@ -50,7 +50,7 @@ SIP response to source port.
 
 ### void KSR.info(...) ###
 
-`void KSR.info("msg")`
+`void KSR.info(str "msg")`
 
 Write a log message to INFO level.
 
@@ -159,7 +159,7 @@ end
 
 ### KSR.is_myself(...) ###
 
-`bool KSR.is_myself("uri")`
+`bool KSR.is_myself(str "uri")`
 
 Return true of the URI address provided as parameter matches a local socket (IP)
 or local domain.
@@ -187,7 +187,7 @@ domain.
 
 ### void KSR.log(...) ###
 
-`void KSR.log("level", "msg")`
+`void KSR.log(str "level", str "msg")`
 
 Write a log message specifying the level value. The level parameter can be:
 
@@ -201,67 +201,67 @@ If level value is not matched, then "err" log level is used.
 
 ### KSR.setflag(...) ###
 
-`bool KSR.setflag(flag)`
+`bool KSR.setflag(int flag)`
 
 ### KSR.resetflag(...) ###
 
-`bool KSR.resetflag(flag)`
+`bool KSR.resetflag(int flag)`
 
 ### KSR.isflagset(...) ###
 
-`bool KSR.isflagset(flag)`
+`bool KSR.isflagset(int flag)`
 
 ### KSR.setbflag(...) ###
 
-`bool KSR.setbflag(flag)`
+`bool KSR.setbflag(int flag)`
 
 ### KSR.resetbflag(...) ###
 
-`bool KSR.resetbflag(flag)`
+`bool KSR.resetbflag(int flag)`
 
 ### KSR.isbflagset(...) ###
 
-`bool KSR.isbflagset(flag)`
+`bool KSR.isbflagset(int flag)`
 
 ### KSR.setbiflag(...) ###
 
-`bool KSR.setbiflag(flag, branch)`
+`bool KSR.setbiflag(int flag, int branch)`
 
 ### KSR.resetbiflag(...) ###
 
-`bool KSR.resetbiflag(flag, branch)`
+`bool KSR.resetbiflag(int flag, int branch)`
 
 ### KSR.isbiflagset(...) ###
 
-`bool KSR.isbiflagset(flag, branch)`
+`bool KSR.isbiflagset(int flag, int branch)`
 
 ### KSR.setsflag(...) ###
 
-`bool KSR.setsflag(flag)`
+`bool KSR.setsflag(int flag)`
 
 ### KSR.resetsflag(...) ###
 
-`bool KSR.resetsflag(flag)`
+`bool KSR.resetsflag(int flag)`
 
 ### KSR.issflagset(...) ###
 
-`bool KSR.issflagset(flag)`
+`bool KSR.issflagset(int flag)`
 
 ### KSR.seturi(...) ###
 
-`bool KSR.seturi("uri")`
+`bool KSR.seturi(str "uri")`
 
 ### KSR.setuser(...) ###
 
-`bool KSR.setuser("user")`
+`bool KSR.setuser(str "user")`
 
 ### KSR.sethost(...) ###
 
-`bool KSR.sethost("host")`
+`bool KSR.sethost(str "host")`
 
 ### KSR.setdsturi(...) ###
 
-`bool KSR.setdsturi("uri")`
+`bool KSR.setdsturi(str "uri")`
 
 ### KSR.resetdsturi(...) ###
 
@@ -313,32 +313,32 @@ Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
 
 ### KSR.forward_uri(...) ###
 
-`int KSR.forward_uri("uri")`
+`int KSR.forward_uri(str "uri")`
 
 ### KSR.hdr.append(...) ###
 
-`int KSR.hdr.append("hdrval")`
+`int KSR.hdr.append(str "hdrval")`
 
 ### KSR.hdr.append_after(...) ###
 
-`int KSR.hdr.append_after("hdrval", "hdrname")`
+`int KSR.hdr.append_after(str "hdrval", str "hdrname")`
 
 ### KSR.hdr.insert(...) ###
 
-`int KSR.hdr.insert("hdrval")`
+`int KSR.hdr.insert(str "hdrval")`
 
 ### KSR.hdr.insert_before(...) ###
 
-`int KSR.hdr.insert_before("hdrval", "hdrname")`
+`int KSR.hdr.insert_before(str "hdrval", str "hdrname")`
 
 ### KSR.hdr.remove(...) ###
 
-`int KSR.hdr.remove("hdrval")`
+`int KSR.hdr.remove(str "hdrval")`
 
 ### KSR.hdr.is_present(...) ###
 
-`int KSR.hdr.is_present("hdrval")`
+`int KSR.hdr.is_present(str "hdrval")`
 
 ### KSR.hdr.append_to_reply(...) ###
 
-`int KSR.hdr.append_to_reply("hdrval")`
+`int KSR.hdr.append_to_reply(str "hdrval")`
