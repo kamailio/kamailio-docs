@@ -113,49 +113,73 @@ end
 
 `bool is_ACK()`
 
+Return true if the method type of the SIP message is `ACK`.
+
 ### KSR.is_BYE() ###
 
 `bool is_BYE()`
+
+Return true if the method type of the SIP message is `BYE`.
 
 ### KSR.is_CANCEL() ###
 
 `bool is_CANCEL()`
 
+Return true if the method type of the SIP message is `CANCEL`.
+
 ### KSR.is_REGISTER() ###
 
 `bool is_REGISTER()`
+
+Return true if the method type of the SIP message is `REGISTER`.
 
 ### KSR.is_MESSAGE() ###
 
 `bool is_MESSAGE()`
 
+Return true if the method type of the SIP message is `MESSAGE`.
+
 ### KSR.is_SUBSCRIBE() ###
 
 `bool is_SUBSCRIBE()`
+
+Return true if the method type of the SIP message is `SUBSCRIBE`.
 
 ### KSR.is_PUBLISH() ###
 
 `bool is_PUBLISH()`
 
+Return true if the method type of the SIP message is `PUBLISH`.
+
 ### KSR.is_NOTIFY() ###
 
 `bool is_NOTIFY()`
+
+Return true if the method type of the SIP message is `NOTIFY`.
 
 ### KSR.is_OPTIONS() ###
 
 `bool is_OPTIONS()`
 
+Return true if the method type of the SIP message is `OPTIONS`.
+
 ### KSR.is_INFO() ###
 
 `bool is_INFO()`
+
+Return true if the method type of the SIP message is `INFO`.
 
 ### KSR.is_UPDATE() ###
 
 `bool is_UPDATE()`
 
+Return true if the method type of the SIP message is `UPDATE`.
+
 ### KSR.is_PRACK() ###
 
 `bool is_PRACK()`
+
+Return true if the method type of the SIP message is `PRACK`.
 
 ### KSR.is_myself(...) ###
 
