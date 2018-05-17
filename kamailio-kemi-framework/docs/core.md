@@ -227,13 +227,34 @@ If level value is not matched, then "err" log level is used.
 
 `bool KSR.setflag(int flag)`
 
+Set the SIP message/transaction flag at the index provided by the parameter. The flag parameter
+has to be a number from 0 to 31.
+
+```
+KSR.setflag(10);
+```
+
 ### KSR.resetflag(...) ###
 
 `bool KSR.resetflag(int flag)`
 
+Reset the SIP message/transaction flag at the index provided by the parameter. The flag parameter
+has to be a number from 0 to 31.
+
+```
+KSR.resetflag(10);
+```
+
 ### KSR.isflagset(...) ###
 
 `bool KSR.isflagset(int flag)`
+
+Return true if the message/transaction flag at the index provided by the parameter is set
+(the bit has value 1).
+
+```
+if ( KSR.isflagset(10) ) ...
+```
 
 ### KSR.setbflag(...) ###
 
