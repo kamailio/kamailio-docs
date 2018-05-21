@@ -260,17 +260,47 @@ if ( KSR.isflagset(10) ) ...
 
 `bool KSR.setbflag(int flag)`
 
+Set the branch flag at the index provided by the parameter. The flag parameter
+has to be a number from 0 to 31.
+
+```
+KSR.setbflag(10);
+```
+
 ### KSR.resetbflag(...) ###
 
 `bool KSR.resetbflag(int flag)`
+
+Reset the branch flag at the index provided by the parameter. The flag parameter
+has to be a number from 0 to 31.
+
+```
+KSR.resetbflag(10);
+```
 
 ### KSR.isbflagset(...) ###
 
 `bool KSR.isbflagset(int flag)`
 
+Return true if the branch flag at the index provided by the parameter is set
+(the bit has value 1).
+
+```
+if ( KSR.isbflagset(10) ) ...
+```
+
 ### KSR.setbiflag(...) ###
 
 `bool KSR.setbiflag(int flag, int branch)`
+
+Set the flag at the index provided by the first parameter to the branch number
+specified by the second parameter. The flag parameter has to be a number from
+0 to 31. The branch parameter should be between 0 and 12 (a matter of
+`max_branches` global parameter).
+
+```
+KSR.setbiflag(10, 2);
+```
 
 ### KSR.resetbiflag(...) ###
 
