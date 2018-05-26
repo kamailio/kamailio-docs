@@ -386,9 +386,19 @@ Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
 
 `int KSR.forward()`
 
+Forward the SIP request in stateless mode to the address set in destination
+URI ($du), or, if this is not set, to the address in request URI ($ru).
+
 ### KSR.forward_uri(...) ###
 
 `int KSR.forward_uri(str "uri")`
+
+Forward the SIP request in stateless mode to the address provided in the SIP
+URI parameter.
+
+```
+KSR.forward_uri("sip:127.0.0.1:5080;transport=tcp");
+```
 
 ### KSR.hdr.append(...) ###
 
