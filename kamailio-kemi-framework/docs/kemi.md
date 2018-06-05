@@ -5,6 +5,8 @@ The following KEMI scripting languages can be used to write SIP routing logic fo
   * JavaScript
   * Lua
   * Python
+  * Python3
+  * Ruby
   * Squirrel
 
 A configuration file for Kamailio that uses a KEMI scripting language has the glabal parameters, loading modules and
@@ -15,6 +17,8 @@ The KEMI scripting language identifiers are:
   * `jsdt` - for JavaScript
   * `lua` - for Lua
   * `python` - for Python
+  * `python3` - for Python3
+  * `ruby` - for Ruby
   * `sqlang` - for Squirrel
 
 ### JavaScript KEMI Interpreter ###
@@ -237,7 +241,7 @@ end
 ### Python KEMI Interpreter ###
 
 It is implemented by `app_python` module. The Python interpreter is linked from `libpython`, supported Python versions:
-2.5, 2.6 and 3.x.
+2.5, 2.6 and 3.x (via app_python3).
 
 ```
 loadmodule "app_python.so"
@@ -404,6 +408,21 @@ class kamailio:
         KSR.info("===== failure route - from kamailio python script\n");
         return 1;
 ```
+
+### Ruby KEMI Interpreter ###
+
+It is implemented by `app_ruby` module. The module requires libruby-dev in order
+to be compiled. The module was initially tested with libruby-2.3 and libruby-2.5.
+
+```
+loadmodule "app_ruby.so"
+modparam("app_ruby", "load", "/path/to/script.rb")
+cfgengine "ruby"
+```
+
+The documentation for `app_ruby` is available at:
+
+  * [app_ruby.html](https://kamailio.org/docs/modules/devel/modules/app_ruby.html)
 
 ### Squirrel KEMI Interpreter ###
 
