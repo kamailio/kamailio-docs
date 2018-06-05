@@ -112,6 +112,24 @@ The following sections lists all exported KEMI functions. More information regar
 
 <a target='_blank' href='/docs/modules/devel/modules/app_python3.html#app_python3.f.exec_p1'> `int exec_p1(str "method", str "p1")` </a>
 
+## app_ruby ##
+
+#### KSR.app_ruby.run() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_ruby.html#app_ruby.f.run'> `int run(str "func")` </a>
+
+#### KSR.app_ruby.run_p1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_ruby.html#app_ruby.f.run_p1'> `int run_p1(str "func", str "p1")` </a>
+
+#### KSR.app_ruby.run_p2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_ruby.html#app_ruby.f.run_p2'> `int run_p2(str "func", str "p1", str "p2")` </a>
+
+#### KSR.app_ruby.run_p3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_ruby.html#app_ruby.f.run_p3'> `int run_p3(str "func", str "p1", str "p2", str "p3")` </a>
+
 ## app_sqlang ##
 
 #### KSR.app_sqlang.dofile() ####
@@ -355,6 +373,14 @@ The following sections lists all exported KEMI functions. More information regar
 #### KSR.corex.resetxflag() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.resetxflag'> `int resetxflag(int fval)` </a>
+
+#### KSR.corex.send_data() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.send_data'> `int send_data(str "uri", str "data")` </a>
+
+#### KSR.corex.sendx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.sendx'> `int sendx(str "uri", str "sock", str "data")` </a>
 
 #### KSR.corex.set_recv_socket() ####
 
