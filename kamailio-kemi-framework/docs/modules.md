@@ -1649,16 +1649,17 @@ This module enables media streams to be proxied via an RTPproxy.
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.set_rtpengine_set2'> `int set_rtpengine_set2(int r1, int r2)` </a>
 
 This function is the sibling function to [set_rtpengine_set()](#ksrrtpengineset_rtpengine_set). The original module function is declared as
-`set_rtpengine_set(setid[, setid])`.
+`set_rtpengine_set(setid[, setid2])`.
 
 In KEMI set_rtpengine_set() takes only the first parameter and set_rtpengine_set2() allows for the second optional parameter to be passed.
 
 ```
-KSR.rtpengine.set_rtpengine_set(2, 1);
+KSR.rtpengine.set_rtpengine_set2(2, 1);
 KSR.rtpengine.rtpengine_offer();
 ```
 
 Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpengine_set) for more information.
+
 #### KSR.rtpengine.start_recording() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.start_recording'> `int start_recording()` </a>
