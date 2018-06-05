@@ -57,7 +57,7 @@ class ModuleDocGenerator(object):
 
     def markdown_section_heading(self, heading):
         self.markdown_string += "## " + heading + " ##\n\n"
-        self.markdown_string += self.read_file_to_string(heading + ".header.md")
+        self.markdown_string += self.read_file_to_string(heading + "/" + heading + ".header.md")
         return True
 
     def markdown_section_content(self, module, methods):
@@ -86,7 +86,7 @@ class ModuleDocGenerator(object):
                                     + module + ".f." + value["name"] + "'> `" + return_value + " " + value["name"] \
                                     + "(" + params_value + ")` </a>\n\n"
 
-            self.markdown_string += self.read_file_to_string(module + "." + value["name"] + ".md")
+            self.markdown_string += self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md")
         return True
 
     def markdown_write(self):
@@ -104,7 +104,8 @@ class ModuleDocGenerator(object):
 
 
 class KemiFileExportParser(object):
-    # These functions are created by a macro so makes the parsing somewhat tricky, for not they are statically defined
+    # These functions are created by a macro so makes the parsing somewhat tricky,
+    # for now they are statically defined
     macro_functions = {
         "t_set_auto_inv_100": "int state",
         "t_set_disable_6xx": "int state",
