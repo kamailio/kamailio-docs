@@ -87,6 +87,11 @@ Matching the method is done based on corresponding characters:
   * `P` - PUBLISH
   * `N` - NOTIFY
   * `U` - UPDATE
+  * `K` - KDMQ
+  * `G` - GET
+  * `T` - POST
+  * `V` - PUT
+  * `D` - DELETE
 
 Example:
 
