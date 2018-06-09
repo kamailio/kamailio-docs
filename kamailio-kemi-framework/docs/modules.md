@@ -1820,6 +1820,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_get'> `int sdp_get(str "avp")` </a>
 
+#### KSR.sdpops.sdp_get_line_startswith() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_get_line_startswith'> `int sdp_get_line_startswith(str "aname", str "sline")` </a>
+
 #### KSR.sdpops.sdp_transport() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_transport'> `int sdp_transport(str "avp")` </a>
