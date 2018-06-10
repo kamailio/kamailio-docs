@@ -117,6 +117,8 @@ is no `exit`, just do `return` from the main KEMI callback functions
 
 For Python, one can use `exit()` or `os.exit()`.
 
+For Ruby, one can use `exit`.
+
 ### KSR.x.drop(...) ###
 
 `void KSR.x.drop()`
