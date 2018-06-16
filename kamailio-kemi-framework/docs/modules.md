@@ -618,6 +618,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_select_limit'> `int ds_select_limit(int set, int alg, int limit)` </a>
 
+#### KSR.dispatcher.ds_set_domain() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_set_domain'> `int ds_set_domain()` </a>
+
+#### KSR.dispatcher.ds_set_dst() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_set_dst'> `int ds_set_dst()` </a>
+
 ## diversion ##
 
 #### KSR.diversion.add_diversion() ####
