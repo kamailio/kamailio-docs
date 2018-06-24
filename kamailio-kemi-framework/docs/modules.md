@@ -618,6 +618,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_select_limit'> `int ds_select_limit(int set, int alg, int limit)` </a>
 
+#### KSR.dispatcher.ds_select_routes() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_select_routes'> `int ds_select_routes(str "srules", str "smode")` </a>
+
+#### KSR.dispatcher.ds_select_routes_limit() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_select_routes_limit'> `int ds_select_routes_limit(str "srules", str "smode", int rlimit)` </a>
+
 #### KSR.dispatcher.ds_set_domain() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_set_domain'> `int ds_set_domain()` </a>
@@ -773,6 +781,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 <a target='_blank' href='/docs/modules/devel/modules/enum.html#enum.f.is_from_user_enum_suffix_service'> `int is_from_user_enum_suffix_service(str "vsuffix", str "vservice")` </a>
 
 ## evapi ##
+
+#### KSR.evapi.async_relay() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.async_relay'> `int async_relay(str "sdata")` </a>
 
 #### KSR.evapi.close() ####
 
