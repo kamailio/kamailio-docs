@@ -270,6 +270,60 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/benchmark.html#benchmark.f.bm_start_timer'> `int bm_start_timer(str "tname")` </a>
 
+## blst ##
+
+#### KSR.blst.blst_add() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_add'> `int blst_add(int t)` </a>
+
+#### KSR.blst.blst_add_default() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_add_default'> `int blst_add_default()` </a>
+
+#### KSR.blst.blst_add_retry_after() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_add_retry_after'> `int blst_add_retry_after(int t_min, int t_max)` </a>
+
+#### KSR.blst.blst_clear_ignore() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_clear_ignore'> `int blst_clear_ignore(int mask)` </a>
+
+#### KSR.blst.blst_clear_ignore_all() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_clear_ignore_all'> `int blst_clear_ignore_all()` </a>
+
+#### KSR.blst.blst_del() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_del'> `int blst_del()` </a>
+
+#### KSR.blst.blst_is_blacklisted() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_is_blacklisted'> `int blst_is_blacklisted()` </a>
+
+#### KSR.blst.blst_rpl_clear_ignore() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_rpl_clear_ignore'> `int blst_rpl_clear_ignore(int mask)` </a>
+
+#### KSR.blst.blst_rpl_clear_ignore_all() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_rpl_clear_ignore_all'> `int blst_rpl_clear_ignore_all()` </a>
+
+#### KSR.blst.blst_rpl_set_ignore() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_rpl_set_ignore'> `int blst_rpl_set_ignore(int mask)` </a>
+
+#### KSR.blst.blst_rpl_set_ignore_all() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_rpl_set_ignore_all'> `int blst_rpl_set_ignore_all()` </a>
+
+#### KSR.blst.blst_set_ignore() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_set_ignore'> `int blst_set_ignore(int mask)` </a>
+
+#### KSR.blst.blst_set_ignore_all() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_set_ignore_all'> `int blst_set_ignore_all()` </a>
+
 ## call_control ##
 
 #### KSR.call_control.call_control() ####
@@ -1843,6 +1897,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sdpops.sdp_get_line_startswith() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_get_line_startswith'> `int sdp_get_line_startswith(str "aname", str "sline")` </a>
+
+#### KSR.sdpops.sdp_print() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_print'> `int sdp_print(int llevel)` </a>
 
 #### KSR.sdpops.sdp_transport() ####
 
