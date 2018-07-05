@@ -1906,9 +1906,17 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_transport'> `int sdp_transport(str "avp")` </a>
 
+#### KSR.sdpops.sdp_with_active_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_active_media'> `int sdp_with_active_media(str "media")` </a>
+
 #### KSR.sdpops.sdp_with_ice() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_ice'> `int sdp_with_ice()` </a>
+
+#### KSR.sdpops.sdp_with_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_media'> `int sdp_with_media(str "media")` </a>
 
 ## sipcapture ##
 
@@ -2683,6 +2691,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.uac.uac_auth() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_auth'> `int uac_auth()` </a>
+
+#### KSR.uac.uac_reg_disable() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_reg_disable'> `int uac_reg_disable(str "attr", str "val")` </a>
+
+#### KSR.uac.uac_reg_enable() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_reg_enable'> `int uac_reg_enable(str "attr", str "val")` </a>
 
 #### KSR.uac.uac_reg_lookup() ####
 
