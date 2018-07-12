@@ -1398,9 +1398,17 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_address'> `int allow_address(int addr_group, str "ips", int port)` </a>
 
+#### KSR.permissions.allow_address_group() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_address_group'> `int allow_address_group(str "_addr", int _port)` </a>
+
 #### KSR.permissions.allow_source_address() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_source_address'> `int allow_source_address(int addr_group)` </a>
+
+#### KSR.permissions.allow_source_address_group() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_source_address_group'> `int allow_source_address_group()` </a>
 
 ## phonenum ##
 
@@ -1655,6 +1663,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.rr.check_route_param() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.check_route_param'> `int check_route_param(str "sre")` </a>
+
+#### KSR.rr.is_direction() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.is_direction'> `int is_direction(str "dir")` </a>
 
 #### KSR.rr.loose_route() ####
 
@@ -2254,6 +2266,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_body_atonce'> `int replace_body_atonce(str "sre", str "sval")` </a>
 
+#### KSR.textops.replace_body_str() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_body_str'> `int replace_body_str(str "mkey", str "rval", str "rmode")` </a>
+
+#### KSR.textops.replace_str() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_str'> `int replace_str(str "mkey", str "rval", str "rmode")` </a>
+
 #### KSR.textops.search() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.search'> `int search(str "sre")` </a>
@@ -2703,6 +2723,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.uac.uac_reg_lookup() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_reg_lookup'> `int uac_reg_lookup(str "userid", str "sdst")` </a>
+
+#### KSR.uac.uac_reg_refresh() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_reg_refresh'> `int uac_reg_refresh(str "l_uuid")` </a>
 
 #### KSR.uac.uac_reg_request_to() ####
 
