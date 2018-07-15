@@ -2270,6 +2270,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_body_str'> `int replace_body_str(str "mkey", str "rval", str "rmode")` </a>
 
+#### KSR.textops.replace_hdrs_str() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_hdrs_str'> `int replace_hdrs_str(str "mkey", str "rval", str "rmode")` </a>
+
 #### KSR.textops.replace_str() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.replace_str'> `int replace_str(str "mkey", str "rval", str "rmode")` </a>
