@@ -39,6 +39,12 @@ Adds the port from the message via as an alias to TCP connection. See `add_tcp_a
 
 Write a log message to DEBUG level.
 
+Example:
+
+```
+KSR.dbg("message from embedded interpreter\n");
+```
+
 ### void KSR.err(...) ###
 
 `void KSR.err(str "msg")`
@@ -315,9 +321,13 @@ KSR.setbiflag(10, 2);
 
 `bool KSR.resetbiflag(int flag, int branch)`
 
+Reset a branch flag.
+
 ### KSR.isbiflagset(...) ###
 
 `bool KSR.isbiflagset(int flag, int branch)`
+
+Test if a branch flag is set.
 
 ### KSR.setsflag(...) ###
 
@@ -334,6 +344,14 @@ KSR.setbiflag(10, 2);
 ### KSR.seturi(...) ###
 
 `bool KSR.seturi(str "uri")`
+
+Set the request URI (R-URI).
+
+Example:
+
+```
+KSR.seturi("sip:alice@voip.com");
+```
 
 ### KSR.setuser(...) ###
 
