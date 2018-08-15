@@ -357,13 +357,31 @@ KSR.seturi("sip:alice@voip.com");
 
 `bool KSR.setuser(str "user")`
 
+Example:
+
+```
+KSR.setuser("alice");
+```
+
 ### KSR.sethost(...) ###
 
 `bool KSR.sethost(str "host")`
 
+Example:
+
+```
+KSR.sethost("voip.com");
+```
+
 ### KSR.setdsturi(...) ###
 
 `bool KSR.setdsturi(str "uri")`
+
+Example:
+
+```
+KSR.setdsturi("sip:voip.com:5061;transport=tls");
+```
 
 ### KSR.resetdsturi(...) ###
 
