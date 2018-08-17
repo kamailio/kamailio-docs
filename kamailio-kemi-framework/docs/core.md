@@ -519,7 +519,7 @@ Return greater than 0 if a header with the name `hdrval` exists and less than
 Example:
 
 ```
-if(KSR.hdr.is_present("X-My-Hdr")) {
+if(KSR.hdr.is_present("X-My-Hdr") > 0) {
   ...
 }
 ```
