@@ -513,7 +513,8 @@ KSR.hdr.remove("X-My-Hdr");
 
 `int KSR.hdr.is_present(str "hdrval")`
 
-Return true if a header with the name `hdrval` exists.
+Return greater than 0 if a header with the name `hdrval` exists and less than
+0 if there is no such header.
 
 Example:
 
