@@ -455,7 +455,7 @@ the last header.
 Example:
 
 ```
-KSR.hdr.append("X-My-Hdr: $si\r\n");
+KSR.hdr.append("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n");
 ```
 
 ### KSR.hdr.append_after(...) ###
@@ -468,7 +468,7 @@ the first header matching the name `hdrname`.
 Example:
 
 ```
-KSR.hdr.append_after("X-My-Hdr: $si\r\n", "Call-Id");
+KSR.hdr.append_after("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n", "Call-Id");
 ```
 
 ### KSR.hdr.insert(...) ###
@@ -481,7 +481,7 @@ the first header.
 Example:
 
 ```
-KSR.hdr.insert("X-My-Hdr: $si\r\n");
+KSR.hdr.insert("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n");
 ```
 
 ### KSR.hdr.insert_before(...) ###
@@ -494,7 +494,7 @@ the header matching the name `hdrname`.
 Example:
 
 ```
-KSR.hdr.insert_before("X-My-Hdr: $si\r\n", "Call-Id");
+KSR.hdr.insert_before("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n", "Call-Id");
 ```
 
 ### KSR.hdr.remove(...) ###
@@ -533,5 +533,5 @@ SIP request.
 Example:
 
 ```
-KSR.hdr.append_to_reply("X-My-Hdr: $si\r\n");
+KSR.hdr.append_to_reply("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n");
 ```
