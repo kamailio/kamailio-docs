@@ -238,6 +238,12 @@ Write a log message specifying the level value. The level parameter can be:
 
 If level value is not matched, then "err" log level is used.
 
+Example:
+
+```
+KSR.log("dbg", "message from: " + KSR.pv.getw("$si") + "\r\n");
+```
+
 ### KSR.setflag(...) ###
 
 `bool KSR.setflag(int flag)`
@@ -321,25 +327,31 @@ KSR.setbiflag(10, 2);
 
 `bool KSR.resetbiflag(int flag, int branch)`
 
-Reset a branch flag.
+Reset a branch flag by position and branch index.
 
 ### KSR.isbiflagset(...) ###
 
 `bool KSR.isbiflagset(int flag, int branch)`
 
-Test if a branch flag is set.
+Test if a branch flag is set by position and branch index.
 
 ### KSR.setsflag(...) ###
 
 `bool KSR.setsflag(int flag)`
 
+Set a script flag.
+
 ### KSR.resetsflag(...) ###
 
 `bool KSR.resetsflag(int flag)`
 
+Reset a script flag.
+
 ### KSR.issflagset(...) ###
 
 `bool KSR.issflagset(int flag)`
+
+Test if a script flag is set.
 
 ### KSR.seturi(...) ###
 
@@ -387,13 +399,26 @@ KSR.setdsturi("sip:voip.com:5061;transport=tls");
 
 `bool KSR.resetdsturi()`
 
+Reset the destination URI (aka: outbound proxy address, dst_uri, $du).
+
 ### KSR.isdsturiset(...) ###
 
 `bool KSR.isdsturiset()`
 
+Test if destination URI is set.
+
 ### KSR.force_rport(...) ###
 
 `bool KSR.force_rport()`
+
+Set the flag for "rport" handling (send the reply based on source address
+instead of Via header).
+
+Example:
+
+```
+KSR.force_rport();
+```
 
 ### KSR.set_drop(...) ###
 
@@ -402,6 +427,12 @@ KSR.setdsturi("sip:voip.com:5061;transport=tls");
 Set the DROP flag, so at the end of KEMI script execution, the SIP request branch or the SIP response is not forwarded.
 
 Note: it doesn't not stop the execution of KEMI script, see KSR.x.drop().
+
+Example:
+
+```
+KSR.set_drop();
+```
 
 ### KSR.set_advertised_address() ###
 
