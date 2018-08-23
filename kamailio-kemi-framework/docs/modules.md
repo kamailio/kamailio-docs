@@ -1026,6 +1026,12 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/ipops.html#ipops.f.srv_query'> `int srv_query(str "naptrname", str "pvid")` </a>
 
+## jansson ##
+
+#### KSR.jansson.get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/jansson.html#jansson.f.get'> `int get(str "spath", str "sdoc", str "spv")` </a>
+
 ## jsonrpcs ##
 
 #### KSR.jsonrpcs.exec() ####
