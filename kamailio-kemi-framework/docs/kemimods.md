@@ -27,6 +27,19 @@ Example:
 KSR.dbg("ruri is: " + KSR.pv.get("$ru") + "\n");
 ```
 
+### KSR.pv.gete(...) ###
+
+`val KSR.pv.gete("pvname")`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the empty string
+("") if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.gete("$avp(x)") + "\n");
+```
+
 ### KSR.pv.getw(...) ###
 
 `val KSR.pv.getw("pvname")`
@@ -38,7 +51,7 @@ in the scripting languages that throw and error when attempting to print a `NULL
 Example:
 
 ```
-KSR.dbg("ruri is: " + KSR.pv.getw("$avp(x)") + "\n");
+KSR.dbg("avp is: " + KSR.pv.getw("$avp(x)") + "\n");
 ```
 
 ### KSR.pv.seti(...) ###
