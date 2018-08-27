@@ -994,6 +994,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/ipops.html#ipops.f.ip_type'> `int ip_type(str "sval")` </a>
 
+#### KSR.ipops.is_in_subnet() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/ipops.html#ipops.f.is_in_subnet'> `int is_in_subnet(str "_sval1", str "_sval2")` </a>
+
 #### KSR.ipops.is_ip() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/ipops.html#ipops.f.is_ip'> `int is_ip(str "sval")` </a>
