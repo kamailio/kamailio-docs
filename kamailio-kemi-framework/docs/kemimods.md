@@ -40,6 +40,32 @@ Example:
 KSR.dbg("avp is: " + KSR.pv.gete("$avp(x)") + "\n");
 ```
 
+### KSR.pv.getvn(...) ###
+
+`val KSR.pv.getvn(str "pvname", int vn)`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the parameter `vn`
+if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.getvn("$avp(x)", 0) + "\n");
+```
+
+### KSR.pv.getvs(...) ###
+
+`val KSR.pv.getvs(str "pvname", int vn)`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the parameter `vs`
+if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.getvs("$avp(x)", "foo") + "\n");
+```
+
 ### KSR.pv.getw(...) ###
 
 `val KSR.pv.getw("pvname")`

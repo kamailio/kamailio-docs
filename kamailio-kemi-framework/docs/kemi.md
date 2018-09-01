@@ -473,7 +473,7 @@ The bool return code is expected to be evaluated as `true` or `false` inside the
 
 If a function has `void` as return type in the signature, the it doesn't return any value.
 
-Few functions may return a string value.
+Few functions may return a string value, for example in the `KSR.pv` submodule to get the value of pseudo-variables.
 
 The convention for the parameters in the signature of the functions is to enclose in double quotes if the parameter
 has a string type and no quotes if the parameter has integer type.
