@@ -708,6 +708,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/dmq.html#dmq.f.handle_message'> `int handle_message()` </a>
 
+#### KSR.dmq.handle_message_rc() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dmq.html#dmq.f.handle_message_rc'> `int handle_message_rc(int returnval)` </a>
+
 #### KSR.dmq.is_from_node() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dmq.html#dmq.f.is_from_node'> `int is_from_node()` </a>
@@ -894,6 +898,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## htable ##
 
+#### KSR.htable.sht_has_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_has_name'> `int sht_has_name(str "sname", str "sop", str "sval")` </a>
+
+#### KSR.htable.sht_has_str_value() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_has_str_value'> `int sht_has_str_value(str "sname", str "sop", str "sval")` </a>
+
 #### KSR.htable.sht_iterator_end() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_end'> `int sht_iterator_end(str "iname")` </a>
@@ -913,6 +925,22 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.htable.sht_reset() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_reset'> `int sht_reset(str "hname")` </a>
+
+#### KSR.htable.sht_rm_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_name'> `int sht_rm_name(str "sname", str "sop", str "sval")` </a>
+
+#### KSR.htable.sht_rm_name_re() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_name_re'> `int sht_rm_name_re(str "htname", str "rexp")` </a>
+
+#### KSR.htable.sht_rm_value() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_value'> `int sht_rm_value(str "sname", str "sop", str "sval")` </a>
+
+#### KSR.htable.sht_rm_value_re() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_value_re'> `int sht_rm_value_re(str "htname", str "rexp")` </a>
 
 #### KSR.htable.sht_unlock() ####
 
@@ -1979,6 +2007,12 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sipdump.send() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.send'> `int send(str "stag")` </a>
+
+## sipjson ##
+
+#### KSR.sipjson.sj_serialize() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipjson.html#sipjson.f.sj_serialize'> `int sj_serialize(str "smode", str "pvn")` </a>
 
 ## siptrace ##
 
