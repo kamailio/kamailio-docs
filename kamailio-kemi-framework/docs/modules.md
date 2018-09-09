@@ -926,6 +926,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_reset'> `int sht_reset(str "hname")` </a>
 
+#### KSR.htable.sht_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm'> `int sht_rm(str "hname", str "iname")` </a>
+
 #### KSR.htable.sht_rm_name() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_name'> `int sht_rm_name(str "sname", str "sop", str "sval")` </a>
