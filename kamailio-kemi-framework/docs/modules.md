@@ -946,6 +946,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_rm_value_re'> `int sht_rm_value_re(str "htname", str "rexp")` </a>
 
+#### KSR.htable.sht_setex() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_setex'> `int sht_setex(str "htname", str "itname", int itval)` </a>
+
 #### KSR.htable.sht_seti() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_seti'> `int sht_seti(str "htname", str "itname", int itval)` </a>
@@ -1895,6 +1899,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sanity.sanity_check_defaults() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sanity.html#sanity.f.sanity_check_defaults'> `int sanity_check_defaults()` </a>
+
+#### KSR.sanity.sanity_reply() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sanity.html#sanity.f.sanity_reply'> `int sanity_reply()` </a>
 
 ## sca ##
 
