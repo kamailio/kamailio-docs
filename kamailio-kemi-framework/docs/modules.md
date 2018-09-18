@@ -958,6 +958,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_sets'> `int sht_sets(str "htname", str "itname", str "itval")` </a>
 
+#### KSR.htable.sht_setxi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_setxi'> `int sht_setxi(str "htname", str "itname", int itval, int exval)` </a>
+
+#### KSR.htable.sht_setxs() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_setxs'> `int sht_setxs(str "htname", str "itname", str "itval", int exval)` </a>
+
 #### KSR.htable.sht_unlock() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_unlock'> `int sht_unlock(str "htname", str "skey")` </a>
