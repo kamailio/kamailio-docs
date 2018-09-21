@@ -1354,6 +1354,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.fix_nated_register'> `int fix_nated_register()` </a>
 
+#### KSR.nathelper.fix_nated_sdp() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.fix_nated_sdp'> `int fix_nated_sdp(int level)` </a>
+
+#### KSR.nathelper.fix_nated_sdp_ip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.fix_nated_sdp_ip'> `int fix_nated_sdp_ip(int level, str "ip")` </a>
+
 #### KSR.nathelper.handle_ruri_alias() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.handle_ruri_alias'> `int handle_ruri_alias()` </a>
