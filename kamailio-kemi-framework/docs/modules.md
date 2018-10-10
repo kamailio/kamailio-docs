@@ -472,6 +472,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.via_add_xavp_params'> `int via_add_xavp_params(int fval)` </a>
 
+#### KSR.corex.via_use_xavp_fields() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.via_use_xavp_fields'> `int via_use_xavp_fields(int fval)` </a>
+
 ## counters ##
 
 #### KSR.counters.add() ####
@@ -1660,7 +1664,7 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 #### KSR.registrar.lookup_uri() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/registrar.html#registrar.f.lookup_uri'> `int lookup_uri(str "table", str "")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/registrar.html#registrar.f.lookup_uri'> `int lookup_uri(str "table", str "uri")` </a>
 
 #### KSR.registrar.reg_fetch_contacts() ####
 
@@ -2089,6 +2093,22 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.siputils.is_request() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_request'> `int is_request()` </a>
+
+#### KSR.siputils.is_uri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_uri'> `int is_uri(str "suri")` </a>
+
+#### KSR.siputils.is_user() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_user'> `int is_user(str "suser")` </a>
+
+#### KSR.siputils.uri_param() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param'> `int uri_param(str "sparam")` </a>
+
+#### KSR.siputils.uri_param_value() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param_value'> `int uri_param_value(str "sparam", str "svalue")` </a>
 
 ## sl ##
 
