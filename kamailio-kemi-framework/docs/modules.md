@@ -2082,9 +2082,21 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.has_totag'> `int has_totag()` </a>
 
+#### KSR.siputils.is_alphanum() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_alphanum'> `int is_alphanum(str "tval")` </a>
+
+#### KSR.siputils.is_alphanumex() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_alphanumex'> `int is_alphanumex(str "tval", str "eset")` </a>
+
 #### KSR.siputils.is_first_hop() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_first_hop'> `int is_first_hop()` </a>
+
+#### KSR.siputils.is_numeric() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_numeric'> `int is_numeric(str "tval")` </a>
 
 #### KSR.siputils.is_reply() ####
 
@@ -2093,6 +2105,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.siputils.is_request() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_request'> `int is_request()` </a>
+
+#### KSR.siputils.is_tel_number() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_tel_number'> `int is_tel_number(str "tval")` </a>
 
 #### KSR.siputils.is_uri() ####
 
