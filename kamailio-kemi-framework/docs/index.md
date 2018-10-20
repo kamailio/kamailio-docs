@@ -71,12 +71,13 @@ language. In other words, the routing blocks are now functions written in a KEMI
 For each new KEMI supported scripting language a module has to be developed for Kamailio, this module linking
 Kamailio to the scripting language interpreter.
 
-At this moment there are couple of supported KEMI scripting languages, respectively `JavaScript`, `Lua`, `Python`,
-`Python3`, `Ruby`, `Squirrel` -- see next sections for more details about these programming languages.
+At this moment there are couple of supported KEMI scripting languages, respectively `JavaScript`
+(`app_jsdt`), `Lua` (`app_lua`), `Python` (`app_python`), `Python3` (`app_python3`), `Ruby` (`app_ruby`),
+`Squirrel` (`app_sqlang`) -- see next sections for more details about these programming languages.
 
 Note: Kamailio has other modules that allow inline execution of scripts written in other programming languages, such
-as `Perl`, `.Net` (`C#`, etc.), `Java`, but they don't implement the KEMI yet, likely that some of them will get support in
-the near future.
+as `Perl` (`app_perl`), `.Net` (`C#`, etc.) (`app_mono`), `Java` (`app_java`), but they don't implement the KEMI yet,
+likely that some of them will get support in the near future.
 
 The main benefits of using KEMI framework:
 
