@@ -3,9 +3,11 @@
 The exports to KEMI framework from the core of Kamailio:
 
   * several functions directly to `KSR` module (like `KSR.function(params)`), which are mostly
-  the main function from the core and for writing log messages (some being part of xlog module for
+  the main functions from the core and for writing log messages (some being part of xlog module for
   native kamailio.cfg language)
   * the `KSR.hdr` submodule, which are the most used functions for managing SIP message headers
+  (some of the functions in this submodules correspond to the ones in `textops` or `textopsx`
+  modules for `kamailio.cfg`).
 
 Example of using KEMI functions exported to Lua interpreter:
 
