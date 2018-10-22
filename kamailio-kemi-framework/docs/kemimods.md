@@ -17,7 +17,7 @@ The functions exported by these modules are listed in the next sections.
 
 ### KSR.pv.get(...) ###
 
-`val KSR.pv.get("pvname")`
+`val KSR.pv.get(str "pvname")`
 
 Return the value of pseudo-variable `pvname`. The returned value can be string or integer.
 
@@ -29,7 +29,7 @@ KSR.dbg("ruri is: " + KSR.pv.get("$ru") + "\n");
 
 ### KSR.pv.gete(...) ###
 
-`val KSR.pv.gete("pvname")`
+`val KSR.pv.gete(str "pvname")`
 
 Return the value of pseudo-variable `pvname` if it is different than `$null` or the empty string
 ("") if the variable is having the `$null` value.
@@ -68,7 +68,7 @@ KSR.dbg("avp is: " + KSR.pv.getvs("$avp(x)", "foo") + "\n");
 
 ### KSR.pv.getw(...) ###
 
-`val KSR.pv.getw("pvname")`
+`val KSR.pv.getw(str "pvname")`
 
 Return the value of pseudo-variable `pvname` if it is different than `$null` or the string `<<null>>`
 if the variable is having the `$null` value. This should be used instead of `KSR.pv.get(...)`
@@ -82,9 +82,9 @@ KSR.dbg("avp is: " + KSR.pv.getw("$avp(x)") + "\n");
 
 ### KSR.pv.seti(...) ###
 
-`void KSR.pv.seti("pvname", intval)`
+`void KSR.pv.seti(str "pvname", int val)`
 
-Set the value of pseudo-variable `pvname` to integer value provided by parameter `intval`.
+Set the value of pseudo-variable `pvname` to integer value provided by parameter `val`.
 
 Example:
 
@@ -94,9 +94,9 @@ KSR.pv.seti("$var(x)", 10);
 
 ### KSR.pv.sets(...) ###
 
-`void KSR.pv.sets("pvname", "strval")`
+`void KSR.pv.sets(str "pvname", str "val")`
 
-Set the value of pseudo-variable `pvname` to string value provided by parameter `strval`.
+Set the value of pseudo-variable `pvname` to string value provided by parameter `val`.
 
 Example:
 
@@ -106,7 +106,7 @@ KSR.pv.sets("$var(x)", "kamailio");
 
 ### KSR.pv.unset(...) ###
 
-`void KSR.pv.unset("pvname")`
+`void KSR.pv.unset(str "pvname")`
 
 Set the value of pseudo-variable `pvname` to `$null`.
 
@@ -118,7 +118,7 @@ KSR.pv.unset("$avp(x)");
 
 ### KSR.pv.is_null(...) ###
 
-`bool KSR.pv.is_null("pvname")`
+`bool KSR.pv.is_null(str "pvname")`
 
 Return true if pseudo-variable `pvname` is `$null`.
 
@@ -132,7 +132,7 @@ if(KSR.pv.is_null("$avp(x)")) {
 
 ### KSR.x.modf(...) ###
 
-`int KSR.x.modf("fname", params...)`
+`int KSR.x.modf(str "fname", params...)`
 
 Execute a function (specified by `fname`) exported by a Kamailio module. Additional parameters must be string and
 they are passed to the Kamailio module function.
