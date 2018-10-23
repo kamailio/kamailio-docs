@@ -44,7 +44,7 @@ Write a log message to DEBUG level.
 Example:
 
 ```
-KSR.dbg("message from embedded interpreter\n");
+KSR.dbg("debug log message from embedded interpreter\n");
 ```
 
 ### void KSR.err(...) ###
@@ -52,6 +52,12 @@ KSR.dbg("message from embedded interpreter\n");
 `void KSR.err(str "msg")`
 
 Write a log message to ERROR level.
+
+Example:
+
+```
+KSR.err("error log message from embedded interpreter\n");
+```
 
 ### KSR.force_rport() ###
 
@@ -65,6 +71,12 @@ SIP response to source port.
 `void KSR.info(str "msg")`
 
 Write a log message to INFO level.
+
+Example:
+
+```
+KSR.info("info log message from embedded interpreter\n");
+```
 
 ### KSR.is_method() ###
 
@@ -243,7 +255,7 @@ If level value is not matched, then "err" log level is used.
 Example:
 
 ```
-KSR.log("dbg", "message from: " + KSR.pv.getw("$si") + "\r\n");
+KSR.log("dbg", "debug log message from: " + KSR.pv.getw("$si") + "\r\n");
 ```
 
 ### KSR.setflag(...) ###
