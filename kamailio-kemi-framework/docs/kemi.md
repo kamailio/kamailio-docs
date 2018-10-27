@@ -318,7 +318,7 @@ listen=udp:127.0.0.1:5060
  
 mpath="modules"
  
-loadmodule "mi_fifo.so"
+loadmodule "jsonrpcs.so"
 loadmodule "kex.so"
 loadmodule "tm.so"
 loadmodule "tmx.so"
@@ -333,10 +333,6 @@ loadmodule "debugger.so"
 loadmodule "app_python.so"
  
 # ----------------- setting module-specific parameters ---------------
- 
-# ----- mi_fifo params -----
-modparam("mi_fifo", "fifo_name", "/tmp/kamailio_fifo")
- 
  
 # ----- tm params -----
 # auto-discard branches from previous serial forking leg
