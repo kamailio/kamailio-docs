@@ -138,16 +138,14 @@ debug=3
 log_stderror=yes
 fork=yes
 children=2
- 
+
 memdbg=5
 memlog=5
- 
+
 auto_aliases=no
- 
+
 listen=udp:127.0.0.1:5060
- 
-mpath="modules"
- 
+
 loadmodule "jsonrpcs.so"
 loadmodule "kex.so"
 loadmodule "tm.so"
@@ -160,12 +158,12 @@ loadmodule "xlog.so"
 loadmodule "ctl.so"
 loadmodule "debugger.so"
 loadmodule "app_lua.so"
- 
+
 # ----------------- setting module-specific parameters ---------------
- 
+
 # ----- jsonrpcs params -----
 modparam("jsonrpcs", "pretty_format", 1)
- 
+
 # ----- tm params -----
 # auto-discard branches from previous serial forking leg
 modparam("tm", "failure_reply_mode", 3)
@@ -173,14 +171,14 @@ modparam("tm", "failure_reply_mode", 3)
 modparam("tm", "fr_timer", 30000)
 # default invite retransmission timeout after 1xx: 120sec
 modparam("tm", "fr_inv_timer", 120000)
- 
+
 # ----- debugger params -----
 modparam("debugger", "cfgtrace", 1)
- 
+
 ####### Routing Logic ########
- 
+
 modparam("app_lua", "load", "/etc/kamailio/kamailio.lua")
- 
+
 cfgengine "lua"
 ```
 
@@ -195,42 +193,42 @@ The file `/etc/kamailio/kamailio.lua` with the routing logic for runtime:
 -- equivalent of request_route{}
 function ksr_request_route()
 	KSR.info("===== request - from kamailio lua script\n");
- 
+
 	if KSR.maxfwd.process_maxfwd(10) < 0 then
 		KSR.sl.send_reply(483, "Too Many Hops");
 		return;
 	end
- 
+
 	-- KSR.sl.sreply(200, "OK Lua");
- 
+
 	KSR.pv.sets("$du", "sip:127.0.0.1:5080")
 	KSR.tm.t_on_branch("ksr_branch_route_one");
 	KSR.tm.t_on_reply("ksr_onreply_route_one");
 	KSR.tm.t_on_failure("ksr_failure_route_one");
- 
+
 	if KSR.tm.t_relay() < 0 then
 		KSR.sl.send_reply(500, "Server error")
 	end
 end
- 
+
 -- SIP response routing
 -- equivalent of reply_route{}
 function ksr_reply_route()
 	KSR.info("===== response - from kamailio lua script\n");
 end
- 
+
 -- branch route callback
 -- equivalent of a branch_route{}
 function ksr_branch_route_one()
 	KSR.info("===== branch route - from kamailio lua script\n");
 end
- 
+
 -- onreply route callback
 -- equivalent of an onreply_route{}
 function ksr_onreply_route_one()
 	KSR.info("===== onreply route - from kamailio lua script\n");
 end
- 
+
 -- failure route callback
 -- equivalent of a failure_route{}
 function ksr_failure_route_one()
@@ -303,21 +301,19 @@ The file `kamailio.cfg` with the global parameters and modules settings:
 #!KAMAILIO
 
 ####### Global Parameters #########
- 
+
 debug=4
 log_stderror=yes
 fork=yes
 children=2
- 
+
 memdbg=5
 memlog=5
- 
+
 auto_aliases=no
- 
+
 listen=udp:127.0.0.1:5060
- 
-mpath="modules"
- 
+
 loadmodule "jsonrpcs.so"
 loadmodule "kex.so"
 loadmodule "tm.so"
@@ -331,9 +327,9 @@ loadmodule "ctl.so"
 loadmodule "mi_rpc.so"
 loadmodule "debugger.so"
 loadmodule "app_python.so"
- 
+
 # ----------------- setting module-specific parameters ---------------
- 
+
 # ----- tm params -----
 # auto-discard branches from previous serial forking leg
 modparam("tm", "failure_reply_mode", 3)
@@ -341,14 +337,14 @@ modparam("tm", "failure_reply_mode", 3)
 modparam("tm", "fr_timer", 30000)
 # default invite retransmission timeout after 1xx: 120sec
 modparam("tm", "fr_inv_timer", 120000)
- 
+
 # ----- debugger params -----
 modparam("debugger", "cfgtrace", 1)
- 
+
 ####### Routing Logic ########
- 
+
 modparam("app_python", "load", "/etc/kamailio/kamailio.py")
- 
+
 cfgengine "python"
 ```
 
@@ -358,25 +354,25 @@ The file `/etc/kamailio/kamailio.py` with the routing logic for runtime:
 import sys
 import Router.Logger as Logger
 import KSR as KSR
- 
+
 def dumpObj(obj):
     for attr in dir(obj):
         # KSR.info("obj.%s = %s\n" % (attr, getattr(obj, attr)));
         Logger.LM_INFO("obj.%s = %s\n" % (attr, getattr(obj, attr)));
- 
+
 def mod_init():
     KSR.info("===== from Python mod init\n");
     # dumpObj(KSR);
     return kamailio();
- 
+
 class kamailio:
     def __init__(self):
         KSR.info('===== kamailio.__init__\n')
- 
+
     def child_init(self, rank):
         KSR.info('===== kamailio.child_init(%d)\n' % rank)
         return 0
- 
+
     def ksr_request_route(self, msg):
         KSR.info("===== request - from kamailio python script\n");
         msg.rewrite_ruri("sip:alice@127.0.0.1:5080");
@@ -387,19 +383,19 @@ class kamailio:
         if KSR.tm.t_relay() < 0 :
             KSR.sl.send_reply(500, "Server error")
         return 1;
- 
+
     def ksr_reply_route(self, msg):
         KSR.info("===== response - from kamailio python script\n");
         return 1;
- 
+
     def ksr_branch_route_one(self, msg):
         KSR.info("===== branch route - from kamailio python script\n");
         return 1;
- 
+
     def ksr_onreply_route_one(self, msg):
         KSR.info("===== onreply route - from kamailio python script\n");
         return 1;
- 
+
     def ksr_failure_route_one(self, msg):
         KSR.info("===== failure route - from kamailio python script\n");
         return 1;
@@ -519,7 +515,7 @@ The structure `sr_kemi_t` is declared in Kamailio core, the file `kemi.h`:
 
 ```C
 #define SR_KEMI_PARAMS_MAX	6
- 
+
 typedef struct sr_kemi {
 	str mname; /* sub-module name */
 	str fname; /* function name */
@@ -546,10 +542,10 @@ static sr_kemi_t sl_kemi_exports[] = {
 		{ SR_KEMIP_INT, SR_KEMIP_STR, SR_KEMIP_NONE,
 			SR_KEMIP_NONE, SR_KEMIP_NONE, SR_KEMIP_NONE }
 	},
- 
+
 	{ {0, 0}, {0, 0}, 0, NULL, { 0, 0, 0, 0, 0, 0 } }
 };
- 
+
 int mod_register(char *path, int *dlflags, void *p1, void *p2)
 {
 	sr_kemi_modules_add(sl_kemi_exports);
