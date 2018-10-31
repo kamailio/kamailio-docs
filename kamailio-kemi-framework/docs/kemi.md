@@ -556,7 +556,7 @@ int mod_register(char *path, int *dlflags, void *p1, void *p2)
 Note that the exported array is ended by a sentinel of `0`/`NULL` values for all fields.
 
 Exported functions must take first parameter as `sip_msg_t*` type (which is the structure with the SIP message being
-processed), then followed by up to 6 int or str* parameters. When `SR_KEMIP_NONE` is given in the array with the types
+processed), then followed by up to 6 `int` or `str*` parameters. When `SR_KEMIP_NONE` is given in the array with the types
 of parameters, it means there is no parameter from there on (some compilers may rise warning, so it is recommended
 to fill all 6 items in array).
 
@@ -567,7 +567,8 @@ Not all combinations of extra (after `sip_msg_t*`) parameters types are supporte
   * `1 param` - can be `int` of `str*`
   * `2 params` - any combination of `int` or `str*`
   * `3 params` - any combination of `int` or `str*`
-  * `4 params` - all have to be `str*` (other combinations to be added as needed)
+  * `4 params` - several combination of `int` or `str*` (all `str*`, all `int`, first parameters `str*` and the rest `int`,
+  first parameters `int` and the rest `str*`, other combinations to be added as needed)
   * `5 params` - all have to be `str*` (other combinations to be added as needed)
   * `6 params` - all have to be `str*` (other combinations to be added as needed)
 
