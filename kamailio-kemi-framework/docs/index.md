@@ -59,11 +59,12 @@ execution.
 With KEMI routing script, the `kamailio.cfg` keeps only the parts with:
 
   * global parameters
-  * loading modules and
+  * loading modules
   * modules settings
 
 All of these parts are evaluated only once at startup. Many of the global and module parameters can be changed at
-runtime via `RPC` commands.
+runtime via `RPC` commands. Few `event_route` blocks that are executed during start up may have to be defined
+inside `kamailio.cfg`, they are executed only once, not being used for SIP routing.
 
 The KEMI comes in the picture by allowing the equivalent of routing blocks to be written in a different scripting
 language. In other words, the routing blocks are now functions written in a KEMI supported scripting language.
