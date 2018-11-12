@@ -1,4 +1,6 @@
-# This file generates the modules.md content
+# tool to generate the modules.md content
+#
+
 import os, json, sys, time, fnmatch, re
 
 
@@ -26,7 +28,7 @@ class ModuleDocGenerator(object):
         for elem in functions:
             module = elem["module"]
 
-            # TODO: What about the pvx module?
+            # TODO: What about the hdr, pv, x sub-module?
             if module == "":
                 module = "core"
 
