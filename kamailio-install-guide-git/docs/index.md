@@ -1,6 +1,6 @@
-# Kamailio v5.2 - Install Guide #
+# Kamailio v5.3 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.2 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.3 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.2.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.3.0)
 with MySQL support, using a Debian unstable system.*
 
 
@@ -386,7 +386,7 @@ Now you have the latest Kamailio devel running on your system.
 ### When To Update ###
 
 Notification about GIT commits are sent to the mailing list:
-**sr-dev@lists.sip-router.org**. Each commit notification contains the reference
+**sr-dev@lists.kamailio.org**. Each commit notification contains the reference
 to the branch where the commit has been done. If the commit message contains
 the lines:
 
