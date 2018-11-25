@@ -6,7 +6,7 @@ For more details about Kamailio Project visit: [kamailio.org](https://www.kamail
 
 Kamailio packages are included in the official Debian Stable repository. At the
 time of writing the initial version of this tutorial, Debian Stable codename is
-Jessie, version 8.x.
+Stretch, version 9.x.
 
 This tutorial should just work for latest Ubuntu versions as well.
 
