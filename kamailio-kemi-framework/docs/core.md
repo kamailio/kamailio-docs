@@ -238,6 +238,18 @@ domain.
 Return true if the URI in To header matches a local socket (IP) or local
 domain.
 
+### KSR.is_myself_suri() ###
+
+`bool is_myself_suri()`
+
+Return true if the URI built from source IP, source port and protocol matches a local socket (IP).
+
+### KSR.is_myself_suri() ###
+
+`bool is_myself_srcip()`
+
+Return true if the source IP matches a local socket (IP).
+
 ### void KSR.log(...) ###
 
 `void KSR.log(str "level", str "msg")`
