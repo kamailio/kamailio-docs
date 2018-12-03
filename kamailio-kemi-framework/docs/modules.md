@@ -2350,6 +2350,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.is_privacy'> `int is_privacy(str "privacy")` </a>
 
+#### KSR.textops.regex_substring() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.regex_substring'> `int regex_substring(str "input", str "regex", int mindex, int nmatch, str "dst")` </a>
+
 #### KSR.textops.remove_body_part() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.remove_body_part'> `int remove_body_part(str "content_type")` </a>
