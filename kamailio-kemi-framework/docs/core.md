@@ -464,25 +464,39 @@ KSR.set_drop();
 
 `int set_advertised_address(str "addr")`
 
+Set the address (host or ip) to be advertised in Via header.
+
 ### KSR.set_advertised_port() ###
 
 `int set_advertised_port(str "port")`
+
+Set the port (in string format) to be advertised in Via header.
 
 ### KSR.set_forward_close(...) ###
 
 `bool KSR.set_forward_close()`
 
+Set the flag to close the connection after forwarding the message.
+
 ### KSR.set_forward_no_connect(...) ###
 
 `bool KSR.set_forward_no_connect()`
+
+Set the flag to not open a connection if the connection to the target does not exist when attempting
+to forward a message.
 
 ### KSR.set_reply_close(...) ###
 
 `bool KSR.set_reply_close()`
 
+Set the flag to close the connection after sending a response.
+
 ### KSR.set_reply_no_connect(...) ###
 
 `bool KSR.set_reply_no_connect()`
+
+Set the flag to not open a connection if the connection for sending the response
+does not exist.
 
 ### KSR.forward(...) ###
 
