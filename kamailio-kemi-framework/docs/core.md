@@ -217,12 +217,24 @@ Return true if the method type of the SIP message is `PRACK`.
 Return true of the URI address provided as parameter matches a local socket (IP)
 or local domain.
 
+```Lua
+if KSR.is_myself("sip:127.0.0.1:5060") then
+  ...
+end
+```
+
 ### KSR.is_myself_furi() ###
 
 `bool is_myself_furi()`
 
 Return true if the URI in From header matches a local socket (IP) or local
 domain.
+
+```Lua
+if KSR.is_myself_furi() then
+  ...
+end
+```
 
 ### KSR.is_myself_ruri() ###
 
@@ -231,6 +243,12 @@ domain.
 Return true if the R-URI matches a local socket (IP) or local
 domain.
 
+```Lua
+if KSR.is_myself_ruri() then
+  ...
+end
+```
+
 ### KSR.is_myself_turi() ###
 
 `bool is_myself_turi()`
@@ -238,17 +256,35 @@ domain.
 Return true if the URI in To header matches a local socket (IP) or local
 domain.
 
+```Lua
+if KSR.is_myself_turi() then
+  ...
+end
+```
+
 ### KSR.is_myself_suri() ###
 
 `bool is_myself_suri()`
 
 Return true if the URI built from source IP, source port and protocol matches a local socket (IP).
 
+```Lua
+if KSR.is_myself_suri() then
+  ...
+end
+```
+
 ### KSR.is_myself_suri() ###
 
 `bool is_myself_srcip()`
 
 Return true if the source IP matches a local socket (IP).
+
+```Lua
+if KSR.is_myself_srcip() then
+  ...
+end
+```
 
 ### void KSR.log(...) ###
 
