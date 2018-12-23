@@ -23,17 +23,33 @@ Exported functions from core directly to KSR module or KSR.hdr submodule are lis
 
 Set the internal flag to add rport parameter to local generated Via header.
 
+Example:
+
+```
+KSR.add_local_rport();
+```
+
 ### KSR.add_tcp_alias() ###
 
 `add_tcp_alias(int port)`
 
 Adds a tcp port alias for the current connection (if tcp). Useful if you want to send all the trafic to port_alias through the same connection this request came from (it could help for firewall or nat traversal). When the `aliased` connection is closed (e.g. it is idle for too much time), all the port aliases are removed.
 
+```
+KSR.add_tcp_alias(5080);
+```
+
 ### KSR.add_tcp_alias_via() ###
 
 `int add_tcp_alias_via()`
 
 Adds the port from the message via as an alias to TCP connection. See `add_tcp_alias(int port)` for more details.
+
+Example:
+
+```
+KSR.add_tcp_alias_via();
+```
 
 ### void KSR.dbg(...) ###
 
