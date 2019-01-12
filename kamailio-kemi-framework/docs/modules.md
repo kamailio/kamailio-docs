@@ -396,7 +396,7 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 #### KSR.cnxcc.set_max_credit() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/cnxcc.html#cnxcc.f.set_max_credit'> `int set_max_credit(str "sclient", str "scredit", str "scps", int initp, int finishp)` </a>
+<a target='_blank' href='/docs/modules/devel/modules/cnxcc.html#cnxcc.f.set_max_credit'> `int set_max_credit(str "sclient", str "scredit", str "sconnect", str "scps", int initp, int finishp)` </a>
 
 #### KSR.cnxcc.set_max_time() ####
 
@@ -1812,6 +1812,14 @@ This module enables media streams to be proxied via an RTPproxy.
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_offer0'> `int rtpengine_offer0()` </a>
 
+#### KSR.rtpengine.rtpengine_query() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_query'> `int rtpengine_query(str "flags")` </a>
+
+#### KSR.rtpengine.rtpengine_query0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_query0'> `int rtpengine_query0()` </a>
+
 #### KSR.rtpengine.set_rtpengine_set() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.set_rtpengine_set'> `int set_rtpengine_set(int r1)` </a>
@@ -2771,6 +2779,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.tmx.t_continue() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tmx.html#tmx.f.t_continue'> `int t_continue(int tindex, int tlabel, str "cbname")` </a>
+
+#### KSR.tmx.t_drop() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tmx.html#tmx.f.t_drop'> `int t_drop()` </a>
+
+#### KSR.tmx.t_drop_rcode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tmx.html#tmx.f.t_drop_rcode'> `int t_drop_rcode(int rcode)` </a>
 
 #### KSR.tmx.t_flush_flags() ####
 
