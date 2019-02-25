@@ -24,7 +24,7 @@ The KEMI scripting language identifiers are:
 ### JavaScript KEMI Interpreter ###
 
 It is implemented by `app_jsdt` module. The JavaScript interpreter is imported inside the module from
-[DukTape](www.ducktape.org) project, therefore it doesn't require to install any external libraries.
+[DukTape](https://www.duktape.org/) project, therefore it doesn't require to install any external libraries.
 
 To use it, set inside `kamailio.cfg`:
 
