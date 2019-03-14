@@ -114,6 +114,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/app_python.html#app_python.f.exec_p1'> `int exec_p1(str "method", str "p1")` </a>
 
+#### KSR.app_python.execx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_python.html#app_python.f.execx'> `int execx(str "method")` </a>
+
 ## app_python3 ##
 
 #### KSR.app_python3.exec() ####
@@ -123,6 +127,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.app_python3.exec_p1() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/app_python3.html#app_python3.f.exec_p1'> `int exec_p1(str "method", str "p1")` </a>
+
+#### KSR.app_python3.execx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/app_python3.html#app_python3.f.execx'> `int execx(str "method")` </a>
 
 ## app_ruby ##
 
@@ -874,6 +882,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/exec.html#exec.f.exec_avp'> `int exec_avp(str "cmd")` </a>
 
+#### KSR.exec.exec_cmd() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/exec.html#exec.f.exec_cmd'> `int exec_cmd(str "cmd")` </a>
+
 #### KSR.exec.exec_dset() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/exec.html#exec.f.exec_dset'> `int exec_dset(str "cmd")` </a>
@@ -1097,6 +1109,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.jsonrpcs.exec() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.exec'> `int exec(str "scmd")` </a>
+
+#### KSR.jsonrpcs.execx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.execx'> `int execx(str "scmd")` </a>
 
 ## keepalive ##
 
@@ -1391,6 +1407,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.ndb_mongodb.exec_simple() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/ndb_mongodb.html#ndb_mongodb.f.exec_simple'> `int exec_simple(str "ssrv", str "sdname", str "scname", str "scmd", str "sres")` </a>
+
+#### KSR.ndb_mongodb.execx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/ndb_mongodb.html#ndb_mongodb.f.execx'> `int execx(str "ssrv", str "sdname", str "scname", str "scmd", str "sres")` </a>
 
 #### KSR.ndb_mongodb.find() ####
 
@@ -1762,7 +1782,7 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 #### KSR.rtjson.init_routes() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/rtjson.html#rtjson.f.init_routes'> `int init_routes(str "rdoc")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/rtjson.html#rtjson.f.init_routes'> `int init_routes(str "srdoc")` </a>
 
 #### KSR.rtjson.next_route() ####
 
@@ -2655,6 +2675,18 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.tm.t_relay() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay'> `int t_relay()` </a>
+
+#### KSR.tm.t_relay_to_flags() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_flags'> `int t_relay_to_flags(int rflags)` </a>
+
+#### KSR.tm.t_relay_to_proxy() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_proxy'> `int t_relay_to_proxy(str "sproxy")` </a>
+
+#### KSR.tm.t_relay_to_proxy_flags() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_proxy_flags'> `int t_relay_to_proxy_flags(str "sproxy", int rflags)` </a>
 
 #### KSR.tm.t_release() ####
 
