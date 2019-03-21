@@ -29,7 +29,7 @@ development versions, is presented at:
   * [Kamailio APT Repos: Debian - Ubuntu](https://deb.kamailio.org/)
 
 For example, if you want to install Kamailio v5.2.x on Debian Strech, add the next
-URL to APT configuration:
+URLs to APT configuration:
 
 ```
 deb     http://deb.kamailio.org/kamailio52 stretch main
@@ -176,3 +176,27 @@ kamctl add alice secret
 Then you can configure your phone to register to `Kamailio` using the username
 and password set in the above command.
 
+## Support ##
+
+Questions about how to use Kamailio and the content of kamailio.cfg can be
+addressed via email to:
+
+  * [sr-users@lists.kamailio.org](http://lists.kamailio.org/cgi-bin/mailman/listinfo/sr-users)
+
+More documentation resources can be found at:
+
+  * [www.kamailio.org/w/documentation](https://www.kamailio.org/w/documentation/)
+  * [www.kamailio.org/wiki](https://www.kamailio.org/wiki/)
+
+## Contributions ##
+
+Anyone is welcome to contribute to this document. It is recommended to make a
+pull request via:
+
+  * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
+
+This version of the document is in GIT branch `master`.
+
+Errors and other issues can be reported via the tracker at:
+
+  * [github.com/kamailio/kamailio-docs/issues](https://github.com/kamailio/kamailio-docs/issues)
