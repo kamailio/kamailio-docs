@@ -4,14 +4,37 @@ For more details about Kamailio Project visit: [kamailio.org](https://www.kamail
 
 ## Overview ##
 
-Kamailio packages are included in the official Debian Stable repository. At the
-time of writing the initial version of this tutorial, Debian Stable codename is
-Stretch, version 9.x.
+Kamailio packages are included in the official Debian Stable repository since version 8.0,
+and continues to be in the current Stable (9.x, codename Stretch).
 
 This tutorial should just work for latest Ubuntu versions as well.
 
 **_The focus of this tutorial is to install Kamailio with MySQL backend using
 deb packages._**
+
+### Alternative APT Repositories ###
+
+Debian Stable includes the Kamailio version which was available at the time of
+their release. Giving that Debian is releasing a new major version like every
+2 years, the Kamailio included in the distro can be older than the current stable
+release.
+
+If you want to use a more recent version of Kamailio, you can use the APT repositories
+hosted by Kamailio project.
+
+The list of `APT` repositories offered by `Kamailio` project for
+various `Debian` or `Ubuntu` versions, including nightly builds for stable and
+development versions, is presented at:
+
+  * [Kamailio APT Repos: Debian - Ubuntu](https://deb.kamailio.org/)
+
+For example, if you want to install Kamailio v5.2.x on Debian Strech, add the next
+URL to APT configuration:
+
+```
+deb     http://deb.kamailio.org/kamailio52 stretch main
+deb-src http://deb.kamailio.org/kamailio52 stretch main
+```
 
 ## APT Install Commands ###
 
@@ -153,10 +176,3 @@ kamctl add alice secret
 Then you can configure your phone to register to `Kamailio` using the username
 and password set in the above command.
 
-## Alternative APT Repositories ##
-
-You can check the list of `APT` repositories offered by `Kamailio` project for
-various `Debian` or `Ubuntu` versions, including nightly builds for stable and
-development versions:
-
-  * [https://www.kamailio.org/wiki/packages/debs](DEBS: Debian - Ubuntu)
