@@ -384,6 +384,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.shm_summary'> `int shm_summary()` </a>
 
+#### KSR.cfgutils.sleep() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.sleep'> `int sleep(int v)` </a>
+
 #### KSR.cfgutils.trylock() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.trylock'> `int trylock(str "lkey")` </a>
@@ -391,6 +395,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.cfgutils.unlock() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.unlock'> `int unlock(str "lkey")` </a>
+
+#### KSR.cfgutils.usleep() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.usleep'> `int usleep(int v)` </a>
 
 ## cnxcc ##
 
@@ -1644,6 +1652,22 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_params_implode'> `int xavp_params_implode(str "sxname", str "svname")` </a>
 
+#### KSR.pvx.xavp_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_rm'> `int xavp_rm(str "rname")` </a>
+
+#### KSR.pvx.xavp_rm_child() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_rm_child'> `int xavp_rm_child(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_set_child_ival() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_set_child_ival'> `int xavp_set_child_ival(str "rname", str "cname", int ival)` </a>
+
+#### KSR.pvx.xavp_set_child_sval() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_set_child_sval'> `int xavp_set_child_sval(str "rname", str "cname", str "sval")` </a>
+
 ## rabbitmq ##
 
 #### KSR.rabbitmq.publish() ####
@@ -2103,6 +2127,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.siptrace.sip_trace_dst_cid() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_dst_cid'> `int sip_trace_dst_cid(str "duri", str "cid")` </a>
+
+#### KSR.siptrace.sip_trace_dst_cid_type() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_dst_cid_type'> `int sip_trace_dst_cid_type(str "duri", str "cid", str "sflag")` </a>
 
 ## siputils ##
 
