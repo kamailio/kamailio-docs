@@ -143,6 +143,11 @@ Example:
 KSR.x.modf("sl_send_reply", "200", "OK");
 ```
 
+Important note: try not to use this function, prefer the use of dedicated KSR fuctions. If you have to use
+this function, check if it has fixup and fixup-free functions in the C code in order to avoid memory leaks.
+If you are not sure how to do the check, ask on sr-users mailing list if it is safe to use it for a specific
+module fuction.
+
 ### KSR.x.exit(...) ###
 
 `void KSR.x.exit()`
