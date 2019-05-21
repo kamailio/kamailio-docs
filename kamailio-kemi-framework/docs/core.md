@@ -290,7 +290,7 @@ if KSR.is_myself_suri() then
 end
 ```
 
-### KSR.is_myself_suri() ###
+### KSR.is_myself_srcip() ###
 
 `bool is_myself_srcip()`
 
