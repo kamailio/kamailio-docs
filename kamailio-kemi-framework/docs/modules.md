@@ -1164,9 +1164,13 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhost'> `xval get_rhost()` </a>
 
-#### KSR.kx.get_rhostx() ####
+#### KSR.kx.get_rhoste() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhostx'> `xval get_rhostx(int xmode)` </a>
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhoste'> `xval get_rhoste()` </a>
+
+#### KSR.kx.get_rhostw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhostw'> `xval get_rhostw()` </a>
 
 #### KSR.kx.get_ruri() ####
 
@@ -1176,9 +1180,13 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
 
-#### KSR.kx.get_ruserx() ####
+#### KSR.kx.get_rusere() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruserx'> `xval get_ruserx(int xmode)` </a>
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rusere'> `xval get_rusere()` </a>
+
+#### KSR.kx.get_ruserw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruserw'> `xval get_ruserw()` </a>
 
 #### KSR.kx.get_turi() ####
 
