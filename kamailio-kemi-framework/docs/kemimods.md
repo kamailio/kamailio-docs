@@ -55,7 +55,7 @@ KSR.dbg("avp is: " + KSR.pv.getvn("$avp(x)", 0) + "\n");
 
 ### KSR.pv.getvs(...) ###
 
-`val KSR.pv.getvs(str "pvname", int vn)`
+`val KSR.pv.getvs(str "pvname", str "vs")`
 
 Return the value of pseudo-variable `pvname` if it is different than `$null` or the parameter `vs`
 if the variable is having the `$null` value.
