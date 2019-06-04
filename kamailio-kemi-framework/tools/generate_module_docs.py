@@ -228,6 +228,8 @@ class KemiFileExportParser(object):
                 val_return = "void"
             elif declarations[2] == "SR_KEMIP_BOOL":
                 val_return = "bool"
+            elif declarations[2] == "SR_KEMIP_XVAL":
+                val_return = "xval"
             else:
                 print "ERR: Invalid return value", declarations[2], func
                 exit()
@@ -326,13 +328,17 @@ class KemiFileExportParser(object):
         param_string = None
         found = False
         temp_string = ""
+        return_match = return_type
 
         # KEMI has some magic where most functions actually return INTs but KEMI maps them to void/bool
         if return_type == "void" or return_type == "bool":
-            return_type = "int"
+            return_match = "int"
+
+        if return_type == "xval":
+            return_match = "sr_kemi_xval_t([ \t])*\*"
 
         # Look for declarations in format:    static? return_type function_name(
-        r = re.compile("^(?:static )?" + return_type + "[ \t]*(" + function_name + ")\(")
+        r = re.compile("^(?:static )?" + return_match + "[ \t]*(" + function_name + ")\(")
         for line in lines:
             m = r.match(line)
             if m:
