@@ -5,6 +5,10 @@ The exports to KEMI framework from the core of Kamailio:
   * several functions directly to `KSR` module (like `KSR.function(params)`), which are mostly
   the main functions from the core and for writing log messages (some being part of xlog module for
   native kamailio.cfg language)
+  * the `KSR.pv` submodule, which are the generic functions to manage pseudo-variables, like set and get
+  operations (some types of variables can have dedicated functions exported by various module, like
+  `htable` to work with items in the shared memory hash table, or r-uri and xavp operations from `pv`
+  and `kemix` modules).
   * the `KSR.hdr` submodule, which are the most used functions for managing SIP message headers
   (some of the functions in this submodules correspond to the ones in `textops` or `textopsx`
   modules for `kamailio.cfg`).
@@ -567,6 +571,132 @@ URI parameter.
 ```
 KSR.forward_uri("sip:127.0.0.1:5080;transport=tcp");
 ```
+
+### KSR.pv. Submodule ###
+
+`KSR.pv` submodule provides the functions to get, set and test the values of pseduo-variables. 
+
+The `pvname` that appears in the next sections in the function prototypes has to be a valid pseudo-variable name for
+ Kamailio native configuration file (for example `$ru`, `$var(x)`, `$shv(z)`, ...).
+
+Note: functions exported by Kamailio's `pv` module are in `KSR.pvx` package.
+
+### KSR.pv.get(...) ###
+
+`xval KSR.pv.get(str "pvname")`
+
+Return the value of pseudo-variable `pvname`. The returned value can be string or integer.
+
+Example:
+
+```
+KSR.dbg("ruri is: " + KSR.pv.get("$ru") + "\n");
+```
+
+### KSR.pv.gete(...) ###
+
+`xval KSR.pv.gete(str "pvname")`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the empty string
+("") if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.gete("$avp(x)") + "\n");
+```
+
+### KSR.pv.getvn(...) ###
+
+`xval KSR.pv.getvn(str "pvname", int vn)`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the parameter `vn`
+if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.getvn("$avp(x)", 0) + "\n");
+```
+
+### KSR.pv.getvs(...) ###
+
+`xval KSR.pv.getvs(str "pvname", str "vs")`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the parameter `vs`
+if the variable is having the `$null` value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.getvs("$avp(x)", "foo") + "\n");
+```
+
+### KSR.pv.getw(...) ###
+
+`xval KSR.pv.getw(str "pvname")`
+
+Return the value of pseudo-variable `pvname` if it is different than `$null` or the string `<<null>>`
+if the variable is having the `$null` value. This should be used instead of `KSR.pv.get(...)`
+in the scripting languages that throw and error when attempting to print a `NULL` (or `NIL`) value.
+
+Example:
+
+```
+KSR.dbg("avp is: " + KSR.pv.getw("$avp(x)") + "\n");
+```
+
+### KSR.pv.seti(...) ###
+
+`void KSR.pv.seti(str "pvname", int val)`
+
+Set the value of pseudo-variable `pvname` to integer value provided by parameter `val`.
+
+Example:
+
+```
+KSR.pv.seti("$var(x)", 10);
+```
+
+### KSR.pv.sets(...) ###
+
+`void KSR.pv.sets(str "pvname", str "val")`
+
+Set the value of pseudo-variable `pvname` to string value provided by parameter `val`.
+
+Example:
+
+```
+KSR.pv.sets("$var(x)", "kamailio");
+```
+
+### KSR.pv.unset(...) ###
+
+`void KSR.pv.unset(str "pvname")`
+
+Set the value of pseudo-variable `pvname` to `$null`.
+
+Example:
+
+```
+KSR.pv.unset("$avp(x)");
+```
+
+### KSR.pv.is_null(...) ###
+
+`bool KSR.pv.is_null(str "pvname")`
+
+Return true if pseudo-variable `pvname` is `$null`.
+
+Example:
+
+```
+if(KSR.pv.is_null("$avp(x)")) {
+  ...
+}
+```
+
+### KSR.hdr Submodule ###
 
 ### KSR.hdr.append(...) ###
 

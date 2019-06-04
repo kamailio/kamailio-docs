@@ -465,7 +465,7 @@ The bool return code is expected to be evaluated as `true` or `false` inside the
 
 If a function has `void` as return type in the signature, the it doesn't return any value.
 
-Few functions may return a string value, for example in the `KSR.pv` submodule to get the value of pseudo-variables.
+Several functions may return a string or `xval` value, for example in the `KSR.pv` submodule to get the value of pseudo-variables. If a function returns `xval`, then the result value can be `string`, `integer` or `null`.
 
 The convention for the parameters in the signature of the functions is to enclose in double quotes if the parameter
 has a string type and no quotes if the parameter has integer type.
@@ -567,8 +567,7 @@ Not all combinations of extra (after `sip_msg_t*`) parameters types are supporte
   * `1 param` - can be `int` of `str*`
   * `2 params` - any combination of `int` or `str*`
   * `3 params` - any combination of `int` or `str*`
-  * `4 params` - several combination of `int` or `str*` (all `str*`, all `int`, first parameters `str*` and the rest `int`,
-  first parameters `int` and the rest `str*`, other combinations to be added as needed)
-  * `5 params` - all have to be `str*` (other combinations to be added as needed)
+  * `4 params` - any combination of `int` or `str*`
+  * `5 params` - any combination of `int` or `str*`
   * `6 params` - all have to be `str*` (other combinations to be added as needed)
 
