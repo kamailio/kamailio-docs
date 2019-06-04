@@ -4,8 +4,8 @@ extra_css: [extra.css]
 pages:
     - 'Kamailio KEMI Framework': 'index.md'
     - 'KEMI Interpreters': 'kemi.md'
-    - 'Core Functions': 'core.md'
-    - 'PV And Special Functions': 'kemimods.md'
+    - 'Core And PV Functions': 'core.md'
+    - 'Special Functions': 'kemimods.md'
     - 'Module Functions': 'modules.md'
     - 'Support': 'support.md'
     - 'Contributions': 'contributions.md'
