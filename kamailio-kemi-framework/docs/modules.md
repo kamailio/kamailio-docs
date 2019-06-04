@@ -922,6 +922,18 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## htable ##
 
+#### KSR.htable.sht_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_get'> `xval sht_get(str "htname", str "itname")` </a>
+
+#### KSR.htable.sht_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_gete'> `xval sht_gete(str "htname", str "itname")` </a>
+
+#### KSR.htable.sht_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_getw'> `xval sht_getw(str "htname", str "itname")` </a>
+
 #### KSR.htable.sht_has_name() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_has_name'> `int sht_has_name(str "sname", str "sop", str "sval")` </a>
@@ -1137,6 +1149,40 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.kex.setdebug() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kex.html#kex.f.setdebug'> `int setdebug(int lval)` </a>
+
+## kx ##
+
+#### KSR.kx.get_furi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_furi'> `xval get_furi()` </a>
+
+#### KSR.kx.get_ouri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ouri'> `xval get_ouri()` </a>
+
+#### KSR.kx.get_rhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhost'> `xval get_rhost()` </a>
+
+#### KSR.kx.get_rhostx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhostx'> `xval get_rhostx(int xmode)` </a>
+
+#### KSR.kx.get_ruri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruri'> `xval get_ruri()` </a>
+
+#### KSR.kx.get_ruser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
+
+#### KSR.kx.get_ruserx() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruserx'> `xval get_ruserx(int xmode)` </a>
+
+#### KSR.kx.get_turi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_turi'> `xval get_turi()` </a>
 
 ## lcr ##
 
