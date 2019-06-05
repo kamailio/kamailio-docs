@@ -789,3 +789,44 @@ Example:
 ```
 KSR.hdr.append_to_reply("X-My-Hdr: " + KSR.pv.getw("$si") + "\r\n");
 ```
+
+### KSR.hdr.get(...) ###
+
+`xval KSR.hdr.get(str "hname")`
+
+Return the value of the header matching the name with `hname` or `NULL` if that
+header is not found.
+
+Example:
+
+```
+v = KSR.hdr.get("X-My-Hdr");
+```
+
+### KSR.hdr.gete(...) ###
+
+`xval KSR.hdr.gete(str "hname")`
+
+Return the value of the header matching the name with `hname` or empty string
+if that header is not found.
+
+
+Example:
+
+```
+v = KSR.hdr.gete("X-My-Hdr");
+```
+
+### KSR.hdr.getw(...) ###
+
+`xval KSR.hdr.getw(str "hname")`
+
+Return the value of the header matching the name with `hname` or string `<<null>>`
+if that header is not found.
+
+
+Example:
+
+```
+v = KSR.hdr.getw("X-My-Hdr");
+```
