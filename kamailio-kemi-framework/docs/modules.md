@@ -1164,14 +1164,6 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhost'> `xval get_rhost()` </a>
 
-#### KSR.kx.get_rhoste() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhoste'> `xval get_rhoste()` </a>
-
-#### KSR.kx.get_rhostw() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhostw'> `xval get_rhostw()` </a>
-
 #### KSR.kx.get_ruri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruri'> `xval get_ruri()` </a>
@@ -1180,17 +1172,37 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
 
-#### KSR.kx.get_rusere() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rusere'> `xval get_rusere()` </a>
-
-#### KSR.kx.get_ruserw() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruserw'> `xval get_ruserw()` </a>
-
 #### KSR.kx.get_turi() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_turi'> `xval get_turi()` </a>
+
+#### KSR.kx.get_ua() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ua'> `xval get_ua()` </a>
+
+#### KSR.kx.gete_rhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_rhost'> `xval gete_rhost()` </a>
+
+#### KSR.kx.gete_ruser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_ruser'> `xval gete_ruser()` </a>
+
+#### KSR.kx.gete_ua() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_ua'> `xval gete_ua()` </a>
+
+#### KSR.kx.getw_rhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_rhost'> `xval getw_rhost()` </a>
+
+#### KSR.kx.getw_ruser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_ruser'> `xval getw_ruser()` </a>
+
+#### KSR.kx.getw_ua() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_ua'> `xval getw_ua()` </a>
 
 ## lcr ##
 
@@ -1697,6 +1709,30 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.pvx.sbranch_set_ruri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_set_ruri'> `int sbranch_set_ruri()` </a>
+
+#### KSR.pvx.xavp_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get'> `xval xavp_get(str "rname")` </a>
+
+#### KSR.pvx.xavp_get_child() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get_child'> `xval xavp_get_child(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete'> `xval xavp_gete(str "rname")` </a>
+
+#### KSR.pvx.xavp_gete_child() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete_child'> `xval xavp_gete_child(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getw'> `xval xavp_getw(str "rname")` </a>
+
+#### KSR.pvx.xavp_getw_child() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getw_child'> `xval xavp_getw_child(str "rname", str "cname")` </a>
 
 #### KSR.pvx.xavp_params_explode() ####
 
