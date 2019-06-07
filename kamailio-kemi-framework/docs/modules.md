@@ -1350,6 +1350,30 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mq_size'> `int mq_size(str "mq")` </a>
 
+#### KSR.mqueue.mqk_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqk_get'> `xval mqk_get(str "qname")` </a>
+
+#### KSR.mqueue.mqk_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqk_gete'> `xval mqk_gete(str "qname")` </a>
+
+#### KSR.mqueue.mqk_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqk_getw'> `xval mqk_getw(str "qname")` </a>
+
+#### KSR.mqueue.mqv_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqv_get'> `xval mqv_get(str "qname")` </a>
+
+#### KSR.mqueue.mqv_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqv_gete'> `xval mqv_gete(str "qname")` </a>
+
+#### KSR.mqueue.mqv_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqueue.html#mqueue.f.mqv_getw'> `xval mqv_getw(str "qname")` </a>
+
 ## msilo ##
 
 #### KSR.msilo.mdump() ####
@@ -1682,6 +1706,34 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## pvx ##
 
+#### KSR.pvx.avp_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_get'> `xval avp_get(str "xname")` </a>
+
+#### KSR.pvx.avp_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_gete'> `xval avp_gete(str "xname")` </a>
+
+#### KSR.pvx.avp_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_getw'> `xval avp_getw(str "xname")` </a>
+
+#### KSR.pvx.avp_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_is_null'> `int avp_is_null(str "xname")` </a>
+
+#### KSR.pvx.avp_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_rm'> `int avp_rm(str "xname")` </a>
+
+#### KSR.pvx.avp_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_seti'> `int avp_seti(str "xname", int vn)` </a>
+
+#### KSR.pvx.avp_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.avp_sets'> `int avp_sets(str "xname", str "vs")` </a>
+
 #### KSR.pvx.evalx() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.evalx'> `int evalx(str "dst", str "fmt")` </a>
@@ -1710,29 +1762,49 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_set_ruri'> `int sbranch_set_ruri()` </a>
 
+#### KSR.pvx.xavp_child_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_get'> `xval xavp_child_get(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_child_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_gete'> `xval xavp_child_gete(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_child_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_getw'> `xval xavp_child_getw(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_child_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_is_null'> `int xavp_child_is_null(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_child_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_rm'> `int xavp_child_rm(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavp_child_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_seti'> `int xavp_child_seti(str "rname", str "cname", int ival)` </a>
+
+#### KSR.pvx.xavp_child_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_sets'> `int xavp_child_sets(str "rname", str "cname", str "sval")` </a>
+
 #### KSR.pvx.xavp_get() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get'> `xval xavp_get(str "rname")` </a>
-
-#### KSR.pvx.xavp_get_child() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get_child'> `xval xavp_get_child(str "rname", str "cname")` </a>
 
 #### KSR.pvx.xavp_gete() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete'> `xval xavp_gete(str "rname")` </a>
 
-#### KSR.pvx.xavp_gete_child() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete_child'> `xval xavp_gete_child(str "rname", str "cname")` </a>
-
 #### KSR.pvx.xavp_getw() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getw'> `xval xavp_getw(str "rname")` </a>
 
-#### KSR.pvx.xavp_getw_child() ####
+#### KSR.pvx.xavp_is_null() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getw_child'> `xval xavp_getw_child(str "rname", str "cname")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_is_null'> `int xavp_is_null(str "rname")` </a>
 
 #### KSR.pvx.xavp_params_explode() ####
 
@@ -1746,17 +1818,13 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_rm'> `int xavp_rm(str "rname")` </a>
 
-#### KSR.pvx.xavp_rm_child() ####
+#### KSR.pvx.xavp_seti() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_rm_child'> `int xavp_rm_child(str "rname", str "cname")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_seti'> `int xavp_seti(str "rname", int ival)` </a>
 
-#### KSR.pvx.xavp_set_child_ival() ####
+#### KSR.pvx.xavp_sets() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_set_child_ival'> `int xavp_set_child_ival(str "rname", str "cname", int ival)` </a>
-
-#### KSR.pvx.xavp_set_child_sval() ####
-
-<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_set_child_sval'> `int xavp_set_child_sval(str "rname", str "cname", str "sval")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_sets'> `int xavp_sets(str "rname", str "sval")` </a>
 
 ## rabbitmq ##
 
