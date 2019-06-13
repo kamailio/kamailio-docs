@@ -608,6 +608,30 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.unset_dlg_profile_static'> `int unset_dlg_profile_static(str "sprofile")` </a>
 
+#### KSR.dialog.var_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_get'> `xval var_get(str "name")` </a>
+
+#### KSR.dialog.var_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_gete'> `xval var_gete(str "name")` </a>
+
+#### KSR.dialog.var_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_getw'> `xval var_getw(str "name")` </a>
+
+#### KSR.dialog.var_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_is_null'> `int var_is_null(str "name")` </a>
+
+#### KSR.dialog.var_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_rm'> `int var_rm(str "name")` </a>
+
+#### KSR.dialog.var_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.var_sets'> `int var_sets(str "name", str "val")` </a>
+
 ## dialplan ##
 
 #### KSR.dialplan.dp_match() ####
