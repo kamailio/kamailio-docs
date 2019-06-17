@@ -1184,6 +1184,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ouri'> `xval get_ouri()` </a>
 
+#### KSR.kx.get_rcvip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvip'> `xval get_rcvip()` </a>
+
+#### KSR.kx.get_rcvport() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvport'> `xval get_rcvport()` </a>
+
 #### KSR.kx.get_rhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhost'> `xval get_rhost()` </a>
@@ -1195,6 +1203,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.kx.get_ruser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
+
+#### KSR.kx.get_srcip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_srcip'> `xval get_srcip()` </a>
+
+#### KSR.kx.get_srcport() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_srcport'> `xval get_srcport()` </a>
 
 #### KSR.kx.get_turi() ####
 
@@ -3265,6 +3281,80 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.xhttp_pi.dispatch() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/xhttp_pi.html#xhttp_pi.f.dispatch'> `int dispatch()` </a>
+
+## xhttp_prom ##
+
+#### KSR.xhttp_prom.check_uri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.check_uri'> `int check_uri()` </a>
+
+#### KSR.xhttp_prom.counter_inc_l0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_inc_l0'> `int counter_inc_l0(str "s_name", int number)` </a>
+
+#### KSR.xhttp_prom.counter_inc_l1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_inc_l1'> `int counter_inc_l1(str "s_name", int number, str "l1")` </a>
+
+#### KSR.xhttp_prom.counter_inc_l2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_inc_l2'> `int counter_inc_l2(str "s_name", int number, str "l1", str "l2")` </a>
+
+#### KSR.xhttp_prom.counter_inc_l3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_inc_l3'> `int counter_inc_l3(str "s_name", int number, str "l1", str "l2", str "l3")` </a>
+
+#### KSR.xhttp_prom.counter_reset_l0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_reset_l0'> `int counter_reset_l0(str "s_name")` </a>
+
+#### KSR.xhttp_prom.counter_reset_l1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_reset_l1'> `int counter_reset_l1(str "s_name", str "l1")` </a>
+
+#### KSR.xhttp_prom.counter_reset_l2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_reset_l2'> `int counter_reset_l2(str "s_name", str "l1", str "l2")` </a>
+
+#### KSR.xhttp_prom.counter_reset_l3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.counter_reset_l3'> `int counter_reset_l3(str "s_name", str "l1", str "l2", str "l3")` </a>
+
+#### KSR.xhttp_prom.dispatch() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.dispatch'> `int dispatch()` </a>
+
+#### KSR.xhttp_prom.gauge_reset_l0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_reset_l0'> `int gauge_reset_l0(str "s_name")` </a>
+
+#### KSR.xhttp_prom.gauge_reset_l1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_reset_l1'> `int gauge_reset_l1(str "s_name", str "l1")` </a>
+
+#### KSR.xhttp_prom.gauge_reset_l2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_reset_l2'> `int gauge_reset_l2(str "s_name", str "l1", str "l2")` </a>
+
+#### KSR.xhttp_prom.gauge_reset_l3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_reset_l3'> `int gauge_reset_l3(str "s_name", str "l1", str "l2", str "l3")` </a>
+
+#### KSR.xhttp_prom.gauge_set_l0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_set_l0'> `int gauge_set_l0(str "s_name", str "s_number")` </a>
+
+#### KSR.xhttp_prom.gauge_set_l1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_set_l1'> `int gauge_set_l1(str "s_name", str "s_number", str "l1")` </a>
+
+#### KSR.xhttp_prom.gauge_set_l2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_set_l2'> `int gauge_set_l2(str "s_name", str "s_number", str "l1", str "l2")` </a>
+
+#### KSR.xhttp_prom.gauge_set_l3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_set_l3'> `int gauge_set_l3(str "s_name", str "s_number", str "l1", str "l2", str "l3")` </a>
 
 ## xhttp_rpc ##
 
