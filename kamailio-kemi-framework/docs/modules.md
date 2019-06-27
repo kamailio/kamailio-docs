@@ -338,6 +338,16 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/call_control.html#call_control.f.call_control'> `int call_control()` </a>
 
+## call_obj ##
+
+#### KSR.call_obj.free() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/call_obj.html#call_obj.f.free'> `int free(int num_obj)` </a>
+
+#### KSR.call_obj.get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/call_obj.html#call_obj.f.get'> `int get()` </a>
+
 ## cfgutils ##
 
 #### KSR.cfgutils.abort() ####
@@ -1176,9 +1186,17 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## kx ##
 
+#### KSR.kx.get_fhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fhost'> `xval get_fhost()` </a>
+
 #### KSR.kx.get_furi() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_furi'> `xval get_furi()` </a>
+
+#### KSR.kx.get_fuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fuser'> `xval get_fuser()` </a>
 
 #### KSR.kx.get_ouri() ####
 
@@ -1220,6 +1238,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ua'> `xval get_ua()` </a>
 
+#### KSR.kx.gete_fhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_fhost'> `xval gete_fhost()` </a>
+
+#### KSR.kx.gete_fuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_fuser'> `xval gete_fuser()` </a>
+
 #### KSR.kx.gete_rhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_rhost'> `xval gete_rhost()` </a>
@@ -1231,6 +1257,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.kx.gete_ua() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_ua'> `xval gete_ua()` </a>
+
+#### KSR.kx.getw_fhost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_fhost'> `xval getw_fhost()` </a>
+
+#### KSR.kx.getw_fuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_fuser'> `xval getw_fuser()` </a>
 
 #### KSR.kx.getw_rhost() ####
 
@@ -2249,6 +2283,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sdpops.sdp_with_active_media() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_active_media'> `int sdp_with_active_media(str "media")` </a>
+
+#### KSR.sdpops.sdp_with_codecs_by_id() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_codecs_by_id'> `int sdp_with_codecs_by_id(str "codecs")` </a>
+
+#### KSR.sdpops.sdp_with_codecs_by_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_codecs_by_name'> `int sdp_with_codecs_by_name(str "codecs")` </a>
 
 #### KSR.sdpops.sdp_with_ice() ####
 
