@@ -487,6 +487,8 @@ interpreter used, one of the following commands needs to be run:
 kamctl rpc app_jsdt.api_list
 kamctl rpc app_lua.api_list
 kamctl rpc app_python.api_list
+kamctl rpc app_python3.api_list
+kamctl rpc app_ruby.api_list
 kamctl rpc app_sqlang.api_list
 ```
 
@@ -519,7 +521,7 @@ The structure `sr_kemi_t` is declared in Kamailio core, the file `kemi.h`:
 typedef struct sr_kemi {
 	str mname; /* sub-module name */
 	str fname; /* function name */
-	int rtype; /* return type (supported SR_KEMIP_INT/BOOL) */
+	int rtype; /* return type (supported SR_KEMIP_INT, SR_KEMIP_BOOL, SR_KEMIP_XVAL) */
 	void *func; /* pointer to the C function to be executed */
 	int ptypes[SR_KEMI_PARAMS_MAX]; /* array with the type of parameters */
 } sr_kemi_t;
@@ -571,3 +573,19 @@ Not all combinations of extra (after `sip_msg_t*`) parameters types are supporte
   * `5 params` - any combination of `int` or `str*`
   * `6 params` - all have to be `str*` (other combinations to be added as needed)
 
+The return type can be:
+
+  * `SR_KEMIP_INT` - returned value is integer and has to be evaluated with the
+  following rules:
+    * if less than 0 - it was an error of processing or equivalent
+    of false in the native scripting language;
+    * if greater than 0 - it was a successful processing or equivalent of true in the
+    native scripting language;
+    * if equal to 0 - stop execution of the routing script (done by a few functions
+    such as KSR.tm.t_check_trans(...))
+  * `SR_KEMIP_BOOL` - returned value can be evaluated in the routing script as
+  TRUE or FALSE. In the C code it has to return 1 for TRUE or 0 for FALSE.
+  * `SR_KEMIP_XVAL` - returned value depends on the context, can be either
+  integer or string value. For example it is used for the functions that return
+  the value of pseudo-variables KSR.pv.get(...). This return type is supported
+  only for exported functions that have up to 2 parameters.
