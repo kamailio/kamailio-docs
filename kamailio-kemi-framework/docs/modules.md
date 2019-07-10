@@ -1202,6 +1202,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ouri'> `xval get_ouri()` </a>
 
+#### KSR.kx.get_proto() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_proto'> `xval get_proto()` </a>
+
+#### KSR.kx.get_protoid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_protoid'> `int get_protoid()` </a>
+
 #### KSR.kx.get_rcvip() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvip'> `xval get_rcvip()` </a>
