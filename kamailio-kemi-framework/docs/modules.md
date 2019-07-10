@@ -1958,6 +1958,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/registrar.html#registrar.f.reg_free_contacts'> `int reg_free_contacts(str "profile")` </a>
 
+#### KSR.registrar.reg_send_reply() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/registrar.html#registrar.f.reg_send_reply'> `int reg_send_reply()` </a>
+
 #### KSR.registrar.registered() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/registrar.html#registrar.f.registered'> `int registered(str "table")` </a>
