@@ -2426,6 +2426,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.is_user'> `int is_user(str "suser")` </a>
 
+#### KSR.siputils.options_reply() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.options_reply'> `int options_reply()` </a>
+
 #### KSR.siputils.uri_param() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param'> `int uri_param(str "sparam")` </a>
