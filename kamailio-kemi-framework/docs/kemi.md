@@ -492,6 +492,38 @@ kamctl rpc app_ruby.api_list
 kamctl rpc app_sqlang.api_list
 ```
 
+### Functions Returning 0 ###
+
+The functions exported by Kamailio via KSR submodules that return 0 were designed to stop the execution of the
+routing script. That is done automatically in the native scripting language, but in KEMI scripting languages
+requires additional steps to terminate the script execution for that SIP message -- typically means evaluation
+of the return code and if it is 0, then execute KSR.x.exit() or the equivalent in that scripting language.
+
+There are only a few functions returning 0, this section tries to collect them for convenience:
+
+  * `tm` module
+    * `t_check_trans()`
+    * `t_newtran()`
+  * websocket module
+    * `ws_handshake()`
+
+Example handling `t_check_trans()` for 0 return code in Lua script:
+
+```
+...
+-- SIP request routing
+-- equivalent of request_route{}
+function ksr_request_route()
+    ...
+    if KSR.tm.t_check_trans()==0 then return 1 end
+    ...
+end
+...
+
+```
+
+Note: these functions can also return negative or positive values, those cases have to be handled as well.
+
 ## Exporting C Function To KEMI Interpreters ##
 
 Because Kamailio needs to load modules in order to export useful functions to KEMI, statical wrappers to C functions
