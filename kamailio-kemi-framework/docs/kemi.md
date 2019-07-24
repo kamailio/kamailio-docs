@@ -515,7 +515,9 @@ Example handling `t_check_trans()` for 0 return code in Lua script:
 -- equivalent of request_route{}
 function ksr_request_route()
     ...
-    if KSR.tm.t_check_trans()==0 then return 1 end
+    if KSR.tm.t_check_trans()==0 then
+        KSR.x.exit();
+    end
     ...
 end
 ...
