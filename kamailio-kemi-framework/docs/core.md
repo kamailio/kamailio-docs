@@ -79,6 +79,20 @@ Example:
 KSR.err("error log message from embedded interpreter\n");
 ```
 
+### int KSR.get_debug(...) ###
+
+`int KSR.get_debug()`
+
+Return the debug level for config logging.
+
+Example:
+
+```
+if KSR.get_debug() < 2 then
+  -- debug and info log messages are not printed
+end
+```
+
 ### KSR.force_rport() ###
 
 `bool force_rport()`
