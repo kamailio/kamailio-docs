@@ -538,6 +538,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## dialog ##
 
+#### KSR.dialog.dlg_bridge() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_bridge'> `int dlg_bridge(str "sfrom", str "sto", str "soproxy")` </a>
+
 #### KSR.dialog.dlg_bye() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_bye'> `int dlg_bye(str "side")` </a>
