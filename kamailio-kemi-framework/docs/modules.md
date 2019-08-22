@@ -1194,6 +1194,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_au'> `xval get_au()` </a>
 
+#### KSR.kx.get_body() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_body'> `xval get_body()` </a>
+
 #### KSR.kx.get_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fhost'> `xval get_fhost()` </a>
@@ -1266,6 +1270,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_au'> `xval gete_au()` </a>
 
+#### KSR.kx.gete_body() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_body'> `xval gete_body()` </a>
+
 #### KSR.kx.gete_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_fhost'> `xval gete_fhost()` </a>
@@ -1293,6 +1301,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.kx.getw_au() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_au'> `xval getw_au()` </a>
+
+#### KSR.kx.getw_body() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_body'> `xval getw_body()` </a>
 
 #### KSR.kx.getw_fhost() ####
 
