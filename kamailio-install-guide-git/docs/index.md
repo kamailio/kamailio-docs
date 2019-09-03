@@ -341,31 +341,37 @@ accounts and setting the phones.
 A new account can be added using `kamctl` tool via:
 
 ```Shell
-# kamctl add username password email
+  kamctl add username password
 
 ```
 
-Or try without the email:
-
-```Shell
-  kamctl add test testpasswd test@mysipserver.com
-```
-
-If you are asked for `SIP_DOMAIN` environment variable do one of the following
+If `SIP_DOMAIN` was not set in `kamctlrc` file do one of the following
 option.
 
   * run in terminal:
 
 ```Shell
   export SIP_DOMAIN=mysipserver.com
+  kamctl add username password
 ```
 
   * or edit `/root/.kamctlrc` and add:
 
-
 ```Shell
   SIP_DOMAIN=mysipserver.com
 ```
+
+and then run again `kamctl add ...` as above.
+
+  * or give the username with domain in `kamctl add ...` parameter:
+
+```Shell
+  kamctl add username@mysipserver.com password
+
+```
+
+Instead of `mysipserver.com` it has to be given the real domain for the SIP service
+or the IP address of Kamailio.
 
 ## Maintenance ##
 
