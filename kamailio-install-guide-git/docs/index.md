@@ -274,61 +274,75 @@ the value for `db_url` parameters.
 You can browse [kamailio.cfg](https://github.com/kamailio/kamailio/blob/master/etc/kamailio.cfg)
 online on GIT repository.
 
-## The init.d Script ##
+## Running Kamailio ##
 
-The init.d script can be used to start/stop the `Kamailio` server in a nicer way.
-A sample of init.d script for `Kamailio` is provided at:
+There are couple of variants for starting/stopping/restarting Kamailio,
+the recommended ones being via `init.d` script or `systemd` unit, a matter of
+what the Debian OS is configured to use.
 
-```Shell
-/usr/local/src/kamailio-devel/kamailio/pkg/kamailio/deb/debian/kamailio.init
+### Init.d Script ###
+
+To install the `init.d` script, run in Kamailio source code directory:
+
+```
+make install-initd-debian
 ```
 
-Just copy the init file to `/etc/init.d/kamailio`. Then change the permissions:
-
-```Shell
-  chmod 755 /etc/init.d/kamailio
-```
-
-then edit the file updating the `$DAEMON` and `$CFGFILE` values:
-
-```Shell
-  DAEMON=/usr/local/sbin/kamailio
-  CFGFILE=/usr/local/etc/kamailio/kamailio.cfg
-```
-
-You need also setup a configuration file in the `/etc/default/` directory.
-This file can be found at:
-
-```Shell
-  /usr/local/src/kamailio-devel/kamailio/pkg/kamailio/debian/kamailio.default
-```
-
-You need to rename the file to `kamailio` after you've copied it. Then edit this
-file and set `RUN_KAMAILIO=yes`. Edit the other options at your convenience.
-
-Create the directory for pid file:
-
-```Shell
-mkdir -p /var/run/kamailio
-```
-
-Default setting is to run Kamailio as user `kamailio` and group `kamailio`.
-For that you need to create the user:
-
-```Shell
-adduser --quiet --system --group --disabled-password \
-        --shell /bin/false --gecos "Kamailio" \
-        --home /var/run/kamailio kamailio
-
-# set ownership to /var/run/kamailio
-chown kamailio:kamailio /var/run/kamailio
-```
+Follow any instructions that may be printed by the above commad.
 
 Then you can start/stop Kamailio using the following commands:
 
 ```Shell
   /etc/init.d/kamailio start
   /etc/init.d/kamailio stop
+```
+
+### Systemd Unit ###
+
+To install the `systemd` unit, run in Kamailio source code directory:
+
+```
+make install-systemd-debian
+```
+
+Follow any instructions that may be printed by the above commad.
+
+Then you can start/stop Kamailio using the following commands:
+
+```Shell
+  systemctl start kamailio
+  systemctl stop kamailio
+```
+
+### Kamctl ###
+
+You may need to edit edit `/usr/local/etc/kamailio/kamctlrc` and set the
+`PID_FILE` and `STARTOPTIONS` attributes.
+
+The you can use:
+
+```
+kamctl start
+kamctl stop
+```
+
+### Command Line ###
+
+Kamailio can be started from command line by executing the binary with specific
+parameters. For example:
+
+  * start Kamailio
+
+```
+/usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -m 128 -M 12
+```
+
+  * stop Kamailio
+
+```
+killall kamailio
+# or
+kill -TERM $(cat /var/run/kamailio/kamailio.pid)
 ```
 
 ## Ready To Rock ##
@@ -353,7 +367,7 @@ option.
   kamctl add username password
 ```
 
-  * or edit `/root/.kamctlrc` and add:
+  * or edit `/usr/local/etc/kamailio/kamctlrc` and add:
 
 ```Shell
   SIP_DOMAIN=mysipserver.com
