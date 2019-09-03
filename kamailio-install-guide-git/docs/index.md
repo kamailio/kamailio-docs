@@ -228,6 +228,9 @@ DBENGINE=MYSQL
 You can change other values in **kamctlrc** file, at least it is recommended to
 change the default passwords for the users to be created to connect to database.
 
+Note that the existing line with `DBENGINE` or other attributes may be commented,
+uncomment by removing the `#` character at the beginning of the line.
+
 Once you are done updating **kamctlrc** file, run the script to create the
 database used by Kamailio:
 
