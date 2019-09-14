@@ -2082,6 +2082,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_params'> `int record_route_params(str "params")` </a>
 
+#### KSR.rr.record_route_preset() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_preset'> `int record_route_preset(str "key1", str "key2")` </a>
+
 #### KSR.rr.remove_record_route() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.remove_record_route'> `int remove_record_route()` </a>
