@@ -1,6 +1,6 @@
 # Kamailio v5.3 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.3 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.3 (stable) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -14,12 +14,11 @@ Support: <sr-users@lists.kamailio.org>
 ## Overview ##
 
 This is a step by step tutorial about how to install and maintain Kamailio SIP
-server development version using the sources downloaded from GIT repository -
+server version 5.3.x using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.3.0)
-with MySQL support, using a Debian unstable system.*
+*This document focuses on Kamailio v5.3.x with MySQL support, using a Debian stable system.*
 
 
 ## Prerequisites ##
@@ -67,8 +66,8 @@ will be stored.
 
 
 ```Shell
-  mkdir -p /usr/local/src/kamailio-devel
-  cd /usr/local/src/kamailio-devel
+  mkdir -p /usr/local/src/kamailio-5.3
+  cd /usr/local/src/kamailio-5.3
 ```
 
 Download the sources from GIT using the following commands.
@@ -76,6 +75,7 @@ Download the sources from GIT using the following commands.
 ```Shell
   git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
   cd kamailio
+  git checkout -b 5.3 origin/5.3
 ```
 
 _**Note**: if your git client version does not support **--no-single-branch**
@@ -121,11 +121,11 @@ make include_modules="db_mysql dialplan" cfg
 ```
 
 **NOTE**: If you want to install everything in one directory (so you can delete
-all installed files at once), say `/usr/local/kamailio-devel`, then set `PREFIX`
+all installed files at once), say `/usr/local/kamailio-5.3`, then set `PREFIX`
 variable to the install path in `make cfg ...` command:
 
 ```Shell
-make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan" cfg
+make PREFIX="/usr/local/kamailio-5.3" include_modules="db_mysql dialplan" cfg
 ```
 
 More hints about `Makefile` system at:
@@ -396,14 +396,14 @@ The maintenance process is very simple right now. You have to be user `root` and
 execute following commands:
 
 ```Shell
-  cd /usr/local/src/kamailio-devel/kamailio
+  cd /usr/local/src/kamailio-5.3/kamailio
   git pull origin
   make all
   make install
   /etc/init.d/kamailio restart
 ```
 
-Now you have the latest Kamailio devel running on your system.
+Now you have the latest Kamailio v5.3.x running on your system.
 
 
 ### When To Update ###
@@ -415,10 +415,10 @@ the lines:
 
 ```Shell
 Module: kamailio
-Branch: master
+Branch: 5.3
 ```
 
-then an update has been made to Kamailio devel version and it will be available
+then an update has been made to Kamailio 5.3 version and it will be available
 to the public GIT in no time.
 
 ## Support ##
