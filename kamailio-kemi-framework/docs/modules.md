@@ -1172,6 +1172,16 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.execx'> `int execx(str "scmd")` </a>
 
+#### KSR.jsonrpcs.response() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.response'> `xval response()` </a>
+
+## kafka ##
+
+#### KSR.kafka.send() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kafka.html#kafka.f.send'> `int send(str "s_topic", str "s_message")` </a>
+
 ## keepalive ##
 
 #### KSR.keepalive.is_alive() ####
@@ -2428,6 +2438,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_dst_cid_type'> `int sip_trace_dst_cid_type(str "duri", str "cid", str "sflag")` </a>
 
+#### KSR.siptrace.sip_trace_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_mode'> `int sip_trace_mode(str "smode")` </a>
+
 ## siputils ##
 
 #### KSR.siputils.has_totag() ####
@@ -3219,6 +3233,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.uac.uac_auth() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_auth'> `int uac_auth()` </a>
+
+#### KSR.uac.uac_auth_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/uac.html#uac.f.uac_auth_mode'> `int uac_auth_mode(int mode)` </a>
 
 #### KSR.uac.uac_reg_disable() ####
 
