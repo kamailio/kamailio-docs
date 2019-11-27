@@ -1624,6 +1624,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.nat_uac_test'> `int nat_uac_test(int tests)` </a>
 
+#### KSR.nathelper.set_alias_to_pv() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.set_alias_to_pv'> `int set_alias_to_pv(str "uri_avp")` </a>
+
 #### KSR.nathelper.set_contact_alias() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.set_contact_alias'> `int set_contact_alias()` </a>
