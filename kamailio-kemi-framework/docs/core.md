@@ -141,6 +141,7 @@ Matching the method is done based on corresponding characters:
   * `R` - REGISTER
   * `M` - MESSAGE
   * `O` - OPTIONS
+  * `F` - REFER
   * `S` - SUBSCRIBE
   * `P` - PUBLISH
   * `N` - NOTIFY
@@ -225,6 +226,13 @@ Return true if the method type of the SIP message is `NOTIFY`.
 `bool is_OPTIONS()`
 
 Return true if the method type of the SIP message is `OPTIONS`.
+
+### KSR.is_REFER() ###
+
+`bool is_REFER()`
+
+Return true if the method type of the SIP message is `REFER`.
+
 
 ### KSR.is_INFO() ###
 
