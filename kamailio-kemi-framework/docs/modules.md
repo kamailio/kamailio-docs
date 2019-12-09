@@ -1840,6 +1840,36 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/pua.html#pua.f.pua_update_contact'> `int pua_update_contact()` </a>
 
+## pv_headers ##
+
+#### KSR.pv_headers.pvh_append_header() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_append_header'> `int pvh_append_header(str "hname", str "hvalue")` </a>
+
+#### KSR.pv_headers.pvh_apply_headers() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_apply_headers'> `int pvh_apply_headers()` </a>
+
+#### KSR.pv_headers.pvh_check_header() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_check_header'> `int pvh_check_header(str "hname")` </a>
+
+#### KSR.pv_headers.pvh_collect_headers() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_collect_headers'> `int pvh_collect_headers()` </a>
+
+#### KSR.pv_headers.pvh_modify_header() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_modify_header'> `int pvh_modify_header(str "hname", str "hvalue", int indx)` </a>
+
+#### KSR.pv_headers.pvh_remove_header() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_remove_header'> `int pvh_remove_header(str "hname", int indx)` </a>
+
+#### KSR.pv_headers.pvh_reset_headers() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_reset_headers'> `int pvh_reset_headers()` </a>
+
 ## pvx ##
 
 #### KSR.pvx.avp_get() ####
