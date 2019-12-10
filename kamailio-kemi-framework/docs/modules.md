@@ -566,6 +566,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_manage'> `int dlg_manage()` </a>
 
+#### KSR.dialog.dlg_reset_property() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_reset_property'> `int dlg_reset_property(str "pval")` </a>
+
 #### KSR.dialog.dlg_resetflag() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/dialog.html#dialog.f.dlg_resetflag'> `int dlg_resetflag(int val)` </a>
@@ -2128,7 +2132,11 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 #### KSR.rr.record_route_preset() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_preset'> `int record_route_preset(str "key1", str "key2")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_preset'> `int record_route_preset(str "addr1", str "addr2")` </a>
+
+#### KSR.rr.record_route_preset_one() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_preset_one'> `int record_route_preset_one(str "addr1")` </a>
 
 #### KSR.rr.remove_record_route() ####
 
