@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.3.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.4.0)
 with MySQL support, using a Debian unstable system.*
 
 
