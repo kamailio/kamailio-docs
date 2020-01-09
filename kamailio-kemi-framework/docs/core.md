@@ -55,6 +55,27 @@ Example:
 KSR.add_tcp_alias_via();
 ```
 
+### void KSR.log(...) ###
+
+`void KSR.log(str "level", str "msg")`
+
+Write a log message specifying the level value. The level parameter can be:
+
+  * "dbg"
+  * "info"
+  * "notice"
+  * "warn"
+  * "crit"
+  * "err"
+
+If level value is not matched, then "err" log level is used.
+
+Example:
+
+```
+KSR.log("dbg", "debug log message from: " + KSR.pv.getw("$si") + "\r\n");
+```
+
 ### void KSR.dbg(...) ###
 
 `void KSR.dbg(str "msg")`
@@ -79,6 +100,54 @@ Example:
 KSR.err("error log message from embedded interpreter\n");
 ```
 
+### void KSR.info(...) ###
+
+`void KSR.info(str "msg")`
+
+Write a log message to INFO level.
+
+Example:
+
+```
+KSR.info("info log message from embedded interpreter\n");
+```
+
+### void KSR.notice(...) ###
+
+`void KSR.notice(str "msg")`
+
+Write a log message to NOTICE level.
+
+Example:
+
+```
+KSR.notice("notice log message from embedded interpreter\n");
+```
+
+### void KSR.warn(...) ###
+
+`void KSR.warn(str "msg")`
+
+Write a log message to WARN level.
+
+Example:
+
+```
+KSR.warn("warn log message from embedded interpreter\n");
+```
+
+### void KSR.crit(...) ###
+
+`void KSR.crit(str "msg")`
+
+Write a log message to CRIT level.
+
+Example:
+
+```
+KSR.crit("critical log message from embedded interpreter\n");
+```
+
 ### int KSR.get_debug(...) ###
 
 `int KSR.get_debug()`
@@ -99,18 +168,6 @@ end
 
 Add rport parameter to the top Via of the incoming request and sent the
 SIP response to source port.
-
-### void KSR.info(...) ###
-
-`void KSR.info(str "msg")`
-
-Write a log message to INFO level.
-
-Example:
-
-```
-KSR.info("info log message from embedded interpreter\n");
-```
 
 ### KSR.is_method() ###
 
@@ -326,26 +383,6 @@ Return true if the source IP matches a local socket (IP).
 if KSR.is_myself_srcip() then
   ...
 end
-```
-
-### void KSR.log(...) ###
-
-`void KSR.log(str "level", str "msg")`
-
-Write a log message specifying the level value. The level parameter can be:
-
-  * "dbg"
-  * "info"
-  * "warn"
-  * "crit"
-  * "err"
-
-If level value is not matched, then "err" log level is used.
-
-Example:
-
-```
-KSR.log("dbg", "debug log message from: " + KSR.pv.getw("$si") + "\r\n");
 ```
 
 ### KSR.setflag(...) ###
