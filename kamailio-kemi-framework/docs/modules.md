@@ -1188,6 +1188,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## keepalive ##
 
+#### KSR.keepalive.add_destination() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/keepalive.html#keepalive.f.add_destination'> `int add_destination(str "uri", str "owner")` </a>
+
+#### KSR.keepalive.del_destination() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/keepalive.html#keepalive.f.del_destination'> `int del_destination(str "uri", str "owner")` </a>
+
 #### KSR.keepalive.is_alive() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/keepalive.html#keepalive.f.is_alive'> `int is_alive(str "dest")` </a>
@@ -1467,6 +1475,20 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.misc_radius.load_caller_avps() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/misc_radius.html#misc_radius.f.load_caller_avps'> `int load_caller_avps(str "user")` </a>
+
+## mqtt ##
+
+#### KSR.mqtt.publish() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqtt.html#mqtt.f.publish'> `int publish(str "topic", str "payload", int qos)` </a>
+
+#### KSR.mqtt.subscribe() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqtt.html#mqtt.f.subscribe'> `int subscribe(str "topic", int qos)` </a>
+
+#### KSR.mqtt.unsubscribe() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/mqtt.html#mqtt.f.unsubscribe'> `int unsubscribe(str "topic")` </a>
 
 ## mqueue ##
 
@@ -2121,6 +2143,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.rr.loose_route() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route'> `int loose_route()` </a>
+
+#### KSR.rr.next_hop_route() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.next_hop_route'> `int next_hop_route()` </a>
 
 #### KSR.rr.record_route() ####
 
@@ -2959,6 +2985,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 <a target='_blank' href='/docs/modules/devel/modules/tls.html#tls.f.is_peer_verified'> `int is_peer_verified()` </a>
 
 ## tm ##
+
+#### KSR.tm.ki_t_load_contacts_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.ki_t_load_contacts_mode'> `int ki_t_load_contacts_mode(int mode)` </a>
 
 #### KSR.tm.t_any_replied() ####
 
