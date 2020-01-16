@@ -644,7 +644,7 @@ Note: functions exported by Kamailio's `pv` module are in `KSR.pvx` package.
 
 `xval KSR.pv.get(str "pvname")`
 
-Return the value of pseudo-variable `pvname`. The returned value can be string or integer.
+Return the value of pseudo-variable `pvname`. The returned value can be string, integer or null (if pseudo-variable isn't set or `$null`).
 
 Example:
 
