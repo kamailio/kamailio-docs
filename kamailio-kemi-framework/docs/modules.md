@@ -1220,6 +1220,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_body'> `xval get_body()` </a>
 
+#### KSR.kx.get_duri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>
+
 #### KSR.kx.get_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fhost'> `xval get_fhost()` </a>
@@ -1296,6 +1300,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_body'> `xval gete_body()` </a>
 
+#### KSR.kx.gete_duri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_duri'> `xval gete_duri()` </a>
+
 #### KSR.kx.gete_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_fhost'> `xval gete_fhost()` </a>
@@ -1327,6 +1335,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.kx.getw_body() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_body'> `xval getw_body()` </a>
+
+#### KSR.kx.getw_duri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_duri'> `xval getw_duri()` </a>
 
 #### KSR.kx.getw_fhost() ####
 
@@ -2470,6 +2482,22 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 ## sipdump ##
 
+#### KSR.sipdump.get_buf() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.get_buf'> `xval get_buf()` </a>
+
+#### KSR.sipdump.get_dst_ip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.get_dst_ip'> `xval get_dst_ip()` </a>
+
+#### KSR.sipdump.get_src_ip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.get_src_ip'> `xval get_src_ip()` </a>
+
+#### KSR.sipdump.get_tag() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.get_tag'> `xval get_tag()` </a>
+
 #### KSR.sipdump.send() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sipdump.html#sipdump.f.send'> `int send(str "stag")` </a>
@@ -2617,6 +2645,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sqlops.sql_result_free() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_free'> `int sql_result_free(str "sres")` </a>
+
+#### KSR.sqlops.sql_result_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_get'> `xval sql_result_get(str "resid", int row, int col)` </a>
 
 #### KSR.sqlops.sql_xquery() ####
 
@@ -3400,6 +3432,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 ## userblacklist ##
 
+#### KSR.userblacklist.check_blacklist() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_blacklist'> `int check_blacklist(str "stable")` </a>
+
+#### KSR.userblacklist.check_global_blacklist() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_global_blacklist'> `int check_global_blacklist()` </a>
+
 #### KSR.userblacklist.check_user_blacklist() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_blacklist'> `int check_user_blacklist(str "suser", str "sdomain")` </a>
@@ -3423,6 +3463,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.userblacklist.check_user_whitelist_table() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_whitelist_table'> `int check_user_whitelist_table(str "suser", str "sdomain", str "snumber", str "stable")` </a>
+
+#### KSR.userblacklist.check_whitelist() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_whitelist'> `int check_whitelist(str "stable")` </a>
 
 ## utils ##
 
