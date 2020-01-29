@@ -964,6 +964,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## htable ##
 
+#### KSR.htable.sht_dec() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_dec'> `int sht_dec(str "htname", str "itname")` </a>
+
 #### KSR.htable.sht_get() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_get'> `xval sht_get(str "htname", str "itname")` </a>
@@ -975,6 +979,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.htable.sht_getw() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_getw'> `xval sht_getw(str "htname", str "itname")` </a>
+
+#### KSR.htable.sht_inc() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_inc'> `int sht_inc(str "htname", str "itname")` </a>
+
+#### KSR.htable.sht_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_is_null'> `int sht_is_null(str "htname", str "itname")` </a>
 
 #### KSR.htable.sht_iterator_end() ####
 
