@@ -978,13 +978,26 @@ is not integer.
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_get'> `xval sht_get(str "htname", str "itname")` </a>
 
+Return the integer or string value of the item.
+
+If the item does not exists, it returns `NULL`. Note that `NULL` might be represented differently in various scripting languages, such as `nil` or `None`.
+
 #### KSR.htable.sht_gete() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_gete'> `xval sht_gete(str "htname", str "itname")` </a>
 
+Return the integer or string value of the item.
+
+If the item does not exists, it returns an empty string.
+
 #### KSR.htable.sht_getw() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_getw'> `xval sht_getw(str "htname", str "itname")` </a>
+
+Return the integer or string value of the item.
+
+If the item does not exists, it returns the string `<null>`, suitable for use
+when writing log messages.
 
 #### KSR.htable.sht_inc() ####
 
