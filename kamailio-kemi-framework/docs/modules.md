@@ -964,9 +964,15 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## htable ##
 
+Functions exported by `htable` module.
+
 #### KSR.htable.sht_dec() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_dec'> `int sht_dec(str "htname", str "itname")` </a>
+
+Do atomic decrement to the item value. It returns the new value or `-255`
+if the hash table does not exist, or the item does not exist or the item value
+is not integer.
 
 #### KSR.htable.sht_get() ####
 
@@ -983,6 +989,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.htable.sht_inc() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/htable.html#htable.f.sht_inc'> `int sht_inc(str "htname", str "itname")` </a>
+
+Do atomic increment to the item value. It returns the new value or `-255`
+if the hash table does not exist, or the item does not exist or the item value
+is not integer.
 
 #### KSR.htable.sht_is_null() ####
 
@@ -1223,6 +1233,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 <a target='_blank' href='/docs/modules/devel/modules/kex.html#kex.f.setdebug'> `int setdebug(int lval)` </a>
 
 ## kx ##
+
+Functions exported by `kemix` module. They aim to provide a convenient way to
+retrieve string or integer values for most commonly used variables or runtime
+environment attributes.
 
 #### KSR.kx.get_au() ####
 
