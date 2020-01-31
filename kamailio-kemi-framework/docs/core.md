@@ -322,6 +322,13 @@ if KSR.is_myself("sip:127.0.0.1:5060") then
 end
 ```
 
+### KSR.is_myself_duri() ###
+
+`bool is_myself_duri()`
+
+Return true if the destination URI (`$du`) matches a local socket (IP) or local
+domain.
+
 ### KSR.is_myself_furi() ###
 
 `bool is_myself_furi()`
@@ -334,6 +341,13 @@ if KSR.is_myself_furi() then
   ...
 end
 ```
+
+### KSR.is_myself_nhuri() ###
+
+`bool is_myself_nhuri()`
+
+Return true if the next hop URI (`$nh(u)`) matches a local socket (IP) or local
+domain.
 
 ### KSR.is_myself_ruri() ###
 
