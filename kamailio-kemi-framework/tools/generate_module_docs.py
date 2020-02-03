@@ -1,8 +1,7 @@
 # tool to generate the modules.md content
 #
 
-import os, json, sys, time, fnmatch, re
-
+import os, json, sys, time, fnmatch, re, importlib
 
 class ModuleDocGenerator(object):
     PATH_GENERATED_MARKDOWN = "../docs/modules.md"
@@ -14,13 +13,13 @@ class ModuleDocGenerator(object):
     def execute(self, data):
         # Validate that we got some methods back. 155 is an arbitrary large number.
         if len(data) < 1:
-            print "ERR: Invalid data"
+            print("ERR: Invalid data")
             exit()
 
         functions_parsed = self.parse_function_list(data)
         self.output_markdown(functions_parsed)
 
-        print "Markdown doc created successfully at " + self.PATH_GENERATED_MARKDOWN
+        print ("Markdown doc created successfully at " + self.PATH_GENERATED_MARKDOWN)
 
     def parse_function_list(self, functions):
         data = {}
@@ -89,7 +88,7 @@ class ModuleDocGenerator(object):
                                     + "(" + params_value + ")` </a>\n\n"
 
             self.markdown_string += self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md")
-            if not self.makrdown_string.endswith("\n"):
+            if not self.markdown_string.endswith("\n"):
                 self.markdown_string += "\n"
         return True
 
@@ -131,14 +130,14 @@ class KemiFileExportParser(object):
         lists = []
 
         for file in files:
-            with open(file) as f:
+            with open(file, 'r', encoding='utf-8', errors='ignore') as f:
                 lines = f.readlines()
 
             export_name = self.find_c_file_kemi_export(file, lines)
             if export_name:
                 export_functions = self.extract_c_file_kemi_export_lines(file, lines, export_name)
                 lists = lists + export_functions
-                print "Found ", len(export_functions), "functions", "Total:", len(lists)
+                print ("Found ", len(export_functions), "functions", "Total:", len(lists))
 
         # Handle some special files separately
         for elem in self.special_exports:
@@ -158,11 +157,11 @@ class KemiFileExportParser(object):
                 line = line.lstrip("\t")
                 if line.find("sr_kemi_modules_add") == 0:
                     param = line[line.find("(") + 1:line.find(")")]
-                    print "INFO: ---- Found export", filename, param
+                    print ("INFO: ---- Found export", filename, param)
                     break
                 else:
                     if line != "int sr_kemi_modules_add(sr_kemi_t *klist)\n":
-                        print "ERR: Possible error at line: ", filename, line
+                        print ("ERR: Possible error at line: ", filename, line)
                         exit()
 
         return param
@@ -182,7 +181,7 @@ class KemiFileExportParser(object):
                 list_functions.append(line)
 
         if len(list_functions) < 1:
-            print "ERR: Couldn't parse file for exported functions: ", export_name
+            print ("ERR: Couldn't parse file for exported functions: ", export_name)
             exit()
 
         parsed_list = self.parse_kemi_export_c_lines(filename, list_functions)
@@ -210,7 +209,7 @@ class KemiFileExportParser(object):
             function_lines_split = func.split(",{")
 
             if len(function_lines_split) < 2:
-                print "ERR: Incorrect function line", func
+                print ("ERR: Incorrect function line", func)
                 exit()
 
             declarations = function_lines_split[0].split(",")
@@ -233,7 +232,7 @@ class KemiFileExportParser(object):
             elif declarations[2] == "SR_KEMIP_XVAL":
                 val_return = "xval"
             else:
-                print "ERR: Invalid return value", declarations[2], func
+                print("ERR: Invalid return value", declarations[2], func)
                 exit()
 
             val_c_function = declarations[3].strip()
@@ -254,11 +253,11 @@ class KemiFileExportParser(object):
                 elif pm == "SR_KEMIP_NONE":
                     continue
                 else:
-                    print "Invalid return value", declarations[2], func
+                    print("Invalid return value", declarations[2], func)
                     exit()
 
             if itr != 6:
-                print "ERR: Couldn't iterate the params: ", params
+                print("ERR: Couldn't iterate the params: ", params)
                 exit()
 
             param_string = self.find_c_function_params(filename, val_c_function, val_return)
@@ -279,14 +278,14 @@ class KemiFileExportParser(object):
             params.pop(0)
 
         if len(params) != len(kemi_types):
-            print "ERR: Mismatching quantity of params. Declaration for", function_name, ":", function_declaration, "KEMI:", kemi_types
+            print("ERR: Mismatching quantity of params. Declaration for", function_name, ":", function_declaration, "KEMI:", kemi_types)
             exit()
 
         for declared, type in zip(params, kemi_types):
             declared = declared.replace("*", "")
             declared = declared.strip().split(" ")[0]
             if declared != type:
-                print "ERR: Mismatching type of params for", function_name, ":", function_declaration, " | ", kemi_types, " | Declared: ", declared, " Type: ", type
+                print("ERR: Mismatching type of params for", function_name, ":", function_declaration, " | ", kemi_types, " | Declared: ", declared, " Type: ", type)
                 exit()
 
         param_string = ""
@@ -319,12 +318,12 @@ class KemiFileExportParser(object):
         if function_name in self.macro_functions:
             return self.macro_functions[function_name]
 
-        print "ERR: Couldn't find the function declaration", filename, function_name, return_type
+        print("ERR: Couldn't find the function declaration", filename, function_name, return_type)
         exit()
 
     def search_file_for_function_declaration(self, filename, function_name, return_type):
         # print "Searching file", filename, "for", function_name
-        with open(filename) as f:
+        with open(filename, 'r', encoding='utf-8', errors='ignore') as f:
             lines = f.readlines()
 
         param_string = None
@@ -362,19 +361,16 @@ class KemiFileExportParser(object):
 
 
 if __name__ == "__main__":
-    reload(sys)
-    sys.setdefaultencoding('utf8')
-
     try:
         if not os.path.isdir(sys.argv[1]):
             raise Exception('Not a valid directory')
     except:
-        print "Please provide the path to the Kamailio src folder as the first argument"
+        print("Please provide the path to the Kamailio src folder as the first argument")
         exit()
 
-    print "Parsing the source"
+    print("Parsing the source")
     parser = KemiFileExportParser()
     data = parser.generate_kemi_export_list(sys.argv[1].rstrip("/"))
     fgen = ModuleDocGenerator()
     fgen.execute(data)
-    print "Done"
+    print("Done")
