@@ -1259,25 +1259,37 @@ environment attributes.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_body'> `xval get_body()` </a>
 
+Return the body of the SIP message (the value of $rb).
+
 #### KSR.kx.get_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>
+
+Return the value of destination URI ($du).
 
 #### KSR.kx.get_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fhost'> `xval get_fhost()` </a>
 
+Return From-URI domain ($fd).
+
 #### KSR.kx.get_furi() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_furi'> `xval get_furi()` </a>
+
+Return the From URI($fu).
 
 #### KSR.kx.get_fuser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fuser'> `xval get_fuser()` </a>
 
+Return the From-URI username ($fU).
+
 #### KSR.kx.get_method() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_method'> `xval get_method()` </a>
+
+Return the SIP method ($rm).
 
 #### KSR.kx.get_ouri() ####
 
@@ -1307,6 +1319,8 @@ environment attributes.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruri'> `xval get_ruri()` </a>
 
+Return the Request URI ($ru).
+
 #### KSR.kx.get_ruser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
@@ -1323,9 +1337,15 @@ environment attributes.
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_status'> `int get_status()` </a>
 
+#### KSR.kx.get_timestamp() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_timestamp'> `int get_timestamp()` </a>
+
 #### KSR.kx.get_turi() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_turi'> `xval get_turi()` </a>
+
+Return the To URI ($tu).
 
 #### KSR.kx.get_ua() ####
 
