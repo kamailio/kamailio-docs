@@ -87,9 +87,9 @@ class ModuleDocGenerator(object):
                                     + module + ".f." + value["name"] + "'> `" + return_value + " " + value["name"] \
                                     + "(" + params_value + ")` </a>\n\n"
 
-            self.markdown_string += self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md")
-            if not self.markdown_string.endswith("\n"):
-                self.markdown_string += "\n"
+            func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
+            if len(func_doc)>0:
+                self.markdown_string += func_doc + "\n\n"
         return True
 
     def markdown_write(self):
