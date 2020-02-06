@@ -1,0 +1,1 @@
+Return the Request URI host (domain) part ($rd).

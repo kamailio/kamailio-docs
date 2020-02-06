@@ -1261,6 +1261,10 @@ environment attributes.
 
 Return the body of the SIP message (the value of $rb).
 
+#### KSR.kx.get_callid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_callid'> `xval get_callid()` </a>
+
 #### KSR.kx.get_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>
@@ -1315,6 +1319,8 @@ Return the SIP method ($rm).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rhost'> `xval get_rhost()` </a>
 
+Return the Request URI host (domain) part ($rd).
+
 #### KSR.kx.get_ruri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruri'> `xval get_ruri()` </a>
@@ -1324,6 +1330,8 @@ Return the Request URI ($ru).
 #### KSR.kx.get_ruser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
+
+Return the Request URI user part ($rU).
 
 #### KSR.kx.get_srcip() ####
 

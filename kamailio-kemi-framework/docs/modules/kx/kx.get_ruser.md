@@ -1,0 +1,1 @@
+Return the Request URI user part ($rU).

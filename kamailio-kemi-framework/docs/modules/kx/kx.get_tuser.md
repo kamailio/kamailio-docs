@@ -1,0 +1,1 @@
+Return the To-URI user part ($tU).
