@@ -1345,6 +1345,12 @@ Return the Request URI user part ($rU).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_status'> `int get_status()` </a>
 
+#### KSR.kx.get_thost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_thost'> `xval get_thost()` </a>
+
+Return the To-URI host (domain) part ($td).
+
 #### KSR.kx.get_timestamp() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_timestamp'> `int get_timestamp()` </a>
@@ -1354,6 +1360,12 @@ Return the Request URI user part ($rU).
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_turi'> `xval get_turi()` </a>
 
 Return the To URI ($tu).
+
+#### KSR.kx.get_tuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_tuser'> `xval get_tuser()` </a>
+
+Return the To-URI user part ($tU).
 
 #### KSR.kx.get_ua() ####
 
@@ -1386,6 +1398,14 @@ Return the To URI ($tu).
 #### KSR.kx.gete_ruser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_ruser'> `xval gete_ruser()` </a>
+
+#### KSR.kx.gete_thost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_thost'> `xval gete_thost()` </a>
+
+#### KSR.kx.gete_tuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_tuser'> `xval gete_tuser()` </a>
 
 #### KSR.kx.gete_ua() ####
 
@@ -1422,6 +1442,14 @@ Return the To URI ($tu).
 #### KSR.kx.getw_ruser() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_ruser'> `xval getw_ruser()` </a>
+
+#### KSR.kx.getw_thost() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_thost'> `xval getw_thost()` </a>
+
+#### KSR.kx.getw_tuser() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_tuser'> `xval getw_tuser()` </a>
 
 #### KSR.kx.getw_ua() ####
 
