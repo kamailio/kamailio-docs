@@ -616,7 +616,9 @@ The return type can be:
     * if greater than 0 - it was a successful processing or equivalent of true in the
     native scripting language;
     * if equal to 0 - stop execution of the routing script (done by a few functions
-    such as KSR.tm.t_check_trans(...))
+    such as `KSR.tm.t_check_trans(...)`)
+    * exceptions to the above rules are the getter functions that return the
+    integer value of some attribute (e.g., `KSR.kx.get_status()`, `KSR.kx.get_timestamp()`)
   * `SR_KEMIP_BOOL` - returned value can be evaluated in the routing script as
   TRUE or FALSE. In the C code it has to return 1 for TRUE or 0 for FALSE.
   * `SR_KEMIP_XVAL` - returned value depends on the context, can be either
