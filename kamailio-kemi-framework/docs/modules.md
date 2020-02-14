@@ -2541,6 +2541,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_media'> `int sdp_with_media(str "media")` </a>
 
+#### KSR.sdpops.sdp_with_transport() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_transport'> `int sdp_with_transport(str "transport")` </a>
+
+#### KSR.sdpops.sdp_with_transport_like() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_transport_like'> `int sdp_with_transport_like(str "transport")` </a>
+
 ## sipcapture ##
 
 #### KSR.sipcapture.float2int() ####
