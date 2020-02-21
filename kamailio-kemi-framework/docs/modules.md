@@ -3161,6 +3161,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_drop_replies_all'> `int t_drop_replies_all()` </a>
 
+#### KSR.tm.t_get_branch_index() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_get_branch_index'> `int t_get_branch_index()` </a>
+
 #### KSR.tm.t_get_status_code() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_get_status_code'> `int t_get_status_code()` </a>
