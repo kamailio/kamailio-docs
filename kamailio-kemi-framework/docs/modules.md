@@ -1295,6 +1295,10 @@ Return the From-URI username ($fU).
 
 Return the SIP method ($rm).
 
+#### KSR.kx.get_nhuri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_nhuri'> `xval get_nhuri()` </a>
+
 #### KSR.kx.get_ouri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ouri'> `xval get_ouri()` </a>
