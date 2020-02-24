@@ -493,6 +493,30 @@ if KSR.is_proto("EW") then
 end
 ```
 
+### KSR.is_IPv4() ###
+
+`bool is_IPv4()`
+
+Return true if the SIP message was received over IPv4.
+
+```Lua
+if KSR.is_IPv4() then
+  ...
+end
+```
+
+### KSR.is_IPv6() ###
+
+`bool is_IPv6()`
+
+Return true if the SIP message was received over IPv6.
+
+```Lua
+if KSR.is_IPv6() then
+  ...
+end
+```
+
 ### KSR.setflag(...) ###
 
 `bool KSR.setflag(int flag)`
