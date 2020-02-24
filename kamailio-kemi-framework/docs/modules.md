@@ -1265,6 +1265,12 @@ Return the body of the SIP message (the value of $rb).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_callid'> `xval get_callid()` </a>
 
+#### KSR.kx.get_conid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_conid'> `int get_conid()` </a>
+
+Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connection corresponds to current SIP message.
+
 #### KSR.kx.get_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>

@@ -1,0 +1,1 @@
+Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connection corresponds to current SIP message.
