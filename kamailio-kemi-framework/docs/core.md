@@ -399,6 +399,100 @@ if KSR.is_myself_srcip() then
 end
 ```
 
+### KSR.is_SCTP() ###
+
+`bool is_SCTP()`
+
+Return true if the incoming protocol is SCTP.
+
+```Lua
+if KSR.is_SCTP() then
+  ...
+end
+```
+
+### KSR.is_TCP() ###
+
+`bool is_TCP()`
+
+Return true if the incoming protocol is TCP.
+
+```Lua
+if KSR.is_TCP() then
+  ...
+end
+```
+
+### KSR.is_TLS() ###
+
+`bool is_TLS()`
+
+Return true if the incoming protocol is TLS.
+
+```Lua
+if KSR.is_TLS() then
+  ...
+end
+```
+
+
+### KSR.is_UDP() ###
+
+`bool is_UDP()`
+
+Return true if the incoming protocol is UDP.
+
+```Lua
+if KSR.is_UDP() then
+  ...
+end
+```
+
+### KSR.is_WS() ###
+
+`bool is_WS()`
+
+Return true if the incoming protocol is WS.
+
+```Lua
+if KSR.is_WS() then
+  ...
+end
+```
+
+### KSR.is_WSS() ###
+
+`bool is_WSS()`
+
+Return true if the incoming protocol is WSS.
+
+```Lua
+if KSR.is_WSS() then
+  ...
+end
+```
+
+
+### KSR.is_proto(...) ###
+
+`bool is_proto(str sproto)`
+
+Return true if the incoming protocol is matching one of the flags provided in
+the `sproto` parameter. The flags are represented by letters and they are:
+
+  * `e` or `E` - match for TLS protocol (encrypted stream)
+  * `s` or `S` - match for SCTP protocol
+  * `t` or `T` - match for TCP protocol
+  * `u` or `U` - match for UDP protocol
+  * `v` or `V` - match for WS protocol
+  * `W` or `W` - match for WSS protocol
+
+```Lua
+if KSR.is_proto("EW") then
+  ...
+end
+```
+
 ### KSR.setflag(...) ###
 
 `bool KSR.setflag(int flag)`
