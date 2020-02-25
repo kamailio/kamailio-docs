@@ -763,12 +763,17 @@ URI parameter.
 KSR.forward_uri("sip:127.0.0.1:5080;transport=tcp");
 ```
 
-### KSR.pv. Submodule ###
+### KSR.pv Submodule ###
 
-`KSR.pv` submodule provides the functions to get, set and test the values of pseduo-variables. 
+`KSR.pv` submodule provides the functions to get, set and test the values of
+pseduo-variables.
 
-The `pvname` that appears in the next sections in the function prototypes has to be a valid pseudo-variable name for
- Kamailio native configuration file (for example `$ru`, `$var(x)`, `$shv(z)`, ...).
+The `pvname` that appears in the next sections in the function prototypes has to
+be a valid pseudo-variable name for Kamailio native configuration file (for
+example `$ru`, `$var(x)`, `$shv(z)`, ...). The list of available pseudo-variables
+is available on the wiki:
+
+  * https://www.kamailio.org/wiki/cookbooks/devel/pseudovariables
 
 Note: functions exported by Kamailio's `pv` module are in `KSR.pvx` package.
 
