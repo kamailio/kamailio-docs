@@ -2083,6 +2083,18 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.shv_sets'> `int shv_sets(str "vname", str "sval")` </a>
 
+#### KSR.pvx.var_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.var_get'> `xval var_get(str "vname")` </a>
+
+#### KSR.pvx.var_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.var_seti'> `int var_seti(str "vname", int ival)` </a>
+
+#### KSR.pvx.var_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.var_sets'> `int var_sets(str "vname", str "sval")` </a>
+
 #### KSR.pvx.xavp_child_get() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_get'> `xval xavp_child_get(str "rname", str "cname")` </a>
