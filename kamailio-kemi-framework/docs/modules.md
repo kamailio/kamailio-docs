@@ -2111,6 +2111,14 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_sets'> `int xavp_child_sets(str "rname", str "cname", str "sval")` </a>
 
+#### KSR.pvx.xavp_copy() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_copy'> `int xavp_copy(str "src_name", int src_idx, str "dst_name")` </a>
+
+#### KSR.pvx.xavp_copy_dst() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_copy_dst'> `int xavp_copy_dst(str "src_name", int src_idx, str "dst_name", int dst_idx)` </a>
+
 #### KSR.pvx.xavp_get() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get'> `xval xavp_get(str "rname")` </a>
