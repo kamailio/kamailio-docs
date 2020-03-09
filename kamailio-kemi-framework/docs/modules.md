@@ -2685,6 +2685,18 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 ## siputils ##
 
+#### KSR.siputils.decode_contact() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.decode_contact'> `int decode_contact()` </a>
+
+#### KSR.siputils.decode_contact_header() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.decode_contact_header'> `int decode_contact_header()` </a>
+
+#### KSR.siputils.encode_contact() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.encode_contact'> `int encode_contact(str "eprefix", str "eaddr")` </a>
+
 #### KSR.siputils.has_totag() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.has_totag'> `int has_totag()` </a>
