@@ -339,7 +339,7 @@ class KemiFileExportParser(object):
             return_match = "sr_kemi_xval_t([ \t])*\*"
 
         # Look for declarations in format:    static? return_type function_name(
-        r = re.compile("^(?:static )?" + return_match + "[ \t]*(" + function_name + ")\(")
+        r = re.compile("^(?:static )?" + return_match + "[ \t]*(" + function_name + ")[ \t]*\(")
         for line in lines:
             m = r.match(line)
             if m:
