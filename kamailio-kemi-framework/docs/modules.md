@@ -3203,6 +3203,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_check_trans'> `int t_check_trans()` </a>
 
+#### KSR.tm.t_clean() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_clean'> `int t_clean()` </a>
+
 #### KSR.tm.t_drop_replies() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_drop_replies'> `int t_drop_replies(str "mode")` </a>
