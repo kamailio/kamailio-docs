@@ -478,9 +478,17 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_recv_socket'> `int set_recv_socket(str "ssock")` </a>
 
+#### KSR.corex.set_recv_socket_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_recv_socket_name'> `int set_recv_socket_name(str "ssock")` </a>
+
 #### KSR.corex.set_send_socket() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_send_socket'> `int set_send_socket(str "ssock")` </a>
+
+#### KSR.corex.set_send_socket_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.set_send_socket_name'> `int set_send_socket_name(str "ssock")` </a>
 
 #### KSR.corex.set_source_address() ####
 
@@ -2059,6 +2067,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavp_to_var'> `int pv_xavp_to_var(str "xname")` </a>
 
+#### KSR.pvx.pv_xavu_print() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavu_print'> `int pv_xavu_print()` </a>
+
 #### KSR.pvx.sbranch_append() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_append'> `int sbranch_append()` </a>
@@ -2166,6 +2178,62 @@ Return the To-URI user part ($tU).
 #### KSR.pvx.xavp_sets() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_sets'> `int xavp_sets(str "rname", str "sval")` </a>
+
+#### KSR.pvx.xavu_child_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_get'> `xval xavu_child_get(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavu_child_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_gete'> `xval xavu_child_gete(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavu_child_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_getw'> `xval xavu_child_getw(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavu_child_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_is_null'> `int xavu_child_is_null(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavu_child_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_rm'> `int xavu_child_rm(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavu_child_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_seti'> `int xavu_child_seti(str "rname", str "cname", int ival)` </a>
+
+#### KSR.pvx.xavu_child_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_sets'> `int xavu_child_sets(str "rname", str "cname", str "sval")` </a>
+
+#### KSR.pvx.xavu_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_get'> `xval xavu_get(str "rname")` </a>
+
+#### KSR.pvx.xavu_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_gete'> `xval xavu_gete(str "rname")` </a>
+
+#### KSR.pvx.xavu_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_getw'> `xval xavu_getw(str "rname")` </a>
+
+#### KSR.pvx.xavu_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_is_null'> `int xavu_is_null(str "rname")` </a>
+
+#### KSR.pvx.xavu_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_rm'> `int xavu_rm(str "rname")` </a>
+
+#### KSR.pvx.xavu_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_seti'> `int xavu_seti(str "rname", int ival)` </a>
+
+#### KSR.pvx.xavu_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavu_sets'> `int xavu_sets(str "rname", str "sval")` </a>
 
 ## rabbitmq ##
 
@@ -2293,6 +2361,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route'> `int loose_route()` </a>
 
+#### KSR.rr.loose_route_preloaded() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route_preloaded'> `int loose_route_preloaded()` </a>
+
 #### KSR.rr.next_hop_route() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.next_hop_route'> `int next_hop_route()` </a>
@@ -2300,6 +2372,10 @@ Return the To-URI user part ($tU).
 #### KSR.rr.record_route() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route'> `int record_route()` </a>
+
+#### KSR.rr.record_route_advertised_address() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_advertised_address'> `int record_route_advertised_address(str "addr")` </a>
 
 #### KSR.rr.record_route_params() ####
 
@@ -2906,6 +2982,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.tcpops.tcp_set_connection_lifetime_cid() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_set_connection_lifetime_cid'> `int tcp_set_connection_lifetime_cid(int i_conid, int i_time)` </a>
+
+#### KSR.tcpops.tcp_set_otcpid() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_set_otcpid'> `int tcp_set_otcpid(int vconid)` </a>
+
+#### KSR.tcpops.tcp_set_otcpid_flag() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_set_otcpid_flag'> `int tcp_set_otcpid_flag(int vmode)` </a>
 
 ## textops ##
 
