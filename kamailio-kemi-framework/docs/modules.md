@@ -2147,6 +2147,18 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get'> `xval xavp_get(str "rname")` </a>
 
+#### KSR.pvx.xavp_get_keys() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get_keys'> `xval xavp_get_keys(str "rname", int indx)` </a>
+
+#### KSR.pvx.xavp_getd() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getd'> `xval xavp_getd(str "rname")` </a>
+
+#### KSR.pvx.xavp_getd_p1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getd_p1'> `xval xavp_getd_p1(str "rname", int indx)` </a>
+
 #### KSR.pvx.xavp_gete() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete'> `xval xavp_gete(str "rname")` </a>
@@ -2666,6 +2678,16 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sdpops.sdp_with_transport_like() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_transport_like'> `int sdp_with_transport_like(str "transport")` </a>
+
+## secsipid ##
+
+#### KSR.secsipid.secsipid_add_identity() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_add_identity'> `int secsipid_add_identity(str "origtn", str "desttn", str "attest", str "origid", str "x5u", str "keypath")` </a>
+
+#### KSR.secsipid.secsipid_check_identity() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_check_identity'> `int secsipid_check_identity(str "keypath")` </a>
 
 ## sipcapture ##
 
