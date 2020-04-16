@@ -458,6 +458,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.has_user_agent'> `int has_user_agent()` </a>
 
+#### KSR.corex.is_faked_msg() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.is_faked_msg'> `int is_faked_msg()` </a>
+
 #### KSR.corex.isxflagset() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.isxflagset'> `int isxflagset(int fval)` </a>
