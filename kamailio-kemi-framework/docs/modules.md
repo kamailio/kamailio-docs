@@ -2909,6 +2909,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_get'> `xval sql_result_get(str "resid", int row, int col)` </a>
 
+#### KSR.sqlops.sql_result_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_gete'> `xval sql_result_gete(str "resid", int row, int col)` </a>
+
+#### KSR.sqlops.sql_result_getz() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_result_getz'> `xval sql_result_getz(str "resid", int row, int col)` </a>
+
 #### KSR.sqlops.sql_xquery() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_xquery'> `int sql_xquery(str "scon", str "squery", str "xavp")` </a>
