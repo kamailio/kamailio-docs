@@ -35,7 +35,7 @@ The following packages are required before proceeding to the next steps.
   * __flex__ - `apt-get install flex`
   * __bison__ - `apt-get install bison`
   * __libmysqlclient-dev__ - `apt-get install libmysqlclient-dev` (or: `apt install default-libmysqlclient-dev`)
-  * __make__ and __autoconf__ - `apt-get install make autoconf`
+  * __make__, __autoconf__ and __pkg-config__ - `apt-get install make autoconf pkg-config`
   * if you want to enable more modules, some of them require extra libraries:
     * __libssl__ - `apt-get install libssl-dev`
     * __libcurl__ - `apt-get install libcurl4-openssl-dev`
