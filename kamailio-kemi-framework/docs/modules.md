@@ -2395,7 +2395,7 @@ Return the To-URI user part ($tU).
 
 #### KSR.rr.record_route_params() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_params'> `int record_route_params(str "params")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.record_route_params'> `int record_route_params(str "sparams")` </a>
 
 #### KSR.rr.record_route_preset() ####
 
