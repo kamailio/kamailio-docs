@@ -309,6 +309,36 @@ Return true if the method type of the SIP message is `UPDATE`.
 
 Return true if the method type of the SIP message is `PRACK`.
 
+### KSR.is_KDMQ() ###
+
+`bool is_KDMQ()`
+
+Return true if the method type of the SIP message is `KDMQ`.
+
+### KSR.is_GET() ###
+
+`bool is_GET()`
+
+Return true if the method type of the HTTP message is `GET`.
+
+### KSR.is_POST() ###
+
+`bool is_POST()`
+
+Return true if the method type of the HTTP message is `POST`.
+
+### KSR.is_PUT() ###
+
+`bool is_PUT()`
+
+Return true if the method type of the HTTP message is `PUT`.
+
+### KSR.is_DELETE() ###
+
+`bool is_DELETE()`
+
+Return true if the method type of the HTTP message is `DELETE`.
+
 ### KSR.is_myself(...) ###
 
 `bool KSR.is_myself(str "uri")`
