@@ -40,7 +40,7 @@ KSR.x.exit();
 It is not exported by each KEMI interpreter module, in that case likely the scripting
 language has an `exit` function that can be used for this purpose. Respectively:
 
-  * for Python and Python3, use `exit()` or `os.exit()`.
+  * for Python and Python3, use `exit()` or `sys.exit()`.
   * for Ruby, use `exit`.
 
 In the case there is no `KSR.x.exit` and no usable `exit` in the KEMI scripting language, just do `return`
