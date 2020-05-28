@@ -1233,6 +1233,20 @@ is not integer.
 
 <a target='_blank' href='/docs/modules/devel/modules/kafka.html#kafka.f.send'> `int send(str "s_topic", str "s_message")` </a>
 
+#### KSR.kafka.send_key() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kafka.html#kafka.f.send_key'> `int send_key(str "s_topic", str "s_message", str "s_key")` </a>
+
+## kazoo ##
+
+#### KSR.kazoo.kazoo_publish() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kazoo.html#kazoo.f.kazoo_publish'> `int kazoo_publish(str "exchange", str "routing_key", str "payload")` </a>
+
+#### KSR.kazoo.kazoo_subscribe() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kazoo.html#kazoo.f.kazoo_subscribe'> `int kazoo_subscribe(str "payload")` </a>
+
 ## keepalive ##
 
 #### KSR.keepalive.add_destination() ####
@@ -3102,6 +3116,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textops.remove_body_part() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.remove_body_part'> `int remove_body_part(str "content_type")` </a>
+
+#### KSR.textops.remove_hf() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.remove_hf'> `int remove_hf(str "hname")` </a>
 
 #### KSR.textops.remove_hf_exp() ####
 
