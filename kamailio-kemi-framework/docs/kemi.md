@@ -352,18 +352,16 @@ The file `/etc/kamailio/kamailio.py` with the routing logic for runtime:
 
 ```Python
 import sys
-import Router.Logger as Logger
 import KSR as KSR
 
 def dumpObj(obj):
     for attr in dir(obj):
-        # KSR.info("obj.%s = %s\n" % (attr, getattr(obj, attr)));
-        Logger.LM_INFO("obj.%s = %s\n" % (attr, getattr(obj, attr)));
+        KSR.info("obj.%s = %s\n" % (attr, getattr(obj, attr)))
 
 def mod_init():
-    KSR.info("===== from Python mod init\n");
-    # dumpObj(KSR);
-    return kamailio();
+    KSR.info("===== from Python mod init\n")
+    # dumpObj(KSR)
+    return kamailio()
 
 class kamailio:
     def __init__(self):
@@ -374,31 +372,35 @@ class kamailio:
         return 0
 
     def ksr_request_route(self, msg):
-        KSR.info("===== request - from kamailio python script\n");
-        msg.rewrite_ruri("sip:alice@127.0.0.1:5080");
-        KSR.tm.t_on_branch("ksr_branch_route_one");
-        KSR.tm.t_on_reply("ksr_onreply_route_one");
-        KSR.tm.t_on_failure("ksr_failure_route_one");
+        KSR.info("===== request - from kamailio python script\n")
+        KSR.setdsturi("sip:alice@127.0.0.1:5080")
+        KSR.tm.t_on_branch("ksr_branch_route_one")
+        KSR.tm.t_on_reply("ksr_onreply_route_one")
+        KSR.tm.t_on_failure("ksr_failure_route_one")
         KSR.sl.send_reply(100, "Trying")
         if KSR.tm.t_relay() < 0 :
             KSR.sl.send_reply(500, "Server error")
-        return 1;
+        return 1
 
     def ksr_reply_route(self, msg):
-        KSR.info("===== response - from kamailio python script\n");
-        return 1;
+        KSR.info("===== response - from kamailio python script\n")
+        return 1
+
+    def ksr_onsend_route(self, msg):
+        KSR.info("===== onsend route - from kamailio python script\n")
+        return 1
 
     def ksr_branch_route_one(self, msg):
-        KSR.info("===== branch route - from kamailio python script\n");
-        return 1;
+        KSR.info("===== branch route - from kamailio python script\n")
+        return 1
 
     def ksr_onreply_route_one(self, msg):
-        KSR.info("===== onreply route - from kamailio python script\n");
-        return 1;
+        KSR.info("===== onreply route - from kamailio python script\n")
+        return 1
 
     def ksr_failure_route_one(self, msg):
-        KSR.info("===== failure route - from kamailio python script\n");
-        return 1;
+        KSR.info("===== failure route - from kamailio python script\n")
+        return 1
 ```
 
 ### Ruby KEMI Interpreter ###
