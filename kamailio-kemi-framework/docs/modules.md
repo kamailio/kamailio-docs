@@ -1327,6 +1327,14 @@ Return the From-URI username ($fU).
 
 Return the SIP method ($rm).
 
+#### KSR.kx.get_msgbuf() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_msgbuf'> `xval get_msgbuf()` </a>
+
+#### KSR.kx.get_msglen() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_msglen'> `int get_msglen()` </a>
+
 #### KSR.kx.get_nhuri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_nhuri'> `xval get_nhuri()` </a>
