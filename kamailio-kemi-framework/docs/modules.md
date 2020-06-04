@@ -450,6 +450,14 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.append_branch_uri_q'> `int append_branch_uri_q(str "uri", str "q")` </a>
 
+#### KSR.corex.file_read() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.file_read'> `xval file_read(str "fname")` </a>
+
+#### KSR.corex.file_write() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.file_write'> `int file_write(str "fname", str "fdata")` </a>
+
 #### KSR.corex.has_ruri_user() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.has_ruri_user'> `int has_ruri_user()` </a>
@@ -1335,6 +1343,10 @@ Return the SIP method ($rm).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_msglen'> `int get_msglen()` </a>
 
+#### KSR.kx.get_msgtype() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_msgtype'> `int get_msgtype()` </a>
+
 #### KSR.kx.get_nhuri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_nhuri'> `xval get_nhuri()` </a>
@@ -2085,6 +2097,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.pv_var_to_xavp'> `int pv_var_to_xavp(str "varname", str "xname")` </a>
 
+#### KSR.pvx.pv_xavi_print() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavi_print'> `int pv_xavi_print()` </a>
+
 #### KSR.pvx.pv_xavp_print() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavp_print'> `int pv_xavp_print()` </a>
@@ -2132,6 +2148,74 @@ Return the To-URI user part ($tU).
 #### KSR.pvx.var_sets() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.var_sets'> `int var_sets(str "vname", str "sval")` </a>
+
+#### KSR.pvx.xavi_child_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_get'> `xval xavi_child_get(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavi_child_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_gete'> `xval xavi_child_gete(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavi_child_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_getw'> `xval xavi_child_getw(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavi_child_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_is_null'> `int xavi_child_is_null(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavi_child_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_rm'> `int xavi_child_rm(str "rname", str "cname")` </a>
+
+#### KSR.pvx.xavi_child_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_seti'> `int xavi_child_seti(str "rname", str "cname", int ival)` </a>
+
+#### KSR.pvx.xavi_child_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_sets'> `int xavi_child_sets(str "rname", str "cname", str "sval")` </a>
+
+#### KSR.pvx.xavi_get() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_get'> `xval xavi_get(str "rname")` </a>
+
+#### KSR.pvx.xavi_get_keys() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_get_keys'> `xval xavi_get_keys(str "rname", int indx)` </a>
+
+#### KSR.pvx.xavi_getd() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getd'> `xval xavi_getd(str "rname")` </a>
+
+#### KSR.pvx.xavi_getd_p1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getd_p1'> `xval xavi_getd_p1(str "rname", int indx)` </a>
+
+#### KSR.pvx.xavi_gete() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_gete'> `xval xavi_gete(str "rname")` </a>
+
+#### KSR.pvx.xavi_getw() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getw'> `xval xavi_getw(str "rname")` </a>
+
+#### KSR.pvx.xavi_is_null() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_is_null'> `int xavi_is_null(str "rname")` </a>
+
+#### KSR.pvx.xavi_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_rm'> `int xavi_rm(str "rname")` </a>
+
+#### KSR.pvx.xavi_seti() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_seti'> `int xavi_seti(str "rname", int ival)` </a>
+
+#### KSR.pvx.xavi_sets() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavi_sets'> `int xavi_sets(str "rname", str "sval")` </a>
 
 #### KSR.pvx.xavp_child_get() ####
 
