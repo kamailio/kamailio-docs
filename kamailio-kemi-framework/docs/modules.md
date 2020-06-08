@@ -1295,6 +1295,10 @@ environment attributes.
 
 Return the body of the SIP message (the value of $rb).
 
+#### KSR.kx.get_bodylen() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_bodylen'> `int get_bodylen()` </a>
+
 #### KSR.kx.get_callid() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_callid'> `xval get_callid()` </a>
