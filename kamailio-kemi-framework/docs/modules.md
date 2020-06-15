@@ -2897,6 +2897,22 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 ## siputils ##
 
+#### KSR.siputils.contact_param_decode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_decode'> `int contact_param_decode(str "nparam")` </a>
+
+#### KSR.siputils.contact_param_decode_ruri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_decode_ruri'> `int contact_param_decode_ruri(str "nparam")` </a>
+
+#### KSR.siputils.contact_param_encode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_encode'> `int contact_param_encode(str "nparam", str "saddr")` </a>
+
+#### KSR.siputils.contact_param_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_rm'> `int contact_param_rm(str "nparam")` </a>
+
 #### KSR.siputils.decode_contact() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.decode_contact'> `int decode_contact()` </a>
@@ -3002,6 +3018,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sqlops.sql_num_rows() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_num_rows'> `int sql_num_rows(str "sres")` </a>
+
+#### KSR.sqlops.sql_pvquery() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sqlops.html#sqlops.f.sql_pvquery'> `int sql_pvquery(str "scon", str "squery", str "sres")` </a>
 
 #### KSR.sqlops.sql_query() ####
 
