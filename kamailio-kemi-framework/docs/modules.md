@@ -268,6 +268,16 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/auth_xkeys.html#auth_xkeys.f.auth_xkeys_check'> `int auth_xkeys_check(str "shdr", str "skey", str "salg", str "sdata")` </a>
 
+## avpops ##
+
+#### KSR.avpops.avp_check() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/avpops.html#avpops.f.avp_check'> `int avp_check(str "param", str "check")` </a>
+
+#### KSR.avpops.avp_copy() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/avpops.html#avpops.f.avp_copy'> `int avp_copy(str "name1", str "name2")` </a>
+
 ## benchmark ##
 
 #### KSR.benchmark.bm_log_timer() ####
@@ -779,6 +789,32 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.diversion.add_diversion_uri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/diversion.html#diversion.f.add_diversion_uri'> `int add_diversion_uri(str "reason", str "uri")` </a>
+
+## dlgs ##
+
+#### KSR.dlgs.dlgs_count() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_count'> `int dlgs_count(str "vfield", str "vop", str "vdata")` </a>
+
+#### KSR.dlgs.dlgs_init() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_init'> `int dlgs_init(str "src", str "dst", str "data")` </a>
+
+#### KSR.dlgs.dlgs_tags_add() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_tags_add'> `int dlgs_tags_add(str "vtags")` </a>
+
+#### KSR.dlgs.dlgs_tags_count() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_tags_count'> `int dlgs_tags_count(str "vtags")` </a>
+
+#### KSR.dlgs.dlgs_tags_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_tags_rm'> `int dlgs_tags_rm(str "vtags")` </a>
+
+#### KSR.dlgs.dlgs_update() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/dlgs.html#dlgs.f.dlgs_update'> `int dlgs_update()` </a>
 
 ## dmq ##
 
@@ -1825,6 +1861,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.set_contact_alias'> `int set_contact_alias()` </a>
 
+#### KSR.nathelper.set_contact_alias_trim() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/nathelper.html#nathelper.f.set_contact_alias_trim'> `int set_contact_alias_trim()` </a>
+
 ## ndb_mongodb ##
 
 #### KSR.ndb_mongodb.exec() ####
@@ -2541,6 +2581,26 @@ Return the To-URI user part ($tU).
 
 This module enables media streams to be proxied via an RTPproxy.
 
+#### KSR.rtpengine.block_dtmf() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.block_dtmf'> `int block_dtmf(str "flags")` </a>
+
+#### KSR.rtpengine.block_dtmf0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.block_dtmf0'> `int block_dtmf0()` </a>
+
+#### KSR.rtpengine.block_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.block_media'> `int block_media(str "flags")` </a>
+
+#### KSR.rtpengine.block_media0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.block_media0'> `int block_media0()` </a>
+
+#### KSR.rtpengine.play_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.play_media'> `int play_media(str "flags")` </a>
+
 #### KSR.rtpengine.rtpengine_answer() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_answer'> `int rtpengine_answer(str "flags")` </a>
@@ -2605,9 +2665,33 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.start_recording'> `int start_recording()` </a>
 
+#### KSR.rtpengine.stop_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.stop_media'> `int stop_media(str "flags")` </a>
+
+#### KSR.rtpengine.stop_media0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.stop_media0'> `int stop_media0()` </a>
+
 #### KSR.rtpengine.stop_recording() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.stop_recording'> `int stop_recording()` </a>
+
+#### KSR.rtpengine.unblock_dtmf() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unblock_dtmf'> `int unblock_dtmf(str "flags")` </a>
+
+#### KSR.rtpengine.unblock_dtmf0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unblock_dtmf0'> `int unblock_dtmf0()` </a>
+
+#### KSR.rtpengine.unblock_media() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unblock_media'> `int unblock_media(str "flags")` </a>
+
+#### KSR.rtpengine.unblock_media0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unblock_media0'> `int unblock_media0()` </a>
 
 ## rtpproxy ##
 
@@ -2972,6 +3056,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.siputils.uri_param() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param'> `int uri_param(str "sparam")` </a>
+
+#### KSR.siputils.uri_param_any() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param_any'> `int uri_param_any(str "sparam")` </a>
+
+#### KSR.siputils.uri_param_rm() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/siputils.html#siputils.f.uri_param_rm'> `int uri_param_rm(str "sparam")` </a>
 
 #### KSR.siputils.uri_param_value() ####
 
