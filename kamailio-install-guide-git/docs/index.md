@@ -1,6 +1,6 @@
-# Kamailio v5.4 - Install Guide #
+# Kamailio v5.5 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.4 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.5 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -19,7 +19,7 @@ the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
 *This document focuses on Kamailio devel (at this time it is the upcoming v5.4.0)
-with MySQL support, using a Debian unstable system.*
+with MySQL/MariaDB support, using a Debian unstable system.*
 
 
 ## Prerequisites ##
@@ -28,7 +28,7 @@ To be able to follow the guidelines from this document you need `root` access.
 
 The following packages are required before proceeding to the next steps.
 
-  * __git__ client: `apt-get install git-core` - it is recommended to have a recent
+  * __git__ client: `apt-get install git` - it is recommended to have a recent
   version, if your Linux distro has an old version, you can download newer one
   from [git-scm.com](http://git-scm.com)
   * __gcc__ and __g++__ compilers: `apt-get install gcc g++`
@@ -50,7 +50,7 @@ The alternative is to set different paths via parameters of **jsonrpcs**
 and **ctl** modules.
 
 **Note**: __g++__ compiler is needed for couple of modules that link to C++ libraries,
-such as app_sqlang, phonenum or ndb_cassandra.
+such as __app_sqlang__, phonenum or __ndb_cassandra__.
 
 ### MySQL Or MariaDB Server ###
 
