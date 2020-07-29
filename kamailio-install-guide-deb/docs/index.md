@@ -28,12 +28,12 @@ development versions, is presented at:
 
   * [Kamailio APT Repos: Debian - Ubuntu](https://deb.kamailio.org/)
 
-For example, if you want to install Kamailio v5.2.x on Debian Strech, add the next
+For example, if you want to install Kamailio v5.4.x on Debian Buster (10.x), add the next
 URLs to APT configuration:
 
 ```
-deb     http://deb.kamailio.org/kamailio52 stretch main
-deb-src http://deb.kamailio.org/kamailio52 stretch main
+deb     http://deb.kamailio.org/kamailio54 buster main
+deb-src http://deb.kamailio.org/kamailio54 buster main
 ```
 
 ## APT Install Commands ###
@@ -45,7 +45,7 @@ command to sync with the remote repository, then install `MySQL` server,
 
 ```Shell
 apt update
-apt install mysql-server
+apt install default-mysql-server
 apt install kamailio kamailio-mysql-modules
 ```
 
