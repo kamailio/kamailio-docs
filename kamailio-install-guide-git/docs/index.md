@@ -1,6 +1,6 @@
-# Kamailio v5.5 - Install Guide #
+# Kamailio v5.4 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.5 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.4 (stable) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -76,6 +76,7 @@ Download the sources from GIT using the following commands.
 ```Shell
   git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
   cd kamailio
+  git checkout -b 5.4 origin/5.4
 ```
 
 _**Note**: if your git client version does not support **--no-single-branch**
@@ -110,14 +111,14 @@ default, such as lcr, dialplan, presence -- add the modules to
 **include_modules** variable inside the **modules.lst** file, like:
 
 ```Shell
-include_modules= db_mysql dialplan
+include_modules= db_mysql tls dialplan
 ```
 
 Alternative is to set `include_modules` variable with the list of extra modules
 to be included for compilation when building `Makefile` cfg:
 
 ```Shell
-make include_modules="db_mysql dialplan" cfg
+make include_modules="db_mysql tls dialplan" cfg
 ```
 
 **NOTE**: If you want to install everything in one directory (so you can delete
@@ -125,7 +126,7 @@ all installed files at once), say `/usr/local/kamailio-devel`, then set `PREFIX`
 variable to the install path in `make cfg ...` command:
 
 ```Shell
-make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan" cfg
+make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql tls dialplan" cfg
 ```
 
 More hints about `Makefile` system at:
@@ -415,7 +416,7 @@ the lines:
 
 ```Shell
 Module: kamailio
-Branch: master
+Branch: 5.4
 ```
 
 then an update has been made to Kamailio devel version and it will be available
