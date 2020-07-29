@@ -18,8 +18,8 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.4.0)
-with MySQL/MariaDB support, using a Debian unstable system.*
+*This document focuses on Kamailio v5.4.x releases series, installed
+with MySQL/MariaDB support, using a Debian stable system.*
 
 
 ## Prerequisites ##
@@ -67,8 +67,8 @@ will be stored.
 
 
 ```Shell
-  mkdir -p /usr/local/src/kamailio-devel
-  cd /usr/local/src/kamailio-devel
+  mkdir -p /usr/local/src/kamailio-5.4
+  cd /usr/local/src/kamailio-5.4
 ```
 
 Download the sources from GIT using the following commands.
