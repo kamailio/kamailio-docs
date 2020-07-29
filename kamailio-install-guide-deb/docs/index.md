@@ -5,7 +5,7 @@ For more details about Kamailio Project visit: [kamailio.org](https://www.kamail
 ## Overview ##
 
 Kamailio packages are included in the official Debian Stable repository since version 8.0,
-and continues to be in the current Stable (9.x, codename Stretch).
+and continues to be in the current Stable (10.x, codename Buster).
 
 This tutorial should just work for latest Ubuntu versions as well.
 
