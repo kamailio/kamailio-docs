@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.4.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.5.0)
 with MySQL/MariaDB support, using a Debian unstable system.*
 
 
@@ -106,18 +106,18 @@ include_modules= db_mysql
 Save the **modules.lst** and exit.
 
 **NOTE**: this is one mechanism to enable modules which are not compiled by
-default, such as lcr, dialplan, presence -- add the modules to
+default, such as lcr, dialplan, tls, presence -- add the modules to
 **include_modules** variable inside the **modules.lst** file, like:
 
 ```Shell
-include_modules= db_mysql dialplan
+include_modules= db_mysql dialplan tls
 ```
 
 Alternative is to set `include_modules` variable with the list of extra modules
 to be included for compilation when building `Makefile` cfg:
 
 ```Shell
-make include_modules="db_mysql dialplan" cfg
+make include_modules="db_mysql dialplan tls" cfg
 ```
 
 **NOTE**: If you want to install everything in one directory (so you can delete
@@ -125,7 +125,7 @@ all installed files at once), say `/usr/local/kamailio-devel`, then set `PREFIX`
 variable to the install path in `make cfg ...` command:
 
 ```Shell
-make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan" cfg
+make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan tls" cfg
 ```
 
 More hints about `Makefile` system at:
