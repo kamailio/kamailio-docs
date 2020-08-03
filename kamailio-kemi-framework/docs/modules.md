@@ -962,6 +962,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.async_relay'> `int async_relay(str "sdata")` </a>
 
+#### KSR.evapi.async_unicast() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.async_unicast'> `int async_unicast(str "sdata", str "stag")` </a>
+
 #### KSR.evapi.close() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.close'> `int close()` </a>
@@ -3458,6 +3462,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textopsx.change_reply_status() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textopsx.html#textopsx.f.change_reply_status'> `int change_reply_status(int code, str "reason")` </a>
+
+#### KSR.textopsx.change_reply_status_code() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textopsx.html#textopsx.f.change_reply_status_code'> `int change_reply_status_code(int code)` </a>
 
 #### KSR.textopsx.exclude_hf_value() ####
 
