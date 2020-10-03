@@ -182,6 +182,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## async ##
 
+#### KSR.async.ms_route() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/async.html#async.f.ms_route'> `int ms_route(str "rn", int s)` </a>
+
 #### KSR.async.route() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/async.html#async.f.route'> `int route(str "rn", int s)` </a>
@@ -364,6 +368,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.abort'> `int abort()` </a>
 
+#### KSR.cfgutils.check_route_exists() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.check_route_exists'> `int check_route_exists(str "route")` </a>
+
 #### KSR.cfgutils.core_hash() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.core_hash'> `int core_hash(str "s1", str "s2", int sz)` </a>
@@ -395,6 +403,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.cfgutils.rand_set_prob() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.rand_set_prob'> `int rand_set_prob(int percent_par)` </a>
+
+#### KSR.cfgutils.route_if_exists() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/cfgutils.html#cfgutils.f.route_if_exists'> `int route_if_exists(str "route")` </a>
 
 #### KSR.cfgutils.shm_status() ####
 
@@ -2531,6 +2543,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route'> `int loose_route()` </a>
 
+#### KSR.rr.loose_route_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route_mode'> `int loose_route_mode(int vmode)` </a>
+
 #### KSR.rr.loose_route_preloaded() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/rr.html#rr.f.loose_route_preloaded'> `int loose_route_preloaded()` </a>
@@ -4108,6 +4124,22 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.xhttp_prom.gauge_set_l3() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_set_l3'> `int gauge_set_l3(str "s_name", str "s_number", str "l1", str "l2", str "l3")` </a>
+
+#### KSR.xhttp_prom.histogram_observe_l0() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.histogram_observe_l0'> `int histogram_observe_l0(str "s_name", str "s_number")` </a>
+
+#### KSR.xhttp_prom.histogram_observe_l1() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.histogram_observe_l1'> `int histogram_observe_l1(str "s_name", str "s_number", str "l1")` </a>
+
+#### KSR.xhttp_prom.histogram_observe_l2() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.histogram_observe_l2'> `int histogram_observe_l2(str "s_name", str "s_number", str "l1", str "l2")` </a>
+
+#### KSR.xhttp_prom.histogram_observe_l3() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.histogram_observe_l3'> `int histogram_observe_l3(str "s_name", str "s_number", str "l1", str "l2", str "l3")` </a>
 
 ## xhttp_rpc ##
 
