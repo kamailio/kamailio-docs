@@ -1995,6 +1995,10 @@ Return the To-URI user part ($tU).
 
 ## pike ##
 
+#### KSR.pike.pike_check_ip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pike.html#pike.f.pike_check_ip'> `int pike_check_ip(str "strip")` </a>
+
 #### KSR.pike.pike_check_req() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pike.html#pike.f.pike_check_req'> `int pike_check_req()` </a>
@@ -2360,6 +2364,10 @@ Return the To-URI user part ($tU).
 #### KSR.pvx.xavp_sets() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_sets'> `int xavp_sets(str "rname", str "sval")` </a>
+
+#### KSR.pvx.xavp_slist_explode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pvx.html#pvx.f.xavp_slist_explode'> `int xavp_slist_explode(str "slist", str "sep", str "mode", str "sxname")` </a>
 
 #### KSR.pvx.xavu_child_get() ####
 
