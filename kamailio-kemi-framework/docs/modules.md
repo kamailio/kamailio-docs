@@ -1987,6 +1987,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_source_address_group'> `int allow_source_address_group()` </a>
 
+#### KSR.permissions.allow_trusted() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/permissions.html#permissions.f.allow_trusted'> `int allow_trusted()` </a>
+
 ## phonenum ##
 
 #### KSR.phonenum.match() ####
