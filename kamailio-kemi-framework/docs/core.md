@@ -1043,9 +1043,25 @@ Example:
 v = KSR.hdr.get("X-My-Hdr");
 ```
 
+### KSR.hdr.get_idx(...) ###
+
+`xval KSR.hdr.get(str "hname", int idx)`
+
+Return the value of the header matching the name with `hname` at the index `idx`
+or `NULL` if that header is not found. The index starts with `0` for first header
+and can be negative to count backwards from the last header (which corresponds
+to index `-1`).
+
+Example:
+
+```
+v = KSR.hdr.get_idx("X-My-Hdr", 1);
+```
+
 ### KSR.hdr.gete(...) ###
 
 `xval KSR.hdr.gete(str "hname")`
+
 
 Return the value of the header matching the name with `hname` or empty string
 if that header is not found.
@@ -1055,6 +1071,20 @@ Example:
 
 ```
 v = KSR.hdr.gete("X-My-Hdr");
+```
+
+### KSR.hdr.gete_idx(...) ###
+
+`xval KSR.hdr.gete(str "hname", int idx)`
+
+Return the value of the header matching the name with `hname` at the index `idx`
+or empty string if that header is not found.
+
+
+Example:
+
+```
+v = KSR.hdr.gete_idx("X-My-Hdr", -1);
 ```
 
 ### KSR.hdr.getw(...) ###
@@ -1069,4 +1099,18 @@ Example:
 
 ```
 v = KSR.hdr.getw("X-My-Hdr");
+```
+
+### KSR.hdr.getw_idx(...) ###
+
+`xval KSR.hdr.getw_idx(str "hname", int idx)`
+
+Return the value of the header matching the name with `hname` at the index `idx`
+or string `<<null>>` if that header is not found.
+
+
+Example:
+
+```
+v = KSR.hdr.getw_idx("X-My-Hdr", 2);
 ```
