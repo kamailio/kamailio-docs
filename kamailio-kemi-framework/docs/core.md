@@ -793,6 +793,20 @@ URI parameter.
 KSR.forward_uri("sip:127.0.0.1:5080;transport=tcp");
 ```
 
+### KSR.route(...) ###
+
+`int KSR.route(str "rname")`
+
+Execute a route block written in configuration file using native scripting
+language. It returns `0` if the last action in the route block is an exit
+operation (e.g., like `exit`, `drop` or Kamailio function returning `0`).
+
+Example:
+
+```
+KSR.route("REQINIT");
+```
+
 ### KSR.pv Submodule ###
 
 `KSR.pv` submodule provides the functions to get, set and test the values of
