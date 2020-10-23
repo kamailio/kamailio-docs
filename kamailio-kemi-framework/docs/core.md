@@ -1114,3 +1114,24 @@ Example:
 ```
 v = KSR.hdr.getw_idx("X-My-Hdr", 2);
 ```
+
+### KSR.hdr.match_content(...) ###
+
+`bool KSR.hdr.match_content(str "hname", str "op", str "mval", str "eidx")`
+
+Return `true` on matching the content of headers based on the expression from
+the parameters, otherwise `false`.
+
+The parameters are:
+  * `hname` - header name
+  * `op`- the matching operator, it can be: `eq` - equal; `ne` - not equal;
+  `sw` - starts with; `in` - includes;
+  * `mval` - matching value
+  * `eidx` - expression of the index, it can be: 'f' - first header only;
+  `l` - last header only; `a` - all headers; `o` - at least one header
+
+Example:
+
+```
+if(KSR.hdr.match_content("X-My-Hdr", "in", "test", "o")) { ... }
+```
