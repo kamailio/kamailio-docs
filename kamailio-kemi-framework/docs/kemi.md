@@ -627,3 +627,86 @@ The return type can be:
   integer or string value. For example it is used for the functions that return
   the value of pseudo-variables KSR.pv.get(...). This return type is supported
   only for exported functions that have up to 2 parameters.
+
+
+## KEMI And Pseudo-Variables ##
+
+Kamailio-specific pseudo-variables can be managed using functions exposed by
+`KSR.pv` module. The `KSR.pv` is exported by Kamailio core or by KEMI interpreter
+module and should be available in the KEMI scripting language automatically, no
+additional Kamailio module needs to be loaded. Of course, availability of
+specific variables is still a matter of loading the module implementing them
+(e.g., availability of `$T(..)` requires loading `tmx` module).
+
+Because the pseduo-variables were designed for Kamailio native configuration
+file scripting language, there are a few constraints and limitations as well as
+recommendations to be aware of, listed in the next sections.
+
+### Constraint Of PV Static Names ###
+
+In many situations the pseudo-variables expect static names, which was ensured
+by parsing `kamailio.cfg` at startup. However that cannot be ensured by using
+KEMI scripts, Kamailio having no control to the implementation of the scripting
+language interpreter, the effect can be that it is possible to define a lot of
+pseudo-variables, which can lead to filling the private memory of Kamailio.
+
+For example, using `htable` module in native `kamailio.cfg`, one defines the
+hash table `test` via `modparam` and in the script uses variables such as
+`$sht(test=>x)` to access the value of the item with the key `x`, or uses
+`$sht(test=>$rU)` to access the value of the item with the key being the R-URI
+username of currently processed SIP request. In such case, two pseudo-variable
+structures are defined by Kamailio at startup, corresponding to `$sht(test=>x)`
+and `$sht(test=>$rU)`.
+
+When using KEMI scripting, accessing `$sht(test=>x)` with `KSR.pv.get("$sht(test=>x)")`
+and `$sht(test=>$rU)` with `KSR.pv.get("$sht(test=>$rU)")` is ok, because still
+two pseudo-variable identifiers are used.
+
+However, someone may try to access the `$sht(test=>$rU)` via
+`KSR.pv.get("$sht(test=>" .. KSR.kx.get_ruser() .. ")")` (example in Lua), then
+it leads of defining internally to Kamailio a lot of variables, corresponding to
+each different R-URI username processed. Say, there were three requests with
+R-URI usernames `alice`, `bob` and `carol`, Kamailio has defined internally
+three pseudo-variable structures corresponding to `$sht(test=>alice)`, `$sht(test=>bob)`
+and `$sht(test=>carol)`.
+
+There are couple of mechanisms trying to cope with this situation, especially for
+hash table, including availability of dedicated functions to access hash table
+items, or trying to clean up some of the pseudo-variable structures. But they
+are not available for all the modules that exposes same risks, such as
+`sqlops`, `ndb_redis` or `ndb_mongodb`. Therefore try to avoid using
+pseudo-variables with dynamic name.
+
+For example, in the next snippet a single pseudo-variable structure is used
+for accessing three hash table items, by leveraging `$var(x)` inside `$sht(...)`
+name:
+
+```Lua
+KSR.pvx.var_sets("x", "alice");
+shtx = KSR.pv_get("$sht(test=>$var(x))");
+KSR.pvx.var_sets("x", "bob");
+shtx = KSR.pv_get("$sht(test=>$var(x))");
+KSR.pvx.var_sets("x", "carol");
+shtx = KSR.pv_get("$sht(test=>$var(x))");
+```
+
+Note that for the modules that return results of SQL or noSQL queries, the result
+id can be reused. The values of result containers are stored in private memory
+and it is safe to use them in different Kamailio worker processes.
+
+### Functions For Specific Pseudo-Variables ###
+
+The package `KSR.kx` exported by `kemix` module offers a consistent set of
+functions to get or set values specific for various pseudo-variables, especially
+for attributes of the SIP message such as From-URI, From-URI-username, etc.
+
+The package `KSR.pvx` exported by `pv` module offers convenience functions
+to work with private-memory (`$var(...)`) or shared memory (`$shv(...)`)
+pseudo-variables as well as XAVPs.
+
+The package `KSR.sqlops` exported by `sqlops` module offers convenience functions
+to access the SQL result instead of using `$dbr(...)`.
+
+It is recommended to look at the functions exported to KEMI by each Kamailio
+module used in the script, there can be useful functions that could be convenient
+to use instead of the pseudo-variables exported by that module.
