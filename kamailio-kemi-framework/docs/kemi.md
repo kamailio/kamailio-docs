@@ -702,10 +702,44 @@ for attributes of the SIP message such as From-URI, From-URI-username, etc.
 
 The package `KSR.pvx` exported by `pv` module offers convenience functions
 to work with private-memory (`$var(...)`) or shared memory (`$shv(...)`)
-pseudo-variables as well as XAVPs.
+pseudo-variables as well as XAVPs variants.
+
+For example:
+
+```Lua
+KSR.pv.sets("$var(x)", "alice");
+```
+
+is the same as:
+
+```Lua
+KSR.pvx.var_sets("x", "alice");
+```
+
+the second variant being recommended to be used.
 
 The package `KSR.sqlops` exported by `sqlops` module offers convenience functions
 to access the SQL result instead of using `$dbr(...)`.
+
+For example:
+
+```Lua
+KSR.sqlops.sql_query("ca", "select username from subscriber limit 1", "ra");
+if KSR.pv.get("$dbr(ra=>rows)") > 0 then
+  local username = KSR.pv.get("$dbr(ra=>[0,0])");
+end
+```
+
+is the same as:
+
+```Lua
+KSR.sqlops.sql_query("ca", "select username from subscriber limit 1", "ra");
+if KSR.sqlops.sql_num_rows("ra") > 0 then
+  local username = KSR.sqlops.sql_result_get("ra", 0, 0);
+end
+```
+
+the second variant being recommended to be used.
 
 It is recommended to look at the functions exported to KEMI by each Kamailio
 module used in the script, there can be useful functions that could be convenient
