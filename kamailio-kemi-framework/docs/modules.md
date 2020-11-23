@@ -318,9 +318,9 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_del'> `int blst_del()` </a>
 
-#### KSR.blst.blst_is_blacklisted() ####
+#### KSR.blst.blst_is_blocklisted() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_is_blacklisted'> `int blst_is_blacklisted()` </a>
+<a target='_blank' href='/docs/modules/devel/modules/blst.html#blst.f.blst_is_blocklisted'> `int blst_is_blocklisted()` </a>
 
 #### KSR.blst.blst_rpl_clear_ignore() ####
 
@@ -1275,6 +1275,10 @@ is not integer.
 
 ## jsonrpcs ##
 
+#### KSR.jsonrpcs.dispatch() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.dispatch'> `int dispatch()` </a>
+
 #### KSR.jsonrpcs.exec() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.exec'> `int exec(str "scmd")` </a>
@@ -1418,6 +1422,14 @@ Return the SIP method ($rm).
 #### KSR.kx.get_protoid() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_protoid'> `int get_protoid()` </a>
+
+#### KSR.kx.get_rcvadvip() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvadvip'> `xval get_rcvadvip()` </a>
+
+#### KSR.kx.get_rcvadvport() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvadvport'> `xval get_rcvadvport()` </a>
 
 #### KSR.kx.get_rcvip() ####
 
@@ -2919,6 +2931,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_check_identity'> `int secsipid_check_identity(str "keypath")` </a>
 
+#### KSR.secsipid.secsipid_check_identity_pubkey() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_check_identity_pubkey'> `int secsipid_check_identity_pubkey(str "keyval")` </a>
+
+#### KSR.secsipid.secsipid_get_url() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_get_url'> `xval secsipid_get_url(str "surl")` </a>
+
 ## sipcapture ##
 
 #### KSR.sipcapture.float2int() ####
@@ -3106,6 +3126,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.sl.send_reply() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/sl.html#sl.f.send_reply'> `int send_reply(int code, str "reason")` </a>
+
+#### KSR.sl.send_reply_mode() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sl.html#sl.f.send_reply_mode'> `int send_reply_mode(int code, str "reason", int mode)` </a>
 
 #### KSR.sl.sl_forward_reply() ####
 
@@ -3975,43 +3999,43 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/uri_db.html#uri_db.f.does_uri_exist'> `int does_uri_exist()` </a>
 
-## userblacklist ##
+## userblocklist ##
 
-#### KSR.userblacklist.check_blacklist() ####
+#### KSR.userblocklist.check_allowlist() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_blacklist'> `int check_blacklist(str "stable")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_allowlist'> `int check_allowlist(str "stable")` </a>
 
-#### KSR.userblacklist.check_global_blacklist() ####
+#### KSR.userblocklist.check_blocklist() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_global_blacklist'> `int check_global_blacklist()` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_blocklist'> `int check_blocklist(str "stable")` </a>
 
-#### KSR.userblacklist.check_user_blacklist() ####
+#### KSR.userblocklist.check_global_blocklist() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_blacklist'> `int check_user_blacklist(str "suser", str "sdomain")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_global_blocklist'> `int check_global_blocklist()` </a>
 
-#### KSR.userblacklist.check_user_blacklist_number() ####
+#### KSR.userblocklist.check_user_allowlist() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_blacklist_number'> `int check_user_blacklist_number(str "suser", str "sdomain", str "snumber")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_allowlist'> `int check_user_allowlist(str "suser", str "sdomain")` </a>
 
-#### KSR.userblacklist.check_user_blacklist_table() ####
+#### KSR.userblocklist.check_user_allowlist_number() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_blacklist_table'> `int check_user_blacklist_table(str "suser", str "sdomain", str "snumber", str "stable")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_allowlist_number'> `int check_user_allowlist_number(str "suser", str "sdomain", str "snumber")` </a>
 
-#### KSR.userblacklist.check_user_whitelist() ####
+#### KSR.userblocklist.check_user_allowlist_table() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_whitelist'> `int check_user_whitelist(str "suser", str "sdomain")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_allowlist_table'> `int check_user_allowlist_table(str "suser", str "sdomain", str "snumber", str "stable")` </a>
 
-#### KSR.userblacklist.check_user_whitelist_number() ####
+#### KSR.userblocklist.check_user_blocklist() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_whitelist_number'> `int check_user_whitelist_number(str "suser", str "sdomain", str "snumber")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_blocklist'> `int check_user_blocklist(str "suser", str "sdomain")` </a>
 
-#### KSR.userblacklist.check_user_whitelist_table() ####
+#### KSR.userblocklist.check_user_blocklist_number() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_user_whitelist_table'> `int check_user_whitelist_table(str "suser", str "sdomain", str "snumber", str "stable")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_blocklist_number'> `int check_user_blocklist_number(str "suser", str "sdomain", str "snumber")` </a>
 
-#### KSR.userblacklist.check_whitelist() ####
+#### KSR.userblocklist.check_user_blocklist_table() ####
 
-<a target='_blank' href='/docs/modules/devel/modules/userblacklist.html#userblacklist.f.check_whitelist'> `int check_whitelist(str "stable")` </a>
+<a target='_blank' href='/docs/modules/devel/modules/userblocklist.html#userblocklist.f.check_user_blocklist_table'> `int check_user_blocklist_table(str "suser", str "sdomain", str "snumber", str "stable")` </a>
 
 ## utils ##
 
