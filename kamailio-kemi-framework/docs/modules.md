@@ -1365,6 +1365,10 @@ Return the body of the SIP message (the value of $rb).
 
 Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connection corresponds to current SIP message.
 
+#### KSR.kx.get_cturi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_cturi'> `xval get_cturi()` </a>
+
 #### KSR.kx.get_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>
@@ -1423,6 +1427,10 @@ Return the SIP method ($rm).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_protoid'> `int get_protoid()` </a>
 
+#### KSR.kx.get_rcv_sock_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcv_sock_name'> `xval get_rcv_sock_name()` </a>
+
 #### KSR.kx.get_rcvadvip() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_rcvadvip'> `xval get_rcvadvip()` </a>
@@ -1456,6 +1464,14 @@ Return the Request URI ($ru).
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_ruser'> `xval get_ruser()` </a>
 
 Return the Request URI user part ($rU).
+
+#### KSR.kx.get_send_sock() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_send_sock'> `xval get_send_sock()` </a>
+
+#### KSR.kx.get_send_sock_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_send_sock_name'> `xval get_send_sock_name()` </a>
 
 #### KSR.kx.get_srcip() ####
 
@@ -1503,6 +1519,10 @@ Return the To-URI user part ($tU).
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_body'> `xval gete_body()` </a>
 
+#### KSR.kx.gete_cturi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_cturi'> `xval gete_cturi()` </a>
+
 #### KSR.kx.gete_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.gete_duri'> `xval gete_duri()` </a>
@@ -1546,6 +1566,10 @@ Return the To-URI user part ($tU).
 #### KSR.kx.getw_body() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_body'> `xval getw_body()` </a>
+
+#### KSR.kx.getw_cturi() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.getw_cturi'> `xval getw_cturi()` </a>
 
 #### KSR.kx.getw_duri() ####
 
@@ -3253,6 +3277,12 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/statsd.html#statsd.f.statsd_stop'> `int statsd_stop(str "key")` </a>
 
+## sworker ##
+
+#### KSR.sworker.task() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/sworker.html#sworker.f.task'> `int task(str "gname")` </a>
+
 ## tcpops ##
 
 #### KSR.tcpops.tcp_conid_alive() ####
@@ -3698,6 +3728,14 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.tm.t_relay_to_flags() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_flags'> `int t_relay_to_flags(int rflags)` </a>
+
+#### KSR.tm.t_relay_to_proto() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_proto'> `int t_relay_to_proto(str "sproto")` </a>
+
+#### KSR.tm.t_relay_to_proto_addr() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tm.html#tm.f.t_relay_to_proto_addr'> `int t_relay_to_proto_addr(str "sproto", str "host", int port)` </a>
 
 #### KSR.tm.t_relay_to_proxy() ####
 
