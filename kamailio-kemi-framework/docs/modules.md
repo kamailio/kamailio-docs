@@ -1369,6 +1369,14 @@ Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connecti
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_cturi'> `xval get_cturi()` </a>
 
+#### KSR.kx.get_def() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_def'> `xval get_def(str "dname")` </a>
+
+#### KSR.kx.get_defn() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_defn'> `int get_defn(str "dname")` </a>
+
 #### KSR.kx.get_duri() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_duri'> `xval get_duri()` </a>
