@@ -3619,6 +3619,16 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 
 <a target='_blank' href='/docs/modules/devel/modules/tls.html#tls.f.cget'> `xval cget(str "aname")` </a>
 
+Return values corresponding the pseudo-variables exported by TLS module, related
+to TLS connection and certificates. The parameter has to be the name of the
+pseudo-variable (without `$`).
+
+Example:
+
+```
+local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
+```
+
 #### KSR.tls.is_peer_verified() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/tls.html#tls.f.is_peer_verified'> `int is_peer_verified()` </a>
