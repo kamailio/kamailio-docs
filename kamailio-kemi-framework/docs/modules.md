@@ -970,6 +970,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 ## evapi ##
 
+#### KSR.evapi.async_multicast() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.async_multicast'> `int async_multicast(str "sdata", str "stag")` </a>
+
 #### KSR.evapi.async_relay() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/evapi.html#evapi.f.async_relay'> `int async_relay(str "sdata")` </a>
@@ -3610,6 +3614,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 <a target='_blank' href='/docs/modules/devel/modules/textopsx.html#textopsx.f.remove_hf_value2'> `int remove_hf_value2(str "hexp", str "val")` </a>
 
 ## tls ##
+
+#### KSR.tls.cget() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/tls.html#tls.f.cget'> `xval cget(str "aname")` </a>
 
 #### KSR.tls.is_peer_verified() ####
 
