@@ -191,19 +191,20 @@ of the corresponding characters given as parameter.
 
 Matching the method is done based on corresponding characters:
 
-  * `I` - INVITE
   * `A` - ACK
   * `B` - BYE
   * `C` - CANCEL
-  * `R` - REGISTER
-  * `M` - MESSAGE
-  * `O` - OPTIONS
-  * `F` - REFER
-  * `S` - SUBSCRIBE
-  * `P` - PUBLISH
-  * `N` - NOTIFY
-  * `U` - UPDATE
+  * `I` - INVITE
   * `K` - KDMQ
+  * `M` - MESSAGE
+  * `N` - NOTIFY
+  * `O` - OPTIONS
+  * `E` - PRACK
+  * `P` - PUBLISH
+  * `F` - REFER
+  * `R` - REGISTER
+  * `S` - SUBSCRIBE
+  * `U` - UPDATE
   * `G` - GET
   * `T` - POST
   * `V` - PUT
