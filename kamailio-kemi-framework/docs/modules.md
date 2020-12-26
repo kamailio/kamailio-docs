@@ -1175,6 +1175,10 @@ is not integer.
 
 <a target='_blank' href='/docs/modules/devel/modules/http_client.html#http_client.f.curl_connect_post'> `int curl_connect_post(str "con", str "url", str "ctype", str "data", str "dpv")` </a>
 
+#### KSR.http_client.get_hdrs() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/http_client.html#http_client.f.get_hdrs'> `int get_hdrs(str "url", str "body", str "hdrs", str "dpv")` </a>
+
 #### KSR.http_client.query() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/http_client.html#http_client.f.query'> `int query(str "url", str "dpv")` </a>
@@ -4140,6 +4144,10 @@ local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
 <a target='_blank' href='/docs/modules/devel/modules/xcap_server.html#xcap_server.f.xcaps_put'> `int xcaps_put(str "uri", str "path", str "pbody")` </a>
 
 ## xhttp ##
+
+#### KSR.xhttp.get_hu() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/xhttp.html#xhttp.f.get_hu'> `xval get_hu()` </a>
 
 #### KSR.xhttp.xhttp_reply() ####
 
