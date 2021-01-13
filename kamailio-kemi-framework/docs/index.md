@@ -12,8 +12,9 @@ Support: <sr-users@lists.kamailio.org>
 
 ### Preamble ###
 
-`Kamailio` uses a scripting laguage for its configuration file (`kamailio.cfg`). This scripting language (referred also
-as native scripting language) was developed from scratch, with initial design going back to years 2001-2002.
+By default, `Kamailio` uses a domain-specific scripting language (aka DSL) for its configuration file (`kamailio.cfg`).
+This scripting language (referred also as native scripting language) was developed from scratch, with initial
+design going back to years 2001-2002.
 
 The configuration file is composed from several main statements:
 
@@ -51,10 +52,10 @@ framework for executing SIP routing scripts written in other programming languag
 
 ### KEMI Overview ###
 
-`Kamailio Embedded Interface` (`KEMI`) framework was added first in `Kamailio v5.0.0` to allow using other scripting
-languages to write SIP routing logic instead of using the native routing blocks. The interpreters for these scripting
-languages are embedded by Kamailio, initialized at startup, in this way being also as fast as possible during runtime
-execution.
+`Kamailio Embedded Interpreter Interface` (`KEMI`) framework was added first in `Kamailio v5.0.0` to enable the use of
+other scripting languages to write the SIP routing logic instead of using the native routing blocks. The interpreters
+for these scripting languages are embedded by Kamailio, initialized at startup, in this way being also as fast as
+possible during runtime execution.
 
 With KEMI routing script, the `kamailio.cfg` keeps only the parts with:
 
@@ -82,7 +83,7 @@ likely that some of them will get support in the near future.
 
 The main benefits of using KEMI framework:
 
-  * reload of SIP routing scripts without restart of Kamailio
+  * reload of SIP routing scripts without restarting of Kamailio
   * better documentation knowledge base for supported scripting languages
   * more complete and flexible scripting languages
   * larger set of libraries that can be used from the scripting languages

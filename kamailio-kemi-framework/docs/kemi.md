@@ -9,7 +9,7 @@ The following KEMI scripting languages can be used to write SIP routing logic fo
   * Ruby
   * Squirrel
 
-A configuration file for Kamailio that uses a KEMI scripting language has the glabal parameters, loading modules and
+A configuration file for Kamailio that uses a KEMI scripting language has the global parameters, loading modules and
 module parameters in the native scripting and sets the value of `cfgengine` to the KEMI scripting language identifier.
 
 The KEMI scripting language identifiers are:
