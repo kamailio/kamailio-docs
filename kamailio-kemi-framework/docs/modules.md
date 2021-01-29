@@ -1391,6 +1391,14 @@ Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connecti
 
 Return the value of destination URI ($du).
 
+#### KSR.kx.get_env() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_env'> `xval get_env(str "envname")` </a>
+
+#### KSR.kx.get_envn() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_envn'> `int get_envn(str "envname")` </a>
+
 #### KSR.kx.get_fhost() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_fhost'> `xval get_fhost()` </a>
@@ -1488,6 +1496,10 @@ Return the Request URI user part ($rU).
 #### KSR.kx.get_send_sock_name() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_send_sock_name'> `xval get_send_sock_name()` </a>
+
+#### KSR.kx.get_send_sock_port() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_send_sock_port'> `int get_send_sock_port()` </a>
 
 #### KSR.kx.get_srcip() ####
 
@@ -3374,6 +3386,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textops.cmp_str() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.cmp_str'> `int cmp_str(str "s1", str "s2")` </a>
+
+#### KSR.textops.ends_with() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.ends_with'> `int ends_with(str "vstr", str "vsuffix")` </a>
 
 #### KSR.textops.filter_body() ####
 
