@@ -492,6 +492,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.is_faked_msg'> `int is_faked_msg()` </a>
 
+#### KSR.corex.is_socket_name() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.is_socket_name'> `int is_socket_name(str "sockname")` </a>
+
 #### KSR.corex.isxflagset() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/corex.html#corex.f.isxflagset'> `int isxflagset(int fval)` </a>
@@ -567,6 +571,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 #### KSR.crypto.aes_encrypt() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/crypto.html#crypto.f.aes_encrypt'> `int aes_encrypt(str "ins", str "keys", str "dpv")` </a>
+
+#### KSR.crypto.hmac_sha256() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/crypto.html#crypto.f.hmac_sha256'> `int hmac_sha256(str "ins", str "keys", str "dpv")` </a>
 
 ## debugger ##
 
@@ -1508,6 +1516,10 @@ Return the Request URI user part ($rU).
 #### KSR.kx.get_srcport() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_srcport'> `xval get_srcport()` </a>
+
+#### KSR.kx.get_srcuri() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/kx.html#kx.f.get_srcuri'> `xval get_srcuri()` </a>
 
 #### KSR.kx.get_status() ####
 
