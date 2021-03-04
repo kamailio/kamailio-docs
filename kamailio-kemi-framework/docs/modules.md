@@ -2085,6 +2085,10 @@ Return the To-URI user part ($tU).
 
 ## pipelimit ##
 
+#### KSR.pipelimit.pl_active() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/pipelimit.html#pipelimit.f.pl_active'> `int pl_active(str "pipeid")` </a>
+
 #### KSR.pipelimit.pl_check() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/pipelimit.html#pipelimit.f.pl_check'> `int pl_check(str "pipeid")` </a>
@@ -3522,6 +3526,10 @@ Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpen
 #### KSR.textops.search_hf() ####
 
 <a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.search_hf'> `int search_hf(str "hname", str "sre", str "flags")` </a>
+
+#### KSR.textops.search_str() ####
+
+<a target='_blank' href='/docs/modules/devel/modules/textops.html#textops.f.search_str'> `int search_str(str "stext", str "sre")` </a>
 
 #### KSR.textops.set_body() ####
 
