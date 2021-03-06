@@ -83,9 +83,11 @@ class ModuleDocGenerator(object):
                 params_value = value["params"]
 
             # Generate the output string for the markdown page
-            self.markdown_string += "<a target='_blank' href='/docs/modules/devel/modules/" + module + ".html#" \
-                                    + module + ".f." + value["name"] + "'> `" + return_value + " " + value["name"] \
-                                    + "(" + params_value + ")` </a>\n\n"
+            self.markdown_string += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
+                                    + "(" + params_value + ");\n```\n\n" \
+
+            self.markdown_string += "  * <a target='_blank' href='/docs/modules/devel/modules/" + module + ".html#" \
+                                    + module + ".f." + value["name"] + "'>📖 kamailio.cfg::" + value["name"] + "()</a>\n\n"
 
             func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
             if len(func_doc)>0:
