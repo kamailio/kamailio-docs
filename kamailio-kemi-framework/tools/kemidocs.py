@@ -3,6 +3,23 @@
 
 KAMWEBURL = "https://kamailio.org"
 
+MODMAPNAME = {
+    "pvx": "pv",
+    "kx": "kemi",
+}
+
+MODMAPFUNC = {
+    "alias_db": {
+        "lookup": "alias_db_lookup",
+        "lookup_ex": "alias_db_lookup",
+    },
+    "app_jsdt": {
+        "dofile": "jsdt_dofile",
+        "dostring": "jsdt_dostring",
+        "run": "jsdt_run",
+    },
+}
+
 import os, json, sys, time, fnmatch, re, importlib
 
 class ModuleDocGenerator(object):
@@ -88,8 +105,13 @@ class ModuleDocGenerator(object):
             self.markdown_string += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
                                     + "(" + params_value + ");\n```\n\n" \
 
-            self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + module + ".html#" \
-                                    + module + ".f." + value["name"] + "'>📖 kamailio.cfg::" + value["name"] + "()</a>\n\n"
+            kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
+            kfuncname = value["name"]
+            if kmodname in MODMAPFUNC:
+                if value["name"] in MODMAPFUNC[kmodname]:
+                    kfuncname = MODMAPFUNC[kmodname][value["name"]]
+            self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + kmodname + ".html#" \
+                                    + kmodname + ".f." + kfuncname + "'>📖 kamailio.cfg::" + kfuncname + "()</a>\n\n"
 
             func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
             if len(func_doc)>0:
