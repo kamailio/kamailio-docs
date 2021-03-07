@@ -1,6 +1,8 @@
 # tool to generate the modules.md content
 #
 
+KAMWEBURL = "https://kamailio.org"
+
 import os, json, sys, time, fnmatch, re, importlib
 
 class ModuleDocGenerator(object):
@@ -86,7 +88,7 @@ class ModuleDocGenerator(object):
             self.markdown_string += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
                                     + "(" + params_value + ");\n```\n\n" \
 
-            self.markdown_string += "  * <a target='_blank' href='/docs/modules/devel/modules/" + module + ".html#" \
+            self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + module + ".html#" \
                                     + module + ".f." + value["name"] + "'>📖 kamailio.cfg::" + value["name"] + "()</a>\n\n"
 
             func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
