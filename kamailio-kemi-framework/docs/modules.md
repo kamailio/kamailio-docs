@@ -58,7 +58,7 @@ int KSR.acc_radius.request(str "comment");
 int KSR.alias_db.lookup(str "stable");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/alias_db.html#alias_db.f.lookup'>📖 kamailio.cfg::lookup()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/alias_db.html#alias_db.f.alias_db_lookup'>📖 kamailio.cfg::alias_db_lookup()</a>
 
 #### KSR.alias_db.lookup_ex() ####
 
@@ -66,7 +66,7 @@ int KSR.alias_db.lookup(str "stable");
 int KSR.alias_db.lookup_ex(str "stable", str "sflags");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/alias_db.html#alias_db.f.lookup_ex'>📖 kamailio.cfg::lookup_ex()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/alias_db.html#alias_db.f.alias_db_lookup'>📖 kamailio.cfg::alias_db_lookup()</a>
 
 ## app_jsdt ##
 
@@ -76,7 +76,7 @@ int KSR.alias_db.lookup_ex(str "stable", str "sflags");
 int KSR.app_jsdt.dofile(str "script");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.dofile'>📖 kamailio.cfg::dofile()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.jsdt_dofile'>📖 kamailio.cfg::jsdt_dofile()</a>
 
 #### KSR.app_jsdt.dostring() ####
 
@@ -84,7 +84,7 @@ int KSR.app_jsdt.dofile(str "script");
 int KSR.app_jsdt.dostring(str "script");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.dostring'>📖 kamailio.cfg::dostring()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.jsdt_dostring'>📖 kamailio.cfg::jsdt_dostring()</a>
 
 #### KSR.app_jsdt.run() ####
 
@@ -92,7 +92,7 @@ int KSR.app_jsdt.dostring(str "script");
 int KSR.app_jsdt.run(str "func");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.run'>📖 kamailio.cfg::run()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html#app_jsdt.f.jsdt_run'>📖 kamailio.cfg::jsdt_run()</a>
 
 #### KSR.app_jsdt.run_p1() ####
 
@@ -2575,7 +2575,7 @@ environment attributes.
 xval KSR.kx.get_au();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_au'>📖 kamailio.cfg::get_au()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_au'>📖 kamailio.cfg::get_au()</a>
 
 #### KSR.kx.get_body() ####
 
@@ -2583,7 +2583,7 @@ xval KSR.kx.get_au();
 xval KSR.kx.get_body();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_body'>📖 kamailio.cfg::get_body()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_body'>📖 kamailio.cfg::get_body()</a>
 
 Return the body of the SIP message (the value of $rb).
 
@@ -2593,7 +2593,7 @@ Return the body of the SIP message (the value of $rb).
 int KSR.kx.get_bodylen();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_bodylen'>📖 kamailio.cfg::get_bodylen()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_bodylen'>📖 kamailio.cfg::get_bodylen()</a>
 
 #### KSR.kx.get_callid() ####
 
@@ -2601,7 +2601,7 @@ int KSR.kx.get_bodylen();
 xval KSR.kx.get_callid();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_callid'>📖 kamailio.cfg::get_callid()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_callid'>📖 kamailio.cfg::get_callid()</a>
 
 #### KSR.kx.get_conid() ####
 
@@ -2609,7 +2609,7 @@ xval KSR.kx.get_callid();
 int KSR.kx.get_conid();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_conid'>📖 kamailio.cfg::get_conid()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_conid'>📖 kamailio.cfg::get_conid()</a>
 
 Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connection corresponds to current SIP message.
 
@@ -2619,7 +2619,7 @@ Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connecti
 xval KSR.kx.get_cturi();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_cturi'>📖 kamailio.cfg::get_cturi()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_cturi'>📖 kamailio.cfg::get_cturi()</a>
 
 #### KSR.kx.get_def() ####
 
@@ -2627,7 +2627,7 @@ xval KSR.kx.get_cturi();
 xval KSR.kx.get_def(str "dname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_def'>📖 kamailio.cfg::get_def()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_def'>📖 kamailio.cfg::get_def()</a>
 
 #### KSR.kx.get_defn() ####
 
@@ -2635,7 +2635,7 @@ xval KSR.kx.get_def(str "dname");
 int KSR.kx.get_defn(str "dname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_defn'>📖 kamailio.cfg::get_defn()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_defn'>📖 kamailio.cfg::get_defn()</a>
 
 #### KSR.kx.get_duri() ####
 
@@ -2643,7 +2643,7 @@ int KSR.kx.get_defn(str "dname");
 xval KSR.kx.get_duri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_duri'>📖 kamailio.cfg::get_duri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_duri'>📖 kamailio.cfg::get_duri()</a>
 
 Return the value of destination URI ($du).
 
@@ -2653,7 +2653,7 @@ Return the value of destination URI ($du).
 xval KSR.kx.get_env(str "envname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_env'>📖 kamailio.cfg::get_env()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_env'>📖 kamailio.cfg::get_env()</a>
 
 #### KSR.kx.get_envn() ####
 
@@ -2661,7 +2661,7 @@ xval KSR.kx.get_env(str "envname");
 int KSR.kx.get_envn(str "envname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_envn'>📖 kamailio.cfg::get_envn()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_envn'>📖 kamailio.cfg::get_envn()</a>
 
 #### KSR.kx.get_fhost() ####
 
@@ -2669,7 +2669,7 @@ int KSR.kx.get_envn(str "envname");
 xval KSR.kx.get_fhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_fhost'>📖 kamailio.cfg::get_fhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_fhost'>📖 kamailio.cfg::get_fhost()</a>
 
 Return From-URI domain ($fd).
 
@@ -2679,7 +2679,7 @@ Return From-URI domain ($fd).
 xval KSR.kx.get_furi();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_furi'>📖 kamailio.cfg::get_furi()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_furi'>📖 kamailio.cfg::get_furi()</a>
 
 Return the From URI($fu).
 
@@ -2689,7 +2689,7 @@ Return the From URI($fu).
 xval KSR.kx.get_fuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_fuser'>📖 kamailio.cfg::get_fuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_fuser'>📖 kamailio.cfg::get_fuser()</a>
 
 Return the From-URI username ($fU).
 
@@ -2699,7 +2699,7 @@ Return the From-URI username ($fU).
 xval KSR.kx.get_method();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_method'>📖 kamailio.cfg::get_method()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_method'>📖 kamailio.cfg::get_method()</a>
 
 Return the SIP method ($rm).
 
@@ -2709,7 +2709,7 @@ Return the SIP method ($rm).
 xval KSR.kx.get_msgbuf();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_msgbuf'>📖 kamailio.cfg::get_msgbuf()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msgbuf'>📖 kamailio.cfg::get_msgbuf()</a>
 
 #### KSR.kx.get_msglen() ####
 
@@ -2717,7 +2717,7 @@ xval KSR.kx.get_msgbuf();
 int KSR.kx.get_msglen();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_msglen'>📖 kamailio.cfg::get_msglen()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msglen'>📖 kamailio.cfg::get_msglen()</a>
 
 #### KSR.kx.get_msgtype() ####
 
@@ -2725,7 +2725,7 @@ int KSR.kx.get_msglen();
 int KSR.kx.get_msgtype();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_msgtype'>📖 kamailio.cfg::get_msgtype()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msgtype'>📖 kamailio.cfg::get_msgtype()</a>
 
 #### KSR.kx.get_nhuri() ####
 
@@ -2733,7 +2733,7 @@ int KSR.kx.get_msgtype();
 xval KSR.kx.get_nhuri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_nhuri'>📖 kamailio.cfg::get_nhuri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_nhuri'>📖 kamailio.cfg::get_nhuri()</a>
 
 #### KSR.kx.get_ouri() ####
 
@@ -2741,7 +2741,7 @@ xval KSR.kx.get_nhuri();
 xval KSR.kx.get_ouri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_ouri'>📖 kamailio.cfg::get_ouri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ouri'>📖 kamailio.cfg::get_ouri()</a>
 
 #### KSR.kx.get_proto() ####
 
@@ -2749,7 +2749,7 @@ xval KSR.kx.get_ouri();
 xval KSR.kx.get_proto();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_proto'>📖 kamailio.cfg::get_proto()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_proto'>📖 kamailio.cfg::get_proto()</a>
 
 #### KSR.kx.get_protoid() ####
 
@@ -2757,7 +2757,7 @@ xval KSR.kx.get_proto();
 int KSR.kx.get_protoid();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_protoid'>📖 kamailio.cfg::get_protoid()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_protoid'>📖 kamailio.cfg::get_protoid()</a>
 
 #### KSR.kx.get_rcv_sock_name() ####
 
@@ -2765,7 +2765,7 @@ int KSR.kx.get_protoid();
 xval KSR.kx.get_rcv_sock_name();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rcv_sock_name'>📖 kamailio.cfg::get_rcv_sock_name()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcv_sock_name'>📖 kamailio.cfg::get_rcv_sock_name()</a>
 
 #### KSR.kx.get_rcvadvip() ####
 
@@ -2773,7 +2773,7 @@ xval KSR.kx.get_rcv_sock_name();
 xval KSR.kx.get_rcvadvip();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rcvadvip'>📖 kamailio.cfg::get_rcvadvip()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvadvip'>📖 kamailio.cfg::get_rcvadvip()</a>
 
 #### KSR.kx.get_rcvadvport() ####
 
@@ -2781,7 +2781,7 @@ xval KSR.kx.get_rcvadvip();
 xval KSR.kx.get_rcvadvport();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rcvadvport'>📖 kamailio.cfg::get_rcvadvport()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvadvport'>📖 kamailio.cfg::get_rcvadvport()</a>
 
 #### KSR.kx.get_rcvip() ####
 
@@ -2789,7 +2789,7 @@ xval KSR.kx.get_rcvadvport();
 xval KSR.kx.get_rcvip();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rcvip'>📖 kamailio.cfg::get_rcvip()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvip'>📖 kamailio.cfg::get_rcvip()</a>
 
 #### KSR.kx.get_rcvport() ####
 
@@ -2797,7 +2797,7 @@ xval KSR.kx.get_rcvip();
 xval KSR.kx.get_rcvport();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rcvport'>📖 kamailio.cfg::get_rcvport()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvport'>📖 kamailio.cfg::get_rcvport()</a>
 
 #### KSR.kx.get_rhost() ####
 
@@ -2805,7 +2805,7 @@ xval KSR.kx.get_rcvport();
 xval KSR.kx.get_rhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_rhost'>📖 kamailio.cfg::get_rhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rhost'>📖 kamailio.cfg::get_rhost()</a>
 
 Return the Request URI host (domain) part ($rd).
 
@@ -2815,7 +2815,7 @@ Return the Request URI host (domain) part ($rd).
 xval KSR.kx.get_ruri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_ruri'>📖 kamailio.cfg::get_ruri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ruri'>📖 kamailio.cfg::get_ruri()</a>
 
 Return the Request URI ($ru).
 
@@ -2825,7 +2825,7 @@ Return the Request URI ($ru).
 xval KSR.kx.get_ruser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_ruser'>📖 kamailio.cfg::get_ruser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ruser'>📖 kamailio.cfg::get_ruser()</a>
 
 Return the Request URI user part ($rU).
 
@@ -2835,7 +2835,7 @@ Return the Request URI user part ($rU).
 xval KSR.kx.get_send_sock();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_send_sock'>📖 kamailio.cfg::get_send_sock()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock'>📖 kamailio.cfg::get_send_sock()</a>
 
 #### KSR.kx.get_send_sock_name() ####
 
@@ -2843,7 +2843,7 @@ xval KSR.kx.get_send_sock();
 xval KSR.kx.get_send_sock_name();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_send_sock_name'>📖 kamailio.cfg::get_send_sock_name()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock_name'>📖 kamailio.cfg::get_send_sock_name()</a>
 
 #### KSR.kx.get_send_sock_port() ####
 
@@ -2851,7 +2851,7 @@ xval KSR.kx.get_send_sock_name();
 int KSR.kx.get_send_sock_port();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_send_sock_port'>📖 kamailio.cfg::get_send_sock_port()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock_port'>📖 kamailio.cfg::get_send_sock_port()</a>
 
 #### KSR.kx.get_srcip() ####
 
@@ -2859,7 +2859,7 @@ int KSR.kx.get_send_sock_port();
 xval KSR.kx.get_srcip();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_srcip'>📖 kamailio.cfg::get_srcip()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcip'>📖 kamailio.cfg::get_srcip()</a>
 
 #### KSR.kx.get_srcport() ####
 
@@ -2867,7 +2867,7 @@ xval KSR.kx.get_srcip();
 xval KSR.kx.get_srcport();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_srcport'>📖 kamailio.cfg::get_srcport()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcport'>📖 kamailio.cfg::get_srcport()</a>
 
 #### KSR.kx.get_srcuri() ####
 
@@ -2875,7 +2875,7 @@ xval KSR.kx.get_srcport();
 xval KSR.kx.get_srcuri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_srcuri'>📖 kamailio.cfg::get_srcuri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcuri'>📖 kamailio.cfg::get_srcuri()</a>
 
 #### KSR.kx.get_status() ####
 
@@ -2883,7 +2883,7 @@ xval KSR.kx.get_srcuri();
 int KSR.kx.get_status();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_status'>📖 kamailio.cfg::get_status()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_status'>📖 kamailio.cfg::get_status()</a>
 
 #### KSR.kx.get_thost() ####
 
@@ -2891,7 +2891,7 @@ int KSR.kx.get_status();
 xval KSR.kx.get_thost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_thost'>📖 kamailio.cfg::get_thost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_thost'>📖 kamailio.cfg::get_thost()</a>
 
 Return the To-URI host (domain) part ($td).
 
@@ -2901,7 +2901,7 @@ Return the To-URI host (domain) part ($td).
 int KSR.kx.get_timestamp();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_timestamp'>📖 kamailio.cfg::get_timestamp()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_timestamp'>📖 kamailio.cfg::get_timestamp()</a>
 
 #### KSR.kx.get_turi() ####
 
@@ -2909,7 +2909,7 @@ int KSR.kx.get_timestamp();
 xval KSR.kx.get_turi();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_turi'>📖 kamailio.cfg::get_turi()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_turi'>📖 kamailio.cfg::get_turi()</a>
 
 Return the To URI ($tu).
 
@@ -2919,7 +2919,7 @@ Return the To URI ($tu).
 xval KSR.kx.get_tuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_tuser'>📖 kamailio.cfg::get_tuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_tuser'>📖 kamailio.cfg::get_tuser()</a>
 
 Return the To-URI user part ($tU).
 
@@ -2929,7 +2929,7 @@ Return the To-URI user part ($tU).
 xval KSR.kx.get_ua();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.get_ua'>📖 kamailio.cfg::get_ua()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ua'>📖 kamailio.cfg::get_ua()</a>
 
 #### KSR.kx.gete_au() ####
 
@@ -2937,7 +2937,7 @@ xval KSR.kx.get_ua();
 xval KSR.kx.gete_au();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_au'>📖 kamailio.cfg::gete_au()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_au'>📖 kamailio.cfg::gete_au()</a>
 
 #### KSR.kx.gete_body() ####
 
@@ -2945,7 +2945,7 @@ xval KSR.kx.gete_au();
 xval KSR.kx.gete_body();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_body'>📖 kamailio.cfg::gete_body()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_body'>📖 kamailio.cfg::gete_body()</a>
 
 #### KSR.kx.gete_cturi() ####
 
@@ -2953,7 +2953,7 @@ xval KSR.kx.gete_body();
 xval KSR.kx.gete_cturi();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_cturi'>📖 kamailio.cfg::gete_cturi()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_cturi'>📖 kamailio.cfg::gete_cturi()</a>
 
 #### KSR.kx.gete_duri() ####
 
@@ -2961,7 +2961,7 @@ xval KSR.kx.gete_cturi();
 xval KSR.kx.gete_duri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_duri'>📖 kamailio.cfg::gete_duri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_duri'>📖 kamailio.cfg::gete_duri()</a>
 
 #### KSR.kx.gete_fhost() ####
 
@@ -2969,7 +2969,7 @@ xval KSR.kx.gete_duri();
 xval KSR.kx.gete_fhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_fhost'>📖 kamailio.cfg::gete_fhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_fhost'>📖 kamailio.cfg::gete_fhost()</a>
 
 #### KSR.kx.gete_fuser() ####
 
@@ -2977,7 +2977,7 @@ xval KSR.kx.gete_fhost();
 xval KSR.kx.gete_fuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_fuser'>📖 kamailio.cfg::gete_fuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_fuser'>📖 kamailio.cfg::gete_fuser()</a>
 
 #### KSR.kx.gete_rhost() ####
 
@@ -2985,7 +2985,7 @@ xval KSR.kx.gete_fuser();
 xval KSR.kx.gete_rhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_rhost'>📖 kamailio.cfg::gete_rhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_rhost'>📖 kamailio.cfg::gete_rhost()</a>
 
 #### KSR.kx.gete_ruser() ####
 
@@ -2993,7 +2993,7 @@ xval KSR.kx.gete_rhost();
 xval KSR.kx.gete_ruser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_ruser'>📖 kamailio.cfg::gete_ruser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_ruser'>📖 kamailio.cfg::gete_ruser()</a>
 
 #### KSR.kx.gete_thost() ####
 
@@ -3001,7 +3001,7 @@ xval KSR.kx.gete_ruser();
 xval KSR.kx.gete_thost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_thost'>📖 kamailio.cfg::gete_thost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_thost'>📖 kamailio.cfg::gete_thost()</a>
 
 #### KSR.kx.gete_tuser() ####
 
@@ -3009,7 +3009,7 @@ xval KSR.kx.gete_thost();
 xval KSR.kx.gete_tuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_tuser'>📖 kamailio.cfg::gete_tuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_tuser'>📖 kamailio.cfg::gete_tuser()</a>
 
 #### KSR.kx.gete_ua() ####
 
@@ -3017,7 +3017,7 @@ xval KSR.kx.gete_tuser();
 xval KSR.kx.gete_ua();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gete_ua'>📖 kamailio.cfg::gete_ua()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_ua'>📖 kamailio.cfg::gete_ua()</a>
 
 #### KSR.kx.gets_status() ####
 
@@ -3025,7 +3025,7 @@ xval KSR.kx.gete_ua();
 xval KSR.kx.gets_status();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.gets_status'>📖 kamailio.cfg::gets_status()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gets_status'>📖 kamailio.cfg::gets_status()</a>
 
 #### KSR.kx.getw_au() ####
 
@@ -3033,7 +3033,7 @@ xval KSR.kx.gets_status();
 xval KSR.kx.getw_au();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_au'>📖 kamailio.cfg::getw_au()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_au'>📖 kamailio.cfg::getw_au()</a>
 
 #### KSR.kx.getw_body() ####
 
@@ -3041,7 +3041,7 @@ xval KSR.kx.getw_au();
 xval KSR.kx.getw_body();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_body'>📖 kamailio.cfg::getw_body()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_body'>📖 kamailio.cfg::getw_body()</a>
 
 #### KSR.kx.getw_cturi() ####
 
@@ -3049,7 +3049,7 @@ xval KSR.kx.getw_body();
 xval KSR.kx.getw_cturi();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_cturi'>📖 kamailio.cfg::getw_cturi()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_cturi'>📖 kamailio.cfg::getw_cturi()</a>
 
 #### KSR.kx.getw_duri() ####
 
@@ -3057,7 +3057,7 @@ xval KSR.kx.getw_cturi();
 xval KSR.kx.getw_duri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_duri'>📖 kamailio.cfg::getw_duri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_duri'>📖 kamailio.cfg::getw_duri()</a>
 
 #### KSR.kx.getw_fhost() ####
 
@@ -3065,7 +3065,7 @@ xval KSR.kx.getw_duri();
 xval KSR.kx.getw_fhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_fhost'>📖 kamailio.cfg::getw_fhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_fhost'>📖 kamailio.cfg::getw_fhost()</a>
 
 #### KSR.kx.getw_fuser() ####
 
@@ -3073,7 +3073,7 @@ xval KSR.kx.getw_fhost();
 xval KSR.kx.getw_fuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_fuser'>📖 kamailio.cfg::getw_fuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_fuser'>📖 kamailio.cfg::getw_fuser()</a>
 
 #### KSR.kx.getw_rhost() ####
 
@@ -3081,7 +3081,7 @@ xval KSR.kx.getw_fuser();
 xval KSR.kx.getw_rhost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_rhost'>📖 kamailio.cfg::getw_rhost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_rhost'>📖 kamailio.cfg::getw_rhost()</a>
 
 #### KSR.kx.getw_ruser() ####
 
@@ -3089,7 +3089,7 @@ xval KSR.kx.getw_rhost();
 xval KSR.kx.getw_ruser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_ruser'>📖 kamailio.cfg::getw_ruser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_ruser'>📖 kamailio.cfg::getw_ruser()</a>
 
 #### KSR.kx.getw_thost() ####
 
@@ -3097,7 +3097,7 @@ xval KSR.kx.getw_ruser();
 xval KSR.kx.getw_thost();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_thost'>📖 kamailio.cfg::getw_thost()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_thost'>📖 kamailio.cfg::getw_thost()</a>
 
 #### KSR.kx.getw_tuser() ####
 
@@ -3105,7 +3105,7 @@ xval KSR.kx.getw_thost();
 xval KSR.kx.getw_tuser();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_tuser'>📖 kamailio.cfg::getw_tuser()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_tuser'>📖 kamailio.cfg::getw_tuser()</a>
 
 #### KSR.kx.getw_ua() ####
 
@@ -3113,7 +3113,7 @@ xval KSR.kx.getw_tuser();
 xval KSR.kx.getw_ua();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kx.html#kx.f.getw_ua'>📖 kamailio.cfg::getw_ua()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_ua'>📖 kamailio.cfg::getw_ua()</a>
 
 ## lcr ##
 
@@ -4199,7 +4199,7 @@ int KSR.pv_headers.pvh_reset_headers();
 xval KSR.pvx.avp_get(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_get'>📖 kamailio.cfg::avp_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_get'>📖 kamailio.cfg::avp_get()</a>
 
 #### KSR.pvx.avp_gete() ####
 
@@ -4207,7 +4207,7 @@ xval KSR.pvx.avp_get(str "xname");
 xval KSR.pvx.avp_gete(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_gete'>📖 kamailio.cfg::avp_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_gete'>📖 kamailio.cfg::avp_gete()</a>
 
 #### KSR.pvx.avp_getw() ####
 
@@ -4215,7 +4215,7 @@ xval KSR.pvx.avp_gete(str "xname");
 xval KSR.pvx.avp_getw(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_getw'>📖 kamailio.cfg::avp_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_getw'>📖 kamailio.cfg::avp_getw()</a>
 
 #### KSR.pvx.avp_is_null() ####
 
@@ -4223,7 +4223,7 @@ xval KSR.pvx.avp_getw(str "xname");
 int KSR.pvx.avp_is_null(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_is_null'>📖 kamailio.cfg::avp_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_is_null'>📖 kamailio.cfg::avp_is_null()</a>
 
 #### KSR.pvx.avp_rm() ####
 
@@ -4231,7 +4231,7 @@ int KSR.pvx.avp_is_null(str "xname");
 int KSR.pvx.avp_rm(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_rm'>📖 kamailio.cfg::avp_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_rm'>📖 kamailio.cfg::avp_rm()</a>
 
 #### KSR.pvx.avp_seti() ####
 
@@ -4239,7 +4239,7 @@ int KSR.pvx.avp_rm(str "xname");
 int KSR.pvx.avp_seti(str "xname", int vn);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_seti'>📖 kamailio.cfg::avp_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_seti'>📖 kamailio.cfg::avp_seti()</a>
 
 #### KSR.pvx.avp_sets() ####
 
@@ -4247,7 +4247,7 @@ int KSR.pvx.avp_seti(str "xname", int vn);
 int KSR.pvx.avp_sets(str "xname", str "vs");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.avp_sets'>📖 kamailio.cfg::avp_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.avp_sets'>📖 kamailio.cfg::avp_sets()</a>
 
 #### KSR.pvx.evalx() ####
 
@@ -4255,7 +4255,7 @@ int KSR.pvx.avp_sets(str "xname", str "vs");
 int KSR.pvx.evalx(str "dst", str "fmt");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.evalx'>📖 kamailio.cfg::evalx()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.evalx'>📖 kamailio.cfg::evalx()</a>
 
 #### KSR.pvx.pv_var_to_xavp() ####
 
@@ -4263,7 +4263,7 @@ int KSR.pvx.evalx(str "dst", str "fmt");
 int KSR.pvx.pv_var_to_xavp(str "varname", str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.pv_var_to_xavp'>📖 kamailio.cfg::pv_var_to_xavp()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.pv_var_to_xavp'>📖 kamailio.cfg::pv_var_to_xavp()</a>
 
 #### KSR.pvx.pv_xavi_print() ####
 
@@ -4271,7 +4271,7 @@ int KSR.pvx.pv_var_to_xavp(str "varname", str "xname");
 int KSR.pvx.pv_xavi_print();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavi_print'>📖 kamailio.cfg::pv_xavi_print()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.pv_xavi_print'>📖 kamailio.cfg::pv_xavi_print()</a>
 
 #### KSR.pvx.pv_xavp_print() ####
 
@@ -4279,7 +4279,7 @@ int KSR.pvx.pv_xavi_print();
 int KSR.pvx.pv_xavp_print();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavp_print'>📖 kamailio.cfg::pv_xavp_print()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.pv_xavp_print'>📖 kamailio.cfg::pv_xavp_print()</a>
 
 #### KSR.pvx.pv_xavp_to_var() ####
 
@@ -4287,7 +4287,7 @@ int KSR.pvx.pv_xavp_print();
 int KSR.pvx.pv_xavp_to_var(str "xname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavp_to_var'>📖 kamailio.cfg::pv_xavp_to_var()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.pv_xavp_to_var'>📖 kamailio.cfg::pv_xavp_to_var()</a>
 
 #### KSR.pvx.pv_xavu_print() ####
 
@@ -4295,7 +4295,7 @@ int KSR.pvx.pv_xavp_to_var(str "xname");
 int KSR.pvx.pv_xavu_print();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.pv_xavu_print'>📖 kamailio.cfg::pv_xavu_print()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.pv_xavu_print'>📖 kamailio.cfg::pv_xavu_print()</a>
 
 #### KSR.pvx.sbranch_append() ####
 
@@ -4303,7 +4303,7 @@ int KSR.pvx.pv_xavu_print();
 int KSR.pvx.sbranch_append();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_append'>📖 kamailio.cfg::sbranch_append()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.sbranch_append'>📖 kamailio.cfg::sbranch_append()</a>
 
 #### KSR.pvx.sbranch_reset() ####
 
@@ -4311,7 +4311,7 @@ int KSR.pvx.sbranch_append();
 int KSR.pvx.sbranch_reset();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_reset'>📖 kamailio.cfg::sbranch_reset()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.sbranch_reset'>📖 kamailio.cfg::sbranch_reset()</a>
 
 #### KSR.pvx.sbranch_set_ruri() ####
 
@@ -4319,7 +4319,7 @@ int KSR.pvx.sbranch_reset();
 int KSR.pvx.sbranch_set_ruri();
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.sbranch_set_ruri'>📖 kamailio.cfg::sbranch_set_ruri()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.sbranch_set_ruri'>📖 kamailio.cfg::sbranch_set_ruri()</a>
 
 #### KSR.pvx.shv_get() ####
 
@@ -4327,7 +4327,7 @@ int KSR.pvx.sbranch_set_ruri();
 xval KSR.pvx.shv_get(str "vname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.shv_get'>📖 kamailio.cfg::shv_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.shv_get'>📖 kamailio.cfg::shv_get()</a>
 
 #### KSR.pvx.shv_seti() ####
 
@@ -4335,7 +4335,7 @@ xval KSR.pvx.shv_get(str "vname");
 int KSR.pvx.shv_seti(str "vname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.shv_seti'>📖 kamailio.cfg::shv_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.shv_seti'>📖 kamailio.cfg::shv_seti()</a>
 
 #### KSR.pvx.shv_sets() ####
 
@@ -4343,7 +4343,7 @@ int KSR.pvx.shv_seti(str "vname", int ival);
 int KSR.pvx.shv_sets(str "vname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.shv_sets'>📖 kamailio.cfg::shv_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.shv_sets'>📖 kamailio.cfg::shv_sets()</a>
 
 #### KSR.pvx.var_get() ####
 
@@ -4351,7 +4351,7 @@ int KSR.pvx.shv_sets(str "vname", str "sval");
 xval KSR.pvx.var_get(str "vname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.var_get'>📖 kamailio.cfg::var_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.var_get'>📖 kamailio.cfg::var_get()</a>
 
 #### KSR.pvx.var_seti() ####
 
@@ -4359,7 +4359,7 @@ xval KSR.pvx.var_get(str "vname");
 int KSR.pvx.var_seti(str "vname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.var_seti'>📖 kamailio.cfg::var_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.var_seti'>📖 kamailio.cfg::var_seti()</a>
 
 #### KSR.pvx.var_sets() ####
 
@@ -4367,7 +4367,7 @@ int KSR.pvx.var_seti(str "vname", int ival);
 int KSR.pvx.var_sets(str "vname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.var_sets'>📖 kamailio.cfg::var_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.var_sets'>📖 kamailio.cfg::var_sets()</a>
 
 #### KSR.pvx.xavi_child_get() ####
 
@@ -4375,7 +4375,7 @@ int KSR.pvx.var_sets(str "vname", str "sval");
 xval KSR.pvx.xavi_child_get(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_get'>📖 kamailio.cfg::xavi_child_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_get'>📖 kamailio.cfg::xavi_child_get()</a>
 
 #### KSR.pvx.xavi_child_gete() ####
 
@@ -4383,7 +4383,7 @@ xval KSR.pvx.xavi_child_get(str "rname", str "cname");
 xval KSR.pvx.xavi_child_gete(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_gete'>📖 kamailio.cfg::xavi_child_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_gete'>📖 kamailio.cfg::xavi_child_gete()</a>
 
 #### KSR.pvx.xavi_child_getw() ####
 
@@ -4391,7 +4391,7 @@ xval KSR.pvx.xavi_child_gete(str "rname", str "cname");
 xval KSR.pvx.xavi_child_getw(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_getw'>📖 kamailio.cfg::xavi_child_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_getw'>📖 kamailio.cfg::xavi_child_getw()</a>
 
 #### KSR.pvx.xavi_child_is_null() ####
 
@@ -4399,7 +4399,7 @@ xval KSR.pvx.xavi_child_getw(str "rname", str "cname");
 int KSR.pvx.xavi_child_is_null(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_is_null'>📖 kamailio.cfg::xavi_child_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_is_null'>📖 kamailio.cfg::xavi_child_is_null()</a>
 
 #### KSR.pvx.xavi_child_rm() ####
 
@@ -4407,7 +4407,7 @@ int KSR.pvx.xavi_child_is_null(str "rname", str "cname");
 int KSR.pvx.xavi_child_rm(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_rm'>📖 kamailio.cfg::xavi_child_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_rm'>📖 kamailio.cfg::xavi_child_rm()</a>
 
 #### KSR.pvx.xavi_child_seti() ####
 
@@ -4415,7 +4415,7 @@ int KSR.pvx.xavi_child_rm(str "rname", str "cname");
 int KSR.pvx.xavi_child_seti(str "rname", str "cname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_seti'>📖 kamailio.cfg::xavi_child_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_seti'>📖 kamailio.cfg::xavi_child_seti()</a>
 
 #### KSR.pvx.xavi_child_sets() ####
 
@@ -4423,7 +4423,7 @@ int KSR.pvx.xavi_child_seti(str "rname", str "cname", int ival);
 int KSR.pvx.xavi_child_sets(str "rname", str "cname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_child_sets'>📖 kamailio.cfg::xavi_child_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_child_sets'>📖 kamailio.cfg::xavi_child_sets()</a>
 
 #### KSR.pvx.xavi_get() ####
 
@@ -4431,7 +4431,7 @@ int KSR.pvx.xavi_child_sets(str "rname", str "cname", str "sval");
 xval KSR.pvx.xavi_get(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_get'>📖 kamailio.cfg::xavi_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_get'>📖 kamailio.cfg::xavi_get()</a>
 
 #### KSR.pvx.xavi_get_keys() ####
 
@@ -4439,7 +4439,7 @@ xval KSR.pvx.xavi_get(str "rname");
 xval KSR.pvx.xavi_get_keys(str "rname", int indx);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_get_keys'>📖 kamailio.cfg::xavi_get_keys()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_get_keys'>📖 kamailio.cfg::xavi_get_keys()</a>
 
 #### KSR.pvx.xavi_getd() ####
 
@@ -4447,7 +4447,7 @@ xval KSR.pvx.xavi_get_keys(str "rname", int indx);
 xval KSR.pvx.xavi_getd(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getd'>📖 kamailio.cfg::xavi_getd()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_getd'>📖 kamailio.cfg::xavi_getd()</a>
 
 #### KSR.pvx.xavi_getd_p1() ####
 
@@ -4455,7 +4455,7 @@ xval KSR.pvx.xavi_getd(str "rname");
 xval KSR.pvx.xavi_getd_p1(str "rname", int indx);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getd_p1'>📖 kamailio.cfg::xavi_getd_p1()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_getd_p1'>📖 kamailio.cfg::xavi_getd_p1()</a>
 
 #### KSR.pvx.xavi_gete() ####
 
@@ -4463,7 +4463,7 @@ xval KSR.pvx.xavi_getd_p1(str "rname", int indx);
 xval KSR.pvx.xavi_gete(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_gete'>📖 kamailio.cfg::xavi_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_gete'>📖 kamailio.cfg::xavi_gete()</a>
 
 #### KSR.pvx.xavi_getw() ####
 
@@ -4471,7 +4471,7 @@ xval KSR.pvx.xavi_gete(str "rname");
 xval KSR.pvx.xavi_getw(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_getw'>📖 kamailio.cfg::xavi_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_getw'>📖 kamailio.cfg::xavi_getw()</a>
 
 #### KSR.pvx.xavi_is_null() ####
 
@@ -4479,7 +4479,7 @@ xval KSR.pvx.xavi_getw(str "rname");
 int KSR.pvx.xavi_is_null(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_is_null'>📖 kamailio.cfg::xavi_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_is_null'>📖 kamailio.cfg::xavi_is_null()</a>
 
 #### KSR.pvx.xavi_rm() ####
 
@@ -4487,7 +4487,7 @@ int KSR.pvx.xavi_is_null(str "rname");
 int KSR.pvx.xavi_rm(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_rm'>📖 kamailio.cfg::xavi_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_rm'>📖 kamailio.cfg::xavi_rm()</a>
 
 #### KSR.pvx.xavi_seti() ####
 
@@ -4495,7 +4495,7 @@ int KSR.pvx.xavi_rm(str "rname");
 int KSR.pvx.xavi_seti(str "rname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_seti'>📖 kamailio.cfg::xavi_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_seti'>📖 kamailio.cfg::xavi_seti()</a>
 
 #### KSR.pvx.xavi_sets() ####
 
@@ -4503,7 +4503,7 @@ int KSR.pvx.xavi_seti(str "rname", int ival);
 int KSR.pvx.xavi_sets(str "rname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavi_sets'>📖 kamailio.cfg::xavi_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_sets'>📖 kamailio.cfg::xavi_sets()</a>
 
 #### KSR.pvx.xavp_child_get() ####
 
@@ -4511,7 +4511,7 @@ int KSR.pvx.xavi_sets(str "rname", str "sval");
 xval KSR.pvx.xavp_child_get(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_get'>📖 kamailio.cfg::xavp_child_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_get'>📖 kamailio.cfg::xavp_child_get()</a>
 
 #### KSR.pvx.xavp_child_gete() ####
 
@@ -4519,7 +4519,7 @@ xval KSR.pvx.xavp_child_get(str "rname", str "cname");
 xval KSR.pvx.xavp_child_gete(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_gete'>📖 kamailio.cfg::xavp_child_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_gete'>📖 kamailio.cfg::xavp_child_gete()</a>
 
 #### KSR.pvx.xavp_child_getw() ####
 
@@ -4527,7 +4527,7 @@ xval KSR.pvx.xavp_child_gete(str "rname", str "cname");
 xval KSR.pvx.xavp_child_getw(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_getw'>📖 kamailio.cfg::xavp_child_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_getw'>📖 kamailio.cfg::xavp_child_getw()</a>
 
 #### KSR.pvx.xavp_child_is_null() ####
 
@@ -4535,7 +4535,7 @@ xval KSR.pvx.xavp_child_getw(str "rname", str "cname");
 int KSR.pvx.xavp_child_is_null(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_is_null'>📖 kamailio.cfg::xavp_child_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_is_null'>📖 kamailio.cfg::xavp_child_is_null()</a>
 
 #### KSR.pvx.xavp_child_rm() ####
 
@@ -4543,7 +4543,7 @@ int KSR.pvx.xavp_child_is_null(str "rname", str "cname");
 int KSR.pvx.xavp_child_rm(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_rm'>📖 kamailio.cfg::xavp_child_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_rm'>📖 kamailio.cfg::xavp_child_rm()</a>
 
 #### KSR.pvx.xavp_child_seti() ####
 
@@ -4551,7 +4551,7 @@ int KSR.pvx.xavp_child_rm(str "rname", str "cname");
 int KSR.pvx.xavp_child_seti(str "rname", str "cname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_seti'>📖 kamailio.cfg::xavp_child_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_seti'>📖 kamailio.cfg::xavp_child_seti()</a>
 
 #### KSR.pvx.xavp_child_sets() ####
 
@@ -4559,7 +4559,7 @@ int KSR.pvx.xavp_child_seti(str "rname", str "cname", int ival);
 int KSR.pvx.xavp_child_sets(str "rname", str "cname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_child_sets'>📖 kamailio.cfg::xavp_child_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_child_sets'>📖 kamailio.cfg::xavp_child_sets()</a>
 
 #### KSR.pvx.xavp_copy() ####
 
@@ -4567,7 +4567,7 @@ int KSR.pvx.xavp_child_sets(str "rname", str "cname", str "sval");
 int KSR.pvx.xavp_copy(str "src_name", int src_idx, str "dst_name");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_copy'>📖 kamailio.cfg::xavp_copy()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_copy'>📖 kamailio.cfg::xavp_copy()</a>
 
 #### KSR.pvx.xavp_copy_dst() ####
 
@@ -4575,7 +4575,7 @@ int KSR.pvx.xavp_copy(str "src_name", int src_idx, str "dst_name");
 int KSR.pvx.xavp_copy_dst(str "src_name", int src_idx, str "dst_name", int dst_idx);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_copy_dst'>📖 kamailio.cfg::xavp_copy_dst()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_copy_dst'>📖 kamailio.cfg::xavp_copy_dst()</a>
 
 #### KSR.pvx.xavp_get() ####
 
@@ -4583,7 +4583,7 @@ int KSR.pvx.xavp_copy_dst(str "src_name", int src_idx, str "dst_name", int dst_i
 xval KSR.pvx.xavp_get(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get'>📖 kamailio.cfg::xavp_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_get'>📖 kamailio.cfg::xavp_get()</a>
 
 #### KSR.pvx.xavp_get_keys() ####
 
@@ -4591,7 +4591,7 @@ xval KSR.pvx.xavp_get(str "rname");
 xval KSR.pvx.xavp_get_keys(str "rname", int indx);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_get_keys'>📖 kamailio.cfg::xavp_get_keys()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_get_keys'>📖 kamailio.cfg::xavp_get_keys()</a>
 
 #### KSR.pvx.xavp_getd() ####
 
@@ -4599,7 +4599,7 @@ xval KSR.pvx.xavp_get_keys(str "rname", int indx);
 xval KSR.pvx.xavp_getd(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getd'>📖 kamailio.cfg::xavp_getd()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_getd'>📖 kamailio.cfg::xavp_getd()</a>
 
 #### KSR.pvx.xavp_getd_p1() ####
 
@@ -4607,7 +4607,7 @@ xval KSR.pvx.xavp_getd(str "rname");
 xval KSR.pvx.xavp_getd_p1(str "rname", int indx);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getd_p1'>📖 kamailio.cfg::xavp_getd_p1()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_getd_p1'>📖 kamailio.cfg::xavp_getd_p1()</a>
 
 #### KSR.pvx.xavp_gete() ####
 
@@ -4615,7 +4615,7 @@ xval KSR.pvx.xavp_getd_p1(str "rname", int indx);
 xval KSR.pvx.xavp_gete(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_gete'>📖 kamailio.cfg::xavp_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_gete'>📖 kamailio.cfg::xavp_gete()</a>
 
 #### KSR.pvx.xavp_getw() ####
 
@@ -4623,7 +4623,7 @@ xval KSR.pvx.xavp_gete(str "rname");
 xval KSR.pvx.xavp_getw(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_getw'>📖 kamailio.cfg::xavp_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_getw'>📖 kamailio.cfg::xavp_getw()</a>
 
 #### KSR.pvx.xavp_is_null() ####
 
@@ -4631,7 +4631,7 @@ xval KSR.pvx.xavp_getw(str "rname");
 int KSR.pvx.xavp_is_null(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_is_null'>📖 kamailio.cfg::xavp_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_is_null'>📖 kamailio.cfg::xavp_is_null()</a>
 
 #### KSR.pvx.xavp_params_explode() ####
 
@@ -4639,7 +4639,7 @@ int KSR.pvx.xavp_is_null(str "rname");
 int KSR.pvx.xavp_params_explode(str "sparams", str "sxname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_params_explode'>📖 kamailio.cfg::xavp_params_explode()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_params_explode'>📖 kamailio.cfg::xavp_params_explode()</a>
 
 #### KSR.pvx.xavp_params_implode() ####
 
@@ -4647,7 +4647,7 @@ int KSR.pvx.xavp_params_explode(str "sparams", str "sxname");
 int KSR.pvx.xavp_params_implode(str "sxname", str "svname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_params_implode'>📖 kamailio.cfg::xavp_params_implode()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_params_implode'>📖 kamailio.cfg::xavp_params_implode()</a>
 
 #### KSR.pvx.xavp_rm() ####
 
@@ -4655,7 +4655,7 @@ int KSR.pvx.xavp_params_implode(str "sxname", str "svname");
 int KSR.pvx.xavp_rm(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_rm'>📖 kamailio.cfg::xavp_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_rm'>📖 kamailio.cfg::xavp_rm()</a>
 
 #### KSR.pvx.xavp_seti() ####
 
@@ -4663,7 +4663,7 @@ int KSR.pvx.xavp_rm(str "rname");
 int KSR.pvx.xavp_seti(str "rname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_seti'>📖 kamailio.cfg::xavp_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_seti'>📖 kamailio.cfg::xavp_seti()</a>
 
 #### KSR.pvx.xavp_sets() ####
 
@@ -4671,7 +4671,7 @@ int KSR.pvx.xavp_seti(str "rname", int ival);
 int KSR.pvx.xavp_sets(str "rname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_sets'>📖 kamailio.cfg::xavp_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_sets'>📖 kamailio.cfg::xavp_sets()</a>
 
 #### KSR.pvx.xavp_slist_explode() ####
 
@@ -4679,7 +4679,7 @@ int KSR.pvx.xavp_sets(str "rname", str "sval");
 int KSR.pvx.xavp_slist_explode(str "slist", str "sep", str "mode", str "sxname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavp_slist_explode'>📖 kamailio.cfg::xavp_slist_explode()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_slist_explode'>📖 kamailio.cfg::xavp_slist_explode()</a>
 
 #### KSR.pvx.xavu_child_get() ####
 
@@ -4687,7 +4687,7 @@ int KSR.pvx.xavp_slist_explode(str "slist", str "sep", str "mode", str "sxname")
 xval KSR.pvx.xavu_child_get(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_get'>📖 kamailio.cfg::xavu_child_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_get'>📖 kamailio.cfg::xavu_child_get()</a>
 
 #### KSR.pvx.xavu_child_gete() ####
 
@@ -4695,7 +4695,7 @@ xval KSR.pvx.xavu_child_get(str "rname", str "cname");
 xval KSR.pvx.xavu_child_gete(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_gete'>📖 kamailio.cfg::xavu_child_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_gete'>📖 kamailio.cfg::xavu_child_gete()</a>
 
 #### KSR.pvx.xavu_child_getw() ####
 
@@ -4703,7 +4703,7 @@ xval KSR.pvx.xavu_child_gete(str "rname", str "cname");
 xval KSR.pvx.xavu_child_getw(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_getw'>📖 kamailio.cfg::xavu_child_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_getw'>📖 kamailio.cfg::xavu_child_getw()</a>
 
 #### KSR.pvx.xavu_child_is_null() ####
 
@@ -4711,7 +4711,7 @@ xval KSR.pvx.xavu_child_getw(str "rname", str "cname");
 int KSR.pvx.xavu_child_is_null(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_is_null'>📖 kamailio.cfg::xavu_child_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_is_null'>📖 kamailio.cfg::xavu_child_is_null()</a>
 
 #### KSR.pvx.xavu_child_rm() ####
 
@@ -4719,7 +4719,7 @@ int KSR.pvx.xavu_child_is_null(str "rname", str "cname");
 int KSR.pvx.xavu_child_rm(str "rname", str "cname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_rm'>📖 kamailio.cfg::xavu_child_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_rm'>📖 kamailio.cfg::xavu_child_rm()</a>
 
 #### KSR.pvx.xavu_child_seti() ####
 
@@ -4727,7 +4727,7 @@ int KSR.pvx.xavu_child_rm(str "rname", str "cname");
 int KSR.pvx.xavu_child_seti(str "rname", str "cname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_seti'>📖 kamailio.cfg::xavu_child_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_seti'>📖 kamailio.cfg::xavu_child_seti()</a>
 
 #### KSR.pvx.xavu_child_sets() ####
 
@@ -4735,7 +4735,7 @@ int KSR.pvx.xavu_child_seti(str "rname", str "cname", int ival);
 int KSR.pvx.xavu_child_sets(str "rname", str "cname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_child_sets'>📖 kamailio.cfg::xavu_child_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_child_sets'>📖 kamailio.cfg::xavu_child_sets()</a>
 
 #### KSR.pvx.xavu_get() ####
 
@@ -4743,7 +4743,7 @@ int KSR.pvx.xavu_child_sets(str "rname", str "cname", str "sval");
 xval KSR.pvx.xavu_get(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_get'>📖 kamailio.cfg::xavu_get()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_get'>📖 kamailio.cfg::xavu_get()</a>
 
 #### KSR.pvx.xavu_gete() ####
 
@@ -4751,7 +4751,7 @@ xval KSR.pvx.xavu_get(str "rname");
 xval KSR.pvx.xavu_gete(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_gete'>📖 kamailio.cfg::xavu_gete()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_gete'>📖 kamailio.cfg::xavu_gete()</a>
 
 #### KSR.pvx.xavu_getw() ####
 
@@ -4759,7 +4759,7 @@ xval KSR.pvx.xavu_gete(str "rname");
 xval KSR.pvx.xavu_getw(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_getw'>📖 kamailio.cfg::xavu_getw()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_getw'>📖 kamailio.cfg::xavu_getw()</a>
 
 #### KSR.pvx.xavu_is_null() ####
 
@@ -4767,7 +4767,7 @@ xval KSR.pvx.xavu_getw(str "rname");
 int KSR.pvx.xavu_is_null(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_is_null'>📖 kamailio.cfg::xavu_is_null()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_is_null'>📖 kamailio.cfg::xavu_is_null()</a>
 
 #### KSR.pvx.xavu_rm() ####
 
@@ -4775,7 +4775,7 @@ int KSR.pvx.xavu_is_null(str "rname");
 int KSR.pvx.xavu_rm(str "rname");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_rm'>📖 kamailio.cfg::xavu_rm()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_rm'>📖 kamailio.cfg::xavu_rm()</a>
 
 #### KSR.pvx.xavu_seti() ####
 
@@ -4783,7 +4783,7 @@ int KSR.pvx.xavu_rm(str "rname");
 int KSR.pvx.xavu_seti(str "rname", int ival);
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_seti'>📖 kamailio.cfg::xavu_seti()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_seti'>📖 kamailio.cfg::xavu_seti()</a>
 
 #### KSR.pvx.xavu_sets() ####
 
@@ -4791,7 +4791,7 @@ int KSR.pvx.xavu_seti(str "rname", int ival);
 int KSR.pvx.xavu_sets(str "rname", str "sval");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pvx.html#pvx.f.xavu_sets'>📖 kamailio.cfg::xavu_sets()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_sets'>📖 kamailio.cfg::xavu_sets()</a>
 
 ## rabbitmq ##
 
