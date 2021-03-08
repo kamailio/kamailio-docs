@@ -75,9 +75,12 @@ class ModuleDocGenerator(object):
         self.markdown_string += self.read_file_to_string("header.md")
         return True
 
-    def markdown_section_heading(self, heading):
-        self.markdown_string += "## " + heading + " ##\n\n"
-        self.markdown_string += self.read_file_to_string(heading + "/" + heading + ".header.md")
+    def markdown_section_heading(self, module):
+        self.markdown_string += "## " + module + " ##\n\n"
+        kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
+        self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" \
+                        + kmodname + ".html'>📖 kamailio.cfg::module::" + kmodname + ".html</a>\n\n"
+        self.markdown_string += self.read_file_to_string(module + "/" + module + ".header.md")
         return True
 
     def markdown_section_content(self, module, methods):
@@ -85,6 +88,8 @@ class ModuleDocGenerator(object):
             module_prefix = ""
         else:
             module_prefix = module + "."
+
+        kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
 
         for value in methods:
             self.markdown_string += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
@@ -105,13 +110,12 @@ class ModuleDocGenerator(object):
             self.markdown_string += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
                                     + "(" + params_value + ");\n```\n\n" \
 
-            kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
             kfuncname = value["name"]
             if kmodname in MODMAPFUNC:
                 if value["name"] in MODMAPFUNC[kmodname]:
                     kfuncname = MODMAPFUNC[kmodname][value["name"]]
             self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + kmodname + ".html#" \
-                                    + kmodname + ".f." + kfuncname + "'>📖 kamailio.cfg::" + kfuncname + "()</a>\n\n"
+                                    + kmodname + ".f." + kfuncname + "'>📖 kamailio.cfg::function::" + kfuncname + "()</a>\n\n"
 
             func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
             if len(func_doc)>0:
