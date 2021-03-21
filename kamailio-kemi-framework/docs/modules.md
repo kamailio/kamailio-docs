@@ -2577,6 +2577,26 @@ xval KSR.jsonrpcs.response();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jsonrpcs.html#jsonrpcs.f.response'>📖 kamailio.cfg::function::response()</a>
 
+## jwt ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html'>📖 kamailio.cfg::module::jwt.html</a>
+
+#### KSR.jwt.jwt_generate() ####
+
+```cpp
+int KSR.jwt.jwt_generate(str "key", str "alg", str "claims");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_generate'>📖 kamailio.cfg::function::jwt_generate()</a>
+
+#### KSR.jwt.jwt_verify() ####
+
+```cpp
+int KSR.jwt.jwt_verify(str "key", str "alg", str "claims", str "jwtval");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_verify'>📖 kamailio.cfg::function::jwt_verify()</a>
+
 ## kafka ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kafka.html'>📖 kamailio.cfg::module::kafka.html</a>
