@@ -6581,6 +6581,50 @@ int KSR.statsd.statsd_stop(str "key");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statsd.html#statsd.f.statsd_stop'>📖 kamailio.cfg::function::statsd_stop()</a>
 
+## stirshaken ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html'>📖 kamailio.cfg::module::stirshaken.html</a>
+
+#### KSR.stirshaken.stirshaken_add_identity() ####
+
+```cpp
+int KSR.stirshaken.stirshaken_add_identity(str "x5u", str "attest", str "origtn_val", str "desttn_val", str "origid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html#stirshaken.f.stirshaken_add_identity'>📖 kamailio.cfg::function::stirshaken_add_identity()</a>
+
+#### KSR.stirshaken.stirshaken_add_identity_with_key() ####
+
+```cpp
+int KSR.stirshaken.stirshaken_add_identity_with_key(str "x5u", str "attest", str "origtn_val", str "desttn_val", str "origid", str "keypath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html#stirshaken.f.stirshaken_add_identity_with_key'>📖 kamailio.cfg::function::stirshaken_add_identity_with_key()</a>
+
+#### KSR.stirshaken.stirshaken_check_identity() ####
+
+```cpp
+int KSR.stirshaken.stirshaken_check_identity();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html#stirshaken.f.stirshaken_check_identity'>📖 kamailio.cfg::function::stirshaken_check_identity()</a>
+
+#### KSR.stirshaken.stirshaken_check_identity_with_cert() ####
+
+```cpp
+int KSR.stirshaken.stirshaken_check_identity_with_cert(str "cert_path");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html#stirshaken.f.stirshaken_check_identity_with_cert'>📖 kamailio.cfg::function::stirshaken_check_identity_with_cert()</a>
+
+#### KSR.stirshaken.stirshaken_check_identity_with_key() ####
+
+```cpp
+int KSR.stirshaken.stirshaken_check_identity_with_key(str "keypath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html#stirshaken.f.stirshaken_check_identity_with_key'>📖 kamailio.cfg::function::stirshaken_check_identity_with_key()</a>
+
 ## sworker ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sworker.html'>📖 kamailio.cfg::module::sworker.html</a>
