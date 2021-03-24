@@ -820,6 +820,15 @@ is available on the wiki:
 
   * https://www.kamailio.org/wiki/cookbooks/devel/pseudovariables
 
+Note: some global Kamailio variable types with value stored in shared memory have
+to be defined via `modparam` in `kamailio.cfg` in order to become available in all
+Kamailio processes. For example all used `$shv(...)` have to be defined via
+`pv` module with:
+
+```
+modparam("pv", "shvset", "name=value")
+```
+
 Note: functions exported by Kamailio's `pv` module are in `KSR.pvx` package.
 
 ### KSR.pv.get(...) ###
