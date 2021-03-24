@@ -3387,6 +3387,26 @@ int KSR.log_systemd.sd_journal_send_xvap(str "xname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/log_systemd.html#log_systemd.f.sd_journal_send_xvap'>📖 kamailio.cfg::function::sd_journal_send_xvap()</a>
 
+## lwsc ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html'>📖 kamailio.cfg::module::lwsc.html</a>
+
+#### KSR.lwsc.lwsc_notify() ####
+
+```cpp
+int KSR.lwsc.lwsc_notify(str "wsurl", str "data");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_notify'>📖 kamailio.cfg::function::lwsc_notify()</a>
+
+#### KSR.lwsc.lwsc_request() ####
+
+```cpp
+int KSR.lwsc.lwsc_request(str "wsurl", str "data");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_request'>📖 kamailio.cfg::function::lwsc_request()</a>
+
 ## maxfwd ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/maxfwd.html'>📖 kamailio.cfg::module::maxfwd.html</a>
