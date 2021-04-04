@@ -1694,6 +1694,22 @@ int KSR.dmq.is_from_node();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dmq.html#dmq.f.is_from_node'>📖 kamailio.cfg::function::is_from_node()</a>
 
+#### KSR.dmq.process_message() ####
+
+```cpp
+int KSR.dmq.process_message();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dmq.html#dmq.f.process_message'>📖 kamailio.cfg::function::process_message()</a>
+
+#### KSR.dmq.process_message_rc() ####
+
+```cpp
+int KSR.dmq.process_message_rc(int returnval);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dmq.html#dmq.f.process_message_rc'>📖 kamailio.cfg::function::process_message_rc()</a>
+
 #### KSR.dmq.send_message() ####
 
 ```cpp
@@ -3399,6 +3415,14 @@ int KSR.lwsc.lwsc_notify(str "wsurl", str "data");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_notify'>📖 kamailio.cfg::function::lwsc_notify()</a>
 
+#### KSR.lwsc.lwsc_notify_proto() ####
+
+```cpp
+int KSR.lwsc.lwsc_notify_proto(str "wsurl", str "wsproto", str "data");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_notify_proto'>📖 kamailio.cfg::function::lwsc_notify_proto()</a>
+
 #### KSR.lwsc.lwsc_request() ####
 
 ```cpp
@@ -3406,6 +3430,14 @@ int KSR.lwsc.lwsc_request(str "wsurl", str "data");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_request'>📖 kamailio.cfg::function::lwsc_request()</a>
+
+#### KSR.lwsc.lwsc_request_proto() ####
+
+```cpp
+int KSR.lwsc.lwsc_request_proto(str "wsurl", str "wsproto", str "data");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html#lwsc.f.lwsc_request_proto'>📖 kamailio.cfg::function::lwsc_request_proto()</a>
 
 ## maxfwd ##
 
@@ -7121,6 +7153,22 @@ int KSR.textops.starts_with(str "s1", str "s2");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.starts_with'>📖 kamailio.cfg::function::starts_with()</a>
 
+#### KSR.textops.str_find() ####
+
+```cpp
+int KSR.textops.str_find(str "txt", str "needle");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.str_find'>📖 kamailio.cfg::function::str_find()</a>
+
+#### KSR.textops.str_ifind() ####
+
+```cpp
+int KSR.textops.str_ifind(str "txt", str "needle");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.str_ifind'>📖 kamailio.cfg::function::str_ifind()</a>
+
 #### KSR.textops.subst() ####
 
 ```cpp
@@ -7338,6 +7386,14 @@ int KSR.tls.is_peer_verified();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.is_peer_verified'>📖 kamailio.cfg::function::is_peer_verified()</a>
+
+#### KSR.tls.set_connect_server_id() ####
+
+```cpp
+int KSR.tls.set_connect_server_id(str "srvid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.set_connect_server_id'>📖 kamailio.cfg::function::set_connect_server_id()</a>
 
 ## tm ##
 
@@ -7958,6 +8014,18 @@ int KSR.tmx.t_suspend();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tmx.html#tmx.f.t_suspend'>📖 kamailio.cfg::function::t_suspend()</a>
+
+## topos ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/topos.html'>📖 kamailio.cfg::module::topos.html</a>
+
+#### KSR.topos.tps_set_context() ####
+
+```cpp
+int KSR.topos.tps_set_context(str "ctx");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/topos.html#topos.f.tps_set_context'>📖 kamailio.cfg::function::tps_set_context()</a>
 
 ## tsilo ##
 
