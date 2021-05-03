@@ -423,6 +423,17 @@ Branch: 5.5
 then an update has been made to Kamailio devel version and it will be available
 to the public GIT in no time.
 
+## Kamcli ##
+
+A modern command line control tool for Kamailio is available at:
+
+  * [https://github.com/kamailio/kamcli](https://github.com/kamailio/kamcli)
+
+It offers an alternative to all `kamctl`/`kamdbctl`/`kamcmd`, offering internal
+interactive shell with syntax highlighting, tab completion and suggestions
+from history. It implements more sub-commands than kamctl and has the ability
+to format the output using different styles.
+
 ## Support ##
 
 Questions about how to use Kamailio and the content of kamailio.cfg can be
