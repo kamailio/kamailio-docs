@@ -2389,6 +2389,54 @@ int KSR.imc.imc_manager();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/imc.html#imc.f.imc_manager'>📖 kamailio.cfg::function::imc_manager()</a>
 
+## ims_charging ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_charging.html'>📖 kamailio.cfg::module::ims_charging.html</a>
+
+#### KSR.ims_charging.Ro_CCR() ####
+
+```cpp
+int KSR.ims_charging.Ro_CCR(str "s_route_name", str "s_direction", int reservation_units, str "s_incoming_trunk_id", str "s_outgoing_trunk_id");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_charging.html#ims_charging.f.Ro_CCR'>📖 kamailio.cfg::function::Ro_CCR()</a>
+
+#### KSR.ims_charging.Ro_CCR_Stop() ####
+
+```cpp
+int KSR.ims_charging.Ro_CCR_Stop(str "p_direction", int p_code, str "p_reason");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_charging.html#ims_charging.f.Ro_CCR_Stop'>📖 kamailio.cfg::function::Ro_CCR_Stop()</a>
+
+#### KSR.ims_charging.Ro_set_session_id_avp() ####
+
+```cpp
+int KSR.ims_charging.Ro_set_session_id_avp();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_charging.html#ims_charging.f.Ro_set_session_id_avp'>📖 kamailio.cfg::function::Ro_set_session_id_avp()</a>
+
+## ims_diameter_server ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_diameter_server.html'>📖 kamailio.cfg::module::ims_diameter_server.html</a>
+
+#### KSR.ims_diameter_server.diameter_request() ####
+
+```cpp
+int KSR.ims_diameter_server.diameter_request(str "peer", int appid, int commandcode, str "message");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_diameter_server.html#ims_diameter_server.f.diameter_request'>📖 kamailio.cfg::function::diameter_request()</a>
+
+#### KSR.ims_diameter_server.diameter_request_async() ####
+
+```cpp
+int KSR.ims_diameter_server.diameter_request_async(str "peer", int appid, int commandcode, str "message");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_diameter_server.html#ims_diameter_server.f.diameter_request_async'>📖 kamailio.cfg::function::diameter_request_async()</a>
+
 ## ipops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ipops.html'>📖 kamailio.cfg::module::ipops.html</a>
@@ -8114,6 +8162,14 @@ int KSR.uac.uac_reg_lookup(str "userid", str "sdst");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uac.html#uac.f.uac_reg_lookup'>📖 kamailio.cfg::function::uac_reg_lookup()</a>
+
+#### KSR.uac.uac_reg_lookup_uri() ####
+
+```cpp
+int KSR.uac.uac_reg_lookup_uri(str "suri", str "sdst");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uac.html#uac.f.uac_reg_lookup_uri'>📖 kamailio.cfg::function::uac_reg_lookup_uri()</a>
 
 #### KSR.uac.uac_reg_refresh() ####
 
