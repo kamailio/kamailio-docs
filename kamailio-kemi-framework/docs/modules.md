@@ -6329,6 +6329,14 @@ int KSR.siputils.is_first_hop();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.is_first_hop'>📖 kamailio.cfg::function::is_first_hop()</a>
 
+#### KSR.siputils.is_first_hop_mode() ####
+
+```cpp
+int KSR.siputils.is_first_hop_mode(int mode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.is_first_hop_mode'>📖 kamailio.cfg::function::is_first_hop_mode()</a>
+
 #### KSR.siputils.is_numeric() ####
 
 ```cpp
@@ -7016,6 +7024,14 @@ int KSR.textops.remove_hf_exp(str "ematch", str "eskip");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.remove_hf_exp'>📖 kamailio.cfg::function::remove_hf_exp()</a>
+
+#### KSR.textops.remove_hf_idx() ####
+
+```cpp
+int KSR.textops.remove_hf_idx(str "hname", int idx);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.remove_hf_idx'>📖 kamailio.cfg::function::remove_hf_idx()</a>
 
 #### KSR.textops.remove_hf_re() ####
 
