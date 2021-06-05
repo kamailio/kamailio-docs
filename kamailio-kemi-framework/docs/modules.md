@@ -3927,6 +3927,14 @@ int KSR.nathelper.handle_ruri_alias();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nathelper.html#nathelper.f.handle_ruri_alias'>📖 kamailio.cfg::function::handle_ruri_alias()</a>
 
+#### KSR.nathelper.handle_ruri_alias_mode() ####
+
+```cpp
+int KSR.nathelper.handle_ruri_alias_mode(int mode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nathelper.html#nathelper.f.handle_ruri_alias_mode'>📖 kamailio.cfg::function::handle_ruri_alias_mode()</a>
+
 #### KSR.nathelper.is_rfc1918() ####
 
 ```cpp
@@ -6020,6 +6028,14 @@ int KSR.sdpops.sdp_with_transport_like(str "transport");
 ## secsipid ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html'>📖 kamailio.cfg::module::secsipid.html</a>
+
+#### KSR.secsipid.result_str() ####
+
+```cpp
+int KSR.secsipid.result_str(str "attrname", str "avpname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.result_str'>📖 kamailio.cfg::function::result_str()</a>
 
 #### KSR.secsipid.secsipid_add_identity() ####
 
