@@ -3419,6 +3419,26 @@ int KSR.lcr.to_gw_addr(int lcr_id, str "addr_str", int transport);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html#lcr.f.to_gw_addr'>📖 kamailio.cfg::function::to_gw_addr()</a>
 
+## ldap ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ldap.html'>📖 kamailio.cfg::module::ldap.html</a>
+
+#### KSR.ldap.result_next() ####
+
+```cpp
+int KSR.ldap.result_next();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ldap.html#ldap.f.result_next'>📖 kamailio.cfg::function::result_next()</a>
+
+#### KSR.ldap.search() ####
+
+```cpp
+int KSR.ldap.search(str "ldapurl");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ldap.html#ldap.f.search'>📖 kamailio.cfg::function::search()</a>
+
 ## log_custom ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/log_custom.html'>📖 kamailio.cfg::module::log_custom.html</a>
