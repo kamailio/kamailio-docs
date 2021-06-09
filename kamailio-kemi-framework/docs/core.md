@@ -503,6 +503,17 @@ if KSR.is_WSS() then
 end
 ```
 
+### KSR.is_WSX() ###
+
+`bool is_WSX()`
+
+Return true if the incoming protocol is WS or WSS.
+
+```Lua
+if KSR.is_WSX() then
+  ...
+end
+```
 
 ### KSR.is_proto(...) ###
 
