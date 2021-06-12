@@ -6693,6 +6693,14 @@ int KSR.statsd.statsd_gauge(str "key", str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statsd.html#statsd.f.statsd_gauge'>📖 kamailio.cfg::function::statsd_gauge()</a>
 
+#### KSR.statsd.statsd_histogram() ####
+
+```cpp
+int KSR.statsd.statsd_histogram(str "key", str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statsd.html#statsd.f.statsd_histogram'>📖 kamailio.cfg::function::statsd_histogram()</a>
+
 #### KSR.statsd.statsd_incr() ####
 
 ```cpp
