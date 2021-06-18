@@ -430,18 +430,6 @@ if KSR.is_myself_srcip() then
 end
 ```
 
-### KSR.is_SCTP() ###
-
-`bool is_SCTP()`
-
-Return true if the incoming protocol is SCTP.
-
-```Lua
-if KSR.is_SCTP() then
-  ...
-end
-```
-
 ### KSR.is_TCP() ###
 
 `bool is_TCP()`
@@ -466,6 +454,17 @@ if KSR.is_TLS() then
 end
 ```
 
+### KSR.is_SCTP() ###
+
+`bool is_SCTP()`
+
+Return true if the incoming protocol is SCTP.
+
+```Lua
+if KSR.is_SCTP() then
+  ...
+end
+```
 
 ### KSR.is_UDP() ###
 
@@ -817,6 +816,97 @@ Example:
 
 ```
 KSR.route("REQINIT");
+```
+
+### KSR.to_TCP() ###
+
+`bool to_TCP()`
+
+Return true if the outgoing protocol is TCP, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_TCP() then
+  ...
+end
+```
+
+### KSR.to_TLS() ###
+
+`bool to_TLS()`
+
+Return true if the outgoing protocol is TLS, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_TLS() then
+  ...
+end
+```
+
+### KSR.to_SCTP() ###
+
+`bool to_SCTP()`
+
+Return true if the outgoing protocol is SCTP, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_SCTP() then
+  ...
+end
+```
+
+### KSR.to_UDP() ###
+
+`bool to_UDP()`
+
+Return true if the outgoing protocol is UDP, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_UDP() then
+  ...
+end
+```
+
+### KSR.to_WS() ###
+
+`bool to_WS()`
+
+Return true if the outgoing protocol is WS, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_WS() then
+  ...
+end
+```
+
+### KSR.to_WSS() ###
+
+`bool to_WSS()`
+
+Return true if the outgoing protocol is WSS, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_WSS() then
+  ...
+end
+```
+
+### KSR.to_WSX() ###
+
+`bool to_WSX()`
+
+Return true if the outgoing protocol is WS or WSS, based on `transport` parameter
+in destination URI or R-RUI.
+
+```Lua
+if KSR.to_WSX() then
+  ...
+end
 ```
 
 ### KSR.pv Submodule ###
