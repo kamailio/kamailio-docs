@@ -4435,6 +4435,18 @@ int KSR.pua.pua_update_contact();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pua.html#pua.f.pua_update_contact'>📖 kamailio.cfg::function::pua_update_contact()</a>
 
+## pua_json ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pua_json.html'>📖 kamailio.cfg::module::pua_json.html</a>
+
+#### KSR.pua_json.publish() ####
+
+```cpp
+int KSR.pua_json.publish(str "pjson");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pua_json.html#pua_json.f.publish'>📖 kamailio.cfg::function::publish()</a>
+
 ## pv_headers ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html'>📖 kamailio.cfg::module::pv_headers.html</a>
@@ -6065,6 +6077,14 @@ int KSR.secsipid.secsipid_add_identity(str "origtn", str "desttn", str "attest",
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_add_identity'>📖 kamailio.cfg::function::secsipid_add_identity()</a>
 
+#### KSR.secsipid.secsipid_build_identity() ####
+
+```cpp
+int KSR.secsipid.secsipid_build_identity(str "origtn", str "desttn", str "attest", str "origid", str "x5u", str "keypath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_build_identity'>📖 kamailio.cfg::function::secsipid_build_identity()</a>
+
 #### KSR.secsipid.secsipid_check_identity() ####
 
 ```cpp
@@ -6340,6 +6360,14 @@ int KSR.siputils.has_totag();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.has_totag'>📖 kamailio.cfg::function::has_totag()</a>
+
+#### KSR.siputils.hdr_date_check() ####
+
+```cpp
+int KSR.siputils.hdr_date_check(int tdiff);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.hdr_date_check'>📖 kamailio.cfg::function::hdr_date_check()</a>
 
 #### KSR.siputils.is_alphanum() ####
 
