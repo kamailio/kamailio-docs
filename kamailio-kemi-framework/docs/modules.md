@@ -6085,6 +6085,14 @@ int KSR.secsipid.secsipid_build_identity(str "origtn", str "desttn", str "attest
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_build_identity'>📖 kamailio.cfg::function::secsipid_build_identity()</a>
 
+#### KSR.secsipid.secsipid_check() ####
+
+```cpp
+int KSR.secsipid.secsipid_check(str "sidentity", str "keypath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_check'>📖 kamailio.cfg::function::secsipid_check()</a>
+
 #### KSR.secsipid.secsipid_check_identity() ####
 
 ```cpp
