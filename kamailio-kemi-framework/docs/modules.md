@@ -6117,6 +6117,14 @@ xval KSR.secsipid.secsipid_get_url(str "surl");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_get_url'>📖 kamailio.cfg::function::secsipid_get_url()</a>
 
+#### KSR.secsipid.secsipid_get_val() ####
+
+```cpp
+xval KSR.secsipid.secsipid_get_val();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_get_val'>📖 kamailio.cfg::function::secsipid_get_val()</a>
+
 ## sipcapture ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipcapture.html'>📖 kamailio.cfg::module::sipcapture.html</a>
@@ -6828,6 +6836,22 @@ int KSR.sworker.task(str "gname");
 ## tcpops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html'>📖 kamailio.cfg::module::tcpops.html</a>
+
+#### KSR.tcpops.tcp_close_connection() ####
+
+```cpp
+int KSR.tcpops.tcp_close_connection();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_close_connection'>📖 kamailio.cfg::function::tcp_close_connection()</a>
+
+#### KSR.tcpops.tcp_close_connection_id() ####
+
+```cpp
+int KSR.tcpops.tcp_close_connection_id(int conid);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_close_connection_id'>📖 kamailio.cfg::function::tcp_close_connection_id()</a>
 
 #### KSR.tcpops.tcp_conid_alive() ####
 
