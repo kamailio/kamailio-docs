@@ -818,6 +818,32 @@ Example:
 KSR.route("REQINIT");
 ```
 
+### KSR.to_IPv4() ###
+
+`bool to_IPv4()`
+
+Return true if the outgoing protocol is IPv4, based on `host` part
+in destination URI or R-RUI (if it is an IP address, no DNS query is done).
+
+```Lua
+if KSR.to_IPv4() then
+  ...
+end
+```
+
+### KSR.to_IPv6() ###
+
+`bool to_IPv6()`
+
+Return true if the outgoing protocol is IPv6, based on `host` part
+in destination URI or R-RUI (if it is an IP address, no DNS query is done).
+
+```Lua
+if KSR.to_IPv6() then
+  ...
+end
+```
+
 ### KSR.to_TCP() ###
 
 `bool to_TCP()`
