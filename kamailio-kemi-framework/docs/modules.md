@@ -3303,6 +3303,22 @@ xval KSR.kx.getw_ua();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_ua'>📖 kamailio.cfg::function::getw_ua()</a>
 
+#### KSR.kx.ifdef() ####
+
+```cpp
+bool KSR.kx.ifdef(str "dname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.ifdef'>📖 kamailio.cfg::function::ifdef()</a>
+
+#### KSR.kx.ifndef() ####
+
+```cpp
+bool KSR.kx.ifndef(str "dname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.ifndef'>📖 kamailio.cfg::function::ifndef()</a>
+
 ## lcr ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html'>📖 kamailio.cfg::module::lcr.html</a>
