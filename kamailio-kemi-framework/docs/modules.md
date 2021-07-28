@@ -5641,6 +5641,22 @@ KSR.rtpengine.rtpengine_offer();
 
 Please review the documentation for [set_rtpengine_set()](#ksrrtpengineset_rtpengine_set) for more information.
 
+#### KSR.rtpengine.silence_media() ####
+
+```cpp
+int KSR.rtpengine.silence_media(str "flags");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.silence_media'>📖 kamailio.cfg::function::silence_media()</a>
+
+#### KSR.rtpengine.silence_media0() ####
+
+```cpp
+int KSR.rtpengine.silence_media0();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.silence_media0'>📖 kamailio.cfg::function::silence_media0()</a>
+
 #### KSR.rtpengine.start_recording() ####
 
 ```cpp
@@ -5704,6 +5720,22 @@ int KSR.rtpengine.unblock_media0();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unblock_media0'>📖 kamailio.cfg::function::unblock_media0()</a>
+
+#### KSR.rtpengine.unsilence_media() ####
+
+```cpp
+int KSR.rtpengine.unsilence_media(str "flags");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unsilence_media'>📖 kamailio.cfg::function::unsilence_media()</a>
+
+#### KSR.rtpengine.unsilence_media0() ####
+
+```cpp
+int KSR.rtpengine.unsilence_media0();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.unsilence_media0'>📖 kamailio.cfg::function::unsilence_media0()</a>
 
 ## rtpproxy ##
 
@@ -5844,6 +5876,26 @@ int KSR.rtpproxy.start_recording();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpproxy.html#rtpproxy.f.start_recording'>📖 kamailio.cfg::function::start_recording()</a>
+
+## ruxc ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html'>📖 kamailio.cfg::module::ruxc.html</a>
+
+#### KSR.ruxc.http_get() ####
+
+```cpp
+int KSR.ruxc.http_get(str "url", str "hdrs", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html#ruxc.f.http_get'>📖 kamailio.cfg::function::http_get()</a>
+
+#### KSR.ruxc.http_post() ####
+
+```cpp
+int KSR.ruxc.http_post(str "url", str "body", str "hdrs", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html#ruxc.f.http_post'>📖 kamailio.cfg::function::http_post()</a>
 
 ## sanity ##
 
