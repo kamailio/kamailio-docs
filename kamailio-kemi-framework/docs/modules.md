@@ -7473,6 +7473,38 @@ int KSR.textopsx.assign_hf_value2(str "hexp", str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.assign_hf_value2'>📖 kamailio.cfg::function::assign_hf_value2()</a>
 
+#### KSR.textopsx.bl_iterator_end() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_end(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_end'>📖 kamailio.cfg::function::bl_iterator_end()</a>
+
+#### KSR.textopsx.bl_iterator_next() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_next(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_next'>📖 kamailio.cfg::function::bl_iterator_next()</a>
+
+#### KSR.textopsx.bl_iterator_rm() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_rm(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_rm'>📖 kamailio.cfg::function::bl_iterator_rm()</a>
+
+#### KSR.textopsx.bl_iterator_start() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_start(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_start'>📖 kamailio.cfg::function::bl_iterator_start()</a>
+
 #### KSR.textopsx.change_reply_status() ####
 
 ```cpp
@@ -7544,6 +7576,14 @@ int KSR.textopsx.hf_iterator_next(str "iname");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.hf_iterator_next'>📖 kamailio.cfg::function::hf_iterator_next()</a>
+
+#### KSR.textopsx.hf_iterator_prev() ####
+
+```cpp
+int KSR.textopsx.hf_iterator_prev(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.hf_iterator_prev'>📖 kamailio.cfg::function::hf_iterator_prev()</a>
 
 #### KSR.textopsx.hf_iterator_rm() ####
 
