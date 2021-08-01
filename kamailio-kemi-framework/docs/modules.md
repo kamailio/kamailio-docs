@@ -6381,6 +6381,14 @@ int KSR.siptrace.sip_trace_mode(str "smode");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html'>📖 kamailio.cfg::module::siputils.html</a>
 
+#### KSR.siputils.cmp_hdr_name() ####
+
+```cpp
+int KSR.siputils.cmp_hdr_name(str "shname1", str "shname2");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.cmp_hdr_name'>📖 kamailio.cfg::function::cmp_hdr_name()</a>
+
 #### KSR.siputils.contact_param_decode() ####
 
 ```cpp
@@ -6892,6 +6900,14 @@ int KSR.stirshaken.stirshaken_check_identity_with_key(str "keypath");
 ## sworker ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sworker.html'>📖 kamailio.cfg::module::sworker.html</a>
+
+#### KSR.sworker.active() ####
+
+```cpp
+int KSR.sworker.active();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sworker.html#sworker.f.active'>📖 kamailio.cfg::function::active()</a>
 
 #### KSR.sworker.task() ####
 
