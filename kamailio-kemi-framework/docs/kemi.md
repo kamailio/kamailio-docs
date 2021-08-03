@@ -52,7 +52,7 @@ Inside the JavaScript script, following functions have a predefined role:
   provided as parameter to `KSR.tm.t_on_failure(…)`
   * `branch failure route callback` - the name of the JavaScript function to be executed instead of an `event route` for
   branch failure has to be provided as parameter to `KSR.tm.t_on_branch_failure(…)`
-  * `event route callback` - the name of the JavaScript function to be exectued instead of module specific
+  * `event route callback` - the name of the JavaScript function to be executed instead of module specific
   `event_route` blocks is provided via `event_callback` parameter of that module
 
 A complete example of using JavaScript as KEMI languages is offered by the next two files:
@@ -102,7 +102,7 @@ Inside the Lua script, following functions have a predefined role:
   provided as parameter to `KSR.tm.t_on_failure(…)`
   * `branch failure route callback` - the name of the Lua function to be executed instead of an `event route` for
   branch failure has to be provided as parameter to `KSR.tm.t_on_branch_failure(…)`
-  * `event route callback` - the name of the Lua function to be exectued instead of module specific
+  * `event route callback` - the name of the Lua function to be executed instead of module specific
   `event_route` blocks is provided via `event_callback` parameter of that module
 
 Note: besides the new KEMI Lua KSR module, the old `sr` Lua module exported by `app_lua` is still available.
@@ -269,7 +269,7 @@ Inside the new class, the following methods are relevant:
   provided as parameter to `KSR.tm.t_on_failure(…)`
   * `branch failure route callback` - the name of the Python function to be executed instead of an event route for
   branch failure has to be provided as parameter to `KSR.tm.t_on_branch_failure(…)`
-  * `event route callback` - the name of the Python function to be exectued instead of module specific
+  * `event route callback` - the name of the Python function to be executed instead of module specific
   `event_route` blocks is provided via `event_callback` parameter of that module
 
 Note: besides the new KEMI Python KSR module, the old `Router` Python module exported by `app_python` is still
