@@ -1150,7 +1150,7 @@ a wrapper for `KSR.hdr.remove("hrm")` and `KSR.hdr.append("hadd")`.
 Example:
 
 ```
-KSR.hdr.remove("X-My-Hdr", "X-My-Hdr: abc\r\n");
+KSR.hdr.rmappend("X-My-Hdr", "X-My-Hdr: abc\r\n");
 ```
 
 ### KSR.hdr.is_present(...) ###
