@@ -6381,6 +6381,14 @@ int KSR.siptrace.sip_trace_mode(str "smode");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html'>📖 kamailio.cfg::module::siputils.html</a>
 
+#### KSR.siputils.cmp_aor() ####
+
+```cpp
+int KSR.siputils.cmp_aor(str "uri1", str "uri2");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.cmp_aor'>📖 kamailio.cfg::function::cmp_aor()</a>
+
 #### KSR.siputils.cmp_hdr_name() ####
 
 ```cpp
@@ -6388,6 +6396,14 @@ int KSR.siputils.cmp_hdr_name(str "shname1", str "shname2");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.cmp_hdr_name'>📖 kamailio.cfg::function::cmp_hdr_name()</a>
+
+#### KSR.siputils.cmp_uri() ####
+
+```cpp
+int KSR.siputils.cmp_uri(str "uri1", str "uri2");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.cmp_uri'>📖 kamailio.cfg::function::cmp_uri()</a>
 
 #### KSR.siputils.contact_param_decode() ####
 
@@ -7489,6 +7505,14 @@ int KSR.textopsx.assign_hf_value2(str "hexp", str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.assign_hf_value2'>📖 kamailio.cfg::function::assign_hf_value2()</a>
 
+#### KSR.textopsx.bl_iterator_append() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_append(str "iname", str "text");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_append'>📖 kamailio.cfg::function::bl_iterator_append()</a>
+
 #### KSR.textopsx.bl_iterator_end() ####
 
 ```cpp
@@ -7496,6 +7520,14 @@ int KSR.textopsx.bl_iterator_end(str "iname");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_end'>📖 kamailio.cfg::function::bl_iterator_end()</a>
+
+#### KSR.textopsx.bl_iterator_insert() ####
+
+```cpp
+int KSR.textopsx.bl_iterator_insert(str "iname", str "text");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_insert'>📖 kamailio.cfg::function::bl_iterator_insert()</a>
 
 #### KSR.textopsx.bl_iterator_next() ####
 
