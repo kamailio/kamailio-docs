@@ -7553,6 +7553,14 @@ int KSR.textopsx.bl_iterator_start(str "iname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_start'>📖 kamailio.cfg::function::bl_iterator_start()</a>
 
+#### KSR.textopsx.bl_iterator_value() ####
+
+```cpp
+xval KSR.textopsx.bl_iterator_value(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_value'>📖 kamailio.cfg::function::bl_iterator_value()</a>
+
 #### KSR.textopsx.change_reply_status() ####
 
 ```cpp
