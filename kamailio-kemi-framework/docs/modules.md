@@ -7617,6 +7617,22 @@ int KSR.textopsx.hf_iterator_end(str "iname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.hf_iterator_end'>📖 kamailio.cfg::function::hf_iterator_end()</a>
 
+#### KSR.textopsx.hf_iterator_hbody() ####
+
+```cpp
+xval KSR.textopsx.hf_iterator_hbody(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.hf_iterator_hbody'>📖 kamailio.cfg::function::hf_iterator_hbody()</a>
+
+#### KSR.textopsx.hf_iterator_hname() ####
+
+```cpp
+xval KSR.textopsx.hf_iterator_hname(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.hf_iterator_hname'>📖 kamailio.cfg::function::hf_iterator_hname()</a>
+
 #### KSR.textopsx.hf_iterator_insert() ####
 
 ```cpp
