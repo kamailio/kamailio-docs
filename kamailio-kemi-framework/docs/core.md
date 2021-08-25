@@ -15,11 +15,17 @@ The exports to KEMI framework from the core of Kamailio:
 
 Example of using KEMI functions exported to Lua interpreter:
 
+
 ```Lua
 KSR.dbg("a debug message from Lua script\n");
 KSR.hdr.remove("Route");
 ```
-Exported functions from core directly to KSR module or KSR.hdr submodule are listed in the next sections.
+
+Note: if a function exported by the core to native Kamailio configuration file is missing here,
+check the exports of `KSR.corex` submodule, some of them have alternatives there
+(e.g., `force_send_socket()` can be done with `KSR.corex.set_send_scoket()`).
+
+Exported functions from core directly to KSR module, KSR.pv or KSR.hdr submodules are listed in the next sections.
 
 ### KSR.add_local_rport() ###
 
