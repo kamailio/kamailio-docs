@@ -3347,6 +3347,14 @@ int KSR.lcr.from_any_gw_addr(str "addr_str", int transport);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html#lcr.f.from_any_gw_addr'>📖 kamailio.cfg::function::from_any_gw_addr()</a>
 
+#### KSR.lcr.from_any_gw_addr_port() ####
+
+```cpp
+int KSR.lcr.from_any_gw_addr_port(str "addr_str", int transport, int src_port);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html#lcr.f.from_any_gw_addr_port'>📖 kamailio.cfg::function::from_any_gw_addr_port()</a>
+
 #### KSR.lcr.from_gw() ####
 
 ```cpp
@@ -3362,6 +3370,14 @@ int KSR.lcr.from_gw_addr(int lcr_id, str "addr_str", int transport);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html#lcr.f.from_gw_addr'>📖 kamailio.cfg::function::from_gw_addr()</a>
+
+#### KSR.lcr.from_gw_addr_port() ####
+
+```cpp
+int KSR.lcr.from_gw_addr_port(int lcr_id, str "addr_str", int transport, int src_port);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html#lcr.f.from_gw_addr_port'>📖 kamailio.cfg::function::from_gw_addr_port()</a>
 
 #### KSR.lcr.inactivate_gw() ####
 
@@ -5613,6 +5629,14 @@ int KSR.rtpengine.rtpengine_query0();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_query0'>📖 kamailio.cfg::function::rtpengine_query0()</a>
 
+#### KSR.rtpengine.rtpengine_query_v() ####
+
+```cpp
+int KSR.rtpengine.rtpengine_query_v(str "fmt", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_query_v'>📖 kamailio.cfg::function::rtpengine_query_v()</a>
+
 #### KSR.rtpengine.set_rtpengine_set() ####
 
 ```cpp
@@ -5880,6 +5904,14 @@ int KSR.rtpproxy.start_recording();
 ## ruxc ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html'>📖 kamailio.cfg::module::ruxc.html</a>
+
+#### KSR.ruxc.http_delete() ####
+
+```cpp
+int KSR.ruxc.http_delete(str "url", str "body", str "hdrs", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html#ruxc.f.http_delete'>📖 kamailio.cfg::function::http_delete()</a>
 
 #### KSR.ruxc.http_get() ####
 
