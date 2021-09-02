@@ -6681,6 +6681,18 @@ int KSR.sl.sl_send_reply(int code, str "reason");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sl.html#sl.f.sl_send_reply'>📖 kamailio.cfg::function::sl_send_reply()</a>
 
+## slack ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/slack.html'>📖 kamailio.cfg::module::slack.html</a>
+
+#### KSR.slack.slack_send() ####
+
+```cpp
+int KSR.slack.slack_send(str "slmsg");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/slack.html#slack.f.slack_send'>📖 kamailio.cfg::function::slack_send()</a>
+
 ## speeddial ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/speeddial.html'>📖 kamailio.cfg::module::speeddial.html</a>
