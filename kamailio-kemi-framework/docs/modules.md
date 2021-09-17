@@ -1410,6 +1410,22 @@ int KSR.dialplan.dp_replace(int dpid, str "src", str "dst");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html'>📖 kamailio.cfg::module::dispatcher.html</a>
 
+#### KSR.dispatcher.ds_is_active() ####
+
+```cpp
+int KSR.dispatcher.ds_is_active(int set);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_active'>📖 kamailio.cfg::function::ds_is_active()</a>
+
+#### KSR.dispatcher.ds_is_active_uri() ####
+
+```cpp
+int KSR.dispatcher.ds_is_active_uri(int set, str "uri");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_is_active_uri'>📖 kamailio.cfg::function::ds_is_active_uri()</a>
+
 #### KSR.dispatcher.ds_is_from_list() ####
 
 ```cpp
@@ -4330,6 +4346,34 @@ int KSR.pipelimit.pl_drop_retry(int rafter);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pipelimit.html#pipelimit.f.pl_drop_retry'>📖 kamailio.cfg::function::pl_drop_retry()</a>
+
+## posops ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html'>📖 kamailio.cfg::module::posops.html</a>
+
+#### KSR.posops.pos_append() ####
+
+```cpp
+int KSR.posops.pos_append(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_append'>📖 kamailio.cfg::function::pos_append()</a>
+
+#### KSR.posops.pos_insert() ####
+
+```cpp
+int KSR.posops.pos_insert(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_insert'>📖 kamailio.cfg::function::pos_insert()</a>
+
+#### KSR.posops.pos_rm() ####
+
+```cpp
+int KSR.posops.pos_rm(int idx, int len);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_rm'>📖 kamailio.cfg::function::pos_rm()</a>
 
 ## prefix_route ##
 
