@@ -4359,6 +4359,38 @@ int KSR.posops.pos_append(int idx, str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_append'>📖 kamailio.cfg::function::pos_append()</a>
 
+#### KSR.posops.pos_body_end() ####
+
+```cpp
+int KSR.posops.pos_body_end();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_body_end'>📖 kamailio.cfg::function::pos_body_end()</a>
+
+#### KSR.posops.pos_body_start() ####
+
+```cpp
+int KSR.posops.pos_body_start();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_body_start'>📖 kamailio.cfg::function::pos_body_start()</a>
+
+#### KSR.posops.pos_headers_end() ####
+
+```cpp
+int KSR.posops.pos_headers_end();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_headers_end'>📖 kamailio.cfg::function::pos_headers_end()</a>
+
+#### KSR.posops.pos_headers_start() ####
+
+```cpp
+int KSR.posops.pos_headers_start();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_headers_start'>📖 kamailio.cfg::function::pos_headers_start()</a>
+
 #### KSR.posops.pos_insert() ####
 
 ```cpp
