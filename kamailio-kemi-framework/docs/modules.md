@@ -4375,6 +4375,22 @@ int KSR.posops.pos_body_start();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_body_start'>📖 kamailio.cfg::function::pos_body_start()</a>
 
+#### KSR.posops.pos_find_str() ####
+
+```cpp
+int KSR.posops.pos_find_str(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_find_str'>📖 kamailio.cfg::function::pos_find_str()</a>
+
+#### KSR.posops.pos_findi_str() ####
+
+```cpp
+int KSR.posops.pos_findi_str(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_findi_str'>📖 kamailio.cfg::function::pos_findi_str()</a>
+
 #### KSR.posops.pos_headers_end() ####
 
 ```cpp
