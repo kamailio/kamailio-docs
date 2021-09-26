@@ -4415,6 +4415,22 @@ int KSR.posops.pos_insert(int idx, str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_insert'>📖 kamailio.cfg::function::pos_insert()</a>
 
+#### KSR.posops.pos_rfind_str() ####
+
+```cpp
+int KSR.posops.pos_rfind_str(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_rfind_str'>📖 kamailio.cfg::function::pos_rfind_str()</a>
+
+#### KSR.posops.pos_rfindi_str() ####
+
+```cpp
+int KSR.posops.pos_rfindi_str(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_rfindi_str'>📖 kamailio.cfg::function::pos_rfindi_str()</a>
+
 #### KSR.posops.pos_rm() ####
 
 ```cpp
@@ -5210,6 +5226,22 @@ int KSR.pvx.xavu_is_null(str "rname");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_is_null'>📖 kamailio.cfg::function::xavu_is_null()</a>
+
+#### KSR.pvx.xavu_params_explode() ####
+
+```cpp
+int KSR.pvx.xavu_params_explode(str "sparams", str "sxname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_params_explode'>📖 kamailio.cfg::function::xavu_params_explode()</a>
+
+#### KSR.pvx.xavu_params_implode() ####
+
+```cpp
+int KSR.pvx.xavu_params_implode(str "sxname", str "svname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavu_params_implode'>📖 kamailio.cfg::function::xavu_params_implode()</a>
 
 #### KSR.pvx.xavu_rm() ####
 
