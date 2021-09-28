@@ -4439,6 +4439,14 @@ int KSR.posops.pos_rm(int idx, int len);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_rm'>📖 kamailio.cfg::function::pos_rm()</a>
 
+#### KSR.posops.pos_search() ####
+
+```cpp
+int KSR.posops.pos_search(int idx, str "sre");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_search'>📖 kamailio.cfg::function::pos_search()</a>
+
 ## prefix_route ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/prefix_route.html'>📖 kamailio.cfg::module::prefix_route.html</a>
