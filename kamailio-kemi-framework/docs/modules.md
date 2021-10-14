@@ -2209,6 +2209,22 @@ int KSR.htable.sht_iterator_rm(str "iname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_rm'>📖 kamailio.cfg::function::sht_iterator_rm()</a>
 
+#### KSR.htable.sht_iterator_seti() ####
+
+```cpp
+int KSR.htable.sht_iterator_seti(str "iname", int ival);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_seti'>📖 kamailio.cfg::function::sht_iterator_seti()</a>
+
+#### KSR.htable.sht_iterator_sets() ####
+
+```cpp
+int KSR.htable.sht_iterator_sets(str "iname", str "sval");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_sets'>📖 kamailio.cfg::function::sht_iterator_sets()</a>
+
 #### KSR.htable.sht_iterator_start() ####
 
 ```cpp
