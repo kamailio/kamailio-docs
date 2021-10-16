@@ -231,6 +231,8 @@ end
 
 Return true if the method type of the SIP message is `INVITE`.
 
+Example:
+
 ```Lua
 if KSR.is_INVITE() then
   ...
@@ -243,11 +245,27 @@ end
 
 Return true if the method type of the SIP message is `ACK`.
 
+Example:
+
+```Lua
+if KSR.is_ACK() then
+  ...
+end
+```
+
 ### KSR.is_BYE() ###
 
 `bool is_BYE()`
 
 Return true if the method type of the SIP message is `BYE`.
+
+Example:
+
+```Lua
+if KSR.is_BYE() then
+  ...
+end
+```
 
 ### KSR.is_CANCEL() ###
 
@@ -255,11 +273,27 @@ Return true if the method type of the SIP message is `BYE`.
 
 Return true if the method type of the SIP message is `CANCEL`.
 
+Example:
+
+```Lua
+if KSR.is_CANCEL() then
+  ...
+end
+```
+
 ### KSR.is_REGISTER() ###
 
 `bool is_REGISTER()`
 
 Return true if the method type of the SIP message is `REGISTER`.
+
+Example:
+
+```Lua
+if KSR.is_REGISTER() then
+  ...
+end
+```
 
 ### KSR.is_MESSAGE() ###
 
