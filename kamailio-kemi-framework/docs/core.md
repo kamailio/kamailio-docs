@@ -420,6 +420,12 @@ end
 Return true if the next hop URI (`$nh(u)`) matches a local socket (IP) or local
 domain.
 
+```Lua
+if KSR.is_myself_nhuri() then
+  ...
+end
+```
+
 ### KSR.is_myself_ruri() ###
 
 `bool is_myself_ruri()`
@@ -627,8 +633,10 @@ KSR.resetflag(10);
 Return true if the message/transaction flag at the index provided by the parameter is set
 (the bit has value 1).
 
-```
-if ( KSR.isflagset(10) ) ...
+```Lua
+if KSR.isflagset(10) then
+  ...
+end
 ```
 
 ### KSR.setbflag(...) ###
@@ -661,7 +669,9 @@ Return true if the branch flag at the index provided by the parameter is set
 (the bit has value 1).
 
 ```
-if ( KSR.isbflagset(10) ) ...
+if KSR.isbflagset(10) then
+  ...
+end
 ```
 
 ### KSR.setbiflag(...) ###
