@@ -301,11 +301,27 @@ end
 
 Return true if the method type of the SIP message is `MESSAGE`.
 
+Example:
+
+```Lua
+if KSR.is_MESSAGE() then
+  ...
+end
+```
+
 ### KSR.is_SUBSCRIBE() ###
 
 `bool is_SUBSCRIBE()`
 
 Return true if the method type of the SIP message is `SUBSCRIBE`.
+
+Example:
+
+```Lua
+if KSR.is_SUBSCRIBE() then
+  ...
+end
+```
 
 ### KSR.is_PUBLISH() ###
 
@@ -313,11 +329,27 @@ Return true if the method type of the SIP message is `SUBSCRIBE`.
 
 Return true if the method type of the SIP message is `PUBLISH`.
 
+Example:
+
+```Lua
+if KSR.is_PUBLISH() then
+  ...
+end
+```
+
 ### KSR.is_NOTIFY() ###
 
 `bool is_NOTIFY()`
 
 Return true if the method type of the SIP message is `NOTIFY`.
+
+Example:
+
+```Lua
+if KSR.is_NOTIFY() then
+  ...
+end
+```
 
 ### KSR.is_OPTIONS() ###
 
@@ -325,12 +357,27 @@ Return true if the method type of the SIP message is `NOTIFY`.
 
 Return true if the method type of the SIP message is `OPTIONS`.
 
+Example:
+
+```Lua
+if KSR.is_OPTIONS() then
+  ...
+end
+```
+
 ### KSR.is_REFER() ###
 
 `bool is_REFER()`
 
 Return true if the method type of the SIP message is `REFER`.
 
+Example:
+
+```Lua
+if KSR.is_REFER() then
+  ...
+end
+```
 
 ### KSR.is_INFO() ###
 
@@ -338,11 +385,27 @@ Return true if the method type of the SIP message is `REFER`.
 
 Return true if the method type of the SIP message is `INFO`.
 
+Example:
+
+```Lua
+if KSR.is_INFO() then
+  ...
+end
+```
+
 ### KSR.is_UPDATE() ###
 
 `bool is_UPDATE()`
 
 Return true if the method type of the SIP message is `UPDATE`.
+
+Example:
+
+```Lua
+if KSR.is_UPDATE() then
+  ...
+end
+```
 
 ### KSR.is_PRACK() ###
 
@@ -350,11 +413,27 @@ Return true if the method type of the SIP message is `UPDATE`.
 
 Return true if the method type of the SIP message is `PRACK`.
 
+Example:
+
+```Lua
+if KSR.is_PRACK() then
+  ...
+end
+```
+
 ### KSR.is_KDMQ() ###
 
 `bool is_KDMQ()`
 
 Return true if the method type of the SIP message is `KDMQ`.
+
+Example:
+
+```Lua
+if KSR.is_KDMQ() then
+  ...
+end
+```
 
 ### KSR.is_GET() ###
 
@@ -362,11 +441,27 @@ Return true if the method type of the SIP message is `KDMQ`.
 
 Return true if the method type of the HTTP message is `GET`.
 
+Example:
+
+```Lua
+if KSR.is_GET() then
+  ...
+end
+```
+
 ### KSR.is_POST() ###
 
 `bool is_POST()`
 
 Return true if the method type of the HTTP message is `POST`.
+
+Example:
+
+```Lua
+if KSR.is_POST() then
+  ...
+end
+```
 
 ### KSR.is_PUT() ###
 
@@ -374,11 +469,27 @@ Return true if the method type of the HTTP message is `POST`.
 
 Return true if the method type of the HTTP message is `PUT`.
 
+Example:
+
+```Lua
+if KSR.is_PUT() then
+  ...
+end
+```
+
 ### KSR.is_DELETE() ###
 
 `bool is_DELETE()`
 
 Return true if the method type of the HTTP message is `DELETE`.
+
+Example:
+
+```Lua
+if KSR.is_DELETE() then
+  ...
+end
+```
 
 ### KSR.is_myself(...) ###
 
