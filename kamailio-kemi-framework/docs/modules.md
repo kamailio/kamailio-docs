@@ -2209,6 +2209,14 @@ int KSR.htable.sht_iterator_rm(str "iname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_rm'>📖 kamailio.cfg::function::sht_iterator_rm()</a>
 
+#### KSR.htable.sht_iterator_setex() ####
+
+```cpp
+int KSR.htable.sht_iterator_setex(str "iname", int exval);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html#htable.f.sht_iterator_setex'>📖 kamailio.cfg::function::sht_iterator_setex()</a>
+
 #### KSR.htable.sht_iterator_seti() ####
 
 ```cpp
