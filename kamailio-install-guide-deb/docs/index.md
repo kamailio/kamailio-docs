@@ -36,6 +36,20 @@ deb     http://deb.kamailio.org/kamailio55 buster main
 deb-src http://deb.kamailio.org/kamailio55 buster main
 ```
 
+### APT Repositories Archive ###
+
+The APT repositories linked in the previous session contain only the packages for
+the latest versions of Kamailio from stable branches. If you want to install
+an older version or rollback to an older version, use the repositories listed at:
+
+  * [APT Repositories Archive](https://deb-archive.kamailio.org/)
+
+For example, to install Kamailio v5.5.1, add the next URL to APT configuration:
+
+```
+deb https://deb-archive.kamailio.org/repos/kamailio-5.5.1
+```
+
 ## APT Install Commands ###
 
 The `apt` tool is used for installing the packages. First run the `update`
