@@ -2701,6 +2701,14 @@ int KSR.jwt.jwt_generate(str "key", str "alg", str "claims");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_generate'>📖 kamailio.cfg::function::jwt_generate()</a>
 
+#### KSR.jwt.jwt_generate_hdrs() ####
+
+```cpp
+int KSR.jwt.jwt_generate_hdrs(str "key", str "alg", str "claims", str "headers");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_generate_hdrs'>📖 kamailio.cfg::function::jwt_generate_hdrs()</a>
+
 #### KSR.jwt.jwt_verify() ####
 
 ```cpp
@@ -4486,6 +4494,14 @@ int KSR.posops.pos_search(int idx, str "sre");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_search'>📖 kamailio.cfg::function::pos_search()</a>
+
+#### KSR.posops.pos_set_char() ####
+
+```cpp
+int KSR.posops.pos_set_char(int idx, str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html#posops.f.pos_set_char'>📖 kamailio.cfg::function::pos_set_char()</a>
 
 ## prefix_route ##
 
@@ -8658,6 +8674,22 @@ int KSR.tsilo.ts_append(str "_table", str "_ruri");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tsilo.html#tsilo.f.ts_append'>📖 kamailio.cfg::function::ts_append()</a>
+
+#### KSR.tsilo.ts_append_by_contact() ####
+
+```cpp
+int KSR.tsilo.ts_append_by_contact(str "_table", str "_ruri");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tsilo.html#tsilo.f.ts_append_by_contact'>📖 kamailio.cfg::function::ts_append_by_contact()</a>
+
+#### KSR.tsilo.ts_append_by_contact_uri() ####
+
+```cpp
+int KSR.tsilo.ts_append_by_contact_uri(str "_table", str "_ruri", str "_contact");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tsilo.html#tsilo.f.ts_append_by_contact_uri'>📖 kamailio.cfg::function::ts_append_by_contact_uri()</a>
 
 #### KSR.tsilo.ts_append_to() ####
 
