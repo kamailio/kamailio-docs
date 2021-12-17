@@ -3073,14 +3073,6 @@ xval KSR.kx.get_ruser();
 
 Return the Request URI user part ($rU).
 
-#### KSR.kx.get_sas() ####
-
-```cpp
-xval KSR.kx.get_sas();
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_sas'>📖 kamailio.cfg::function::get_sas()</a>
-
 #### KSR.kx.get_send_sock() ####
 
 ```cpp
@@ -3104,6 +3096,14 @@ int KSR.kx.get_send_sock_port();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock_port'>📖 kamailio.cfg::function::get_send_sock_port()</a>
+
+#### KSR.kx.get_srcaddr_sock() ####
+
+```cpp
+xval KSR.kx.get_srcaddr_sock();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcaddr_sock'>📖 kamailio.cfg::function::get_srcaddr_sock()</a>
 
 #### KSR.kx.get_srcip() ####
 
