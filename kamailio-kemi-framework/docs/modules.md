@@ -3011,6 +3011,14 @@ xval KSR.kx.get_rcv_sock_name();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcv_sock_name'>📖 kamailio.cfg::function::get_rcv_sock_name()</a>
 
+#### KSR.kx.get_rcvaddr_sock() ####
+
+```cpp
+xval KSR.kx.get_rcvaddr_sock();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvaddr_sock'>📖 kamailio.cfg::function::get_rcvaddr_sock()</a>
+
 #### KSR.kx.get_rcvadvip() ####
 
 ```cpp
