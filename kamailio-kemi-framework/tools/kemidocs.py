@@ -89,10 +89,13 @@ class ModuleDocGenerator(object):
         else:
             module_prefix = module + "."
 
+        kmodtoc = "Exported functions:\n\n"
+        kmodtext = ""
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
 
         for value in methods:
-            self.markdown_string += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
+            kmodtoc += "  * [KSR." + module_prefix + value["name"] + "()](#ksr" + module_prefix.replace('.', '') + value["name"] + ")\n"
+            kmodtext += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
 
             # Sanitize the return values
             if value["return"] == "none":
@@ -107,19 +110,20 @@ class ModuleDocGenerator(object):
                 params_value = value["params"]
 
             # Generate the output string for the markdown page
-            self.markdown_string += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
+            kmodtext += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
                                     + "(" + params_value + ");\n```\n\n" \
 
             kfuncname = value["name"]
             if kmodname in MODMAPFUNC:
                 if value["name"] in MODMAPFUNC[kmodname]:
                     kfuncname = MODMAPFUNC[kmodname][value["name"]]
-            self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + kmodname + ".html#" \
+            kmodtext += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + kmodname + ".html#" \
                                     + kmodname + ".f." + kfuncname + "'>📖 kamailio.cfg::function::" + kfuncname + "()</a>\n\n"
 
             func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
             if len(func_doc)>0:
-                self.markdown_string += func_doc + "\n\n"
+                kmodtext += func_doc + "\n\n"
+        self.markdown_string += kmodtoc + "\n" + kmodtext
         return True
 
     def markdown_write(self):
