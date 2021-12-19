@@ -12,6 +12,12 @@ The documentation of `acc` module is available online at:
 
   * [acc.html](https://kamailio.org/docs/modules/devel/modules/acc.html)
 
+Exported functions:
+
+  * [KSR.acc.acc_db_request()](#ksraccacc_db_request)
+  * [KSR.acc.acc_log_request()](#ksraccacc_log_request)
+  * [KSR.acc.acc_request()](#ksraccacc_request)
+
 #### KSR.acc.acc_db_request() ####
 
 ```cpp
@@ -46,6 +52,10 @@ Equivalent of native kamailio.cfg function: `acc_request("comment", "dbtable")`.
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/acc_radius.html'>📖 kamailio.cfg::module::acc_radius.html</a>
 
+Exported functions:
+
+  * [KSR.acc_radius.request()](#ksracc_radiusrequest)
+
 #### KSR.acc_radius.request() ####
 
 ```cpp
@@ -57,6 +67,11 @@ int KSR.acc_radius.request(str "comment");
 ## alias_db ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/alias_db.html'>📖 kamailio.cfg::module::alias_db.html</a>
+
+Exported functions:
+
+  * [KSR.alias_db.lookup()](#ksralias_dblookup)
+  * [KSR.alias_db.lookup_ex()](#ksralias_dblookup_ex)
 
 #### KSR.alias_db.lookup() ####
 
@@ -77,6 +92,16 @@ int KSR.alias_db.lookup_ex(str "stable", str "sflags");
 ## app_jsdt ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_jsdt.html'>📖 kamailio.cfg::module::app_jsdt.html</a>
+
+Exported functions:
+
+  * [KSR.app_jsdt.dofile()](#ksrapp_jsdtdofile)
+  * [KSR.app_jsdt.dostring()](#ksrapp_jsdtdostring)
+  * [KSR.app_jsdt.run()](#ksrapp_jsdtrun)
+  * [KSR.app_jsdt.run_p1()](#ksrapp_jsdtrun_p1)
+  * [KSR.app_jsdt.run_p2()](#ksrapp_jsdtrun_p2)
+  * [KSR.app_jsdt.run_p3()](#ksrapp_jsdtrun_p3)
+  * [KSR.app_jsdt.runstring()](#ksrapp_jsdtrunstring)
 
 #### KSR.app_jsdt.dofile() ####
 
@@ -138,6 +163,16 @@ int KSR.app_jsdt.runstring(str "script");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_lua.html'>📖 kamailio.cfg::module::app_lua.html</a>
 
+Exported functions:
+
+  * [KSR.app_lua.dofile()](#ksrapp_luadofile)
+  * [KSR.app_lua.dostring()](#ksrapp_luadostring)
+  * [KSR.app_lua.run()](#ksrapp_luarun)
+  * [KSR.app_lua.run_p1()](#ksrapp_luarun_p1)
+  * [KSR.app_lua.run_p2()](#ksrapp_luarun_p2)
+  * [KSR.app_lua.run_p3()](#ksrapp_luarun_p3)
+  * [KSR.app_lua.runstring()](#ksrapp_luarunstring)
+
 #### KSR.app_lua.dofile() ####
 
 ```cpp
@@ -198,6 +233,12 @@ int KSR.app_lua.runstring(str "script");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python.html'>📖 kamailio.cfg::module::app_python.html</a>
 
+Exported functions:
+
+  * [KSR.app_python.exec()](#ksrapp_pythonexec)
+  * [KSR.app_python.exec_p1()](#ksrapp_pythonexec_p1)
+  * [KSR.app_python.execx()](#ksrapp_pythonexecx)
+
 #### KSR.app_python.exec() ####
 
 ```cpp
@@ -226,6 +267,12 @@ int KSR.app_python.execx(str "method");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3.html'>📖 kamailio.cfg::module::app_python3.html</a>
 
+Exported functions:
+
+  * [KSR.app_python3.exec()](#ksrapp_python3exec)
+  * [KSR.app_python3.exec_p1()](#ksrapp_python3exec_p1)
+  * [KSR.app_python3.execx()](#ksrapp_python3execx)
+
 #### KSR.app_python3.exec() ####
 
 ```cpp
@@ -253,6 +300,13 @@ int KSR.app_python3.execx(str "method");
 ## app_ruby ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_ruby.html'>📖 kamailio.cfg::module::app_ruby.html</a>
+
+Exported functions:
+
+  * [KSR.app_ruby.run()](#ksrapp_rubyrun)
+  * [KSR.app_ruby.run_p1()](#ksrapp_rubyrun_p1)
+  * [KSR.app_ruby.run_p2()](#ksrapp_rubyrun_p2)
+  * [KSR.app_ruby.run_p3()](#ksrapp_rubyrun_p3)
 
 #### KSR.app_ruby.run() ####
 
@@ -289,6 +343,16 @@ int KSR.app_ruby.run_p3(str "func", str "p1", str "p2", str "p3");
 ## app_sqlang ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html'>📖 kamailio.cfg::module::app_sqlang.html</a>
+
+Exported functions:
+
+  * [KSR.app_sqlang.dofile()](#ksrapp_sqlangdofile)
+  * [KSR.app_sqlang.dostring()](#ksrapp_sqlangdostring)
+  * [KSR.app_sqlang.run()](#ksrapp_sqlangrun)
+  * [KSR.app_sqlang.run_p1()](#ksrapp_sqlangrun_p1)
+  * [KSR.app_sqlang.run_p2()](#ksrapp_sqlangrun_p2)
+  * [KSR.app_sqlang.run_p3()](#ksrapp_sqlangrun_p3)
+  * [KSR.app_sqlang.runstring()](#ksrapp_sqlangrunstring)
 
 #### KSR.app_sqlang.dofile() ####
 
@@ -350,6 +414,12 @@ int KSR.app_sqlang.runstring(str "script");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/async.html'>📖 kamailio.cfg::module::async.html</a>
 
+Exported functions:
+
+  * [KSR.async.ms_route()](#ksrasyncms_route)
+  * [KSR.async.route()](#ksrasyncroute)
+  * [KSR.async.task_route()](#ksrasynctask_route)
+
 #### KSR.async.ms_route() ####
 
 ```cpp
@@ -377,6 +447,13 @@ int KSR.async.task_route(str "rn");
 ## auth ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html'>📖 kamailio.cfg::module::auth.html</a>
+
+Exported functions:
+
+  * [KSR.auth.auth_challenge()](#ksrauthauth_challenge)
+  * [KSR.auth.consume_credentials()](#ksrauthconsume_credentials)
+  * [KSR.auth.has_credentials()](#ksrauthhas_credentials)
+  * [KSR.auth.pv_auth_check()](#ksrauthpv_auth_check)
 
 #### KSR.auth.auth_challenge() ####
 
@@ -414,6 +491,11 @@ int KSR.auth.pv_auth_check(str "srealm", str "spasswd", int vflags, int vchecks)
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_db.html'>📖 kamailio.cfg::module::auth_db.html</a>
 
+Exported functions:
+
+  * [KSR.auth_db.auth_check()](#ksrauth_dbauth_check)
+  * [KSR.auth_db.is_subscriber()](#ksrauth_dbis_subscriber)
+
 #### KSR.auth_db.auth_check() ####
 
 ```cpp
@@ -433,6 +515,14 @@ int KSR.auth_db.is_subscriber(str "suri", str "stable", int iflags);
 ## auth_ephemeral ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_ephemeral.html'>📖 kamailio.cfg::module::auth_ephemeral.html</a>
+
+Exported functions:
+
+  * [KSR.auth_ephemeral.autheph_authenticate()](#ksrauth_ephemeralautheph_authenticate)
+  * [KSR.auth_ephemeral.autheph_check()](#ksrauth_ephemeralautheph_check)
+  * [KSR.auth_ephemeral.autheph_proxy()](#ksrauth_ephemeralautheph_proxy)
+  * [KSR.auth_ephemeral.autheph_www()](#ksrauth_ephemeralautheph_www)
+  * [KSR.auth_ephemeral.autheph_www_method()](#ksrauth_ephemeralautheph_www_method)
 
 #### KSR.auth_ephemeral.autheph_authenticate() ####
 
@@ -478,6 +568,13 @@ int KSR.auth_ephemeral.autheph_www_method(str "srealm", str "smethod");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_radius.html'>📖 kamailio.cfg::module::auth_radius.html</a>
 
+Exported functions:
+
+  * [KSR.auth_radius.proxy_authorize()](#ksrauth_radiusproxy_authorize)
+  * [KSR.auth_radius.proxy_authorize_user()](#ksrauth_radiusproxy_authorize_user)
+  * [KSR.auth_radius.www_authorize()](#ksrauth_radiuswww_authorize)
+  * [KSR.auth_radius.www_authorize_user()](#ksrauth_radiuswww_authorize_user)
+
 #### KSR.auth_radius.proxy_authorize() ####
 
 ```cpp
@@ -514,6 +611,11 @@ int KSR.auth_radius.www_authorize_user(str "srealm", str "suser");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_xkeys.html'>📖 kamailio.cfg::module::auth_xkeys.html</a>
 
+Exported functions:
+
+  * [KSR.auth_xkeys.auth_xkeys_add()](#ksrauth_xkeysauth_xkeys_add)
+  * [KSR.auth_xkeys.auth_xkeys_check()](#ksrauth_xkeysauth_xkeys_check)
+
 #### KSR.auth_xkeys.auth_xkeys_add() ####
 
 ```cpp
@@ -533,6 +635,11 @@ int KSR.auth_xkeys.auth_xkeys_check(str "shdr", str "skey", str "salg", str "sda
 ## avpops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/avpops.html'>📖 kamailio.cfg::module::avpops.html</a>
+
+Exported functions:
+
+  * [KSR.avpops.avp_check()](#ksravpopsavp_check)
+  * [KSR.avpops.avp_copy()](#ksravpopsavp_copy)
 
 #### KSR.avpops.avp_check() ####
 
@@ -554,6 +661,11 @@ int KSR.avpops.avp_copy(str "name1", str "name2");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/benchmark.html'>📖 kamailio.cfg::module::benchmark.html</a>
 
+Exported functions:
+
+  * [KSR.benchmark.bm_log_timer()](#ksrbenchmarkbm_log_timer)
+  * [KSR.benchmark.bm_start_timer()](#ksrbenchmarkbm_start_timer)
+
 #### KSR.benchmark.bm_log_timer() ####
 
 ```cpp
@@ -573,6 +685,22 @@ int KSR.benchmark.bm_start_timer(str "tname");
 ## blst ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/blst.html'>📖 kamailio.cfg::module::blst.html</a>
+
+Exported functions:
+
+  * [KSR.blst.blst_add()](#ksrblstblst_add)
+  * [KSR.blst.blst_add_default()](#ksrblstblst_add_default)
+  * [KSR.blst.blst_add_retry_after()](#ksrblstblst_add_retry_after)
+  * [KSR.blst.blst_clear_ignore()](#ksrblstblst_clear_ignore)
+  * [KSR.blst.blst_clear_ignore_all()](#ksrblstblst_clear_ignore_all)
+  * [KSR.blst.blst_del()](#ksrblstblst_del)
+  * [KSR.blst.blst_is_blocklisted()](#ksrblstblst_is_blocklisted)
+  * [KSR.blst.blst_rpl_clear_ignore()](#ksrblstblst_rpl_clear_ignore)
+  * [KSR.blst.blst_rpl_clear_ignore_all()](#ksrblstblst_rpl_clear_ignore_all)
+  * [KSR.blst.blst_rpl_set_ignore()](#ksrblstblst_rpl_set_ignore)
+  * [KSR.blst.blst_rpl_set_ignore_all()](#ksrblstblst_rpl_set_ignore_all)
+  * [KSR.blst.blst_set_ignore()](#ksrblstblst_set_ignore)
+  * [KSR.blst.blst_set_ignore_all()](#ksrblstblst_set_ignore_all)
 
 #### KSR.blst.blst_add() ####
 
@@ -682,6 +810,10 @@ int KSR.blst.blst_set_ignore_all();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/call_control.html'>📖 kamailio.cfg::module::call_control.html</a>
 
+Exported functions:
+
+  * [KSR.call_control.call_control()](#ksrcall_controlcall_control)
+
 #### KSR.call_control.call_control() ####
 
 ```cpp
@@ -693,6 +825,11 @@ int KSR.call_control.call_control();
 ## call_obj ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/call_obj.html'>📖 kamailio.cfg::module::call_obj.html</a>
+
+Exported functions:
+
+  * [KSR.call_obj.free()](#ksrcall_objfree)
+  * [KSR.call_obj.get()](#ksrcall_objget)
 
 #### KSR.call_obj.free() ####
 
@@ -713,6 +850,26 @@ int KSR.call_obj.get();
 ## cfgutils ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html'>📖 kamailio.cfg::module::cfgutils.html</a>
+
+Exported functions:
+
+  * [KSR.cfgutils.abort()](#ksrcfgutilsabort)
+  * [KSR.cfgutils.check_route_exists()](#ksrcfgutilscheck_route_exists)
+  * [KSR.cfgutils.core_hash()](#ksrcfgutilscore_hash)
+  * [KSR.cfgutils.lock()](#ksrcfgutilslock)
+  * [KSR.cfgutils.pkg_status()](#ksrcfgutilspkg_status)
+  * [KSR.cfgutils.pkg_summary()](#ksrcfgutilspkg_summary)
+  * [KSR.cfgutils.rand_event()](#ksrcfgutilsrand_event)
+  * [KSR.cfgutils.rand_get_prob()](#ksrcfgutilsrand_get_prob)
+  * [KSR.cfgutils.rand_reset_prob()](#ksrcfgutilsrand_reset_prob)
+  * [KSR.cfgutils.rand_set_prob()](#ksrcfgutilsrand_set_prob)
+  * [KSR.cfgutils.route_if_exists()](#ksrcfgutilsroute_if_exists)
+  * [KSR.cfgutils.shm_status()](#ksrcfgutilsshm_status)
+  * [KSR.cfgutils.shm_summary()](#ksrcfgutilsshm_summary)
+  * [KSR.cfgutils.sleep()](#ksrcfgutilssleep)
+  * [KSR.cfgutils.trylock()](#ksrcfgutilstrylock)
+  * [KSR.cfgutils.unlock()](#ksrcfgutilsunlock)
+  * [KSR.cfgutils.usleep()](#ksrcfgutilsusleep)
 
 #### KSR.cfgutils.abort() ####
 
@@ -854,6 +1011,15 @@ int KSR.cfgutils.usleep(int v);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cnxcc.html'>📖 kamailio.cfg::module::cnxcc.html</a>
 
+Exported functions:
+
+  * [KSR.cnxcc.get_channel_count()](#ksrcnxccget_channel_count)
+  * [KSR.cnxcc.set_max_channels()](#ksrcnxccset_max_channels)
+  * [KSR.cnxcc.set_max_credit()](#ksrcnxccset_max_credit)
+  * [KSR.cnxcc.set_max_time()](#ksrcnxccset_max_time)
+  * [KSR.cnxcc.terminate_all()](#ksrcnxccterminate_all)
+  * [KSR.cnxcc.update_max_time()](#ksrcnxccupdate_max_time)
+
 #### KSR.cnxcc.get_channel_count() ####
 
 ```cpp
@@ -905,6 +1071,31 @@ int KSR.cnxcc.update_max_time(str "sclient", int secs);
 ## corex ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/corex.html'>📖 kamailio.cfg::module::corex.html</a>
+
+Exported functions:
+
+  * [KSR.corex.append_branch()](#ksrcorexappend_branch)
+  * [KSR.corex.append_branch_uri()](#ksrcorexappend_branch_uri)
+  * [KSR.corex.append_branch_uri_q()](#ksrcorexappend_branch_uri_q)
+  * [KSR.corex.file_read()](#ksrcorexfile_read)
+  * [KSR.corex.file_write()](#ksrcorexfile_write)
+  * [KSR.corex.has_ruri_user()](#ksrcorexhas_ruri_user)
+  * [KSR.corex.has_user_agent()](#ksrcorexhas_user_agent)
+  * [KSR.corex.is_faked_msg()](#ksrcorexis_faked_msg)
+  * [KSR.corex.is_socket_name()](#ksrcorexis_socket_name)
+  * [KSR.corex.isxflagset()](#ksrcorexisxflagset)
+  * [KSR.corex.resetxflag()](#ksrcorexresetxflag)
+  * [KSR.corex.send_data()](#ksrcorexsend_data)
+  * [KSR.corex.sendx()](#ksrcorexsendx)
+  * [KSR.corex.set_recv_socket()](#ksrcorexset_recv_socket)
+  * [KSR.corex.set_recv_socket_name()](#ksrcorexset_recv_socket_name)
+  * [KSR.corex.set_send_socket()](#ksrcorexset_send_socket)
+  * [KSR.corex.set_send_socket_name()](#ksrcorexset_send_socket_name)
+  * [KSR.corex.set_source_address()](#ksrcorexset_source_address)
+  * [KSR.corex.setxflag()](#ksrcorexsetxflag)
+  * [KSR.corex.via_add_srvid()](#ksrcorexvia_add_srvid)
+  * [KSR.corex.via_add_xavp_params()](#ksrcorexvia_add_xavp_params)
+  * [KSR.corex.via_use_xavp_fields()](#ksrcorexvia_use_xavp_fields)
 
 #### KSR.corex.append_branch() ####
 
@@ -1086,6 +1277,12 @@ int KSR.corex.via_use_xavp_fields(int fval);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/counters.html'>📖 kamailio.cfg::module::counters.html</a>
 
+Exported functions:
+
+  * [KSR.counters.add()](#ksrcountersadd)
+  * [KSR.counters.inc()](#ksrcountersinc)
+  * [KSR.counters.reset()](#ksrcountersreset)
+
 #### KSR.counters.add() ####
 
 ```cpp
@@ -1113,6 +1310,12 @@ int KSR.counters.reset(str "sname");
 ## crypto ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/crypto.html'>📖 kamailio.cfg::module::crypto.html</a>
+
+Exported functions:
+
+  * [KSR.crypto.aes_decrypt()](#ksrcryptoaes_decrypt)
+  * [KSR.crypto.aes_encrypt()](#ksrcryptoaes_encrypt)
+  * [KSR.crypto.hmac_sha256()](#ksrcryptohmac_sha256)
 
 #### KSR.crypto.aes_decrypt() ####
 
@@ -1142,6 +1345,11 @@ int KSR.crypto.hmac_sha256(str "ins", str "keys", str "dpv");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/debugger.html'>📖 kamailio.cfg::module::debugger.html</a>
 
+Exported functions:
+
+  * [KSR.debugger.dbg_pv_dump()](#ksrdebuggerdbg_pv_dump)
+  * [KSR.debugger.dbg_pv_dump_ex()](#ksrdebuggerdbg_pv_dump_ex)
+
 #### KSR.debugger.dbg_pv_dump() ####
 
 ```cpp
@@ -1161,6 +1369,37 @@ int KSR.debugger.dbg_pv_dump_ex(int mask, int level);
 ## dialog ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html'>📖 kamailio.cfg::module::dialog.html</a>
+
+Exported functions:
+
+  * [KSR.dialog.dlg_bridge()](#ksrdialogdlg_bridge)
+  * [KSR.dialog.dlg_bye()](#ksrdialogdlg_bye)
+  * [KSR.dialog.dlg_db_load_callid()](#ksrdialogdlg_db_load_callid)
+  * [KSR.dialog.dlg_db_load_extra()](#ksrdialogdlg_db_load_extra)
+  * [KSR.dialog.dlg_get()](#ksrdialogdlg_get)
+  * [KSR.dialog.dlg_isflagset()](#ksrdialogdlg_isflagset)
+  * [KSR.dialog.dlg_manage()](#ksrdialogdlg_manage)
+  * [KSR.dialog.dlg_reset_property()](#ksrdialogdlg_reset_property)
+  * [KSR.dialog.dlg_resetflag()](#ksrdialogdlg_resetflag)
+  * [KSR.dialog.dlg_set_property()](#ksrdialogdlg_set_property)
+  * [KSR.dialog.dlg_set_timeout()](#ksrdialogdlg_set_timeout)
+  * [KSR.dialog.dlg_set_timeout_id()](#ksrdialogdlg_set_timeout_id)
+  * [KSR.dialog.dlg_setflag()](#ksrdialogdlg_setflag)
+  * [KSR.dialog.get_profile_size()](#ksrdialogget_profile_size)
+  * [KSR.dialog.get_profile_size_static()](#ksrdialogget_profile_size_static)
+  * [KSR.dialog.is_in_profile()](#ksrdialogis_in_profile)
+  * [KSR.dialog.is_in_profile_static()](#ksrdialogis_in_profile_static)
+  * [KSR.dialog.is_known_dlg()](#ksrdialogis_known_dlg)
+  * [KSR.dialog.set_dlg_profile()](#ksrdialogset_dlg_profile)
+  * [KSR.dialog.set_dlg_profile_static()](#ksrdialogset_dlg_profile_static)
+  * [KSR.dialog.unset_dlg_profile()](#ksrdialogunset_dlg_profile)
+  * [KSR.dialog.unset_dlg_profile_static()](#ksrdialogunset_dlg_profile_static)
+  * [KSR.dialog.var_get()](#ksrdialogvar_get)
+  * [KSR.dialog.var_gete()](#ksrdialogvar_gete)
+  * [KSR.dialog.var_getw()](#ksrdialogvar_getw)
+  * [KSR.dialog.var_is_null()](#ksrdialogvar_is_null)
+  * [KSR.dialog.var_rm()](#ksrdialogvar_rm)
+  * [KSR.dialog.var_sets()](#ksrdialogvar_sets)
 
 #### KSR.dialog.dlg_bridge() ####
 
@@ -1390,6 +1629,11 @@ int KSR.dialog.var_sets(str "name", str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialplan.html'>📖 kamailio.cfg::module::dialplan.html</a>
 
+Exported functions:
+
+  * [KSR.dialplan.dp_match()](#ksrdialplandp_match)
+  * [KSR.dialplan.dp_replace()](#ksrdialplandp_replace)
+
 #### KSR.dialplan.dp_match() ####
 
 ```cpp
@@ -1409,6 +1653,33 @@ int KSR.dialplan.dp_replace(int dpid, str "src", str "dst");
 ## dispatcher ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html'>📖 kamailio.cfg::module::dispatcher.html</a>
+
+Exported functions:
+
+  * [KSR.dispatcher.ds_is_active()](#ksrdispatcherds_is_active)
+  * [KSR.dispatcher.ds_is_active_uri()](#ksrdispatcherds_is_active_uri)
+  * [KSR.dispatcher.ds_is_from_list()](#ksrdispatcherds_is_from_list)
+  * [KSR.dispatcher.ds_is_from_list_mode()](#ksrdispatcherds_is_from_list_mode)
+  * [KSR.dispatcher.ds_is_from_list_uri()](#ksrdispatcherds_is_from_list_uri)
+  * [KSR.dispatcher.ds_is_from_lists()](#ksrdispatcherds_is_from_lists)
+  * [KSR.dispatcher.ds_list_exists()](#ksrdispatcherds_list_exists)
+  * [KSR.dispatcher.ds_load_unset()](#ksrdispatcherds_load_unset)
+  * [KSR.dispatcher.ds_load_update()](#ksrdispatcherds_load_update)
+  * [KSR.dispatcher.ds_mark_dst()](#ksrdispatcherds_mark_dst)
+  * [KSR.dispatcher.ds_mark_dst_state()](#ksrdispatcherds_mark_dst_state)
+  * [KSR.dispatcher.ds_next_domain()](#ksrdispatcherds_next_domain)
+  * [KSR.dispatcher.ds_next_dst()](#ksrdispatcherds_next_dst)
+  * [KSR.dispatcher.ds_reload()](#ksrdispatcherds_reload)
+  * [KSR.dispatcher.ds_select()](#ksrdispatcherds_select)
+  * [KSR.dispatcher.ds_select_domain()](#ksrdispatcherds_select_domain)
+  * [KSR.dispatcher.ds_select_domain_limit()](#ksrdispatcherds_select_domain_limit)
+  * [KSR.dispatcher.ds_select_dst()](#ksrdispatcherds_select_dst)
+  * [KSR.dispatcher.ds_select_dst_limit()](#ksrdispatcherds_select_dst_limit)
+  * [KSR.dispatcher.ds_select_limit()](#ksrdispatcherds_select_limit)
+  * [KSR.dispatcher.ds_select_routes()](#ksrdispatcherds_select_routes)
+  * [KSR.dispatcher.ds_select_routes_limit()](#ksrdispatcherds_select_routes_limit)
+  * [KSR.dispatcher.ds_set_domain()](#ksrdispatcherds_set_domain)
+  * [KSR.dispatcher.ds_set_dst()](#ksrdispatcherds_set_dst)
 
 #### KSR.dispatcher.ds_is_active() ####
 
@@ -1606,6 +1877,11 @@ int KSR.dispatcher.ds_set_dst();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/diversion.html'>📖 kamailio.cfg::module::diversion.html</a>
 
+Exported functions:
+
+  * [KSR.diversion.add_diversion()](#ksrdiversionadd_diversion)
+  * [KSR.diversion.add_diversion_uri()](#ksrdiversionadd_diversion_uri)
+
 #### KSR.diversion.add_diversion() ####
 
 ```cpp
@@ -1625,6 +1901,15 @@ int KSR.diversion.add_diversion_uri(str "reason", str "uri");
 ## dlgs ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dlgs.html'>📖 kamailio.cfg::module::dlgs.html</a>
+
+Exported functions:
+
+  * [KSR.dlgs.dlgs_count()](#ksrdlgsdlgs_count)
+  * [KSR.dlgs.dlgs_init()](#ksrdlgsdlgs_init)
+  * [KSR.dlgs.dlgs_tags_add()](#ksrdlgsdlgs_tags_add)
+  * [KSR.dlgs.dlgs_tags_count()](#ksrdlgsdlgs_tags_count)
+  * [KSR.dlgs.dlgs_tags_rm()](#ksrdlgsdlgs_tags_rm)
+  * [KSR.dlgs.dlgs_update()](#ksrdlgsdlgs_update)
 
 #### KSR.dlgs.dlgs_count() ####
 
@@ -1677,6 +1962,18 @@ int KSR.dlgs.dlgs_update();
 ## dmq ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dmq.html'>📖 kamailio.cfg::module::dmq.html</a>
+
+Exported functions:
+
+  * [KSR.dmq.bcast_message()](#ksrdmqbcast_message)
+  * [KSR.dmq.handle_message()](#ksrdmqhandle_message)
+  * [KSR.dmq.handle_message_rc()](#ksrdmqhandle_message_rc)
+  * [KSR.dmq.is_from_node()](#ksrdmqis_from_node)
+  * [KSR.dmq.process_message()](#ksrdmqprocess_message)
+  * [KSR.dmq.process_message_rc()](#ksrdmqprocess_message_rc)
+  * [KSR.dmq.send_message()](#ksrdmqsend_message)
+  * [KSR.dmq.t_replicate()](#ksrdmqt_replicate)
+  * [KSR.dmq.t_replicate_mode()](#ksrdmqt_replicate_mode)
 
 #### KSR.dmq.bcast_message() ####
 
@@ -1754,6 +2051,14 @@ int KSR.dmq.t_replicate_mode(int mode);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/domain.html'>📖 kamailio.cfg::module::domain.html</a>
 
+Exported functions:
+
+  * [KSR.domain.is_domain_local()](#ksrdomainis_domain_local)
+  * [KSR.domain.is_from_local()](#ksrdomainis_from_local)
+  * [KSR.domain.is_uri_host_local()](#ksrdomainis_uri_host_local)
+  * [KSR.domain.lookup_domain()](#ksrdomainlookup_domain)
+  * [KSR.domain.lookup_domain_prefix()](#ksrdomainlookup_domain_prefix)
+
 #### KSR.domain.is_domain_local() ####
 
 ```cpp
@@ -1797,6 +2102,18 @@ int KSR.domain.lookup_domain_prefix(str "_sdomain", str "_sprefix");
 ## drouting ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/drouting.html'>📖 kamailio.cfg::module::drouting.html</a>
+
+Exported functions:
+
+  * [KSR.drouting.do_routing()](#ksrdroutingdo_routing)
+  * [KSR.drouting.do_routing_furi()](#ksrdroutingdo_routing_furi)
+  * [KSR.drouting.goes_to_gw()](#ksrdroutinggoes_to_gw)
+  * [KSR.drouting.goes_to_gw_type()](#ksrdroutinggoes_to_gw_type)
+  * [KSR.drouting.is_from_gw()](#ksrdroutingis_from_gw)
+  * [KSR.drouting.is_from_gw_type()](#ksrdroutingis_from_gw_type)
+  * [KSR.drouting.is_from_gw_type_flags()](#ksrdroutingis_from_gw_type_flags)
+  * [KSR.drouting.next_routing()](#ksrdroutingnext_routing)
+  * [KSR.drouting.use_next_gw()](#ksrdroutinguse_next_gw)
 
 #### KSR.drouting.do_routing() ####
 
@@ -1873,6 +2190,21 @@ int KSR.drouting.use_next_gw();
 ## enum ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/enum.html'>📖 kamailio.cfg::module::enum.html</a>
+
+Exported functions:
+
+  * [KSR.enum.enum_i_query_suffix()](#ksrenumenum_i_query_suffix)
+  * [KSR.enum.enum_pv_query()](#ksrenumenum_pv_query)
+  * [KSR.enum.enum_pv_query_suffix()](#ksrenumenum_pv_query_suffix)
+  * [KSR.enum.enum_pv_query_suffix_service()](#ksrenumenum_pv_query_suffix_service)
+  * [KSR.enum.enum_query()](#ksrenumenum_query)
+  * [KSR.enum.enum_query_suffix()](#ksrenumenum_query_suffix)
+  * [KSR.enum.enum_query_suffix_service()](#ksrenumenum_query_suffix_service)
+  * [KSR.enum.i_enum_query()](#ksrenumi_enum_query)
+  * [KSR.enum.i_enum_query_suffix_service()](#ksrenumi_enum_query_suffix_service)
+  * [KSR.enum.is_from_user_enum()](#ksrenumis_from_user_enum)
+  * [KSR.enum.is_from_user_enum_suffix()](#ksrenumis_from_user_enum_suffix)
+  * [KSR.enum.is_from_user_enum_suffix_service()](#ksrenumis_from_user_enum_suffix_service)
 
 #### KSR.enum.enum_i_query_suffix() ####
 
@@ -1974,6 +2306,17 @@ int KSR.enum.is_from_user_enum_suffix_service(str "vsuffix", str "vservice");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/evapi.html'>📖 kamailio.cfg::module::evapi.html</a>
 
+Exported functions:
+
+  * [KSR.evapi.async_multicast()](#ksrevapiasync_multicast)
+  * [KSR.evapi.async_relay()](#ksrevapiasync_relay)
+  * [KSR.evapi.async_unicast()](#ksrevapiasync_unicast)
+  * [KSR.evapi.close()](#ksrevapiclose)
+  * [KSR.evapi.relay()](#ksrevapirelay)
+  * [KSR.evapi.relay_multicast()](#ksrevapirelay_multicast)
+  * [KSR.evapi.relay_unicast()](#ksrevapirelay_unicast)
+  * [KSR.evapi.set_tag()](#ksrevapiset_tag)
+
 #### KSR.evapi.async_multicast() ####
 
 ```cpp
@@ -2042,6 +2385,13 @@ int KSR.evapi.set_tag(str "stag");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/exec.html'>📖 kamailio.cfg::module::exec.html</a>
 
+Exported functions:
+
+  * [KSR.exec.exec_avp()](#ksrexecexec_avp)
+  * [KSR.exec.exec_cmd()](#ksrexecexec_cmd)
+  * [KSR.exec.exec_dset()](#ksrexecexec_dset)
+  * [KSR.exec.exec_msg()](#ksrexecexec_msg)
+
 #### KSR.exec.exec_avp() ####
 
 ```cpp
@@ -2078,6 +2428,10 @@ int KSR.exec.exec_msg(str "cmd");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/geoip.html'>📖 kamailio.cfg::module::geoip.html</a>
 
+Exported functions:
+
+  * [KSR.geoip.match()](#ksrgeoipmatch)
+
 #### KSR.geoip.match() ####
 
 ```cpp
@@ -2090,6 +2444,10 @@ int KSR.geoip.match(str "tomatch", str "pvclass");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/geoip2.html'>📖 kamailio.cfg::module::geoip2.html</a>
 
+Exported functions:
+
+  * [KSR.geoip2.match()](#ksrgeoip2match)
+
 #### KSR.geoip2.match() ####
 
 ```cpp
@@ -2101,6 +2459,10 @@ int KSR.geoip2.match(str "tomatch", str "pvclass");
 ## group ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/group.html'>📖 kamailio.cfg::module::group.html</a>
+
+Exported functions:
+
+  * [KSR.group.is_user_in()](#ksrgroupis_user_in)
 
 #### KSR.group.is_user_in() ####
 
@@ -2115,6 +2477,37 @@ int KSR.group.is_user_in(str "uri", str "grp");
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/htable.html'>📖 kamailio.cfg::module::htable.html</a>
 
 Functions exported by `htable` module.
+
+Exported functions:
+
+  * [KSR.htable.sht_dec()](#ksrhtablesht_dec)
+  * [KSR.htable.sht_get()](#ksrhtablesht_get)
+  * [KSR.htable.sht_gete()](#ksrhtablesht_gete)
+  * [KSR.htable.sht_getw()](#ksrhtablesht_getw)
+  * [KSR.htable.sht_inc()](#ksrhtablesht_inc)
+  * [KSR.htable.sht_is_null()](#ksrhtablesht_is_null)
+  * [KSR.htable.sht_iterator_end()](#ksrhtablesht_iterator_end)
+  * [KSR.htable.sht_iterator_next()](#ksrhtablesht_iterator_next)
+  * [KSR.htable.sht_iterator_rm()](#ksrhtablesht_iterator_rm)
+  * [KSR.htable.sht_iterator_setex()](#ksrhtablesht_iterator_setex)
+  * [KSR.htable.sht_iterator_seti()](#ksrhtablesht_iterator_seti)
+  * [KSR.htable.sht_iterator_sets()](#ksrhtablesht_iterator_sets)
+  * [KSR.htable.sht_iterator_start()](#ksrhtablesht_iterator_start)
+  * [KSR.htable.sht_lock()](#ksrhtablesht_lock)
+  * [KSR.htable.sht_match_name()](#ksrhtablesht_match_name)
+  * [KSR.htable.sht_match_str_value()](#ksrhtablesht_match_str_value)
+  * [KSR.htable.sht_reset()](#ksrhtablesht_reset)
+  * [KSR.htable.sht_rm()](#ksrhtablesht_rm)
+  * [KSR.htable.sht_rm_name()](#ksrhtablesht_rm_name)
+  * [KSR.htable.sht_rm_name_re()](#ksrhtablesht_rm_name_re)
+  * [KSR.htable.sht_rm_value()](#ksrhtablesht_rm_value)
+  * [KSR.htable.sht_rm_value_re()](#ksrhtablesht_rm_value_re)
+  * [KSR.htable.sht_setex()](#ksrhtablesht_setex)
+  * [KSR.htable.sht_seti()](#ksrhtablesht_seti)
+  * [KSR.htable.sht_sets()](#ksrhtablesht_sets)
+  * [KSR.htable.sht_setxi()](#ksrhtablesht_setxi)
+  * [KSR.htable.sht_setxs()](#ksrhtablesht_setxs)
+  * [KSR.htable.sht_unlock()](#ksrhtablesht_unlock)
 
 #### KSR.htable.sht_dec() ####
 
@@ -2365,6 +2758,10 @@ int KSR.htable.sht_unlock(str "htname", str "skey");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/http_async_client.html'>📖 kamailio.cfg::module::http_async_client.html</a>
 
+Exported functions:
+
+  * [KSR.http_async_client.query()](#ksrhttp_async_clientquery)
+
 #### KSR.http_async_client.query() ####
 
 ```cpp
@@ -2376,6 +2773,15 @@ int KSR.http_async_client.query(str "sdata", str "rn");
 ## http_client ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/http_client.html'>📖 kamailio.cfg::module::http_client.html</a>
+
+Exported functions:
+
+  * [KSR.http_client.curl_connect()](#ksrhttp_clientcurl_connect)
+  * [KSR.http_client.curl_connect_post()](#ksrhttp_clientcurl_connect_post)
+  * [KSR.http_client.get_hdrs()](#ksrhttp_clientget_hdrs)
+  * [KSR.http_client.query()](#ksrhttp_clientquery)
+  * [KSR.http_client.query_post()](#ksrhttp_clientquery_post)
+  * [KSR.http_client.query_post_hdrs()](#ksrhttp_clientquery_post_hdrs)
 
 #### KSR.http_client.curl_connect() ####
 
@@ -2429,6 +2835,10 @@ int KSR.http_client.query_post_hdrs(str "url", str "post", str "hdrs", str "dpv"
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/imc.html'>📖 kamailio.cfg::module::imc.html</a>
 
+Exported functions:
+
+  * [KSR.imc.imc_manager()](#ksrimcimc_manager)
+
 #### KSR.imc.imc_manager() ####
 
 ```cpp
@@ -2440,6 +2850,12 @@ int KSR.imc.imc_manager();
 ## ims_charging ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_charging.html'>📖 kamailio.cfg::module::ims_charging.html</a>
+
+Exported functions:
+
+  * [KSR.ims_charging.Ro_CCR()](#ksrims_chargingRo_CCR)
+  * [KSR.ims_charging.Ro_CCR_Stop()](#ksrims_chargingRo_CCR_Stop)
+  * [KSR.ims_charging.Ro_set_session_id_avp()](#ksrims_chargingRo_set_session_id_avp)
 
 #### KSR.ims_charging.Ro_CCR() ####
 
@@ -2469,6 +2885,11 @@ int KSR.ims_charging.Ro_set_session_id_avp();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_diameter_server.html'>📖 kamailio.cfg::module::ims_diameter_server.html</a>
 
+Exported functions:
+
+  * [KSR.ims_diameter_server.diameter_request()](#ksrims_diameter_serverdiameter_request)
+  * [KSR.ims_diameter_server.diameter_request_async()](#ksrims_diameter_serverdiameter_request_async)
+
 #### KSR.ims_diameter_server.diameter_request() ####
 
 ```cpp
@@ -2488,6 +2909,28 @@ int KSR.ims_diameter_server.diameter_request_async(str "peer", int appid, int co
 ## ipops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ipops.html'>📖 kamailio.cfg::module::ipops.html</a>
+
+Exported functions:
+
+  * [KSR.ipops.compare_ips()](#ksripopscompare_ips)
+  * [KSR.ipops.compare_pure_ips()](#ksripopscompare_pure_ips)
+  * [KSR.ipops.detailed_ip_type()](#ksripopsdetailed_ip_type)
+  * [KSR.ipops.detailed_ipv4_type()](#ksripopsdetailed_ipv4_type)
+  * [KSR.ipops.detailed_ipv6_type()](#ksripopsdetailed_ipv6_type)
+  * [KSR.ipops.dns_int_match_ip()](#ksripopsdns_int_match_ip)
+  * [KSR.ipops.dns_query()](#ksripopsdns_query)
+  * [KSR.ipops.dns_sys_match_ip()](#ksripopsdns_sys_match_ip)
+  * [KSR.ipops.ip_is_in_subnet()](#ksripopsip_is_in_subnet)
+  * [KSR.ipops.ip_type()](#ksripopsip_type)
+  * [KSR.ipops.is_in_subnet()](#ksripopsis_in_subnet)
+  * [KSR.ipops.is_ip()](#ksripopsis_ip)
+  * [KSR.ipops.is_ip4()](#ksripopsis_ip4)
+  * [KSR.ipops.is_ip6()](#ksripopsis_ip6)
+  * [KSR.ipops.is_ip6_reference()](#ksripopsis_ip6_reference)
+  * [KSR.ipops.is_ip_rfc1918()](#ksripopsis_ip_rfc1918)
+  * [KSR.ipops.is_pure_ip()](#ksripopsis_pure_ip)
+  * [KSR.ipops.naptr_query()](#ksripopsnaptr_query)
+  * [KSR.ipops.srv_query()](#ksripopssrv_query)
 
 #### KSR.ipops.compare_ips() ####
 
@@ -2645,6 +3088,10 @@ int KSR.ipops.srv_query(str "naptrname", str "pvid");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jansson.html'>📖 kamailio.cfg::module::jansson.html</a>
 
+Exported functions:
+
+  * [KSR.jansson.get()](#ksrjanssonget)
+
 #### KSR.jansson.get() ####
 
 ```cpp
@@ -2656,6 +3103,13 @@ int KSR.jansson.get(str "spath", str "sdoc", str "spv");
 ## jsonrpcs ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jsonrpcs.html'>📖 kamailio.cfg::module::jsonrpcs.html</a>
+
+Exported functions:
+
+  * [KSR.jsonrpcs.dispatch()](#ksrjsonrpcsdispatch)
+  * [KSR.jsonrpcs.exec()](#ksrjsonrpcsexec)
+  * [KSR.jsonrpcs.execx()](#ksrjsonrpcsexecx)
+  * [KSR.jsonrpcs.response()](#ksrjsonrpcsresponse)
 
 #### KSR.jsonrpcs.dispatch() ####
 
@@ -2693,6 +3147,12 @@ xval KSR.jsonrpcs.response();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html'>📖 kamailio.cfg::module::jwt.html</a>
 
+Exported functions:
+
+  * [KSR.jwt.jwt_generate()](#ksrjwtjwt_generate)
+  * [KSR.jwt.jwt_generate_hdrs()](#ksrjwtjwt_generate_hdrs)
+  * [KSR.jwt.jwt_verify()](#ksrjwtjwt_verify)
+
 #### KSR.jwt.jwt_generate() ####
 
 ```cpp
@@ -2721,6 +3181,11 @@ int KSR.jwt.jwt_verify(str "key", str "alg", str "claims", str "jwtval");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kafka.html'>📖 kamailio.cfg::module::kafka.html</a>
 
+Exported functions:
+
+  * [KSR.kafka.send()](#ksrkafkasend)
+  * [KSR.kafka.send_key()](#ksrkafkasend_key)
+
 #### KSR.kafka.send() ####
 
 ```cpp
@@ -2741,6 +3206,11 @@ int KSR.kafka.send_key(str "s_topic", str "s_message", str "s_key");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kazoo.html'>📖 kamailio.cfg::module::kazoo.html</a>
 
+Exported functions:
+
+  * [KSR.kazoo.kazoo_publish()](#ksrkazookazoo_publish)
+  * [KSR.kazoo.kazoo_subscribe()](#ksrkazookazoo_subscribe)
+
 #### KSR.kazoo.kazoo_publish() ####
 
 ```cpp
@@ -2760,6 +3230,12 @@ int KSR.kazoo.kazoo_subscribe(str "payload");
 ## keepalive ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/keepalive.html'>📖 kamailio.cfg::module::keepalive.html</a>
+
+Exported functions:
+
+  * [KSR.keepalive.add_destination()](#ksrkeepaliveadd_destination)
+  * [KSR.keepalive.del_destination()](#ksrkeepalivedel_destination)
+  * [KSR.keepalive.is_alive()](#ksrkeepaliveis_alive)
 
 #### KSR.keepalive.add_destination() ####
 
@@ -2789,6 +3265,11 @@ int KSR.keepalive.is_alive(str "dest");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kex.html'>📖 kamailio.cfg::module::kex.html</a>
 
+Exported functions:
+
+  * [KSR.kex.resetdebug()](#ksrkexresetdebug)
+  * [KSR.kex.setdebug()](#ksrkexsetdebug)
+
 #### KSR.kex.resetdebug() ####
 
 ```cpp
@@ -2812,6 +3293,78 @@ int KSR.kex.setdebug(int lval);
 Functions exported by `kemix` module. They aim to provide a convenient way to
 retrieve string or integer values for most commonly used variables or runtime
 environment attributes.
+
+Exported functions:
+
+  * [KSR.kx.get_au()](#ksrkxget_au)
+  * [KSR.kx.get_body()](#ksrkxget_body)
+  * [KSR.kx.get_bodylen()](#ksrkxget_bodylen)
+  * [KSR.kx.get_callid()](#ksrkxget_callid)
+  * [KSR.kx.get_conid()](#ksrkxget_conid)
+  * [KSR.kx.get_cturi()](#ksrkxget_cturi)
+  * [KSR.kx.get_def()](#ksrkxget_def)
+  * [KSR.kx.get_defn()](#ksrkxget_defn)
+  * [KSR.kx.get_duri()](#ksrkxget_duri)
+  * [KSR.kx.get_env()](#ksrkxget_env)
+  * [KSR.kx.get_envn()](#ksrkxget_envn)
+  * [KSR.kx.get_fhost()](#ksrkxget_fhost)
+  * [KSR.kx.get_furi()](#ksrkxget_furi)
+  * [KSR.kx.get_fuser()](#ksrkxget_fuser)
+  * [KSR.kx.get_method()](#ksrkxget_method)
+  * [KSR.kx.get_msgbuf()](#ksrkxget_msgbuf)
+  * [KSR.kx.get_msglen()](#ksrkxget_msglen)
+  * [KSR.kx.get_msgtype()](#ksrkxget_msgtype)
+  * [KSR.kx.get_nhuri()](#ksrkxget_nhuri)
+  * [KSR.kx.get_ouri()](#ksrkxget_ouri)
+  * [KSR.kx.get_proto()](#ksrkxget_proto)
+  * [KSR.kx.get_protoid()](#ksrkxget_protoid)
+  * [KSR.kx.get_rcv_sock_name()](#ksrkxget_rcv_sock_name)
+  * [KSR.kx.get_rcvaddr_sock()](#ksrkxget_rcvaddr_sock)
+  * [KSR.kx.get_rcvadvip()](#ksrkxget_rcvadvip)
+  * [KSR.kx.get_rcvadvport()](#ksrkxget_rcvadvport)
+  * [KSR.kx.get_rcvip()](#ksrkxget_rcvip)
+  * [KSR.kx.get_rcvport()](#ksrkxget_rcvport)
+  * [KSR.kx.get_rhost()](#ksrkxget_rhost)
+  * [KSR.kx.get_ruri()](#ksrkxget_ruri)
+  * [KSR.kx.get_ruser()](#ksrkxget_ruser)
+  * [KSR.kx.get_send_sock()](#ksrkxget_send_sock)
+  * [KSR.kx.get_send_sock_name()](#ksrkxget_send_sock_name)
+  * [KSR.kx.get_send_sock_port()](#ksrkxget_send_sock_port)
+  * [KSR.kx.get_srcaddr_sock()](#ksrkxget_srcaddr_sock)
+  * [KSR.kx.get_srcip()](#ksrkxget_srcip)
+  * [KSR.kx.get_srcport()](#ksrkxget_srcport)
+  * [KSR.kx.get_srcuri()](#ksrkxget_srcuri)
+  * [KSR.kx.get_status()](#ksrkxget_status)
+  * [KSR.kx.get_thost()](#ksrkxget_thost)
+  * [KSR.kx.get_timestamp()](#ksrkxget_timestamp)
+  * [KSR.kx.get_turi()](#ksrkxget_turi)
+  * [KSR.kx.get_tuser()](#ksrkxget_tuser)
+  * [KSR.kx.get_ua()](#ksrkxget_ua)
+  * [KSR.kx.gete_au()](#ksrkxgete_au)
+  * [KSR.kx.gete_body()](#ksrkxgete_body)
+  * [KSR.kx.gete_cturi()](#ksrkxgete_cturi)
+  * [KSR.kx.gete_duri()](#ksrkxgete_duri)
+  * [KSR.kx.gete_fhost()](#ksrkxgete_fhost)
+  * [KSR.kx.gete_fuser()](#ksrkxgete_fuser)
+  * [KSR.kx.gete_rhost()](#ksrkxgete_rhost)
+  * [KSR.kx.gete_ruser()](#ksrkxgete_ruser)
+  * [KSR.kx.gete_thost()](#ksrkxgete_thost)
+  * [KSR.kx.gete_tuser()](#ksrkxgete_tuser)
+  * [KSR.kx.gete_ua()](#ksrkxgete_ua)
+  * [KSR.kx.gets_status()](#ksrkxgets_status)
+  * [KSR.kx.getw_au()](#ksrkxgetw_au)
+  * [KSR.kx.getw_body()](#ksrkxgetw_body)
+  * [KSR.kx.getw_cturi()](#ksrkxgetw_cturi)
+  * [KSR.kx.getw_duri()](#ksrkxgetw_duri)
+  * [KSR.kx.getw_fhost()](#ksrkxgetw_fhost)
+  * [KSR.kx.getw_fuser()](#ksrkxgetw_fuser)
+  * [KSR.kx.getw_rhost()](#ksrkxgetw_rhost)
+  * [KSR.kx.getw_ruser()](#ksrkxgetw_ruser)
+  * [KSR.kx.getw_thost()](#ksrkxgetw_thost)
+  * [KSR.kx.getw_tuser()](#ksrkxgetw_tuser)
+  * [KSR.kx.getw_ua()](#ksrkxgetw_ua)
+  * [KSR.kx.ifdef()](#ksrkxifdef)
+  * [KSR.kx.ifndef()](#ksrkxifndef)
 
 #### KSR.kx.get_au() ####
 
@@ -3395,6 +3948,25 @@ bool KSR.kx.ifndef(str "dname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lcr.html'>📖 kamailio.cfg::module::lcr.html</a>
 
+Exported functions:
+
+  * [KSR.lcr.defunct_gw()](#ksrlcrdefunct_gw)
+  * [KSR.lcr.from_any_gw()](#ksrlcrfrom_any_gw)
+  * [KSR.lcr.from_any_gw_addr()](#ksrlcrfrom_any_gw_addr)
+  * [KSR.lcr.from_any_gw_addr_port()](#ksrlcrfrom_any_gw_addr_port)
+  * [KSR.lcr.from_gw()](#ksrlcrfrom_gw)
+  * [KSR.lcr.from_gw_addr()](#ksrlcrfrom_gw_addr)
+  * [KSR.lcr.from_gw_addr_port()](#ksrlcrfrom_gw_addr_port)
+  * [KSR.lcr.inactivate_gw()](#ksrlcrinactivate_gw)
+  * [KSR.lcr.load_gws()](#ksrlcrload_gws)
+  * [KSR.lcr.load_gws_furi()](#ksrlcrload_gws_furi)
+  * [KSR.lcr.load_gws_ruser()](#ksrlcrload_gws_ruser)
+  * [KSR.lcr.next_gw()](#ksrlcrnext_gw)
+  * [KSR.lcr.to_any_gw()](#ksrlcrto_any_gw)
+  * [KSR.lcr.to_any_gw_addr()](#ksrlcrto_any_gw_addr)
+  * [KSR.lcr.to_gw()](#ksrlcrto_gw)
+  * [KSR.lcr.to_gw_addr()](#ksrlcrto_gw_addr)
+
 #### KSR.lcr.defunct_gw() ####
 
 ```cpp
@@ -3527,6 +4099,11 @@ int KSR.lcr.to_gw_addr(int lcr_id, str "addr_str", int transport);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ldap.html'>📖 kamailio.cfg::module::ldap.html</a>
 
+Exported functions:
+
+  * [KSR.ldap.result_next()](#ksrldapresult_next)
+  * [KSR.ldap.search()](#ksrldapsearch)
+
 #### KSR.ldap.result_next() ####
 
 ```cpp
@@ -3547,6 +4124,10 @@ int KSR.ldap.search(str "ldapurl");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/log_custom.html'>📖 kamailio.cfg::module::log_custom.html</a>
 
+Exported functions:
+
+  * [KSR.log_custom.log_udp()](#ksrlog_customlog_udp)
+
 #### KSR.log_custom.log_udp() ####
 
 ```cpp
@@ -3558,6 +4139,11 @@ int KSR.log_custom.log_udp(str "txt");
 ## log_systemd ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/log_systemd.html'>📖 kamailio.cfg::module::log_systemd.html</a>
+
+Exported functions:
+
+  * [KSR.log_systemd.sd_journal_print()](#ksrlog_systemdsd_journal_print)
+  * [KSR.log_systemd.sd_journal_send_xvap()](#ksrlog_systemdsd_journal_send_xvap)
 
 #### KSR.log_systemd.sd_journal_print() ####
 
@@ -3578,6 +4164,13 @@ int KSR.log_systemd.sd_journal_send_xvap(str "xname");
 ## lwsc ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/lwsc.html'>📖 kamailio.cfg::module::lwsc.html</a>
+
+Exported functions:
+
+  * [KSR.lwsc.lwsc_notify()](#ksrlwsclwsc_notify)
+  * [KSR.lwsc.lwsc_notify_proto()](#ksrlwsclwsc_notify_proto)
+  * [KSR.lwsc.lwsc_request()](#ksrlwsclwsc_request)
+  * [KSR.lwsc.lwsc_request_proto()](#ksrlwsclwsc_request_proto)
 
 #### KSR.lwsc.lwsc_notify() ####
 
@@ -3615,6 +4208,11 @@ int KSR.lwsc.lwsc_request_proto(str "wsurl", str "wsproto", str "data");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/maxfwd.html'>📖 kamailio.cfg::module::maxfwd.html</a>
 
+Exported functions:
+
+  * [KSR.maxfwd.is_maxfwd_lt()](#ksrmaxfwdis_maxfwd_lt)
+  * [KSR.maxfwd.process_maxfwd()](#ksrmaxfwdprocess_maxfwd)
+
 #### KSR.maxfwd.is_maxfwd_lt() ####
 
 ```cpp
@@ -3634,6 +4232,12 @@ int KSR.maxfwd.process_maxfwd(int limit);
 ## mediaproxy ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/mediaproxy.html'>📖 kamailio.cfg::module::mediaproxy.html</a>
+
+Exported functions:
+
+  * [KSR.mediaproxy.end_media_session()](#ksrmediaproxyend_media_session)
+  * [KSR.mediaproxy.engage_media_proxy()](#ksrmediaproxyengage_media_proxy)
+  * [KSR.mediaproxy.use_media_proxy()](#ksrmediaproxyuse_media_proxy)
 
 #### KSR.mediaproxy.end_media_session() ####
 
@@ -3662,6 +4266,16 @@ int KSR.mediaproxy.use_media_proxy();
 ## misc_radius ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/misc_radius.html'>📖 kamailio.cfg::module::misc_radius.html</a>
+
+Exported functions:
+
+  * [KSR.misc_radius.does_uri_exist()](#ksrmisc_radiusdoes_uri_exist)
+  * [KSR.misc_radius.does_uri_exist_uval()](#ksrmisc_radiusdoes_uri_exist_uval)
+  * [KSR.misc_radius.does_uri_user_exist()](#ksrmisc_radiusdoes_uri_user_exist)
+  * [KSR.misc_radius.does_uri_user_exist_uval()](#ksrmisc_radiusdoes_uri_user_exist_uval)
+  * [KSR.misc_radius.is_user_in()](#ksrmisc_radiusis_user_in)
+  * [KSR.misc_radius.load_callee_avps()](#ksrmisc_radiusload_callee_avps)
+  * [KSR.misc_radius.load_caller_avps()](#ksrmisc_radiusload_caller_avps)
 
 #### KSR.misc_radius.does_uri_exist() ####
 
@@ -3723,6 +4337,12 @@ int KSR.misc_radius.load_caller_avps(str "user");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/mqtt.html'>📖 kamailio.cfg::module::mqtt.html</a>
 
+Exported functions:
+
+  * [KSR.mqtt.publish()](#ksrmqttpublish)
+  * [KSR.mqtt.subscribe()](#ksrmqttsubscribe)
+  * [KSR.mqtt.unsubscribe()](#ksrmqttunsubscribe)
+
 #### KSR.mqtt.publish() ####
 
 ```cpp
@@ -3750,6 +4370,19 @@ int KSR.mqtt.unsubscribe(str "topic");
 ## mqueue ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/mqueue.html'>📖 kamailio.cfg::module::mqueue.html</a>
+
+Exported functions:
+
+  * [KSR.mqueue.mq_add()](#ksrmqueuemq_add)
+  * [KSR.mqueue.mq_fetch()](#ksrmqueuemq_fetch)
+  * [KSR.mqueue.mq_pv_free()](#ksrmqueuemq_pv_free)
+  * [KSR.mqueue.mq_size()](#ksrmqueuemq_size)
+  * [KSR.mqueue.mqk_get()](#ksrmqueuemqk_get)
+  * [KSR.mqueue.mqk_gete()](#ksrmqueuemqk_gete)
+  * [KSR.mqueue.mqk_getw()](#ksrmqueuemqk_getw)
+  * [KSR.mqueue.mqv_get()](#ksrmqueuemqv_get)
+  * [KSR.mqueue.mqv_gete()](#ksrmqueuemqv_gete)
+  * [KSR.mqueue.mqv_getw()](#ksrmqueuemqv_getw)
 
 #### KSR.mqueue.mq_add() ####
 
@@ -3835,6 +4468,13 @@ xval KSR.mqueue.mqv_getw(str "qname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msilo.html'>📖 kamailio.cfg::module::msilo.html</a>
 
+Exported functions:
+
+  * [KSR.msilo.mdump()](#ksrmsilomdump)
+  * [KSR.msilo.mdump_uri()](#ksrmsilomdump_uri)
+  * [KSR.msilo.mstore()](#ksrmsilomstore)
+  * [KSR.msilo.mstore_uri()](#ksrmsilomstore_uri)
+
 #### KSR.msilo.mdump() ####
 
 ```cpp
@@ -3870,6 +4510,18 @@ int KSR.msilo.mstore_uri(str "owner_s");
 ## msrp ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msrp.html'>📖 kamailio.cfg::module::msrp.html</a>
+
+Exported functions:
+
+  * [KSR.msrp.cmap_lookup()](#ksrmsrpcmap_lookup)
+  * [KSR.msrp.cmap_save()](#ksrmsrpcmap_save)
+  * [KSR.msrp.is_reply()](#ksrmsrpis_reply)
+  * [KSR.msrp.is_request()](#ksrmsrpis_request)
+  * [KSR.msrp.relay()](#ksrmsrprelay)
+  * [KSR.msrp.relay_flags()](#ksrmsrprelay_flags)
+  * [KSR.msrp.reply()](#ksrmsrpreply)
+  * [KSR.msrp.reply_flags()](#ksrmsrpreply_flags)
+  * [KSR.msrp.set_dst()](#ksrmsrpset_dst)
 
 #### KSR.msrp.cmap_lookup() ####
 
@@ -3947,6 +4599,10 @@ int KSR.msrp.set_dst(str "rtaddr", str "rfsock");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/mtree.html'>📖 kamailio.cfg::module::mtree.html</a>
 
+Exported functions:
+
+  * [KSR.mtree.mt_match()](#ksrmtreemt_match)
+
 #### KSR.mtree.mt_match() ####
 
 ```cpp
@@ -3958,6 +4614,12 @@ int KSR.mtree.mt_match(str "tname", str "tomatch", int mval);
 ## nat_traversal ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nat_traversal.html'>📖 kamailio.cfg::module::nat_traversal.html</a>
+
+Exported functions:
+
+  * [KSR.nat_traversal.client_nat_test()](#ksrnat_traversalclient_nat_test)
+  * [KSR.nat_traversal.fix_contact()](#ksrnat_traversalfix_contact)
+  * [KSR.nat_traversal.nat_keepalive()](#ksrnat_traversalnat_keepalive)
 
 #### KSR.nat_traversal.client_nat_test() ####
 
@@ -3986,6 +4648,23 @@ int KSR.nat_traversal.nat_keepalive();
 ## nathelper ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nathelper.html'>📖 kamailio.cfg::module::nathelper.html</a>
+
+Exported functions:
+
+  * [KSR.nathelper.add_contact_alias()](#ksrnathelperadd_contact_alias)
+  * [KSR.nathelper.add_contact_alias_addr()](#ksrnathelperadd_contact_alias_addr)
+  * [KSR.nathelper.add_rcv_param()](#ksrnathelperadd_rcv_param)
+  * [KSR.nathelper.fix_nated_contact()](#ksrnathelperfix_nated_contact)
+  * [KSR.nathelper.fix_nated_register()](#ksrnathelperfix_nated_register)
+  * [KSR.nathelper.fix_nated_sdp()](#ksrnathelperfix_nated_sdp)
+  * [KSR.nathelper.fix_nated_sdp_ip()](#ksrnathelperfix_nated_sdp_ip)
+  * [KSR.nathelper.handle_ruri_alias()](#ksrnathelperhandle_ruri_alias)
+  * [KSR.nathelper.handle_ruri_alias_mode()](#ksrnathelperhandle_ruri_alias_mode)
+  * [KSR.nathelper.is_rfc1918()](#ksrnathelperis_rfc1918)
+  * [KSR.nathelper.nat_uac_test()](#ksrnathelpernat_uac_test)
+  * [KSR.nathelper.set_alias_to_pv()](#ksrnathelperset_alias_to_pv)
+  * [KSR.nathelper.set_contact_alias()](#ksrnathelperset_contact_alias)
+  * [KSR.nathelper.set_contact_alias_trim()](#ksrnathelperset_contact_alias_trim)
 
 #### KSR.nathelper.add_contact_alias() ####
 
@@ -4103,6 +4782,16 @@ int KSR.nathelper.set_contact_alias_trim();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ndb_mongodb.html'>📖 kamailio.cfg::module::ndb_mongodb.html</a>
 
+Exported functions:
+
+  * [KSR.ndb_mongodb.exec()](#ksrndb_mongodbexec)
+  * [KSR.ndb_mongodb.exec_simple()](#ksrndb_mongodbexec_simple)
+  * [KSR.ndb_mongodb.execx()](#ksrndb_mongodbexecx)
+  * [KSR.ndb_mongodb.find()](#ksrndb_mongodbfind)
+  * [KSR.ndb_mongodb.find_one()](#ksrndb_mongodbfind_one)
+  * [KSR.ndb_mongodb.free_reply()](#ksrndb_mongodbfree_reply)
+  * [KSR.ndb_mongodb.next_reply()](#ksrndb_mongodbnext_reply)
+
 #### KSR.ndb_mongodb.exec() ####
 
 ```cpp
@@ -4163,6 +4852,14 @@ int KSR.ndb_mongodb.next_reply(str "name");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ndb_redis.html'>📖 kamailio.cfg::module::ndb_redis.html</a>
 
+Exported functions:
+
+  * [KSR.ndb_redis.redis_cmd()](#ksrndb_redisredis_cmd)
+  * [KSR.ndb_redis.redis_cmd_p1()](#ksrndb_redisredis_cmd_p1)
+  * [KSR.ndb_redis.redis_cmd_p2()](#ksrndb_redisredis_cmd_p2)
+  * [KSR.ndb_redis.redis_cmd_p3()](#ksrndb_redisredis_cmd_p3)
+  * [KSR.ndb_redis.redis_free()](#ksrndb_redisredis_free)
+
 #### KSR.ndb_redis.redis_cmd() ####
 
 ```cpp
@@ -4206,6 +4903,15 @@ int KSR.ndb_redis.redis_free(str "name");
 ## path ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/path.html'>📖 kamailio.cfg::module::path.html</a>
+
+Exported functions:
+
+  * [KSR.path.add_path()](#ksrpathadd_path)
+  * [KSR.path.add_path_received()](#ksrpathadd_path_received)
+  * [KSR.path.add_path_received_user()](#ksrpathadd_path_received_user)
+  * [KSR.path.add_path_received_user_params()](#ksrpathadd_path_received_user_params)
+  * [KSR.path.add_path_user()](#ksrpathadd_path_user)
+  * [KSR.path.add_path_user_params()](#ksrpathadd_path_user_params)
 
 #### KSR.path.add_path() ####
 
@@ -4259,6 +4965,11 @@ int KSR.path.add_path_user_params(str "_user", str "_params");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pdt.html'>📖 kamailio.cfg::module::pdt.html</a>
 
+Exported functions:
+
+  * [KSR.pdt.pd_translate()](#ksrpdtpd_translate)
+  * [KSR.pdt.pprefix2domain()](#ksrpdtpprefix2domain)
+
 #### KSR.pdt.pd_translate() ####
 
 ```cpp
@@ -4278,6 +4989,14 @@ int KSR.pdt.pprefix2domain(int m, int s);
 ## permissions ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/permissions.html'>📖 kamailio.cfg::module::permissions.html</a>
+
+Exported functions:
+
+  * [KSR.permissions.allow_address()](#ksrpermissionsallow_address)
+  * [KSR.permissions.allow_address_group()](#ksrpermissionsallow_address_group)
+  * [KSR.permissions.allow_source_address()](#ksrpermissionsallow_source_address)
+  * [KSR.permissions.allow_source_address_group()](#ksrpermissionsallow_source_address_group)
+  * [KSR.permissions.allow_trusted()](#ksrpermissionsallow_trusted)
 
 #### KSR.permissions.allow_address() ####
 
@@ -4323,6 +5042,10 @@ int KSR.permissions.allow_trusted();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/phonenum.html'>📖 kamailio.cfg::module::phonenum.html</a>
 
+Exported functions:
+
+  * [KSR.phonenum.match()](#ksrphonenummatch)
+
 #### KSR.phonenum.match() ####
 
 ```cpp
@@ -4334,6 +5057,11 @@ int KSR.phonenum.match(str "tomatch", str "pvclass");
 ## pike ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pike.html'>📖 kamailio.cfg::module::pike.html</a>
+
+Exported functions:
+
+  * [KSR.pike.pike_check_ip()](#ksrpikepike_check_ip)
+  * [KSR.pike.pike_check_req()](#ksrpikepike_check_req)
 
 #### KSR.pike.pike_check_ip() ####
 
@@ -4354,6 +5082,15 @@ int KSR.pike.pike_check_req();
 ## pipelimit ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pipelimit.html'>📖 kamailio.cfg::module::pipelimit.html</a>
+
+Exported functions:
+
+  * [KSR.pipelimit.pl_active()](#ksrpipelimitpl_active)
+  * [KSR.pipelimit.pl_check()](#ksrpipelimitpl_check)
+  * [KSR.pipelimit.pl_check_limit()](#ksrpipelimitpl_check_limit)
+  * [KSR.pipelimit.pl_drop()](#ksrpipelimitpl_drop)
+  * [KSR.pipelimit.pl_drop_range()](#ksrpipelimitpl_drop_range)
+  * [KSR.pipelimit.pl_drop_retry()](#ksrpipelimitpl_drop_retry)
 
 #### KSR.pipelimit.pl_active() ####
 
@@ -4406,6 +5143,23 @@ int KSR.pipelimit.pl_drop_retry(int rafter);
 ## posops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/posops.html'>📖 kamailio.cfg::module::posops.html</a>
+
+Exported functions:
+
+  * [KSR.posops.pos_append()](#ksrposopspos_append)
+  * [KSR.posops.pos_body_end()](#ksrposopspos_body_end)
+  * [KSR.posops.pos_body_start()](#ksrposopspos_body_start)
+  * [KSR.posops.pos_find_str()](#ksrposopspos_find_str)
+  * [KSR.posops.pos_findi_str()](#ksrposopspos_findi_str)
+  * [KSR.posops.pos_headers_end()](#ksrposopspos_headers_end)
+  * [KSR.posops.pos_headers_start()](#ksrposopspos_headers_start)
+  * [KSR.posops.pos_insert()](#ksrposopspos_insert)
+  * [KSR.posops.pos_rfind_str()](#ksrposopspos_rfind_str)
+  * [KSR.posops.pos_rfindi_str()](#ksrposopspos_rfindi_str)
+  * [KSR.posops.pos_rm()](#ksrposopspos_rm)
+  * [KSR.posops.pos_rsearch()](#ksrposopspos_rsearch)
+  * [KSR.posops.pos_search()](#ksrposopspos_search)
+  * [KSR.posops.pos_set_char()](#ksrposopspos_set_char)
 
 #### KSR.posops.pos_append() ####
 
@@ -4523,6 +5277,11 @@ int KSR.posops.pos_set_char(int idx, str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/prefix_route.html'>📖 kamailio.cfg::module::prefix_route.html</a>
 
+Exported functions:
+
+  * [KSR.prefix_route.prefix_route()](#ksrprefix_routeprefix_route)
+  * [KSR.prefix_route.prefix_route_uri()](#ksrprefix_routeprefix_route_uri)
+
 #### KSR.prefix_route.prefix_route() ####
 
 ```cpp
@@ -4542,6 +5301,18 @@ int KSR.prefix_route.prefix_route_uri();
 ## presence ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/presence.html'>📖 kamailio.cfg::module::presence.html</a>
+
+Exported functions:
+
+  * [KSR.presence.handle_publish()](#ksrpresencehandle_publish)
+  * [KSR.presence.handle_publish_uri()](#ksrpresencehandle_publish_uri)
+  * [KSR.presence.handle_subscribe()](#ksrpresencehandle_subscribe)
+  * [KSR.presence.handle_subscribe_uri()](#ksrpresencehandle_subscribe_uri)
+  * [KSR.presence.pres_auth_status()](#ksrpresencepres_auth_status)
+  * [KSR.presence.pres_has_subscribers()](#ksrpresencepres_has_subscribers)
+  * [KSR.presence.pres_refresh_watchers()](#ksrpresencepres_refresh_watchers)
+  * [KSR.presence.pres_refresh_watchers_file()](#ksrpresencepres_refresh_watchers_file)
+  * [KSR.presence.pres_update_watchers()](#ksrpresencepres_update_watchers)
 
 #### KSR.presence.handle_publish() ####
 
@@ -4619,6 +5390,11 @@ int KSR.presence.pres_update_watchers(str "pres_uri", str "event");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/presence_xml.html'>📖 kamailio.cfg::module::presence_xml.html</a>
 
+Exported functions:
+
+  * [KSR.presence_xml.pres_check_activities()](#ksrpresence_xmlpres_check_activities)
+  * [KSR.presence_xml.pres_check_basic()](#ksrpresence_xmlpres_check_basic)
+
 #### KSR.presence_xml.pres_check_activities() ####
 
 ```cpp
@@ -4638,6 +5414,11 @@ int KSR.presence_xml.pres_check_basic(str "pres_uri", str "status");
 ## pua ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pua.html'>📖 kamailio.cfg::module::pua.html</a>
+
+Exported functions:
+
+  * [KSR.pua.pua_set_publish()](#ksrpuapua_set_publish)
+  * [KSR.pua.pua_update_contact()](#ksrpuapua_update_contact)
 
 #### KSR.pua.pua_set_publish() ####
 
@@ -4659,6 +5440,10 @@ int KSR.pua.pua_update_contact();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pua_json.html'>📖 kamailio.cfg::module::pua_json.html</a>
 
+Exported functions:
+
+  * [KSR.pua_json.publish()](#ksrpua_jsonpublish)
+
 #### KSR.pua_json.publish() ####
 
 ```cpp
@@ -4670,6 +5455,16 @@ int KSR.pua_json.publish(str "pjson");
 ## pv_headers ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html'>📖 kamailio.cfg::module::pv_headers.html</a>
+
+Exported functions:
+
+  * [KSR.pv_headers.pvh_append_header()](#ksrpv_headerspvh_append_header)
+  * [KSR.pv_headers.pvh_apply_headers()](#ksrpv_headerspvh_apply_headers)
+  * [KSR.pv_headers.pvh_check_header()](#ksrpv_headerspvh_check_header)
+  * [KSR.pv_headers.pvh_collect_headers()](#ksrpv_headerspvh_collect_headers)
+  * [KSR.pv_headers.pvh_modify_header()](#ksrpv_headerspvh_modify_header)
+  * [KSR.pv_headers.pvh_remove_header()](#ksrpv_headerspvh_remove_header)
+  * [KSR.pv_headers.pvh_reset_headers()](#ksrpv_headerspvh_reset_headers)
 
 #### KSR.pv_headers.pvh_append_header() ####
 
@@ -4730,6 +5525,86 @@ int KSR.pv_headers.pvh_reset_headers();
 ## pvx ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html'>📖 kamailio.cfg::module::pv.html</a>
+
+Exported functions:
+
+  * [KSR.pvx.avp_get()](#ksrpvxavp_get)
+  * [KSR.pvx.avp_gete()](#ksrpvxavp_gete)
+  * [KSR.pvx.avp_getw()](#ksrpvxavp_getw)
+  * [KSR.pvx.avp_is_null()](#ksrpvxavp_is_null)
+  * [KSR.pvx.avp_rm()](#ksrpvxavp_rm)
+  * [KSR.pvx.avp_seti()](#ksrpvxavp_seti)
+  * [KSR.pvx.avp_sets()](#ksrpvxavp_sets)
+  * [KSR.pvx.evalx()](#ksrpvxevalx)
+  * [KSR.pvx.pv_var_to_xavp()](#ksrpvxpv_var_to_xavp)
+  * [KSR.pvx.pv_xavi_print()](#ksrpvxpv_xavi_print)
+  * [KSR.pvx.pv_xavp_print()](#ksrpvxpv_xavp_print)
+  * [KSR.pvx.pv_xavp_to_var()](#ksrpvxpv_xavp_to_var)
+  * [KSR.pvx.pv_xavu_print()](#ksrpvxpv_xavu_print)
+  * [KSR.pvx.sbranch_append()](#ksrpvxsbranch_append)
+  * [KSR.pvx.sbranch_reset()](#ksrpvxsbranch_reset)
+  * [KSR.pvx.sbranch_set_ruri()](#ksrpvxsbranch_set_ruri)
+  * [KSR.pvx.shv_get()](#ksrpvxshv_get)
+  * [KSR.pvx.shv_seti()](#ksrpvxshv_seti)
+  * [KSR.pvx.shv_sets()](#ksrpvxshv_sets)
+  * [KSR.pvx.var_get()](#ksrpvxvar_get)
+  * [KSR.pvx.var_seti()](#ksrpvxvar_seti)
+  * [KSR.pvx.var_sets()](#ksrpvxvar_sets)
+  * [KSR.pvx.xavi_child_get()](#ksrpvxxavi_child_get)
+  * [KSR.pvx.xavi_child_gete()](#ksrpvxxavi_child_gete)
+  * [KSR.pvx.xavi_child_getw()](#ksrpvxxavi_child_getw)
+  * [KSR.pvx.xavi_child_is_null()](#ksrpvxxavi_child_is_null)
+  * [KSR.pvx.xavi_child_rm()](#ksrpvxxavi_child_rm)
+  * [KSR.pvx.xavi_child_seti()](#ksrpvxxavi_child_seti)
+  * [KSR.pvx.xavi_child_sets()](#ksrpvxxavi_child_sets)
+  * [KSR.pvx.xavi_get()](#ksrpvxxavi_get)
+  * [KSR.pvx.xavi_get_keys()](#ksrpvxxavi_get_keys)
+  * [KSR.pvx.xavi_getd()](#ksrpvxxavi_getd)
+  * [KSR.pvx.xavi_getd_p1()](#ksrpvxxavi_getd_p1)
+  * [KSR.pvx.xavi_gete()](#ksrpvxxavi_gete)
+  * [KSR.pvx.xavi_getw()](#ksrpvxxavi_getw)
+  * [KSR.pvx.xavi_is_null()](#ksrpvxxavi_is_null)
+  * [KSR.pvx.xavi_rm()](#ksrpvxxavi_rm)
+  * [KSR.pvx.xavi_seti()](#ksrpvxxavi_seti)
+  * [KSR.pvx.xavi_sets()](#ksrpvxxavi_sets)
+  * [KSR.pvx.xavp_child_get()](#ksrpvxxavp_child_get)
+  * [KSR.pvx.xavp_child_gete()](#ksrpvxxavp_child_gete)
+  * [KSR.pvx.xavp_child_getw()](#ksrpvxxavp_child_getw)
+  * [KSR.pvx.xavp_child_is_null()](#ksrpvxxavp_child_is_null)
+  * [KSR.pvx.xavp_child_rm()](#ksrpvxxavp_child_rm)
+  * [KSR.pvx.xavp_child_seti()](#ksrpvxxavp_child_seti)
+  * [KSR.pvx.xavp_child_sets()](#ksrpvxxavp_child_sets)
+  * [KSR.pvx.xavp_copy()](#ksrpvxxavp_copy)
+  * [KSR.pvx.xavp_copy_dst()](#ksrpvxxavp_copy_dst)
+  * [KSR.pvx.xavp_get()](#ksrpvxxavp_get)
+  * [KSR.pvx.xavp_get_keys()](#ksrpvxxavp_get_keys)
+  * [KSR.pvx.xavp_getd()](#ksrpvxxavp_getd)
+  * [KSR.pvx.xavp_getd_p1()](#ksrpvxxavp_getd_p1)
+  * [KSR.pvx.xavp_gete()](#ksrpvxxavp_gete)
+  * [KSR.pvx.xavp_getw()](#ksrpvxxavp_getw)
+  * [KSR.pvx.xavp_is_null()](#ksrpvxxavp_is_null)
+  * [KSR.pvx.xavp_params_explode()](#ksrpvxxavp_params_explode)
+  * [KSR.pvx.xavp_params_implode()](#ksrpvxxavp_params_implode)
+  * [KSR.pvx.xavp_rm()](#ksrpvxxavp_rm)
+  * [KSR.pvx.xavp_seti()](#ksrpvxxavp_seti)
+  * [KSR.pvx.xavp_sets()](#ksrpvxxavp_sets)
+  * [KSR.pvx.xavp_slist_explode()](#ksrpvxxavp_slist_explode)
+  * [KSR.pvx.xavu_child_get()](#ksrpvxxavu_child_get)
+  * [KSR.pvx.xavu_child_gete()](#ksrpvxxavu_child_gete)
+  * [KSR.pvx.xavu_child_getw()](#ksrpvxxavu_child_getw)
+  * [KSR.pvx.xavu_child_is_null()](#ksrpvxxavu_child_is_null)
+  * [KSR.pvx.xavu_child_rm()](#ksrpvxxavu_child_rm)
+  * [KSR.pvx.xavu_child_seti()](#ksrpvxxavu_child_seti)
+  * [KSR.pvx.xavu_child_sets()](#ksrpvxxavu_child_sets)
+  * [KSR.pvx.xavu_get()](#ksrpvxxavu_get)
+  * [KSR.pvx.xavu_gete()](#ksrpvxxavu_gete)
+  * [KSR.pvx.xavu_getw()](#ksrpvxxavu_getw)
+  * [KSR.pvx.xavu_is_null()](#ksrpvxxavu_is_null)
+  * [KSR.pvx.xavu_params_explode()](#ksrpvxxavu_params_explode)
+  * [KSR.pvx.xavu_params_implode()](#ksrpvxxavu_params_implode)
+  * [KSR.pvx.xavu_rm()](#ksrpvxxavu_rm)
+  * [KSR.pvx.xavu_seti()](#ksrpvxxavu_seti)
+  * [KSR.pvx.xavu_sets()](#ksrpvxxavu_sets)
 
 #### KSR.pvx.avp_get() ####
 
@@ -5351,6 +6226,11 @@ int KSR.pvx.xavu_sets(str "rname", str "sval");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rabbitmq.html'>📖 kamailio.cfg::module::rabbitmq.html</a>
 
+Exported functions:
+
+  * [KSR.rabbitmq.publish()](#ksrrabbitmqpublish)
+  * [KSR.rabbitmq.publish_consume()](#ksrrabbitmqpublish_consume)
+
 #### KSR.rabbitmq.publish() ####
 
 ```cpp
@@ -5371,6 +6251,11 @@ int KSR.rabbitmq.publish_consume(str "exchange", str "routingkey", str "contentt
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/regex.html'>📖 kamailio.cfg::module::regex.html</a>
 
+Exported functions:
+
+  * [KSR.regex.pcre_match()](#ksrregexpcre_match)
+  * [KSR.regex.pcre_match_group()](#ksrregexpcre_match_group)
+
 #### KSR.regex.pcre_match() ####
 
 ```cpp
@@ -5390,6 +6275,26 @@ int KSR.regex.pcre_match_group(str "string", int num_pcre);
 ## registrar ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html'>📖 kamailio.cfg::module::registrar.html</a>
+
+Exported functions:
+
+  * [KSR.registrar.add_sock_hdr()](#ksrregistraradd_sock_hdr)
+  * [KSR.registrar.lookup()](#ksrregistrarlookup)
+  * [KSR.registrar.lookup_branches()](#ksrregistrarlookup_branches)
+  * [KSR.registrar.lookup_to_dset()](#ksrregistrarlookup_to_dset)
+  * [KSR.registrar.lookup_uri()](#ksrregistrarlookup_uri)
+  * [KSR.registrar.reg_fetch_contacts()](#ksrregistrarreg_fetch_contacts)
+  * [KSR.registrar.reg_free_contacts()](#ksrregistrarreg_free_contacts)
+  * [KSR.registrar.reg_send_reply()](#ksrregistrarreg_send_reply)
+  * [KSR.registrar.registered()](#ksrregistrarregistered)
+  * [KSR.registrar.registered_action()](#ksrregistrarregistered_action)
+  * [KSR.registrar.registered_flags()](#ksrregistrarregistered_flags)
+  * [KSR.registrar.registered_uri()](#ksrregistrarregistered_uri)
+  * [KSR.registrar.save()](#ksrregistrarsave)
+  * [KSR.registrar.save_uri()](#ksrregistrarsave_uri)
+  * [KSR.registrar.set_q_override()](#ksrregistrarset_q_override)
+  * [KSR.registrar.unregister()](#ksrregistrarunregister)
+  * [KSR.registrar.unregister_ruid()](#ksrregistrarunregister_ruid)
 
 #### KSR.registrar.add_sock_hdr() ####
 
@@ -5531,6 +6436,13 @@ int KSR.registrar.unregister_ruid(str "_dtable", str "_uri", str "_ruid");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rls.html'>📖 kamailio.cfg::module::rls.html</a>
 
+Exported functions:
+
+  * [KSR.rls.handle_notify()](#ksrrlshandle_notify)
+  * [KSR.rls.handle_subscribe()](#ksrrlshandle_subscribe)
+  * [KSR.rls.handle_subscribe_uri()](#ksrrlshandle_subscribe_uri)
+  * [KSR.rls.update_subs()](#ksrrlsupdate_subs)
+
 #### KSR.rls.handle_notify() ####
 
 ```cpp
@@ -5566,6 +6478,22 @@ int KSR.rls.update_subs(str "uri", str "event");
 ## rr ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rr.html'>📖 kamailio.cfg::module::rr.html</a>
+
+Exported functions:
+
+  * [KSR.rr.add_rr_param()](#ksrrradd_rr_param)
+  * [KSR.rr.check_route_param()](#ksrrrcheck_route_param)
+  * [KSR.rr.is_direction()](#ksrrris_direction)
+  * [KSR.rr.loose_route()](#ksrrrloose_route)
+  * [KSR.rr.loose_route_mode()](#ksrrrloose_route_mode)
+  * [KSR.rr.loose_route_preloaded()](#ksrrrloose_route_preloaded)
+  * [KSR.rr.next_hop_route()](#ksrrrnext_hop_route)
+  * [KSR.rr.record_route()](#ksrrrrecord_route)
+  * [KSR.rr.record_route_advertised_address()](#ksrrrrecord_route_advertised_address)
+  * [KSR.rr.record_route_params()](#ksrrrrecord_route_params)
+  * [KSR.rr.record_route_preset()](#ksrrrrecord_route_preset)
+  * [KSR.rr.record_route_preset_one()](#ksrrrrecord_route_preset_one)
+  * [KSR.rr.remove_record_route()](#ksrrrremove_record_route)
 
 #### KSR.rr.add_rr_param() ####
 
@@ -5675,6 +6603,13 @@ int KSR.rr.remove_record_route();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtjson.html'>📖 kamailio.cfg::module::rtjson.html</a>
 
+Exported functions:
+
+  * [KSR.rtjson.init_routes()](#ksrrtjsoninit_routes)
+  * [KSR.rtjson.next_route()](#ksrrtjsonnext_route)
+  * [KSR.rtjson.push_routes()](#ksrrtjsonpush_routes)
+  * [KSR.rtjson.update_branch()](#ksrrtjsonupdate_branch)
+
 #### KSR.rtjson.init_routes() ####
 
 ```cpp
@@ -5712,6 +6647,39 @@ int KSR.rtjson.update_branch();
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html'>📖 kamailio.cfg::module::rtpengine.html</a>
 
 This module enables media streams to be proxied via an RTPproxy.
+
+Exported functions:
+
+  * [KSR.rtpengine.block_dtmf()](#ksrrtpengineblock_dtmf)
+  * [KSR.rtpengine.block_dtmf0()](#ksrrtpengineblock_dtmf0)
+  * [KSR.rtpengine.block_media()](#ksrrtpengineblock_media)
+  * [KSR.rtpengine.block_media0()](#ksrrtpengineblock_media0)
+  * [KSR.rtpengine.play_media()](#ksrrtpengineplay_media)
+  * [KSR.rtpengine.rtpengine_answer()](#ksrrtpenginertpengine_answer)
+  * [KSR.rtpengine.rtpengine_answer0()](#ksrrtpenginertpengine_answer0)
+  * [KSR.rtpengine.rtpengine_delete()](#ksrrtpenginertpengine_delete)
+  * [KSR.rtpengine.rtpengine_delete0()](#ksrrtpenginertpengine_delete0)
+  * [KSR.rtpengine.rtpengine_manage()](#ksrrtpenginertpengine_manage)
+  * [KSR.rtpengine.rtpengine_manage0()](#ksrrtpenginertpengine_manage0)
+  * [KSR.rtpengine.rtpengine_offer()](#ksrrtpenginertpengine_offer)
+  * [KSR.rtpengine.rtpengine_offer0()](#ksrrtpenginertpengine_offer0)
+  * [KSR.rtpengine.rtpengine_query()](#ksrrtpenginertpengine_query)
+  * [KSR.rtpengine.rtpengine_query0()](#ksrrtpenginertpengine_query0)
+  * [KSR.rtpengine.rtpengine_query_v()](#ksrrtpenginertpengine_query_v)
+  * [KSR.rtpengine.set_rtpengine_set()](#ksrrtpengineset_rtpengine_set)
+  * [KSR.rtpengine.set_rtpengine_set2()](#ksrrtpengineset_rtpengine_set2)
+  * [KSR.rtpengine.silence_media()](#ksrrtpenginesilence_media)
+  * [KSR.rtpengine.silence_media0()](#ksrrtpenginesilence_media0)
+  * [KSR.rtpengine.start_recording()](#ksrrtpenginestart_recording)
+  * [KSR.rtpengine.stop_media()](#ksrrtpenginestop_media)
+  * [KSR.rtpengine.stop_media0()](#ksrrtpenginestop_media0)
+  * [KSR.rtpengine.stop_recording()](#ksrrtpenginestop_recording)
+  * [KSR.rtpengine.unblock_dtmf()](#ksrrtpengineunblock_dtmf)
+  * [KSR.rtpengine.unblock_dtmf0()](#ksrrtpengineunblock_dtmf0)
+  * [KSR.rtpengine.unblock_media()](#ksrrtpengineunblock_media)
+  * [KSR.rtpengine.unblock_media0()](#ksrrtpengineunblock_media0)
+  * [KSR.rtpengine.unsilence_media()](#ksrrtpengineunsilence_media)
+  * [KSR.rtpengine.unsilence_media0()](#ksrrtpengineunsilence_media0)
 
 #### KSR.rtpengine.block_dtmf() ####
 
@@ -5969,6 +6937,26 @@ int KSR.rtpengine.unsilence_media0();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpproxy.html'>📖 kamailio.cfg::module::rtpproxy.html</a>
 
+Exported functions:
+
+  * [KSR.rtpproxy.rtpproxy_answer()](#ksrrtpproxyrtpproxy_answer)
+  * [KSR.rtpproxy.rtpproxy_answer0()](#ksrrtpproxyrtpproxy_answer0)
+  * [KSR.rtpproxy.rtpproxy_answer_ip()](#ksrrtpproxyrtpproxy_answer_ip)
+  * [KSR.rtpproxy.rtpproxy_destroy()](#ksrrtpproxyrtpproxy_destroy)
+  * [KSR.rtpproxy.rtpproxy_destroy0()](#ksrrtpproxyrtpproxy_destroy0)
+  * [KSR.rtpproxy.rtpproxy_manage()](#ksrrtpproxyrtpproxy_manage)
+  * [KSR.rtpproxy.rtpproxy_manage0()](#ksrrtpproxyrtpproxy_manage0)
+  * [KSR.rtpproxy.rtpproxy_manage_ip()](#ksrrtpproxyrtpproxy_manage_ip)
+  * [KSR.rtpproxy.rtpproxy_offer()](#ksrrtpproxyrtpproxy_offer)
+  * [KSR.rtpproxy.rtpproxy_offer0()](#ksrrtpproxyrtpproxy_offer0)
+  * [KSR.rtpproxy.rtpproxy_offer_ip()](#ksrrtpproxyrtpproxy_offer_ip)
+  * [KSR.rtpproxy.rtpproxy_stop_stream2uac()](#ksrrtpproxyrtpproxy_stop_stream2uac)
+  * [KSR.rtpproxy.rtpproxy_stop_stream2uas()](#ksrrtpproxyrtpproxy_stop_stream2uas)
+  * [KSR.rtpproxy.rtpproxy_stream2uac()](#ksrrtpproxyrtpproxy_stream2uac)
+  * [KSR.rtpproxy.rtpproxy_stream2uas()](#ksrrtpproxyrtpproxy_stream2uas)
+  * [KSR.rtpproxy.set_rtpproxy_set()](#ksrrtpproxyset_rtpproxy_set)
+  * [KSR.rtpproxy.start_recording()](#ksrrtpproxystart_recording)
+
 #### KSR.rtpproxy.rtpproxy_answer() ####
 
 ```cpp
@@ -6109,6 +7097,12 @@ int KSR.rtpproxy.start_recording();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ruxc.html'>📖 kamailio.cfg::module::ruxc.html</a>
 
+Exported functions:
+
+  * [KSR.ruxc.http_delete()](#ksrruxchttp_delete)
+  * [KSR.ruxc.http_get()](#ksrruxchttp_get)
+  * [KSR.ruxc.http_post()](#ksrruxchttp_post)
+
 #### KSR.ruxc.http_delete() ####
 
 ```cpp
@@ -6137,6 +7131,12 @@ int KSR.ruxc.http_post(str "url", str "body", str "hdrs", str "dpv");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sanity.html'>📖 kamailio.cfg::module::sanity.html</a>
 
+Exported functions:
+
+  * [KSR.sanity.sanity_check()](#ksrsanitysanity_check)
+  * [KSR.sanity.sanity_check_defaults()](#ksrsanitysanity_check_defaults)
+  * [KSR.sanity.sanity_reply()](#ksrsanitysanity_reply)
+
 #### KSR.sanity.sanity_check() ####
 
 ```cpp
@@ -6164,6 +7164,14 @@ int KSR.sanity.sanity_reply();
 ## sca ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sca.html'>📖 kamailio.cfg::module::sca.html</a>
+
+Exported functions:
+
+  * [KSR.sca.call_info_update()](#ksrscacall_info_update)
+  * [KSR.sca.call_info_update_default()](#ksrscacall_info_update_default)
+  * [KSR.sca.call_info_update_mask()](#ksrscacall_info_update_mask)
+  * [KSR.sca.call_info_update_turi()](#ksrscacall_info_update_turi)
+  * [KSR.sca.handle_subscribe()](#ksrscahandle_subscribe)
 
 #### KSR.sca.call_info_update() ####
 
@@ -6208,6 +7216,28 @@ int KSR.sca.handle_subscribe();
 ## sdpops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html'>📖 kamailio.cfg::module::sdpops.html</a>
+
+Exported functions:
+
+  * [KSR.sdpops.keep_codecs_by_id()](#ksrsdpopskeep_codecs_by_id)
+  * [KSR.sdpops.keep_codecs_by_name()](#ksrsdpopskeep_codecs_by_name)
+  * [KSR.sdpops.remove_codecs_by_id()](#ksrsdpopsremove_codecs_by_id)
+  * [KSR.sdpops.remove_codecs_by_name()](#ksrsdpopsremove_codecs_by_name)
+  * [KSR.sdpops.remove_line_by_prefix()](#ksrsdpopsremove_line_by_prefix)
+  * [KSR.sdpops.remove_media()](#ksrsdpopsremove_media)
+  * [KSR.sdpops.sdp_content()](#ksrsdpopssdp_content)
+  * [KSR.sdpops.sdp_content_flags()](#ksrsdpopssdp_content_flags)
+  * [KSR.sdpops.sdp_get()](#ksrsdpopssdp_get)
+  * [KSR.sdpops.sdp_get_line_startswith()](#ksrsdpopssdp_get_line_startswith)
+  * [KSR.sdpops.sdp_print()](#ksrsdpopssdp_print)
+  * [KSR.sdpops.sdp_transport()](#ksrsdpopssdp_transport)
+  * [KSR.sdpops.sdp_with_active_media()](#ksrsdpopssdp_with_active_media)
+  * [KSR.sdpops.sdp_with_codecs_by_id()](#ksrsdpopssdp_with_codecs_by_id)
+  * [KSR.sdpops.sdp_with_codecs_by_name()](#ksrsdpopssdp_with_codecs_by_name)
+  * [KSR.sdpops.sdp_with_ice()](#ksrsdpopssdp_with_ice)
+  * [KSR.sdpops.sdp_with_media()](#ksrsdpopssdp_with_media)
+  * [KSR.sdpops.sdp_with_transport()](#ksrsdpopssdp_with_transport)
+  * [KSR.sdpops.sdp_with_transport_like()](#ksrsdpopssdp_with_transport_like)
 
 #### KSR.sdpops.keep_codecs_by_id() ####
 
@@ -6365,6 +7395,18 @@ int KSR.sdpops.sdp_with_transport_like(str "transport");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html'>📖 kamailio.cfg::module::secsipid.html</a>
 
+Exported functions:
+
+  * [KSR.secsipid.result_str()](#ksrsecsipidresult_str)
+  * [KSR.secsipid.secsipid_add_identity()](#ksrsecsipidsecsipid_add_identity)
+  * [KSR.secsipid.secsipid_build_identity()](#ksrsecsipidsecsipid_build_identity)
+  * [KSR.secsipid.secsipid_build_identity_prvkey()](#ksrsecsipidsecsipid_build_identity_prvkey)
+  * [KSR.secsipid.secsipid_check()](#ksrsecsipidsecsipid_check)
+  * [KSR.secsipid.secsipid_check_identity()](#ksrsecsipidsecsipid_check_identity)
+  * [KSR.secsipid.secsipid_check_identity_pubkey()](#ksrsecsipidsecsipid_check_identity_pubkey)
+  * [KSR.secsipid.secsipid_get_url()](#ksrsecsipidsecsipid_get_url)
+  * [KSR.secsipid.secsipid_get_val()](#ksrsecsipidsecsipid_get_val)
+
 #### KSR.secsipid.result_str() ####
 
 ```cpp
@@ -6441,6 +7483,17 @@ xval KSR.secsipid.secsipid_get_val();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipcapture.html'>📖 kamailio.cfg::module::sipcapture.html</a>
 
+Exported functions:
+
+  * [KSR.sipcapture.float2int()](#ksrsipcapturefloat2int)
+  * [KSR.sipcapture.report_capture()](#ksrsipcapturereport_capture)
+  * [KSR.sipcapture.report_capture_cid()](#ksrsipcapturereport_capture_cid)
+  * [KSR.sipcapture.report_capture_data()](#ksrsipcapturereport_capture_data)
+  * [KSR.sipcapture.sip_capture()](#ksrsipcapturesip_capture)
+  * [KSR.sipcapture.sip_capture_forward()](#ksrsipcapturesip_capture_forward)
+  * [KSR.sipcapture.sip_capture_mode()](#ksrsipcapturesip_capture_mode)
+  * [KSR.sipcapture.sip_capture_table()](#ksrsipcapturesip_capture_table)
+
 #### KSR.sipcapture.float2int() ####
 
 ```cpp
@@ -6509,6 +7562,14 @@ int KSR.sipcapture.sip_capture_table(str "_table");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipdump.html'>📖 kamailio.cfg::module::sipdump.html</a>
 
+Exported functions:
+
+  * [KSR.sipdump.get_buf()](#ksrsipdumpget_buf)
+  * [KSR.sipdump.get_dst_ip()](#ksrsipdumpget_dst_ip)
+  * [KSR.sipdump.get_src_ip()](#ksrsipdumpget_src_ip)
+  * [KSR.sipdump.get_tag()](#ksrsipdumpget_tag)
+  * [KSR.sipdump.send()](#ksrsipdumpsend)
+
 #### KSR.sipdump.get_buf() ####
 
 ```cpp
@@ -6553,6 +7614,10 @@ int KSR.sipdump.send(str "stag");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipjson.html'>📖 kamailio.cfg::module::sipjson.html</a>
 
+Exported functions:
+
+  * [KSR.sipjson.sj_serialize()](#ksrsipjsonsj_serialize)
+
 #### KSR.sipjson.sj_serialize() ####
 
 ```cpp
@@ -6564,6 +7629,16 @@ int KSR.sipjson.sj_serialize(str "smode", str "pvn");
 ## siptrace ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siptrace.html'>📖 kamailio.cfg::module::siptrace.html</a>
+
+Exported functions:
+
+  * [KSR.siptrace.hlog()](#ksrsiptracehlog)
+  * [KSR.siptrace.hlog_cid()](#ksrsiptracehlog_cid)
+  * [KSR.siptrace.sip_trace()](#ksrsiptracesip_trace)
+  * [KSR.siptrace.sip_trace_dst()](#ksrsiptracesip_trace_dst)
+  * [KSR.siptrace.sip_trace_dst_cid()](#ksrsiptracesip_trace_dst_cid)
+  * [KSR.siptrace.sip_trace_dst_cid_type()](#ksrsiptracesip_trace_dst_cid_type)
+  * [KSR.siptrace.sip_trace_mode()](#ksrsiptracesip_trace_mode)
 
 #### KSR.siptrace.hlog() ####
 
@@ -6624,6 +7699,36 @@ int KSR.siptrace.sip_trace_mode(str "smode");
 ## siputils ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html'>📖 kamailio.cfg::module::siputils.html</a>
+
+Exported functions:
+
+  * [KSR.siputils.cmp_aor()](#ksrsiputilscmp_aor)
+  * [KSR.siputils.cmp_hdr_name()](#ksrsiputilscmp_hdr_name)
+  * [KSR.siputils.cmp_uri()](#ksrsiputilscmp_uri)
+  * [KSR.siputils.contact_param_decode()](#ksrsiputilscontact_param_decode)
+  * [KSR.siputils.contact_param_decode_ruri()](#ksrsiputilscontact_param_decode_ruri)
+  * [KSR.siputils.contact_param_encode()](#ksrsiputilscontact_param_encode)
+  * [KSR.siputils.contact_param_rm()](#ksrsiputilscontact_param_rm)
+  * [KSR.siputils.decode_contact()](#ksrsiputilsdecode_contact)
+  * [KSR.siputils.decode_contact_header()](#ksrsiputilsdecode_contact_header)
+  * [KSR.siputils.encode_contact()](#ksrsiputilsencode_contact)
+  * [KSR.siputils.has_totag()](#ksrsiputilshas_totag)
+  * [KSR.siputils.hdr_date_check()](#ksrsiputilshdr_date_check)
+  * [KSR.siputils.is_alphanum()](#ksrsiputilsis_alphanum)
+  * [KSR.siputils.is_alphanumex()](#ksrsiputilsis_alphanumex)
+  * [KSR.siputils.is_first_hop()](#ksrsiputilsis_first_hop)
+  * [KSR.siputils.is_first_hop_mode()](#ksrsiputilsis_first_hop_mode)
+  * [KSR.siputils.is_numeric()](#ksrsiputilsis_numeric)
+  * [KSR.siputils.is_reply()](#ksrsiputilsis_reply)
+  * [KSR.siputils.is_request()](#ksrsiputilsis_request)
+  * [KSR.siputils.is_tel_number()](#ksrsiputilsis_tel_number)
+  * [KSR.siputils.is_uri()](#ksrsiputilsis_uri)
+  * [KSR.siputils.is_user()](#ksrsiputilsis_user)
+  * [KSR.siputils.options_reply()](#ksrsiputilsoptions_reply)
+  * [KSR.siputils.uri_param()](#ksrsiputilsuri_param)
+  * [KSR.siputils.uri_param_any()](#ksrsiputilsuri_param_any)
+  * [KSR.siputils.uri_param_rm()](#ksrsiputilsuri_param_rm)
+  * [KSR.siputils.uri_param_value()](#ksrsiputilsuri_param_value)
 
 #### KSR.siputils.cmp_aor() ####
 
@@ -6845,6 +7950,14 @@ int KSR.siputils.uri_param_value(str "sparam", str "svalue");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sl.html'>📖 kamailio.cfg::module::sl.html</a>
 
+Exported functions:
+
+  * [KSR.sl.send_reply()](#ksrslsend_reply)
+  * [KSR.sl.send_reply_mode()](#ksrslsend_reply_mode)
+  * [KSR.sl.sl_forward_reply()](#ksrslsl_forward_reply)
+  * [KSR.sl.sl_reply_error()](#ksrslsl_reply_error)
+  * [KSR.sl.sl_send_reply()](#ksrslsl_send_reply)
+
 #### KSR.sl.send_reply() ####
 
 ```cpp
@@ -6889,6 +8002,10 @@ int KSR.sl.sl_send_reply(int code, str "reason");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/slack.html'>📖 kamailio.cfg::module::slack.html</a>
 
+Exported functions:
+
+  * [KSR.slack.slack_send()](#ksrslackslack_send)
+
 #### KSR.slack.slack_send() ####
 
 ```cpp
@@ -6900,6 +8017,11 @@ int KSR.slack.slack_send(str "slmsg");
 ## speeddial ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/speeddial.html'>📖 kamailio.cfg::module::speeddial.html</a>
+
+Exported functions:
+
+  * [KSR.speeddial.lookup()](#ksrspeeddiallookup)
+  * [KSR.speeddial.lookup_owner()](#ksrspeeddiallookup_owner)
 
 #### KSR.speeddial.lookup() ####
 
@@ -6920,6 +8042,20 @@ int KSR.speeddial.lookup_owner(str "stable", str "sowner");
 ## sqlops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sqlops.html'>📖 kamailio.cfg::module::sqlops.html</a>
+
+Exported functions:
+
+  * [KSR.sqlops.sql_is_null()](#ksrsqlopssql_is_null)
+  * [KSR.sqlops.sql_num_columns()](#ksrsqlopssql_num_columns)
+  * [KSR.sqlops.sql_num_rows()](#ksrsqlopssql_num_rows)
+  * [KSR.sqlops.sql_pvquery()](#ksrsqlopssql_pvquery)
+  * [KSR.sqlops.sql_query()](#ksrsqlopssql_query)
+  * [KSR.sqlops.sql_query_async()](#ksrsqlopssql_query_async)
+  * [KSR.sqlops.sql_result_free()](#ksrsqlopssql_result_free)
+  * [KSR.sqlops.sql_result_get()](#ksrsqlopssql_result_get)
+  * [KSR.sqlops.sql_result_gete()](#ksrsqlopssql_result_gete)
+  * [KSR.sqlops.sql_result_getz()](#ksrsqlopssql_result_getz)
+  * [KSR.sqlops.sql_xquery()](#ksrsqlopssql_xquery)
 
 #### KSR.sqlops.sql_is_null() ####
 
@@ -7013,6 +8149,10 @@ int KSR.sqlops.sql_xquery(str "scon", str "squery", str "xavp");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ss7ops.html'>📖 kamailio.cfg::module::ss7ops.html</a>
 
+Exported functions:
+
+  * [KSR.ss7ops.isup_to_json()](#ksrss7opsisup_to_json)
+
 #### KSR.ss7ops.isup_to_json() ####
 
 ```cpp
@@ -7025,6 +8165,10 @@ int KSR.ss7ops.isup_to_json(int proto);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sst.html'>📖 kamailio.cfg::module::sst.html</a>
 
+Exported functions:
+
+  * [KSR.sst.sst_check_min()](#ksrsstsst_check_min)
+
 #### KSR.sst.sst_check_min() ####
 
 ```cpp
@@ -7036,6 +8180,11 @@ int KSR.sst.sst_check_min(int flag);
 ## statistics ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statistics.html'>📖 kamailio.cfg::module::statistics.html</a>
+
+Exported functions:
+
+  * [KSR.statistics.reset_stat()](#ksrstatisticsreset_stat)
+  * [KSR.statistics.update_stat()](#ksrstatisticsupdate_stat)
 
 #### KSR.statistics.reset_stat() ####
 
@@ -7057,6 +8206,10 @@ int KSR.statistics.update_stat(str "sname", int sval);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statsc.html'>📖 kamailio.cfg::module::statsc.html</a>
 
+Exported functions:
+
+  * [KSR.statsc.statsc_reset()](#ksrstatscstatsc_reset)
+
 #### KSR.statsc.statsc_reset() ####
 
 ```cpp
@@ -7068,6 +8221,16 @@ int KSR.statsc.statsc_reset();
 ## statsd ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/statsd.html'>📖 kamailio.cfg::module::statsd.html</a>
+
+Exported functions:
+
+  * [KSR.statsd.statsd_decr()](#ksrstatsdstatsd_decr)
+  * [KSR.statsd.statsd_gauge()](#ksrstatsdstatsd_gauge)
+  * [KSR.statsd.statsd_histogram()](#ksrstatsdstatsd_histogram)
+  * [KSR.statsd.statsd_incr()](#ksrstatsdstatsd_incr)
+  * [KSR.statsd.statsd_set()](#ksrstatsdstatsd_set)
+  * [KSR.statsd.statsd_start()](#ksrstatsdstatsd_start)
+  * [KSR.statsd.statsd_stop()](#ksrstatsdstatsd_stop)
 
 #### KSR.statsd.statsd_decr() ####
 
@@ -7129,6 +8292,14 @@ int KSR.statsd.statsd_stop(str "key");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/stirshaken.html'>📖 kamailio.cfg::module::stirshaken.html</a>
 
+Exported functions:
+
+  * [KSR.stirshaken.stirshaken_add_identity()](#ksrstirshakenstirshaken_add_identity)
+  * [KSR.stirshaken.stirshaken_add_identity_with_key()](#ksrstirshakenstirshaken_add_identity_with_key)
+  * [KSR.stirshaken.stirshaken_check_identity()](#ksrstirshakenstirshaken_check_identity)
+  * [KSR.stirshaken.stirshaken_check_identity_with_cert()](#ksrstirshakenstirshaken_check_identity_with_cert)
+  * [KSR.stirshaken.stirshaken_check_identity_with_key()](#ksrstirshakenstirshaken_check_identity_with_key)
+
 #### KSR.stirshaken.stirshaken_add_identity() ####
 
 ```cpp
@@ -7173,6 +8344,11 @@ int KSR.stirshaken.stirshaken_check_identity_with_key(str "keypath");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sworker.html'>📖 kamailio.cfg::module::sworker.html</a>
 
+Exported functions:
+
+  * [KSR.sworker.active()](#ksrsworkeractive)
+  * [KSR.sworker.task()](#ksrsworkertask)
+
 #### KSR.sworker.active() ####
 
 ```cpp
@@ -7192,6 +8368,23 @@ int KSR.sworker.task(str "gname");
 ## tcpops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html'>📖 kamailio.cfg::module::tcpops.html</a>
+
+Exported functions:
+
+  * [KSR.tcpops.tcp_close_connection()](#ksrtcpopstcp_close_connection)
+  * [KSR.tcpops.tcp_close_connection_id()](#ksrtcpopstcp_close_connection_id)
+  * [KSR.tcpops.tcp_conid_alive()](#ksrtcpopstcp_conid_alive)
+  * [KSR.tcpops.tcp_conid_state()](#ksrtcpopstcp_conid_state)
+  * [KSR.tcpops.tcp_enable_closed_event()](#ksrtcpopstcp_enable_closed_event)
+  * [KSR.tcpops.tcp_enable_closed_event_cid()](#ksrtcpopstcp_enable_closed_event_cid)
+  * [KSR.tcpops.tcp_keepalive_disable()](#ksrtcpopstcp_keepalive_disable)
+  * [KSR.tcpops.tcp_keepalive_disable_cid()](#ksrtcpopstcp_keepalive_disable_cid)
+  * [KSR.tcpops.tcp_keepalive_enable()](#ksrtcpopstcp_keepalive_enable)
+  * [KSR.tcpops.tcp_keepalive_enable_cid()](#ksrtcpopstcp_keepalive_enable_cid)
+  * [KSR.tcpops.tcp_set_connection_lifetime()](#ksrtcpopstcp_set_connection_lifetime)
+  * [KSR.tcpops.tcp_set_connection_lifetime_cid()](#ksrtcpopstcp_set_connection_lifetime_cid)
+  * [KSR.tcpops.tcp_set_otcpid()](#ksrtcpopstcp_set_otcpid)
+  * [KSR.tcpops.tcp_set_otcpid_flag()](#ksrtcpopstcp_set_otcpid_flag)
 
 #### KSR.tcpops.tcp_close_connection() ####
 
@@ -7308,6 +8501,62 @@ int KSR.tcpops.tcp_set_otcpid_flag(int vmode);
 ## textops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html'>📖 kamailio.cfg::module::textops.html</a>
+
+Exported functions:
+
+  * [KSR.textops.append_body_part()](#ksrtextopsappend_body_part)
+  * [KSR.textops.append_body_part_cd()](#ksrtextopsappend_body_part_cd)
+  * [KSR.textops.append_body_part_hex()](#ksrtextopsappend_body_part_hex)
+  * [KSR.textops.append_body_part_hex_cd()](#ksrtextopsappend_body_part_hex_cd)
+  * [KSR.textops.cmp_istr()](#ksrtextopscmp_istr)
+  * [KSR.textops.cmp_str()](#ksrtextopscmp_str)
+  * [KSR.textops.ends_with()](#ksrtextopsends_with)
+  * [KSR.textops.filter_body()](#ksrtextopsfilter_body)
+  * [KSR.textops.get_body_part()](#ksrtextopsget_body_part)
+  * [KSR.textops.get_body_part_raw()](#ksrtextopsget_body_part_raw)
+  * [KSR.textops.has_body()](#ksrtextopshas_body)
+  * [KSR.textops.has_body_type()](#ksrtextopshas_body_type)
+  * [KSR.textops.in_list()](#ksrtextopsin_list)
+  * [KSR.textops.in_list_prefix()](#ksrtextopsin_list_prefix)
+  * [KSR.textops.is_audio_on_hold()](#ksrtextopsis_audio_on_hold)
+  * [KSR.textops.is_present_hf()](#ksrtextopsis_present_hf)
+  * [KSR.textops.is_present_hf_re()](#ksrtextopsis_present_hf_re)
+  * [KSR.textops.is_privacy()](#ksrtextopsis_privacy)
+  * [KSR.textops.regex_substring()](#ksrtextopsregex_substring)
+  * [KSR.textops.remove_body_part()](#ksrtextopsremove_body_part)
+  * [KSR.textops.remove_hf()](#ksrtextopsremove_hf)
+  * [KSR.textops.remove_hf_exp()](#ksrtextopsremove_hf_exp)
+  * [KSR.textops.remove_hf_idx()](#ksrtextopsremove_hf_idx)
+  * [KSR.textops.remove_hf_re()](#ksrtextopsremove_hf_re)
+  * [KSR.textops.replace()](#ksrtextopsreplace)
+  * [KSR.textops.replace_all()](#ksrtextopsreplace_all)
+  * [KSR.textops.replace_body()](#ksrtextopsreplace_body)
+  * [KSR.textops.replace_body_all()](#ksrtextopsreplace_body_all)
+  * [KSR.textops.replace_body_atonce()](#ksrtextopsreplace_body_atonce)
+  * [KSR.textops.replace_body_str()](#ksrtextopsreplace_body_str)
+  * [KSR.textops.replace_hdrs()](#ksrtextopsreplace_hdrs)
+  * [KSR.textops.replace_hdrs_str()](#ksrtextopsreplace_hdrs_str)
+  * [KSR.textops.replace_str()](#ksrtextopsreplace_str)
+  * [KSR.textops.search()](#ksrtextopssearch)
+  * [KSR.textops.search_append()](#ksrtextopssearch_append)
+  * [KSR.textops.search_append_body()](#ksrtextopssearch_append_body)
+  * [KSR.textops.search_body()](#ksrtextopssearch_body)
+  * [KSR.textops.search_hf()](#ksrtextopssearch_hf)
+  * [KSR.textops.search_str()](#ksrtextopssearch_str)
+  * [KSR.textops.set_body()](#ksrtextopsset_body)
+  * [KSR.textops.set_body_multipart()](#ksrtextopsset_body_multipart)
+  * [KSR.textops.set_body_multipart_boundary()](#ksrtextopsset_body_multipart_boundary)
+  * [KSR.textops.set_body_multipart_content()](#ksrtextopsset_body_multipart_content)
+  * [KSR.textops.set_body_multipart_mode()](#ksrtextopsset_body_multipart_mode)
+  * [KSR.textops.set_reply_body()](#ksrtextopsset_reply_body)
+  * [KSR.textops.starts_with()](#ksrtextopsstarts_with)
+  * [KSR.textops.str_find()](#ksrtextopsstr_find)
+  * [KSR.textops.str_ifind()](#ksrtextopsstr_ifind)
+  * [KSR.textops.subst()](#ksrtextopssubst)
+  * [KSR.textops.subst_body()](#ksrtextopssubst_body)
+  * [KSR.textops.subst_hf()](#ksrtextopssubst_hf)
+  * [KSR.textops.subst_uri()](#ksrtextopssubst_uri)
+  * [KSR.textops.subst_user()](#ksrtextopssubst_user)
 
 #### KSR.textops.append_body_part() ####
 
@@ -7737,6 +8986,43 @@ int KSR.textops.subst_user(str "subst");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html'>📖 kamailio.cfg::module::textopsx.html</a>
 
+Exported functions:
+
+  * [KSR.textopsx.append_hf_value()](#ksrtextopsxappend_hf_value)
+  * [KSR.textopsx.assign_hf_value()](#ksrtextopsxassign_hf_value)
+  * [KSR.textopsx.assign_hf_value2()](#ksrtextopsxassign_hf_value2)
+  * [KSR.textopsx.bl_iterator_append()](#ksrtextopsxbl_iterator_append)
+  * [KSR.textopsx.bl_iterator_end()](#ksrtextopsxbl_iterator_end)
+  * [KSR.textopsx.bl_iterator_insert()](#ksrtextopsxbl_iterator_insert)
+  * [KSR.textopsx.bl_iterator_next()](#ksrtextopsxbl_iterator_next)
+  * [KSR.textopsx.bl_iterator_rm()](#ksrtextopsxbl_iterator_rm)
+  * [KSR.textopsx.bl_iterator_start()](#ksrtextopsxbl_iterator_start)
+  * [KSR.textopsx.bl_iterator_value()](#ksrtextopsxbl_iterator_value)
+  * [KSR.textopsx.change_reply_status()](#ksrtextopsxchange_reply_status)
+  * [KSR.textopsx.change_reply_status_code()](#ksrtextopsxchange_reply_status_code)
+  * [KSR.textopsx.exclude_hf_value()](#ksrtextopsxexclude_hf_value)
+  * [KSR.textopsx.fnmatch()](#ksrtextopsxfnmatch)
+  * [KSR.textopsx.fnmatch_ex()](#ksrtextopsxfnmatch_ex)
+  * [KSR.textopsx.hf_iterator_append()](#ksrtextopsxhf_iterator_append)
+  * [KSR.textopsx.hf_iterator_end()](#ksrtextopsxhf_iterator_end)
+  * [KSR.textopsx.hf_iterator_hbody()](#ksrtextopsxhf_iterator_hbody)
+  * [KSR.textopsx.hf_iterator_hname()](#ksrtextopsxhf_iterator_hname)
+  * [KSR.textopsx.hf_iterator_insert()](#ksrtextopsxhf_iterator_insert)
+  * [KSR.textopsx.hf_iterator_next()](#ksrtextopsxhf_iterator_next)
+  * [KSR.textopsx.hf_iterator_prev()](#ksrtextopsxhf_iterator_prev)
+  * [KSR.textopsx.hf_iterator_rm()](#ksrtextopsxhf_iterator_rm)
+  * [KSR.textopsx.hf_iterator_start()](#ksrtextopsxhf_iterator_start)
+  * [KSR.textopsx.hf_value_exists()](#ksrtextopsxhf_value_exists)
+  * [KSR.textopsx.include_hf_value()](#ksrtextopsxinclude_hf_value)
+  * [KSR.textopsx.insert_hf_value()](#ksrtextopsxinsert_hf_value)
+  * [KSR.textopsx.keep_hf()](#ksrtextopsxkeep_hf)
+  * [KSR.textopsx.keep_hf_re()](#ksrtextopsxkeep_hf_re)
+  * [KSR.textopsx.msg_apply_changes()](#ksrtextopsxmsg_apply_changes)
+  * [KSR.textopsx.msg_set_buffer()](#ksrtextopsxmsg_set_buffer)
+  * [KSR.textopsx.remove_body()](#ksrtextopsxremove_body)
+  * [KSR.textopsx.remove_hf_value()](#ksrtextopsxremove_hf_value)
+  * [KSR.textopsx.remove_hf_value2()](#ksrtextopsxremove_hf_value2)
+
 #### KSR.textopsx.append_hf_value() ####
 
 ```cpp
@@ -8013,6 +9299,12 @@ int KSR.textopsx.remove_hf_value2(str "hexp", str "val");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html'>📖 kamailio.cfg::module::tls.html</a>
 
+Exported functions:
+
+  * [KSR.tls.cget()](#ksrtlscget)
+  * [KSR.tls.is_peer_verified()](#ksrtlsis_peer_verified)
+  * [KSR.tls.set_connect_server_id()](#ksrtlsset_connect_server_id)
+
 #### KSR.tls.cget() ####
 
 ```cpp
@@ -8050,6 +9342,63 @@ int KSR.tls.set_connect_server_id(str "srvid");
 ## tm ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tm.html'>📖 kamailio.cfg::module::tm.html</a>
+
+Exported functions:
+
+  * [KSR.tm.ki_t_load_contacts_mode()](#ksrtmki_t_load_contacts_mode)
+  * [KSR.tm.t_any_replied()](#ksrtmt_any_replied)
+  * [KSR.tm.t_any_timeout()](#ksrtmt_any_timeout)
+  * [KSR.tm.t_branch_replied()](#ksrtmt_branch_replied)
+  * [KSR.tm.t_branch_timeout()](#ksrtmt_branch_timeout)
+  * [KSR.tm.t_check_status()](#ksrtmt_check_status)
+  * [KSR.tm.t_check_trans()](#ksrtmt_check_trans)
+  * [KSR.tm.t_clean()](#ksrtmt_clean)
+  * [KSR.tm.t_drop_replies()](#ksrtmt_drop_replies)
+  * [KSR.tm.t_drop_replies_all()](#ksrtmt_drop_replies_all)
+  * [KSR.tm.t_get_branch_index()](#ksrtmt_get_branch_index)
+  * [KSR.tm.t_get_status_code()](#ksrtmt_get_status_code)
+  * [KSR.tm.t_grep_status()](#ksrtmt_grep_status)
+  * [KSR.tm.t_is_canceled()](#ksrtmt_is_canceled)
+  * [KSR.tm.t_is_expired()](#ksrtmt_is_expired)
+  * [KSR.tm.t_is_retr_async_reply()](#ksrtmt_is_retr_async_reply)
+  * [KSR.tm.t_is_set()](#ksrtmt_is_set)
+  * [KSR.tm.t_load_contacts()](#ksrtmt_load_contacts)
+  * [KSR.tm.t_lookup_cancel()](#ksrtmt_lookup_cancel)
+  * [KSR.tm.t_lookup_cancel_flags()](#ksrtmt_lookup_cancel_flags)
+  * [KSR.tm.t_lookup_request()](#ksrtmt_lookup_request)
+  * [KSR.tm.t_newtran()](#ksrtmt_newtran)
+  * [KSR.tm.t_next_contact_flow()](#ksrtmt_next_contact_flow)
+  * [KSR.tm.t_next_contacts()](#ksrtmt_next_contacts)
+  * [KSR.tm.t_on_branch()](#ksrtmt_on_branch)
+  * [KSR.tm.t_on_branch_failure()](#ksrtmt_on_branch_failure)
+  * [KSR.tm.t_on_failure()](#ksrtmt_on_failure)
+  * [KSR.tm.t_on_reply()](#ksrtmt_on_reply)
+  * [KSR.tm.t_relay()](#ksrtmt_relay)
+  * [KSR.tm.t_relay_to_flags()](#ksrtmt_relay_to_flags)
+  * [KSR.tm.t_relay_to_proto()](#ksrtmt_relay_to_proto)
+  * [KSR.tm.t_relay_to_proto_addr()](#ksrtmt_relay_to_proto_addr)
+  * [KSR.tm.t_relay_to_proxy()](#ksrtmt_relay_to_proxy)
+  * [KSR.tm.t_relay_to_proxy_flags()](#ksrtmt_relay_to_proxy_flags)
+  * [KSR.tm.t_release()](#ksrtmt_release)
+  * [KSR.tm.t_replicate()](#ksrtmt_replicate)
+  * [KSR.tm.t_reply()](#ksrtmt_reply)
+  * [KSR.tm.t_reset_fr()](#ksrtmt_reset_fr)
+  * [KSR.tm.t_reset_max_lifetime()](#ksrtmt_reset_max_lifetime)
+  * [KSR.tm.t_reset_retr()](#ksrtmt_reset_retr)
+  * [KSR.tm.t_retransmit_reply()](#ksrtmt_retransmit_reply)
+  * [KSR.tm.t_save_lumps()](#ksrtmt_save_lumps)
+  * [KSR.tm.t_send_reply()](#ksrtmt_send_reply)
+  * [KSR.tm.t_set_auto_inv_100()](#ksrtmt_set_auto_inv_100)
+  * [KSR.tm.t_set_disable_6xx()](#ksrtmt_set_disable_6xx)
+  * [KSR.tm.t_set_disable_failover()](#ksrtmt_set_disable_failover)
+  * [KSR.tm.t_set_disable_internal_reply()](#ksrtmt_set_disable_internal_reply)
+  * [KSR.tm.t_set_fr()](#ksrtmt_set_fr)
+  * [KSR.tm.t_set_fr_inv()](#ksrtmt_set_fr_inv)
+  * [KSR.tm.t_set_max_lifetime()](#ksrtmt_set_max_lifetime)
+  * [KSR.tm.t_set_no_e2e_cancel_reason()](#ksrtmt_set_no_e2e_cancel_reason)
+  * [KSR.tm.t_set_retr()](#ksrtmt_set_retr)
+  * [KSR.tm.t_uac_send()](#ksrtmt_uac_send)
+  * [KSR.tm.t_use_uac_headers()](#ksrtmt_use_uac_headers)
 
 #### KSR.tm.ki_t_load_contacts_mode() ####
 
@@ -8487,6 +9836,15 @@ int KSR.tm.t_use_uac_headers();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tmrec.html'>📖 kamailio.cfg::module::tmrec.html</a>
 
+Exported functions:
+
+  * [KSR.tmrec.is_leap_year()](#ksrtmrecis_leap_year)
+  * [KSR.tmrec.is_leap_year_now()](#ksrtmrecis_leap_year_now)
+  * [KSR.tmrec.match()](#ksrtmrecmatch)
+  * [KSR.tmrec.match_timestamp()](#ksrtmrecmatch_timestamp)
+  * [KSR.tmrec.time_period_match()](#ksrtmrectime_period_match)
+  * [KSR.tmrec.time_period_match_timestamp()](#ksrtmrectime_period_match_timestamp)
+
 #### KSR.tmrec.is_leap_year() ####
 
 ```cpp
@@ -8538,6 +9896,25 @@ int KSR.tmrec.time_period_match_timestamp(str "period", int ti);
 ## tmx ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tmx.html'>📖 kamailio.cfg::module::tmx.html</a>
+
+Exported functions:
+
+  * [KSR.tmx.t_cancel_branches()](#ksrtmxt_cancel_branches)
+  * [KSR.tmx.t_cancel_callid()](#ksrtmxt_cancel_callid)
+  * [KSR.tmx.t_cancel_callid_reason()](#ksrtmxt_cancel_callid_reason)
+  * [KSR.tmx.t_continue()](#ksrtmxt_continue)
+  * [KSR.tmx.t_drop()](#ksrtmxt_drop)
+  * [KSR.tmx.t_drop_rcode()](#ksrtmxt_drop_rcode)
+  * [KSR.tmx.t_flush_flags()](#ksrtmxt_flush_flags)
+  * [KSR.tmx.t_flush_xflags()](#ksrtmxt_flush_xflags)
+  * [KSR.tmx.t_is_branch_route()](#ksrtmxt_is_branch_route)
+  * [KSR.tmx.t_is_failure_route()](#ksrtmxt_is_failure_route)
+  * [KSR.tmx.t_is_reply_route()](#ksrtmxt_is_reply_route)
+  * [KSR.tmx.t_is_request_route()](#ksrtmxt_is_request_route)
+  * [KSR.tmx.t_precheck_trans()](#ksrtmxt_precheck_trans)
+  * [KSR.tmx.t_reply_callid()](#ksrtmxt_reply_callid)
+  * [KSR.tmx.t_reuse_branch()](#ksrtmxt_reuse_branch)
+  * [KSR.tmx.t_suspend()](#ksrtmxt_suspend)
 
 #### KSR.tmx.t_cancel_branches() ####
 
@@ -8671,6 +10048,10 @@ int KSR.tmx.t_suspend();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/topos.html'>📖 kamailio.cfg::module::topos.html</a>
 
+Exported functions:
+
+  * [KSR.topos.tps_set_context()](#ksrtopostps_set_context)
+
 #### KSR.topos.tps_set_context() ####
 
 ```cpp
@@ -8682,6 +10063,16 @@ int KSR.topos.tps_set_context(str "ctx");
 ## tsilo ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tsilo.html'>📖 kamailio.cfg::module::tsilo.html</a>
+
+Exported functions:
+
+  * [KSR.tsilo.ts_append()](#ksrtsilots_append)
+  * [KSR.tsilo.ts_append_by_contact()](#ksrtsilots_append_by_contact)
+  * [KSR.tsilo.ts_append_by_contact_uri()](#ksrtsilots_append_by_contact_uri)
+  * [KSR.tsilo.ts_append_to()](#ksrtsilots_append_to)
+  * [KSR.tsilo.ts_append_to_uri()](#ksrtsilots_append_to_uri)
+  * [KSR.tsilo.ts_store()](#ksrtsilots_store)
+  * [KSR.tsilo.ts_store_uri()](#ksrtsilots_store_uri)
 
 #### KSR.tsilo.ts_append() ####
 
@@ -8742,6 +10133,25 @@ int KSR.tsilo.ts_store_uri(str "puri");
 ## uac ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uac.html'>📖 kamailio.cfg::module::uac.html</a>
+
+Exported functions:
+
+  * [KSR.uac.uac_auth()](#ksruacuac_auth)
+  * [KSR.uac.uac_auth_mode()](#ksruacuac_auth_mode)
+  * [KSR.uac.uac_reg_disable()](#ksruacuac_reg_disable)
+  * [KSR.uac.uac_reg_enable()](#ksruacuac_reg_enable)
+  * [KSR.uac.uac_reg_lookup()](#ksruacuac_reg_lookup)
+  * [KSR.uac.uac_reg_lookup_uri()](#ksruacuac_reg_lookup_uri)
+  * [KSR.uac.uac_reg_refresh()](#ksruacuac_reg_refresh)
+  * [KSR.uac.uac_reg_request_to()](#ksruacuac_reg_request_to)
+  * [KSR.uac.uac_reg_status()](#ksruacuac_reg_status)
+  * [KSR.uac.uac_replace_from()](#ksruacuac_replace_from)
+  * [KSR.uac.uac_replace_from_uri()](#ksruacuac_replace_from_uri)
+  * [KSR.uac.uac_replace_to()](#ksruacuac_replace_to)
+  * [KSR.uac.uac_replace_to_uri()](#ksruacuac_replace_to_uri)
+  * [KSR.uac.uac_req_send()](#ksruacuac_req_send)
+  * [KSR.uac.uac_restore_from()](#ksruacuac_restore_from)
+  * [KSR.uac.uac_restore_to()](#ksruacuac_restore_to)
 
 #### KSR.uac.uac_auth() ####
 
@@ -8875,6 +10285,12 @@ int KSR.uac.uac_restore_to();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uac_redirect.html'>📖 kamailio.cfg::module::uac_redirect.html</a>
 
+Exported functions:
+
+  * [KSR.uac_redirect.get_redirects()](#ksruac_redirectget_redirects)
+  * [KSR.uac_redirect.get_redirects_acc()](#ksruac_redirectget_redirects_acc)
+  * [KSR.uac_redirect.get_redirects_all()](#ksruac_redirectget_redirects_all)
+
 #### KSR.uac_redirect.get_redirects() ####
 
 ```cpp
@@ -8902,6 +10318,14 @@ int KSR.uac_redirect.get_redirects_all();
 ## uri_db ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uri_db.html'>📖 kamailio.cfg::module::uri_db.html</a>
+
+Exported functions:
+
+  * [KSR.uri_db.check_from()](#ksruri_dbcheck_from)
+  * [KSR.uri_db.check_to()](#ksruri_dbcheck_to)
+  * [KSR.uri_db.check_uri()](#ksruri_dbcheck_uri)
+  * [KSR.uri_db.check_uri_realm()](#ksruri_dbcheck_uri_realm)
+  * [KSR.uri_db.does_uri_exist()](#ksruri_dbdoes_uri_exist)
 
 #### KSR.uri_db.check_from() ####
 
@@ -8946,6 +10370,18 @@ int KSR.uri_db.does_uri_exist();
 ## userblocklist ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/userblocklist.html'>📖 kamailio.cfg::module::userblocklist.html</a>
+
+Exported functions:
+
+  * [KSR.userblocklist.check_allowlist()](#ksruserblocklistcheck_allowlist)
+  * [KSR.userblocklist.check_blocklist()](#ksruserblocklistcheck_blocklist)
+  * [KSR.userblocklist.check_global_blocklist()](#ksruserblocklistcheck_global_blocklist)
+  * [KSR.userblocklist.check_user_allowlist()](#ksruserblocklistcheck_user_allowlist)
+  * [KSR.userblocklist.check_user_allowlist_number()](#ksruserblocklistcheck_user_allowlist_number)
+  * [KSR.userblocklist.check_user_allowlist_table()](#ksruserblocklistcheck_user_allowlist_table)
+  * [KSR.userblocklist.check_user_blocklist()](#ksruserblocklistcheck_user_blocklist)
+  * [KSR.userblocklist.check_user_blocklist_number()](#ksruserblocklistcheck_user_blocklist_number)
+  * [KSR.userblocklist.check_user_blocklist_table()](#ksruserblocklistcheck_user_blocklist_table)
 
 #### KSR.userblocklist.check_allowlist() ####
 
@@ -9023,6 +10459,10 @@ int KSR.userblocklist.check_user_blocklist_table(str "suser", str "sdomain", str
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/utils.html'>📖 kamailio.cfg::module::utils.html</a>
 
+Exported functions:
+
+  * [KSR.utils.xcap_auth_status()](#ksrutilsxcap_auth_status)
+
 #### KSR.utils.xcap_auth_status() ####
 
 ```cpp
@@ -9034,6 +10474,13 @@ int KSR.utils.xcap_auth_status(str "watcher_uri", str "presentity_uri");
 ## websocket ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/websocket.html'>📖 kamailio.cfg::module::websocket.html</a>
+
+Exported functions:
+
+  * [KSR.websocket.close()](#ksrwebsocketclose)
+  * [KSR.websocket.close_conid()](#ksrwebsocketclose_conid)
+  * [KSR.websocket.close_reason()](#ksrwebsocketclose_reason)
+  * [KSR.websocket.handle_handshake()](#ksrwebsockethandle_handshake)
 
 #### KSR.websocket.close() ####
 
@@ -9071,6 +10518,12 @@ int KSR.websocket.handle_handshake();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xcap_server.html'>📖 kamailio.cfg::module::xcap_server.html</a>
 
+Exported functions:
+
+  * [KSR.xcap_server.xcaps_del()](#ksrxcap_serverxcaps_del)
+  * [KSR.xcap_server.xcaps_get()](#ksrxcap_serverxcaps_get)
+  * [KSR.xcap_server.xcaps_put()](#ksrxcap_serverxcaps_put)
+
 #### KSR.xcap_server.xcaps_del() ####
 
 ```cpp
@@ -9099,6 +10552,11 @@ int KSR.xcap_server.xcaps_put(str "uri", str "path", str "pbody");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp.html'>📖 kamailio.cfg::module::xhttp.html</a>
 
+Exported functions:
+
+  * [KSR.xhttp.get_hu()](#ksrxhttpget_hu)
+  * [KSR.xhttp.xhttp_reply()](#ksrxhttpxhttp_reply)
+
 #### KSR.xhttp.get_hu() ####
 
 ```cpp
@@ -9119,6 +10577,10 @@ int KSR.xhttp.xhttp_reply(int code, str "reason", str "ctype", str "body");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_pi.html'>📖 kamailio.cfg::module::xhttp_pi.html</a>
 
+Exported functions:
+
+  * [KSR.xhttp_pi.dispatch()](#ksrxhttp_pidispatch)
+
 #### KSR.xhttp_pi.dispatch() ####
 
 ```cpp
@@ -9130,6 +10592,31 @@ int KSR.xhttp_pi.dispatch();
 ## xhttp_prom ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html'>📖 kamailio.cfg::module::xhttp_prom.html</a>
+
+Exported functions:
+
+  * [KSR.xhttp_prom.check_uri()](#ksrxhttp_promcheck_uri)
+  * [KSR.xhttp_prom.counter_inc_l0()](#ksrxhttp_promcounter_inc_l0)
+  * [KSR.xhttp_prom.counter_inc_l1()](#ksrxhttp_promcounter_inc_l1)
+  * [KSR.xhttp_prom.counter_inc_l2()](#ksrxhttp_promcounter_inc_l2)
+  * [KSR.xhttp_prom.counter_inc_l3()](#ksrxhttp_promcounter_inc_l3)
+  * [KSR.xhttp_prom.counter_reset_l0()](#ksrxhttp_promcounter_reset_l0)
+  * [KSR.xhttp_prom.counter_reset_l1()](#ksrxhttp_promcounter_reset_l1)
+  * [KSR.xhttp_prom.counter_reset_l2()](#ksrxhttp_promcounter_reset_l2)
+  * [KSR.xhttp_prom.counter_reset_l3()](#ksrxhttp_promcounter_reset_l3)
+  * [KSR.xhttp_prom.dispatch()](#ksrxhttp_promdispatch)
+  * [KSR.xhttp_prom.gauge_reset_l0()](#ksrxhttp_promgauge_reset_l0)
+  * [KSR.xhttp_prom.gauge_reset_l1()](#ksrxhttp_promgauge_reset_l1)
+  * [KSR.xhttp_prom.gauge_reset_l2()](#ksrxhttp_promgauge_reset_l2)
+  * [KSR.xhttp_prom.gauge_reset_l3()](#ksrxhttp_promgauge_reset_l3)
+  * [KSR.xhttp_prom.gauge_set_l0()](#ksrxhttp_promgauge_set_l0)
+  * [KSR.xhttp_prom.gauge_set_l1()](#ksrxhttp_promgauge_set_l1)
+  * [KSR.xhttp_prom.gauge_set_l2()](#ksrxhttp_promgauge_set_l2)
+  * [KSR.xhttp_prom.gauge_set_l3()](#ksrxhttp_promgauge_set_l3)
+  * [KSR.xhttp_prom.histogram_observe_l0()](#ksrxhttp_promhistogram_observe_l0)
+  * [KSR.xhttp_prom.histogram_observe_l1()](#ksrxhttp_promhistogram_observe_l1)
+  * [KSR.xhttp_prom.histogram_observe_l2()](#ksrxhttp_promhistogram_observe_l2)
+  * [KSR.xhttp_prom.histogram_observe_l3()](#ksrxhttp_promhistogram_observe_l3)
 
 #### KSR.xhttp_prom.check_uri() ####
 
@@ -9311,6 +10798,10 @@ int KSR.xhttp_prom.histogram_observe_l3(str "s_name", str "s_number", str "l1", 
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_rpc.html'>📖 kamailio.cfg::module::xhttp_rpc.html</a>
 
+Exported functions:
+
+  * [KSR.xhttp_rpc.dispatch()](#ksrxhttp_rpcdispatch)
+
 #### KSR.xhttp_rpc.dispatch() ####
 
 ```cpp
@@ -9322,6 +10813,17 @@ int KSR.xhttp_rpc.dispatch();
 ## xlog ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xlog.html'>📖 kamailio.cfg::module::xlog.html</a>
+
+Exported functions:
+
+  * [KSR.xlog.xalert()](#ksrxlogxalert)
+  * [KSR.xlog.xcrit()](#ksrxlogxcrit)
+  * [KSR.xlog.xdbg()](#ksrxlogxdbg)
+  * [KSR.xlog.xerr()](#ksrxlogxerr)
+  * [KSR.xlog.xinfo()](#ksrxlogxinfo)
+  * [KSR.xlog.xlog()](#ksrxlogxlog)
+  * [KSR.xlog.xnotice()](#ksrxlogxnotice)
+  * [KSR.xlog.xwarn()](#ksrxlogxwarn)
 
 #### KSR.xlog.xalert() ####
 
@@ -9390,6 +10892,11 @@ int KSR.xlog.xwarn(str "lmsg");
 ## xmlrpc ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xmlrpc.html'>📖 kamailio.cfg::module::xmlrpc.html</a>
+
+Exported functions:
+
+  * [KSR.xmlrpc.dispatch_rpc()](#ksrxmlrpcdispatch_rpc)
+  * [KSR.xmlrpc.xmlrpc_reply()](#ksrxmlrpcxmlrpc_reply)
 
 #### KSR.xmlrpc.dispatch_rpc() ####
 
