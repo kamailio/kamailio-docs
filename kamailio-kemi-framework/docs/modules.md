@@ -10516,6 +10516,40 @@ int KSR.utils.xcap_auth_status(str "watcher_uri", str "presentity_uri");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/utils.html#utils.f.xcap_auth_status'>📖 kamailio.cfg::function::xcap_auth_status()</a>
 
+## uuid ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uuid.html'>📖 kamailio.cfg::module::uuid.html</a>
+
+Exported functions:
+
+  * [KSR.uuid.get()](#ksruuidget)
+  * [KSR.uuid.rget()](#ksruuidrget)
+  * [KSR.uuid.tget()](#ksruuidtget)
+
+#### KSR.uuid.get() ####
+
+```cpp
+xval KSR.uuid.get();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uuid.html#uuid.f.get'>📖 kamailio.cfg::function::get()</a>
+
+#### KSR.uuid.rget() ####
+
+```cpp
+xval KSR.uuid.rget();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uuid.html#uuid.f.rget'>📖 kamailio.cfg::function::rget()</a>
+
+#### KSR.uuid.tget() ####
+
+```cpp
+xval KSR.uuid.tget();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/uuid.html#uuid.f.tget'>📖 kamailio.cfg::function::tget()</a>
+
 ## websocket ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/websocket.html'>📖 kamailio.cfg::module::websocket.html</a>
