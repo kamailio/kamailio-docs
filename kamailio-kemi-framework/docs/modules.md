@@ -2964,6 +2964,7 @@ Exported functions:
   * [KSR.ipops.detailed_ipv6_type()](#ksripopsdetailed_ipv6_type)
   * [KSR.ipops.dns_int_match_ip()](#ksripopsdns_int_match_ip)
   * [KSR.ipops.dns_query()](#ksripopsdns_query)
+  * [KSR.ipops.dns_set_local_ttl()](#ksripopsdns_set_local_ttl)
   * [KSR.ipops.dns_sys_match_ip()](#ksripopsdns_sys_match_ip)
   * [KSR.ipops.ip_is_in_subnet()](#ksripopsip_is_in_subnet)
   * [KSR.ipops.ip_type()](#ksripopsip_type)
@@ -3032,6 +3033,14 @@ int KSR.ipops.dns_query(str "naptrname", str "pvid");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ipops.html#ipops.f.dns_query'>📖 kamailio.cfg::function::dns_query()</a>
+
+#### KSR.ipops.dns_set_local_ttl() ####
+
+```cpp
+int KSR.ipops.dns_set_local_ttl(int vttl);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ipops.html#ipops.f.dns_set_local_ttl'>📖 kamailio.cfg::function::dns_set_local_ttl()</a>
 
 #### KSR.ipops.dns_sys_match_ip() ####
 
@@ -5507,8 +5516,10 @@ Exported functions:
   * [KSR.pv_headers.pvh_apply_headers()](#ksrpv_headerspvh_apply_headers)
   * [KSR.pv_headers.pvh_check_header()](#ksrpv_headerspvh_check_header)
   * [KSR.pv_headers.pvh_collect_headers()](#ksrpv_headerspvh_collect_headers)
+  * [KSR.pv_headers.pvh_header_param_exists()](#ksrpv_headerspvh_header_param_exists)
   * [KSR.pv_headers.pvh_modify_header()](#ksrpv_headerspvh_modify_header)
   * [KSR.pv_headers.pvh_remove_header()](#ksrpv_headerspvh_remove_header)
+  * [KSR.pv_headers.pvh_remove_header_param()](#ksrpv_headerspvh_remove_header_param)
   * [KSR.pv_headers.pvh_reset_headers()](#ksrpv_headerspvh_reset_headers)
 
 #### KSR.pv_headers.pvh_append_header() ####
@@ -5543,6 +5554,14 @@ int KSR.pv_headers.pvh_collect_headers();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_collect_headers'>📖 kamailio.cfg::function::pvh_collect_headers()</a>
 
+#### KSR.pv_headers.pvh_header_param_exists() ####
+
+```cpp
+int KSR.pv_headers.pvh_header_param_exists(str "hname", str "hvalue");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_header_param_exists'>📖 kamailio.cfg::function::pvh_header_param_exists()</a>
+
 #### KSR.pv_headers.pvh_modify_header() ####
 
 ```cpp
@@ -5558,6 +5577,14 @@ int KSR.pv_headers.pvh_remove_header(str "hname", int indx);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_remove_header'>📖 kamailio.cfg::function::pvh_remove_header()</a>
+
+#### KSR.pv_headers.pvh_remove_header_param() ####
+
+```cpp
+int KSR.pv_headers.pvh_remove_header_param(int idx, str "hname", str "elements", str "toRemove");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_remove_header_param'>📖 kamailio.cfg::function::pvh_remove_header_param()</a>
 
 #### KSR.pv_headers.pvh_reset_headers() ####
 
@@ -7671,6 +7698,58 @@ int KSR.sipjson.sj_serialize(str "smode", str "pvn");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipjson.html#sipjson.f.sj_serialize'>📖 kamailio.cfg::function::sj_serialize()</a>
 
+## siprepo ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html'>📖 kamailio.cfg::module::siprepo.html</a>
+
+Exported functions:
+
+  * [KSR.siprepo.sr_msg_async_pull()](#ksrsipreposr_msg_async_pull)
+  * [KSR.siprepo.sr_msg_check()](#ksrsipreposr_msg_check)
+  * [KSR.siprepo.sr_msg_pull()](#ksrsipreposr_msg_pull)
+  * [KSR.siprepo.sr_msg_push()](#ksrsipreposr_msg_push)
+  * [KSR.siprepo.sr_msg_rm()](#ksrsipreposr_msg_rm)
+
+#### KSR.siprepo.sr_msg_async_pull() ####
+
+```cpp
+int KSR.siprepo.sr_msg_async_pull(str "callid", str "msgid", str "gname", str "rname", int rmode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_async_pull'>📖 kamailio.cfg::function::sr_msg_async_pull()</a>
+
+#### KSR.siprepo.sr_msg_check() ####
+
+```cpp
+int KSR.siprepo.sr_msg_check();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_check'>📖 kamailio.cfg::function::sr_msg_check()</a>
+
+#### KSR.siprepo.sr_msg_pull() ####
+
+```cpp
+int KSR.siprepo.sr_msg_pull(str "callid", str "msgid", str "rname", int rmode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_pull'>📖 kamailio.cfg::function::sr_msg_pull()</a>
+
+#### KSR.siprepo.sr_msg_push() ####
+
+```cpp
+int KSR.siprepo.sr_msg_push(str "msgid", int rmode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_push'>📖 kamailio.cfg::function::sr_msg_push()</a>
+
+#### KSR.siprepo.sr_msg_rm() ####
+
+```cpp
+int KSR.siprepo.sr_msg_rm(str "callid", str "msgid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_rm'>📖 kamailio.cfg::function::sr_msg_rm()</a>
+
 ## siptrace ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siptrace.html'>📖 kamailio.cfg::module::siptrace.html</a>
@@ -8572,6 +8651,7 @@ Exported functions:
   * [KSR.textops.remove_hf()](#ksrtextopsremove_hf)
   * [KSR.textops.remove_hf_exp()](#ksrtextopsremove_hf_exp)
   * [KSR.textops.remove_hf_idx()](#ksrtextopsremove_hf_idx)
+  * [KSR.textops.remove_hf_match()](#ksrtextopsremove_hf_match)
   * [KSR.textops.remove_hf_re()](#ksrtextopsremove_hf_re)
   * [KSR.textops.replace()](#ksrtextopsreplace)
   * [KSR.textops.replace_all()](#ksrtextopsreplace_all)
@@ -8786,6 +8866,14 @@ int KSR.textops.remove_hf_idx(str "hname", int idx);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.remove_hf_idx'>📖 kamailio.cfg::function::remove_hf_idx()</a>
+
+#### KSR.textops.remove_hf_match() ####
+
+```cpp
+int KSR.textops.remove_hf_match(str "hname", str "op", str "expr");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.remove_hf_match'>📖 kamailio.cfg::function::remove_hf_match()</a>
 
 #### KSR.textops.remove_hf_re() ####
 
