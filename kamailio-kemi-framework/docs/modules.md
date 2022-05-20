@@ -1422,6 +1422,7 @@ Exported functions:
   * [KSR.dialog.dlg_db_load_callid()](#ksrdialogdlg_db_load_callid)
   * [KSR.dialog.dlg_db_load_extra()](#ksrdialogdlg_db_load_extra)
   * [KSR.dialog.dlg_get()](#ksrdialogdlg_get)
+  * [KSR.dialog.dlg_get_var()](#ksrdialogdlg_get_var)
   * [KSR.dialog.dlg_isflagset()](#ksrdialogdlg_isflagset)
   * [KSR.dialog.dlg_manage()](#ksrdialogdlg_manage)
   * [KSR.dialog.dlg_reset_property()](#ksrdialogdlg_reset_property)
@@ -1429,6 +1430,7 @@ Exported functions:
   * [KSR.dialog.dlg_set_property()](#ksrdialogdlg_set_property)
   * [KSR.dialog.dlg_set_timeout()](#ksrdialogdlg_set_timeout)
   * [KSR.dialog.dlg_set_timeout_id()](#ksrdialogdlg_set_timeout_id)
+  * [KSR.dialog.dlg_set_var()](#ksrdialogdlg_set_var)
   * [KSR.dialog.dlg_setflag()](#ksrdialogdlg_setflag)
   * [KSR.dialog.get_profile_size()](#ksrdialogget_profile_size)
   * [KSR.dialog.get_profile_size_static()](#ksrdialogget_profile_size_static)
@@ -1486,6 +1488,14 @@ int KSR.dialog.dlg_get(str "sc", str "sf", str "st");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_get'>📖 kamailio.cfg::function::dlg_get()</a>
 
+#### KSR.dialog.dlg_get_var() ####
+
+```cpp
+xval KSR.dialog.dlg_get_var(str "sc", str "sf", str "st", str "key");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_get_var'>📖 kamailio.cfg::function::dlg_get_var()</a>
+
 #### KSR.dialog.dlg_isflagset() ####
 
 ```cpp
@@ -1541,6 +1551,14 @@ int KSR.dialog.dlg_set_timeout_id(int to, int he, int hi);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_set_timeout_id'>📖 kamailio.cfg::function::dlg_set_timeout_id()</a>
+
+#### KSR.dialog.dlg_set_var() ####
+
+```cpp
+int KSR.dialog.dlg_set_var(str "sc", str "sf", str "st", str "key", str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_set_var'>📖 kamailio.cfg::function::dlg_set_var()</a>
 
 #### KSR.dialog.dlg_setflag() ####
 
@@ -5619,6 +5637,7 @@ Exported functions:
   * [KSR.pvx.shv_get()](#ksrpvxshv_get)
   * [KSR.pvx.shv_seti()](#ksrpvxshv_seti)
   * [KSR.pvx.shv_sets()](#ksrpvxshv_sets)
+  * [KSR.pvx.shvinc_get()](#ksrpvxshvinc_get)
   * [KSR.pvx.var_get()](#ksrpvxvar_get)
   * [KSR.pvx.var_seti()](#ksrpvxvar_seti)
   * [KSR.pvx.var_sets()](#ksrpvxvar_sets)
@@ -5655,8 +5674,10 @@ Exported functions:
   * [KSR.pvx.xavp_gete()](#ksrpvxxavp_gete)
   * [KSR.pvx.xavp_getw()](#ksrpvxxavp_getw)
   * [KSR.pvx.xavp_is_null()](#ksrpvxxavp_is_null)
+  * [KSR.pvx.xavp_lshift()](#ksrpvxxavp_lshift)
   * [KSR.pvx.xavp_params_explode()](#ksrpvxxavp_params_explode)
   * [KSR.pvx.xavp_params_implode()](#ksrpvxxavp_params_implode)
+  * [KSR.pvx.xavp_push_dst()](#ksrpvxxavp_push_dst)
   * [KSR.pvx.xavp_rm()](#ksrpvxxavp_rm)
   * [KSR.pvx.xavp_seti()](#ksrpvxxavp_seti)
   * [KSR.pvx.xavp_sets()](#ksrpvxxavp_sets)
@@ -5829,6 +5850,14 @@ int KSR.pvx.shv_sets(str "vname", str "sval");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.shv_sets'>📖 kamailio.cfg::function::shv_sets()</a>
+
+#### KSR.pvx.shvinc_get() ####
+
+```cpp
+xval KSR.pvx.shvinc_get(str "vname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.shvinc_get'>📖 kamailio.cfg::function::shvinc_get()</a>
 
 #### KSR.pvx.var_get() ####
 
@@ -6118,6 +6147,14 @@ int KSR.pvx.xavp_is_null(str "rname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_is_null'>📖 kamailio.cfg::function::xavp_is_null()</a>
 
+#### KSR.pvx.xavp_lshift() ####
+
+```cpp
+int KSR.pvx.xavp_lshift(str "xname", int idx);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_lshift'>📖 kamailio.cfg::function::xavp_lshift()</a>
+
 #### KSR.pvx.xavp_params_explode() ####
 
 ```cpp
@@ -6133,6 +6170,14 @@ int KSR.pvx.xavp_params_implode(str "sxname", str "svname");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_params_implode'>📖 kamailio.cfg::function::xavp_params_implode()</a>
+
+#### KSR.pvx.xavp_push_dst() ####
+
+```cpp
+int KSR.pvx.xavp_push_dst(str "xname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_push_dst'>📖 kamailio.cfg::function::xavp_push_dst()</a>
 
 #### KSR.pvx.xavp_rm() ####
 
@@ -6355,8 +6400,10 @@ Exported functions:
   * [KSR.registrar.lookup_branches()](#ksrregistrarlookup_branches)
   * [KSR.registrar.lookup_to_dset()](#ksrregistrarlookup_to_dset)
   * [KSR.registrar.lookup_uri()](#ksrregistrarlookup_uri)
+  * [KSR.registrar.lookup_xavp()](#ksrregistrarlookup_xavp)
   * [KSR.registrar.reg_fetch_contacts()](#ksrregistrarreg_fetch_contacts)
   * [KSR.registrar.reg_free_contacts()](#ksrregistrarreg_free_contacts)
+  * [KSR.registrar.reg_from_user()](#ksrregistrarreg_from_user)
   * [KSR.registrar.reg_send_reply()](#ksrregistrarreg_send_reply)
   * [KSR.registrar.registered()](#ksrregistrarregistered)
   * [KSR.registrar.registered_action()](#ksrregistrarregistered_action)
@@ -6365,6 +6412,8 @@ Exported functions:
   * [KSR.registrar.save()](#ksrregistrarsave)
   * [KSR.registrar.save_uri()](#ksrregistrarsave_uri)
   * [KSR.registrar.set_q_override()](#ksrregistrarset_q_override)
+  * [KSR.registrar.ulc_cget()](#ksrregistrarulc_cget)
+  * [KSR.registrar.ulc_rget()](#ksrregistrarulc_rget)
   * [KSR.registrar.unregister()](#ksrregistrarunregister)
   * [KSR.registrar.unregister_ruid()](#ksrregistrarunregister_ruid)
 
@@ -6408,6 +6457,14 @@ int KSR.registrar.lookup_uri(str "table", str "uri");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.lookup_uri'>📖 kamailio.cfg::function::lookup_uri()</a>
 
+#### KSR.registrar.lookup_xavp() ####
+
+```cpp
+int KSR.registrar.lookup_xavp(str "utname", str "uri", str "rxname", str "cxname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.lookup_xavp'>📖 kamailio.cfg::function::lookup_xavp()</a>
+
 #### KSR.registrar.reg_fetch_contacts() ####
 
 ```cpp
@@ -6423,6 +6480,14 @@ int KSR.registrar.reg_free_contacts(str "profile");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.reg_free_contacts'>📖 kamailio.cfg::function::reg_free_contacts()</a>
+
+#### KSR.registrar.reg_from_user() ####
+
+```cpp
+int KSR.registrar.reg_from_user(str "utname", str "uri", int vmode);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.reg_from_user'>📖 kamailio.cfg::function::reg_from_user()</a>
 
 #### KSR.registrar.reg_send_reply() ####
 
@@ -6487,6 +6552,22 @@ int KSR.registrar.set_q_override(str "new_q");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.set_q_override'>📖 kamailio.cfg::function::set_q_override()</a>
+
+#### KSR.registrar.ulc_cget() ####
+
+```cpp
+xval KSR.registrar.ulc_cget(str "rid", str "attr", int idx);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.ulc_cget'>📖 kamailio.cfg::function::ulc_cget()</a>
+
+#### KSR.registrar.ulc_rget() ####
+
+```cpp
+xval KSR.registrar.ulc_rget(str "rid", str "attr");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/registrar.html#registrar.f.ulc_rget'>📖 kamailio.cfg::function::ulc_rget()</a>
 
 #### KSR.registrar.unregister() ####
 
