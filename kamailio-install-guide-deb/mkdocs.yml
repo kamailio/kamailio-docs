@@ -1,7 +1,7 @@
 site_name: Install Kamailio On Debian
 theme: readthedocs
 extra_css: [extra.css]
-pages:
+nav:
     - 'index.md'
     - 'support.md'
     - 'contributions.md'
