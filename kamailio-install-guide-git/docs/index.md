@@ -1,6 +1,6 @@
 # Kamailio v5.6 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.6 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.6 (stable) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.5.0)
+*This document focuses on Kamailio v5.6.x series, installed
 with MySQL/MariaDB support, using a Debian unstable system.*
 
 
@@ -50,7 +50,7 @@ The alternative is to set different paths via parameters of **jsonrpcs**
 and **ctl** modules.
 
 **Note**: __g++__ compiler is needed for couple of modules that link to C++ libraries,
-such as __app_sqlang__, phonenum or __ndb_cassandra__.
+such as __app_sqlang__, __phonenum__ or __ndb_cassandra__.
 
 ### MySQL Or MariaDB Server ###
 
@@ -66,9 +66,10 @@ First of all, you have to create a directory on the file system where the source
 will be stored.
 
 
+
 ```Shell
-  mkdir -p /usr/local/src/kamailio-devel
-  cd /usr/local/src/kamailio-devel
+  mkdir -p /usr/local/src/kamailio-5.6
+  cd /usr/local/src/kamailio-5.6
 ```
 
 Download the sources from GIT using the following commands.
@@ -76,6 +77,7 @@ Download the sources from GIT using the following commands.
 ```Shell
   git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
   cd kamailio
+  git checkout -b 5.6 origin/5.6
 ```
 
 _**Note**: if your git client version does not support **--no-single-branch**
@@ -121,11 +123,11 @@ make include_modules="db_mysql dialplan tls" cfg
 ```
 
 **NOTE**: If you want to install everything in one directory (so you can delete
-all installed files at once), say `/usr/local/kamailio-devel`, then set `PREFIX`
+all installed files at once), say `/usr/local/kamailio-5.6`, then set `PREFIX`
 variable to the install path in `make cfg ...` command:
 
 ```Shell
-make PREFIX="/usr/local/kamailio-devel" include_modules="db_mysql dialplan tls" cfg
+make PREFIX="/usr/local/kamailio-5.6" include_modules="db_mysql dialplan tls" cfg
 ```
 
 More hints about `Makefile` system at:
@@ -415,7 +417,7 @@ the lines:
 
 ```Shell
 Module: kamailio
-Branch: master
+Branch: 5.6
 ```
 
 then an update has been made to Kamailio devel version and it will be available
