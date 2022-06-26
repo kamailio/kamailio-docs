@@ -4850,6 +4850,22 @@ int KSR.nathelper.set_contact_alias_trim();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nathelper.html#nathelper.f.set_contact_alias_trim'>📖 kamailio.cfg::function::set_contact_alias_trim()</a>
 
+## nats ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nats.html'>📖 kamailio.cfg::module::nats.html</a>
+
+Exported functions:
+
+  * [KSR.nats.publish()](#ksrnatspublish)
+
+#### KSR.nats.publish() ####
+
+```cpp
+int KSR.nats.publish(str "subject", str "payload");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nats.html#nats.f.publish'>📖 kamailio.cfg::function::publish()</a>
+
 ## ndb_mongodb ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ndb_mongodb.html'>📖 kamailio.cfg::module::ndb_mongodb.html</a>
@@ -9516,8 +9532,29 @@ int KSR.textopsx.remove_hf_value2(str "hexp", str "val");
 Exported functions:
 
   * [KSR.tls.cget()](#ksrtlscget)
+  * [KSR.tls.cget()](#ksrtlscget)
+  * [KSR.tls.is_peer_verified()](#ksrtlsis_peer_verified)
   * [KSR.tls.is_peer_verified()](#ksrtlsis_peer_verified)
   * [KSR.tls.set_connect_server_id()](#ksrtlsset_connect_server_id)
+  * [KSR.tls.set_connect_server_id()](#ksrtlsset_connect_server_id)
+
+#### KSR.tls.cget() ####
+
+```cpp
+xval KSR.tls.cget(str "aname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.cget'>📖 kamailio.cfg::function::cget()</a>
+
+Return values corresponding the pseudo-variables exported by TLS module, related
+to TLS connection and certificates. The parameter has to be the name of the
+pseudo-variable (without `$`).
+
+Example:
+
+```
+local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
+```
 
 #### KSR.tls.cget() ####
 
@@ -9544,6 +9581,22 @@ int KSR.tls.is_peer_verified();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.is_peer_verified'>📖 kamailio.cfg::function::is_peer_verified()</a>
+
+#### KSR.tls.is_peer_verified() ####
+
+```cpp
+int KSR.tls.is_peer_verified();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.is_peer_verified'>📖 kamailio.cfg::function::is_peer_verified()</a>
+
+#### KSR.tls.set_connect_server_id() ####
+
+```cpp
+int KSR.tls.set_connect_server_id(str "srvid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.set_connect_server_id'>📖 kamailio.cfg::function::set_connect_server_id()</a>
 
 #### KSR.tls.set_connect_server_id() ####
 
