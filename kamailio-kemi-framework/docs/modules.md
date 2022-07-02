@@ -5615,7 +5615,7 @@ int KSR.pv_headers.pvh_remove_header(str "hname", int indx);
 #### KSR.pv_headers.pvh_remove_header_param() ####
 
 ```cpp
-int KSR.pv_headers.pvh_remove_header_param(int idx, str "hname", str "elements", str "toRemove");
+int KSR.pv_headers.pvh_remove_header_param(str "hname", str "toRemove");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv_headers.html#pv_headers.f.pvh_remove_header_param'>📖 kamailio.cfg::function::pvh_remove_header_param()</a>
