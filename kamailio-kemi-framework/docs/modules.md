@@ -9622,6 +9622,7 @@ Exported functions:
   * [KSR.tm.t_clean()](#ksrtmt_clean)
   * [KSR.tm.t_drop_replies()](#ksrtmt_drop_replies)
   * [KSR.tm.t_drop_replies_all()](#ksrtmt_drop_replies_all)
+  * [KSR.tm.t_exists()](#ksrtmt_exists)
   * [KSR.tm.t_get_branch_index()](#ksrtmt_get_branch_index)
   * [KSR.tm.t_get_status_code()](#ksrtmt_get_status_code)
   * [KSR.tm.t_grep_status()](#ksrtmt_grep_status)
@@ -9746,6 +9747,14 @@ int KSR.tm.t_drop_replies_all();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tm.html#tm.f.t_drop_replies_all'>📖 kamailio.cfg::function::t_drop_replies_all()</a>
+
+#### KSR.tm.t_exists() ####
+
+```cpp
+int KSR.tm.t_exists();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tm.html#tm.f.t_exists'>📖 kamailio.cfg::function::t_exists()</a>
 
 #### KSR.tm.t_get_branch_index() ####
 
