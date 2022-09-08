@@ -9333,6 +9333,10 @@ xval KSR.textopsx.bl_iterator_value(str "iname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.bl_iterator_value'>📖 kamailio.cfg::function::bl_iterator_value()</a>
 
+Return the content of the body line for the current position of the cursor, including the EoL.
+
+It is an alternative to getting the line content via `$blitval(iname)`.
+
 #### KSR.textopsx.change_reply_status() ####
 
 ```cpp
