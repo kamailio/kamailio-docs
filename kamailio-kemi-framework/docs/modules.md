@@ -1696,6 +1696,8 @@ Exported functions:
 
   * [KSR.dialplan.dp_match()](#ksrdialplandp_match)
   * [KSR.dialplan.dp_replace()](#ksrdialplandp_replace)
+  * [KSR.dialplan.dp_translate()](#ksrdialplandp_translate)
+  * [KSR.dialplan.dp_translate_vars()](#ksrdialplandp_translate_vars)
 
 #### KSR.dialplan.dp_match() ####
 
@@ -1712,6 +1714,22 @@ int KSR.dialplan.dp_replace(int dpid, str "src", str "dst");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialplan.html#dialplan.f.dp_replace'>📖 kamailio.cfg::function::dp_replace()</a>
+
+#### KSR.dialplan.dp_translate() ####
+
+```cpp
+int KSR.dialplan.dp_translate(int id);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialplan.html#dialplan.f.dp_translate'>📖 kamailio.cfg::function::dp_translate()</a>
+
+#### KSR.dialplan.dp_translate_vars() ####
+
+```cpp
+int KSR.dialplan.dp_translate_vars(int id, str "input", str "output");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialplan.html#dialplan.f.dp_translate_vars'>📖 kamailio.cfg::function::dp_translate_vars()</a>
 
 ## dispatcher ##
 
@@ -6380,6 +6398,31 @@ int KSR.rabbitmq.publish_consume(str "exchange", str "routingkey", str "contentt
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rabbitmq.html#rabbitmq.f.publish_consume'>📖 kamailio.cfg::function::publish_consume()</a>
 
+## ratelimit ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ratelimit.html'>📖 kamailio.cfg::module::ratelimit.html</a>
+
+Exported functions:
+
+  * [KSR.ratelimit.rl_check()](#ksrratelimitrl_check)
+  * [KSR.ratelimit.rl_check_pipe()](#ksrratelimitrl_check_pipe)
+
+#### KSR.ratelimit.rl_check() ####
+
+```cpp
+int KSR.ratelimit.rl_check();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ratelimit.html#ratelimit.f.rl_check'>📖 kamailio.cfg::function::rl_check()</a>
+
+#### KSR.ratelimit.rl_check_pipe() ####
+
+```cpp
+int KSR.ratelimit.rl_check_pipe(int pipe);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ratelimit.html#ratelimit.f.rl_check_pipe'>📖 kamailio.cfg::function::rl_check_pipe()</a>
+
 ## regex ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/regex.html'>📖 kamailio.cfg::module::regex.html</a>
@@ -7939,6 +7982,7 @@ Exported functions:
   * [KSR.siputils.is_alphanumex()](#ksrsiputilsis_alphanumex)
   * [KSR.siputils.is_first_hop()](#ksrsiputilsis_first_hop)
   * [KSR.siputils.is_first_hop_mode()](#ksrsiputilsis_first_hop_mode)
+  * [KSR.siputils.is_gruu()](#ksrsiputilsis_gruu)
   * [KSR.siputils.is_numeric()](#ksrsiputilsis_numeric)
   * [KSR.siputils.is_reply()](#ksrsiputilsis_reply)
   * [KSR.siputils.is_request()](#ksrsiputilsis_request)
@@ -8078,6 +8122,14 @@ int KSR.siputils.is_first_hop_mode(int mode);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.is_first_hop_mode'>📖 kamailio.cfg::function::is_first_hop_mode()</a>
+
+#### KSR.siputils.is_gruu() ####
+
+```cpp
+int KSR.siputils.is_gruu();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.is_gruu'>📖 kamailio.cfg::function::is_gruu()</a>
 
 #### KSR.siputils.is_numeric() ####
 
