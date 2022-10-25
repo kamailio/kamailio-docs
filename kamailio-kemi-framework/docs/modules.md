@@ -892,6 +892,22 @@ int KSR.call_obj.get();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/call_obj.html#call_obj.f.get'>📖 kamailio.cfg::function::get()</a>
 
+## carrierroute ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html'>📖 kamailio.cfg::module::carrierroute.html</a>
+
+Exported functions:
+
+  * [KSR.carrierroute.cr_user_carrier()](#ksrcarrierroutecr_user_carrier)
+
+#### KSR.carrierroute.cr_user_carrier() ####
+
+```cpp
+int KSR.carrierroute.cr_user_carrier(str "user", str "domain", str "dstvar");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_user_carrier'>📖 kamailio.cfg::function::cr_user_carrier()</a>
+
 ## cfgutils ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html'>📖 kamailio.cfg::module::cfgutils.html</a>
