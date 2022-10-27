@@ -7982,6 +7982,7 @@ int KSR.siptrace.sip_trace_mode(str "smode");
 
 Exported functions:
 
+  * [KSR.siputils.add_uri_param()](#ksrsiputilsadd_uri_param)
   * [KSR.siputils.cmp_aor()](#ksrsiputilscmp_aor)
   * [KSR.siputils.cmp_hdr_name()](#ksrsiputilscmp_hdr_name)
   * [KSR.siputils.cmp_uri()](#ksrsiputilscmp_uri)
@@ -8010,6 +8011,14 @@ Exported functions:
   * [KSR.siputils.uri_param_any()](#ksrsiputilsuri_param_any)
   * [KSR.siputils.uri_param_rm()](#ksrsiputilsuri_param_rm)
   * [KSR.siputils.uri_param_value()](#ksrsiputilsuri_param_value)
+
+#### KSR.siputils.add_uri_param() ####
+
+```cpp
+int KSR.siputils.add_uri_param(str "param");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.add_uri_param'>📖 kamailio.cfg::function::add_uri_param()</a>
 
 #### KSR.siputils.cmp_aor() ####
 
