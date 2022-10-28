@@ -239,7 +239,7 @@ end
 ### Python KEMI Interpreter ###
 
 It is implemented by `app_python` module. The Python interpreter is linked from `libpython`, supported Python versions:
-2.5, 2.6 and 3.x (via app_python3).
+2.5, 2.6 and 3.x (via `app_python3`).
 
 ```
 loadmodule "app_python.so"
@@ -292,6 +292,10 @@ The file `kamailio-basic-kemi-python.py` has to be saved to local disk and the `
 The documentation for `app_python` is available at:
 
   * [app_python.html](https://kamailio.org/docs/modules/devel/modules/app_python.html)
+
+The documentation for `app_python3` is available at:
+
+  * [app_python3.html](https://kamailio.org/docs/modules/devel/modules/app_python3.html)
 
 #### Basic KEMI Python Scripting Example ####
 
