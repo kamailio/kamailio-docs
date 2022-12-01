@@ -238,8 +238,13 @@ end
 
 ### Python KEMI Interpreter ###
 
-It is implemented by `app_python` module. The Python interpreter is linked from `libpython`, supported Python versions:
-2.5, 2.6 and 3.x (via `app_python3`).
+Execution of KEMI Python scripts can be done by:
+
+  * `app_python` - for Python versions 2.5, 2.6 and 2.7
+  * `app_python3` - for Python versions 3.0+
+  * `app_python3s` - for Python versions 3.0+ (available from Kamailio v5.7.0-dev)
+
+The Python interpreter is linked from `libpython`.
 
 ```
 loadmodule "app_python.so"
@@ -405,6 +410,51 @@ class kamailio:
     def ksr_failure_route_one(self, msg):
         KSR.info("===== failure route - from kamailio python script\n")
         return 1
+```
+
+The `app_python3s` is an alternative of `app_python3` which is not instantiating
+the dynamic SIP message object, it only exports the static `KSR` module. That
+means that no class has to be defined, the KEMI script functions are no longer
+associated with an object, making it more similar to `app_lua` or `app_jsdt`.
+
+The KEMI callback functions have to be simple defined in the Python3 script, like:
+
+```python
+# SIP request routing
+# -- equivalent of request_route{}
+def ksr_request_route():
+    ...
+    ksr_route_natdetect():
+    ...
+
+
+# Caller NAT detection
+def ksr_route_natdetect():
+    KSR.force_rport()
+    if KSR.nathelper.nat_uac_test(19)>0 :
+        if KSR.is_REGISTER() :
+            KSR.nathelper.fix_nated_register()
+        elif KSR.siputils.is_first_hop()>0 :
+            KSR.nathelper.set_contact_alias()
+
+        KSR.setflag(FLT_NATS)
+
+    return 1
+
+
+# SIP response handling
+# -- equivalent of reply_route{}
+def ksr_reply_route():
+    KSR.dbg("response handling - python script\n")
+
+    if KSR.sanity.sanity_check(17604, 6)<0 :
+        KSR.err("Malformed SIP response from "
+                + KSR.pv.get("$si") + ":" + str(KSR.pv.get("$sp")) +"\n")
+        KSR.set_drop()
+        return -255
+
+    return 1
+
 ```
 
 ### Ruby KEMI Interpreter ###
