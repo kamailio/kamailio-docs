@@ -4,7 +4,7 @@ The following KEMI scripting languages can be used to write SIP routing logic fo
 
   * JavaScript
   * Lua
-  * Python
+  * Python2
   * Python3
   * Ruby
   * Squirrel
@@ -16,8 +16,8 @@ The KEMI scripting language identifiers are:
 
   * `jsdt` - for JavaScript
   * `lua` - for Lua
-  * `python` - for Python
-  * `python3` - for Python3
+  * `python` - for Python2
+  * `python` - for Python3
   * `ruby` - for Ruby
   * `sqlang` - for Squirrel
 
@@ -252,8 +252,9 @@ modparam("app_python", "script_name", "/path/to/script.py")
 cfgengine "python"
 ```
 
-In the Python script you have to declare the global `mod_init()` method where to instantiate an object of a class that
-implements the other callback methods (functions) to be executed by Kamailio.
+For `app_python` and `app_python3`, in the Python script you have to declare the global `mod_init()` method
+where to instantiate an object of a class that implements the other callback methods (functions)
+to be executed by Kamailio.
 
 Inside the new class, the following methods are relevant:
 
@@ -302,7 +303,7 @@ The documentation for `app_python3` is available at:
 
   * [app_python3.html](https://kamailio.org/docs/modules/devel/modules/app_python3.html)
 
-#### Basic KEMI Python Scripting Example ####
+#### Basic KEMI Python Scripting Example For APP_PYTHON And APP_PYTHON3 ####
 
 The file `kamailio.cfg` with the global parameters and modules settings:
 
@@ -412,12 +413,16 @@ class kamailio:
         return 1
 ```
 
+#### KEMI Python Scripting Example For APP_PYTHON3S ####
+
 The `app_python3s` is an alternative of `app_python3` which is not instantiating
 the dynamic SIP message object, it only exports the static `KSR` module. That
 means that no class has to be defined, the KEMI script functions are no longer
 associated with an object, making it more similar to `app_lua` or `app_jsdt`.
 
-The KEMI callback functions have to be simple defined in the Python3 script, like:
+The KEMI callback functions `ksr_request_route()`, `ksr_reply_route()` and
+`ksr_onsend_route()` have to be simply defined in the Python3 script, they have
+no parameter, like:
 
 ```python
 # SIP request routing
