@@ -281,10 +281,14 @@ Inside the new class, the following methods are relevant:
 Note: besides the new KEMI Python KSR module, the old `Router` Python module exported by `app_python` is still
 available.
 
-A complete example of using Python as KEMI languages is offered by the next two files:
+A more complete example of using Python as KEMI languages is offered by the next two files:
 
   * [kamailio-basic-kemi.cfg](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi.cfg)
   * [kamailio-basic-kemi-python.py](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-python.py)
+
+For `app_python3s`:
+
+  * [kamailio-basic-kemi-python3s.py](https://github.com/kamailio/kamailio/blob/master/misc/examples/kemi/kamailio-basic-kemi-python3s.py)
 
 The file `kamailio-basic-kemi.cfg` has to be saved as `kamailio.cfg` and inside it add after the first line:
 
