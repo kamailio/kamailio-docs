@@ -297,6 +297,40 @@ int KSR.app_python3.execx(str "method");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3.html#app_python3.f.execx'>📖 kamailio.cfg::function::execx()</a>
 
+## app_python3s ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3s.html'>📖 kamailio.cfg::module::app_python3s.html</a>
+
+Exported functions:
+
+  * [KSR.app_python3s.exec()](#ksrapp_python3sexec)
+  * [KSR.app_python3s.exec_p1()](#ksrapp_python3sexec_p1)
+  * [KSR.app_python3s.execx()](#ksrapp_python3sexecx)
+
+#### KSR.app_python3s.exec() ####
+
+```cpp
+int KSR.app_python3s.exec(str "method");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3s.html#app_python3s.f.exec'>📖 kamailio.cfg::function::exec()</a>
+
+#### KSR.app_python3s.exec_p1() ####
+
+```cpp
+int KSR.app_python3s.exec_p1(str "method", str "p1");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3s.html#app_python3s.f.exec_p1'>📖 kamailio.cfg::function::exec_p1()</a>
+
+#### KSR.app_python3s.execx() ####
+
+```cpp
+int KSR.app_python3s.execx(str "method");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_python3s.html#app_python3s.f.execx'>📖 kamailio.cfg::function::execx()</a>
+
 ## app_ruby ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_ruby.html'>📖 kamailio.cfg::module::app_ruby.html</a>
@@ -3258,6 +3292,7 @@ Exported functions:
   * [KSR.jwt.jwt_generate()](#ksrjwtjwt_generate)
   * [KSR.jwt.jwt_generate_hdrs()](#ksrjwtjwt_generate_hdrs)
   * [KSR.jwt.jwt_verify()](#ksrjwtjwt_verify)
+  * [KSR.jwt.jwt_verify_key()](#ksrjwtjwt_verify_key)
 
 #### KSR.jwt.jwt_generate() ####
 
@@ -3278,10 +3313,18 @@ int KSR.jwt.jwt_generate_hdrs(str "key", str "alg", str "claims", str "headers")
 #### KSR.jwt.jwt_verify() ####
 
 ```cpp
-int KSR.jwt.jwt_verify(str "key", str "alg", str "claims", str "jwtval");
+int KSR.jwt.jwt_verify(str "keypath", str "alg", str "claims", str "jwtval");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_verify'>📖 kamailio.cfg::function::jwt_verify()</a>
+
+#### KSR.jwt.jwt_verify_key() ####
+
+```cpp
+int KSR.jwt.jwt_verify_key(str "key", str "alg", str "claims", str "jwtval");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/jwt.html#jwt.f.jwt_verify_key'>📖 kamailio.cfg::function::jwt_verify_key()</a>
 
 ## kafka ##
 
