@@ -76,7 +76,7 @@ The documentation for `app_jsdk` is available at:
 ### Lua KEMI Interpreter ###
 
 It is implemented by `app_lua` module. The Lua interpreter is linked from `liblua` library, supported Lua versions: 
-5.1 and 5.2.
+5.1, 5.2, 5.3, and 5.4.
 
 ```
 loadmodule "app_lua.so"
