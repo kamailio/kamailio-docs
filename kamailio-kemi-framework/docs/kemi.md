@@ -528,7 +528,7 @@ The integer return code from a Kemi functions has to be evaluated with the follo
 
 The bool return code is expected to be evaluated as `true` or `false` inside the KEMI script.
 
-If a function has `void` as return type in the signature, the it doesn't return any value.
+If a function has `void` as return type in the signature, then it doesn't return any value.
 
 Several functions may return a string or `xval` value, for example in the `KSR.pv` submodule to get the value of pseudo-variables. If a function returns `xval`, then the result value can be `string`, `integer` or `null`.
 
