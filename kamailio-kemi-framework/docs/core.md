@@ -1306,7 +1306,7 @@ KSR.hdr.remove("X-My-Hdr");
 
 Remove all the headers with the name `hrm` and append `hadd`. The value for
 `hadd` must include header name name and ending `\r\n`. This function is a
-a wrapper for `KSR.hdr.remove("hrm")` and `KSR.hdr.append("hadd")`.
+wrapper for `KSR.hdr.remove("hrm")` and `KSR.hdr.append("hadd")`.
 
 Example:
 
