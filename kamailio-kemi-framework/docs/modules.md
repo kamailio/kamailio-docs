@@ -1,16 +1,36 @@
 <!-- This file is auto-generated. Any manual modifications will be deleted -->
 # KEMI Module Functions #
-The following sections list all exported KEMI functions. More information regarding a function can be found by clicking the KEMI prototype, which will take you to the original module's documentation.
 
+The following sections lists all exported KEMI functions. More information regarding
+the function can be found by clicking the KEMI prototype which will take you
+the original module's documentation.
+
+Because the native `kamailio.cfg` scripting language allows variadic functions,
+but exports to KEMI are functions with fixed number of parameters, there can
+be a group of KEMI functions to offer the capabilities of a single `kamailio.cfg`
+function. In such case, the KEMI functions share a common naming prefix, usually
+the name of the `kamailio.cfg` function.
+
+For example, the `kamailio.cfg` function `ds_is_from_list(...)` from `dispatcher`
+module has the prototype:
+
+```c
+int ds_is_from_list([groupid [, mode [, uri] ] ])
+```
+
+And the corresponding KEMI exports are:
+
+```c
+int KSR.dispatcher.ds_is_from_lists();
+int KSR.dispatcher.ds_is_from_list(int groupid);
+int KSR.dispatcher.ds_is_from_list_mode(int groupid, int mode);
+int KSR.dispatcher.ds_is_from_list_uri(int groupid, int mode, str "uri");
+```
 ## acc ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/acc.html'>📖 kamailio.cfg::module::acc.html</a>
 
 The functions exported by `acc` module to KEMI are listed in the next sections.
-
-The documentation of `acc` module is available online at:
-
-  * [acc.html](https://kamailio.org/docs/modules/devel/modules/acc.html)
 
 Exported functions:
 
@@ -932,7 +952,52 @@ int KSR.call_obj.get();
 
 Exported functions:
 
+  * [KSR.carrierroute.cr_next_domain()](#ksrcarrierroutecr_next_domain)
+  * [KSR.carrierroute.cr_nofallback_route()](#ksrcarrierroutecr_nofallback_route)
+  * [KSR.carrierroute.cr_nofallback_route_info()](#ksrcarrierroutecr_nofallback_route_info)
+  * [KSR.carrierroute.cr_route()](#ksrcarrierroutecr_route)
+  * [KSR.carrierroute.cr_route_info()](#ksrcarrierroutecr_route_info)
   * [KSR.carrierroute.cr_user_carrier()](#ksrcarrierroutecr_user_carrier)
+
+#### KSR.carrierroute.cr_next_domain() ####
+
+```cpp
+int KSR.carrierroute.cr_next_domain(str "_carrier", str "_domain", str "_prefix_matching", str "_host", str "_reply_code", str "_dstavp");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_next_domain'>📖 kamailio.cfg::function::cr_next_domain()</a>
+
+#### KSR.carrierroute.cr_nofallback_route() ####
+
+```cpp
+int KSR.carrierroute.cr_nofallback_route(str "_carrier", str "_domain", str "_prefix_matching", str "_rewrite_user", str "_hsrc");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_nofallback_route'>📖 kamailio.cfg::function::cr_nofallback_route()</a>
+
+#### KSR.carrierroute.cr_nofallback_route_info() ####
+
+```cpp
+int KSR.carrierroute.cr_nofallback_route_info(str "_carrier", str "_domain", str "_prefix_matching", str "_rewrite_user", str "_hsrc", str "_dstvar");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_nofallback_route_info'>📖 kamailio.cfg::function::cr_nofallback_route_info()</a>
+
+#### KSR.carrierroute.cr_route() ####
+
+```cpp
+int KSR.carrierroute.cr_route(str "_carrier", str "_domain", str "_prefix_matching", str "_rewrite_user", str "_hsrc");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_route'>📖 kamailio.cfg::function::cr_route()</a>
+
+#### KSR.carrierroute.cr_route_info() ####
+
+```cpp
+int KSR.carrierroute.cr_route_info(str "_carrier", str "_domain", str "_prefix_matching", str "_rewrite_user", str "_hsrc", str "_dstvar");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_route_info'>📖 kamailio.cfg::function::cr_route_info()</a>
 
 #### KSR.carrierroute.cr_user_carrier() ####
 
@@ -3439,9 +3504,9 @@ int KSR.kex.setdebug(int lval);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html'>📖 kamailio.cfg::module::kemi.html</a>
 
-Functions exported by `kemix` module. They aim to provide a convenient way to
-retrieve string or integer values for most commonly used variables or runtime
-environment attributes.
+Functions exported by `kemix` module and available in KEMI language under
+`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
+values for most commonly used variables or runtime environment attributes.
 
 Exported functions:
 
@@ -6917,7 +6982,8 @@ int KSR.rtjson.update_branch();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html'>📖 kamailio.cfg::module::rtpengine.html</a>
 
-This module enables media streams to be proxied via an RTPproxy.
+This module enables media streams to be proxied via RTPEngine, exporting
+the functions to interact with it.
 
 Exported functions:
 
@@ -8892,6 +8958,7 @@ Exported functions:
   * [KSR.textops.set_body_multipart_mode()](#ksrtextopsset_body_multipart_mode)
   * [KSR.textops.set_reply_body()](#ksrtextopsset_reply_body)
   * [KSR.textops.starts_with()](#ksrtextopsstarts_with)
+  * [KSR.textops.str_any_in()](#ksrtextopsstr_any_in)
   * [KSR.textops.str_find()](#ksrtextopsstr_find)
   * [KSR.textops.str_ifind()](#ksrtextopsstr_ifind)
   * [KSR.textops.subst()](#ksrtextopssubst)
@@ -9275,6 +9342,14 @@ int KSR.textops.starts_with(str "s1", str "s2");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.starts_with'>📖 kamailio.cfg::function::starts_with()</a>
+
+#### KSR.textops.str_any_in() ####
+
+```cpp
+int KSR.textops.str_any_in(str "txt", str "clist");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.str_any_in'>📖 kamailio.cfg::function::str_any_in()</a>
 
 #### KSR.textops.str_find() ####
 
