@@ -4999,6 +4999,7 @@ int KSR.nathelper.set_contact_alias_trim();
 Exported functions:
 
   * [KSR.nats.publish()](#ksrnatspublish)
+  * [KSR.nats.publish_request()](#ksrnatspublish_request)
 
 #### KSR.nats.publish() ####
 
@@ -5007,6 +5008,14 @@ int KSR.nats.publish(str "subject", str "payload");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nats.html#nats.f.publish'>📖 kamailio.cfg::function::publish()</a>
+
+#### KSR.nats.publish_request() ####
+
+Like `nats_publish()` but also with a `reply` topic string so the other side can publish message back like in the NATS Request-Reply mode.
+
+```cpp
+int KSR.nats.publish_request(str "subject", str "payload", str "reply");
+```
 
 ## ndb_mongodb ##
 
@@ -11422,4 +11431,3 @@ int KSR.xmlrpc.xmlrpc_reply(int rcode, str "reason");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xmlrpc.html#xmlrpc.f.xmlrpc_reply'>📖 kamailio.cfg::function::xmlrpc_reply()</a>
-
