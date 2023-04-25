@@ -552,7 +552,9 @@ Exported functions:
   * [KSR.auth.auth_challenge()](#ksrauthauth_challenge)
   * [KSR.auth.consume_credentials()](#ksrauthconsume_credentials)
   * [KSR.auth.has_credentials()](#ksrauthhas_credentials)
+  * [KSR.auth.proxy_challenge()](#ksrauthproxy_challenge)
   * [KSR.auth.pv_auth_check()](#ksrauthpv_auth_check)
+  * [KSR.auth.www_challenge()](#ksrauthwww_challenge)
 
 #### KSR.auth.auth_challenge() ####
 
@@ -578,6 +580,14 @@ int KSR.auth.has_credentials(str "srealm");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.has_credentials'>📖 kamailio.cfg::function::has_credentials()</a>
 
+#### KSR.auth.proxy_challenge() ####
+
+```cpp
+int KSR.auth.proxy_challenge(str "realm", int flags);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.proxy_challenge'>📖 kamailio.cfg::function::proxy_challenge()</a>
+
 #### KSR.auth.pv_auth_check() ####
 
 ```cpp
@@ -585,6 +595,14 @@ int KSR.auth.pv_auth_check(str "srealm", str "spasswd", int vflags, int vchecks)
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.pv_auth_check'>📖 kamailio.cfg::function::pv_auth_check()</a>
+
+#### KSR.auth.www_challenge() ####
+
+```cpp
+int KSR.auth.www_challenge(str "realm", int flags);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.www_challenge'>📖 kamailio.cfg::function::www_challenge()</a>
 
 ## auth_db ##
 
@@ -4999,6 +5017,7 @@ int KSR.nathelper.set_contact_alias_trim();
 Exported functions:
 
   * [KSR.nats.publish()](#ksrnatspublish)
+  * [KSR.nats.publish_request()](#ksrnatspublish_request)
 
 #### KSR.nats.publish() ####
 
@@ -5007,6 +5026,14 @@ int KSR.nats.publish(str "subject", str "payload");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nats.html#nats.f.publish'>📖 kamailio.cfg::function::publish()</a>
+
+#### KSR.nats.publish_request() ####
+
+```cpp
+int KSR.nats.publish_request(str "subject", str "payload", str "reply");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/nats.html#nats.f.publish_request'>📖 kamailio.cfg::function::publish_request()</a>
 
 ## ndb_mongodb ##
 
@@ -8784,6 +8811,7 @@ Exported functions:
   * [KSR.tcpops.tcp_conid_state()](#ksrtcpopstcp_conid_state)
   * [KSR.tcpops.tcp_enable_closed_event()](#ksrtcpopstcp_enable_closed_event)
   * [KSR.tcpops.tcp_enable_closed_event_cid()](#ksrtcpopstcp_enable_closed_event_cid)
+  * [KSR.tcpops.tcp_get_conid()](#ksrtcpopstcp_get_conid)
   * [KSR.tcpops.tcp_keepalive_disable()](#ksrtcpopstcp_keepalive_disable)
   * [KSR.tcpops.tcp_keepalive_disable_cid()](#ksrtcpopstcp_keepalive_disable_cid)
   * [KSR.tcpops.tcp_keepalive_enable()](#ksrtcpopstcp_keepalive_enable)
@@ -8840,6 +8868,14 @@ int KSR.tcpops.tcp_enable_closed_event_cid(int i_conid);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_enable_closed_event_cid'>📖 kamailio.cfg::function::tcp_enable_closed_event_cid()</a>
+
+#### KSR.tcpops.tcp_get_conid() ####
+
+```cpp
+int KSR.tcpops.tcp_get_conid(str "saddr", str "pvs");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_get_conid'>📖 kamailio.cfg::function::tcp_get_conid()</a>
 
 #### KSR.tcpops.tcp_keepalive_disable() ####
 
