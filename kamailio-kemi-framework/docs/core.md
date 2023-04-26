@@ -154,7 +154,7 @@ Example:
 KSR.crit("critical log message from embedded interpreter\n");
 ```
 
-### int KSR.get_debug(...) ###
+### int KSR.get_debug() ###
 
 `int KSR.get_debug()`
 
@@ -895,7 +895,7 @@ Example:
 KSR.force_rport();
 ```
 
-### KSR.set_drop(...) ###
+### KSR.set_drop() ###
 
 `void KSR.set_drop()`
 
@@ -921,33 +921,33 @@ Set the address (host or ip) to be advertised in Via header.
 
 Set the port (in string format) to be advertised in Via header.
 
-### KSR.set_forward_close(...) ###
+### KSR.set_forward_close() ###
 
 `bool KSR.set_forward_close()`
 
 Set the flag to close the connection after forwarding the message.
 
-### KSR.set_forward_no_connect(...) ###
+### KSR.set_forward_no_connect() ###
 
 `bool KSR.set_forward_no_connect()`
 
 Set the flag to not open a connection if the connection to the target does not exist when attempting
 to forward a message.
 
-### KSR.set_reply_close(...) ###
+### KSR.set_reply_close() ###
 
 `bool KSR.set_reply_close()`
 
 Set the flag to close the connection after sending a response.
 
-### KSR.set_reply_no_connect(...) ###
+### KSR.set_reply_no_connect() ###
 
 `bool KSR.set_reply_no_connect()`
 
 Set the flag to not open a connection if the connection for sending the response
 does not exist.
 
-### KSR.forward(...) ###
+### KSR.forward() ###
 
 `int KSR.forward()`
 
