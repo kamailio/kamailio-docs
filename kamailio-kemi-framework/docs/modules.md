@@ -550,6 +550,7 @@ int KSR.async.task_route(str "rn");
 Exported functions:
 
   * [KSR.auth.auth_challenge()](#ksrauthauth_challenge)
+  * [KSR.auth.auth_get_www_authenticate()](#ksrauthauth_get_www_authenticate)
   * [KSR.auth.consume_credentials()](#ksrauthconsume_credentials)
   * [KSR.auth.has_credentials()](#ksrauthhas_credentials)
   * [KSR.auth.proxy_challenge()](#ksrauthproxy_challenge)
@@ -563,6 +564,14 @@ int KSR.auth.auth_challenge(str "realm", int flags);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.auth_challenge'>📖 kamailio.cfg::function::auth_challenge()</a>
+
+#### KSR.auth.auth_get_www_authenticate() ####
+
+```cpp
+int KSR.auth.auth_get_www_authenticate(str "realm", int flags, str "pvdst");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.auth_get_www_authenticate'>📖 kamailio.cfg::function::auth_get_www_authenticate()</a>
 
 #### KSR.auth.consume_credentials() ####
 
@@ -612,6 +621,7 @@ Exported functions:
 
   * [KSR.auth_db.auth_check()](#ksrauth_dbauth_check)
   * [KSR.auth_db.is_subscriber()](#ksrauth_dbis_subscriber)
+  * [KSR.auth_db.www_authenticate_method()](#ksrauth_dbwww_authenticate_method)
 
 #### KSR.auth_db.auth_check() ####
 
@@ -628,6 +638,14 @@ int KSR.auth_db.is_subscriber(str "suri", str "stable", int iflags);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_db.html#auth_db.f.is_subscriber'>📖 kamailio.cfg::function::is_subscriber()</a>
+
+#### KSR.auth_db.www_authenticate_method() ####
+
+```cpp
+int KSR.auth_db.www_authenticate_method(str "realm", str "table", str "method");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_db.html#auth_db.f.www_authenticate_method'>📖 kamailio.cfg::function::www_authenticate_method()</a>
 
 ## auth_ephemeral ##
 
