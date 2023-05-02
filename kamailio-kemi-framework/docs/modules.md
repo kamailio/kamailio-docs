@@ -621,6 +621,7 @@ Exported functions:
 
   * [KSR.auth_db.auth_check()](#ksrauth_dbauth_check)
   * [KSR.auth_db.is_subscriber()](#ksrauth_dbis_subscriber)
+  * [KSR.auth_db.www_authenticate()](#ksrauth_dbwww_authenticate)
   * [KSR.auth_db.www_authenticate_method()](#ksrauth_dbwww_authenticate_method)
 
 #### KSR.auth_db.auth_check() ####
@@ -638,6 +639,14 @@ int KSR.auth_db.is_subscriber(str "suri", str "stable", int iflags);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_db.html#auth_db.f.is_subscriber'>📖 kamailio.cfg::function::is_subscriber()</a>
+
+#### KSR.auth_db.www_authenticate() ####
+
+```cpp
+int KSR.auth_db.www_authenticate(str "realm", str "table");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth_db.html#auth_db.f.www_authenticate'>📖 kamailio.cfg::function::www_authenticate()</a>
 
 #### KSR.auth_db.www_authenticate_method() ####
 
