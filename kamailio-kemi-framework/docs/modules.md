@@ -3838,9 +3838,9 @@ int KSR.kex.setdebug(int lval);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html'>📖 kamailio.cfg::module::kemi.html</a>
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Functions exported by `kemix` module are available in KEMI language under
+`KSR.kx`. They aim to provide a convenient way to retrieve string, boolean or
+integer values for most commonly used variables or runtime environment attributes.
 
 Exported functions:
 
