@@ -28,12 +28,12 @@ development versions, is presented at:
 
   * [Kamailio APT Repos: Debian - Ubuntu](https://deb.kamailio.org/)
 
-For example, if you want to install Kamailio v5.5.x on Debian Buster (10.x), add the next
+For example, if you want to install Kamailio v5.7.x on Debian Bullseye (11.x), add the next
 URLs to APT configuration:
 
 ```
-deb     http://deb.kamailio.org/kamailio55 buster main
-deb-src http://deb.kamailio.org/kamailio55 buster main
+deb     http://deb.kamailio.org/kamailio57 bullseye main
+deb-src http://deb.kamailio.org/kamailio57 bullseye main
 ```
 
 ### APT Repositories Archive ###
@@ -44,10 +44,10 @@ an older version or rollback to an older version, use the repositories listed at
 
   * [APT Repositories Archive](https://deb-archive.kamailio.org/)
 
-For example, to install Kamailio v5.5.1, add the next URL to APT configuration:
+For example, to install Kamailio v5.6.1, add the next URL to APT configuration:
 
 ```
-deb https://deb-archive.kamailio.org/repos/kamailio-5.5.1
+deb https://deb-archive.kamailio.org/repos/kamailio-5.6.1
 ```
 
 ## APT Install Commands ###
