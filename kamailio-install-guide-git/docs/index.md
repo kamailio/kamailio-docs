@@ -1,6 +1,6 @@
 # Kamailio v5.7 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.7 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.7 (stable) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -75,6 +75,7 @@ Download the sources from GIT using the following commands.
 
 ```Shell
   git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
+  git checkout -b 5.7 origin/5.7
   cd kamailio
 ```
 
@@ -276,7 +277,7 @@ have to add several lines at the top of config file, like:
 If you changed the password for the `kamailio` user of MySQL, you have to update
 the value for `db_url` parameters.
 
-You can browse [kamailio.cfg](https://github.com/kamailio/kamailio/blob/master/etc/kamailio.cfg)
+You can browse [kamailio.cfg](https://github.com/kamailio/kamailio/blob/5.7/etc/kamailio.cfg)
 online on GIT repository.
 
 ## Running Kamailio ##
@@ -415,7 +416,7 @@ the lines:
 
 ```Shell
 Module: kamailio
-Branch: master
+Branch: 5.7
 ```
 
 then an update has been made to Kamailio devel version and it will be available
@@ -451,7 +452,7 @@ pull request via:
 
   * [github.com/kamailio/kamailio-docs/pulls](https://github.com/kamailio/kamailio-docs/pulls)
 
-This version of the document is in GIT branch `master`.
+This version of the document is in GIT branch `5.7`.
 
 Errors and other issues can be reported via the tracker at:
 
