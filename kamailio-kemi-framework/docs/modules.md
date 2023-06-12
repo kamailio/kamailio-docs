@@ -8082,6 +8082,7 @@ Exported functions:
   * [KSR.siptrace.sip_trace_dst_cid()](#ksrsiptracesip_trace_dst_cid)
   * [KSR.siptrace.sip_trace_dst_cid_type()](#ksrsiptracesip_trace_dst_cid_type)
   * [KSR.siptrace.sip_trace_mode()](#ksrsiptracesip_trace_mode)
+  * [KSR.siptrace.sip_trace_msg()](#ksrsiptracesip_trace_msg)
 
 #### KSR.siptrace.hlog() ####
 
@@ -8138,6 +8139,14 @@ int KSR.siptrace.sip_trace_mode(str "smode");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_mode'>📖 kamailio.cfg::function::sip_trace_mode()</a>
+
+#### KSR.siptrace.sip_trace_msg() ####
+
+```cpp
+int KSR.siptrace.sip_trace_msg(str "vmsg", str "saddr", str "taddr", str "duri", str "corrid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siptrace.html#siptrace.f.sip_trace_msg'>📖 kamailio.cfg::function::sip_trace_msg()</a>
 
 ## siputils ##
 
