@@ -2687,7 +2687,16 @@ int KSR.geoip.match(str "tomatch", str "pvclass");
 
 Exported functions:
 
+  * [KSR.geoip2.distance()](#ksrgeoip2distance)
   * [KSR.geoip2.match()](#ksrgeoip2match)
+
+#### KSR.geoip2.distance() ####
+
+```cpp
+int KSR.geoip2.distance(str "_ipaddr", str "_lat", str "_lon");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/geoip2.html#geoip2.f.distance'>📖 kamailio.cfg::function::distance()</a>
 
 #### KSR.geoip2.match() ####
 
@@ -3079,6 +3088,8 @@ int KSR.http_client.query_post_hdrs(str "url", str "post", str "hdrs", str "dpv"
 Exported functions:
 
   * [KSR.imc.imc_manager()](#ksrimcimc_manager)
+  * [KSR.imc.imc_room_active()](#ksrimcimc_room_active)
+  * [KSR.imc.imc_room_member()](#ksrimcimc_room_member)
 
 #### KSR.imc.imc_manager() ####
 
@@ -3087,6 +3098,22 @@ int KSR.imc.imc_manager();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/imc.html#imc.f.imc_manager'>📖 kamailio.cfg::function::imc_manager()</a>
+
+#### KSR.imc.imc_room_active() ####
+
+```cpp
+int KSR.imc.imc_room_active(str "room");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/imc.html#imc.f.imc_room_active'>📖 kamailio.cfg::function::imc_room_active()</a>
+
+#### KSR.imc.imc_room_member() ####
+
+```cpp
+int KSR.imc.imc_room_member(str "room", str "member");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/imc.html#imc.f.imc_room_member'>📖 kamailio.cfg::function::imc_room_member()</a>
 
 ## ims_charging ##
 
@@ -4522,6 +4549,22 @@ int KSR.mediaproxy.use_media_proxy();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/mediaproxy.html#mediaproxy.f.use_media_proxy'>📖 kamailio.cfg::function::use_media_proxy()</a>
 
+## microhttpd ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/microhttpd.html'>📖 kamailio.cfg::module::microhttpd.html</a>
+
+Exported functions:
+
+  * [KSR.microhttpd.mhttpd_reply()](#ksrmicrohttpdmhttpd_reply)
+
+#### KSR.microhttpd.mhttpd_reply() ####
+
+```cpp
+int KSR.microhttpd.mhttpd_reply(int rcode, str "sreason", str "sctype", str "sbody");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/microhttpd.html#microhttpd.f.mhttpd_reply'>📖 kamailio.cfg::function::mhttpd_reply()</a>
+
 ## misc_radius ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/misc_radius.html'>📖 kamailio.cfg::module::misc_radius.html</a>
@@ -4732,6 +4775,7 @@ Exported functions:
   * [KSR.msilo.mdump()](#ksrmsilomdump)
   * [KSR.msilo.mdump_uri()](#ksrmsilomdump_uri)
   * [KSR.msilo.mstore()](#ksrmsilomstore)
+  * [KSR.msilo.mstore_addrs()](#ksrmsilomstore_addrs)
   * [KSR.msilo.mstore_uri()](#ksrmsilomstore_uri)
 
 #### KSR.msilo.mdump() ####
@@ -4758,10 +4802,18 @@ int KSR.msilo.mstore();
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msilo.html#msilo.f.mstore'>📖 kamailio.cfg::function::mstore()</a>
 
+#### KSR.msilo.mstore_addrs() ####
+
+```cpp
+int KSR.msilo.mstore_addrs(str "owner", str "srcaddr", str "dstaddr");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msilo.html#msilo.f.mstore_addrs'>📖 kamailio.cfg::function::mstore_addrs()</a>
+
 #### KSR.msilo.mstore_uri() ####
 
 ```cpp
-int KSR.msilo.mstore_uri(str "owner_s");
+int KSR.msilo.mstore_uri(str "owner");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msilo.html#msilo.f.mstore_uri'>📖 kamailio.cfg::function::mstore_uri()</a>
