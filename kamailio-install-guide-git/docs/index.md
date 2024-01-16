@@ -321,7 +321,7 @@ To install the `init.d` script, run in Kamailio source code directory:
 make install-initd-debian
 ```
 
-Follow any instructions that may be printed by the above commad.
+Follow any instructions that may be printed by the above command.
 
 Then you can start/stop Kamailio using the following commands:
 
@@ -338,7 +338,7 @@ To install the `systemd` unit, run in Kamailio source code directory:
 make install-systemd-debian
 ```
 
-Follow any instructions that may be printed by the above commad.
+Follow any instructions that may be printed by the above command.
 
 Then you can start/stop Kamailio using the following commands:
 
