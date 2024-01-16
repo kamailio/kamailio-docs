@@ -18,13 +18,41 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.5.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.8.0)
 with MySQL/MariaDB support, using a Debian unstable system.*
 
+To be able to follow the guidelines from this document you need `root` access.
+
+## Quick Install ##
+
+This section collects in one set the commands to install Kamailio with `db_mysql`
+ and `tls` modules to be able to connect to MariaDb or MySQL servers and configure
+Kamailio to also listen on TLS sockets. For understanding what is actually done
+or customize the installation, read the next sections.
+
+```Shell
+  apt update
+  apt install -y make autoconf pkg-config git gcc g++ flex bison \
+      libssl-dev default-libmysqlclient-dev
+  mkdir -p /usr/local/src/kamailio-devel
+  cd /usr/local/src/kamailio-devel
+  git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
+  cd kamailio
+  make include_modules="db_mysql tls" cfg
+  make all
+  make install
+  make install-systemd-debian
+```
+
+Now Kamailio is installed. Recommendations for other sections to read:
+
+  - `MySQL Or MariaDB Server` about installing the backend SQL server
+  - `What And Where Was Installed` to see where the relevant files were deployed
+  - `Create MySQL Database` to create the required database
+  - `Ready To Rock` to see how to create SIP subscriber accounts
 
 ## Prerequisites ##
 
-To be able to follow the guidelines from this document you need `root` access.
 
 The following packages are required before proceeding to the next steps.
 
