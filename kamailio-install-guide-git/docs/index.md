@@ -1,6 +1,6 @@
-# Kamailio v5.7 - Install Guide #
+# Kamailio v5.8 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.7 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.8 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
