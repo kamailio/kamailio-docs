@@ -67,16 +67,16 @@ will be stored.
 
 
 ```Shell
-  mkdir -p /usr/local/src/kamailio-devel
-  cd /usr/local/src/kamailio-devel
+  mkdir -p /usr/local/src/kamailio-5.7
+  cd /usr/local/src/kamailio-5.7
 ```
 
 Download the sources from GIT using the following commands.
 
 ```Shell
   git clone --depth 1 --no-single-branch https://github.com/kamailio/kamailio kamailio
-  git checkout -b 5.7 origin/5.7
   cd kamailio
+  git checkout -b 5.7 origin/5.7
 ```
 
 _**Note**: if your git client version does not support **--no-single-branch**
