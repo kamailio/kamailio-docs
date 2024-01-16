@@ -18,8 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.5.0)
-with MySQL/MariaDB support, using a Debian unstable system.*
+*This document focuses on Kamailio v5.7.x series with MySQL/MariaDB support, using a Debian unstable system.*
 
 To be able to follow the guidelines from this document you need `root` access.
 
