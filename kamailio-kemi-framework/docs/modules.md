@@ -394,76 +394,6 @@ int KSR.app_ruby.run_p3(str "func", str "p1", str "p2", str "p3");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_ruby.html#app_ruby.f.run_p3'>📖 kamailio.cfg::function::run_p3()</a>
 
-## app_sqlang ##
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html'>📖 kamailio.cfg::module::app_sqlang.html</a>
-
-Exported functions:
-
-  * [KSR.app_sqlang.dofile()](#ksrapp_sqlangdofile)
-  * [KSR.app_sqlang.dostring()](#ksrapp_sqlangdostring)
-  * [KSR.app_sqlang.run()](#ksrapp_sqlangrun)
-  * [KSR.app_sqlang.run_p1()](#ksrapp_sqlangrun_p1)
-  * [KSR.app_sqlang.run_p2()](#ksrapp_sqlangrun_p2)
-  * [KSR.app_sqlang.run_p3()](#ksrapp_sqlangrun_p3)
-  * [KSR.app_sqlang.runstring()](#ksrapp_sqlangrunstring)
-
-#### KSR.app_sqlang.dofile() ####
-
-```cpp
-int KSR.app_sqlang.dofile(str "script");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.dofile'>📖 kamailio.cfg::function::dofile()</a>
-
-#### KSR.app_sqlang.dostring() ####
-
-```cpp
-int KSR.app_sqlang.dostring(str "script");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.dostring'>📖 kamailio.cfg::function::dostring()</a>
-
-#### KSR.app_sqlang.run() ####
-
-```cpp
-int KSR.app_sqlang.run(str "func");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.run'>📖 kamailio.cfg::function::run()</a>
-
-#### KSR.app_sqlang.run_p1() ####
-
-```cpp
-int KSR.app_sqlang.run_p1(str "func", str "p1");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.run_p1'>📖 kamailio.cfg::function::run_p1()</a>
-
-#### KSR.app_sqlang.run_p2() ####
-
-```cpp
-int KSR.app_sqlang.run_p2(str "func", str "p1", str "p2");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.run_p2'>📖 kamailio.cfg::function::run_p2()</a>
-
-#### KSR.app_sqlang.run_p3() ####
-
-```cpp
-int KSR.app_sqlang.run_p3(str "func", str "p1", str "p2", str "p3");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.run_p3'>📖 kamailio.cfg::function::run_p3()</a>
-
-#### KSR.app_sqlang.runstring() ####
-
-```cpp
-int KSR.app_sqlang.runstring(str "script");
-```
-
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/app_sqlang.html#app_sqlang.f.runstring'>📖 kamailio.cfg::function::runstring()</a>
-
 ## async ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/async.html'>📖 kamailio.cfg::module::async.html</a>
@@ -2673,6 +2603,31 @@ int KSR.exec.exec_msg(str "cmd");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/exec.html#exec.f.exec_msg'>📖 kamailio.cfg::function::exec_msg()</a>
+
+## gcrypt ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/gcrypt.html'>📖 kamailio.cfg::module::gcrypt.html</a>
+
+Exported functions:
+
+  * [KSR.gcrypt.aes_decrypt()](#ksrgcryptaes_decrypt)
+  * [KSR.gcrypt.aes_encrypt()](#ksrgcryptaes_encrypt)
+
+#### KSR.gcrypt.aes_decrypt() ####
+
+```cpp
+int KSR.gcrypt.aes_decrypt(str "ins", str "keys", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/gcrypt.html#gcrypt.f.aes_decrypt'>📖 kamailio.cfg::function::aes_decrypt()</a>
+
+#### KSR.gcrypt.aes_encrypt() ####
+
+```cpp
+int KSR.gcrypt.aes_encrypt(str "ins", str "keys", str "dpv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/gcrypt.html#gcrypt.f.aes_encrypt'>📖 kamailio.cfg::function::aes_encrypt()</a>
 
 ## geoip ##
 
@@ -7926,6 +7881,8 @@ Exported functions:
   * [KSR.secsipid.secsipid_check_identity_pubkey()](#ksrsecsipidsecsipid_check_identity_pubkey)
   * [KSR.secsipid.secsipid_get_url()](#ksrsecsipidsecsipid_get_url)
   * [KSR.secsipid.secsipid_get_val()](#ksrsecsipidsecsipid_get_val)
+  * [KSR.secsipid.secsipid_sign()](#ksrsecsipidsecsipid_sign)
+  * [KSR.secsipid.secsipid_sign_prvkey()](#ksrsecsipidsecsipid_sign_prvkey)
 
 #### KSR.secsipid.result_str() ####
 
@@ -7998,6 +7955,22 @@ xval KSR.secsipid.secsipid_get_val();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_get_val'>📖 kamailio.cfg::function::secsipid_get_val()</a>
+
+#### KSR.secsipid.secsipid_sign() ####
+
+```cpp
+int KSR.secsipid.secsipid_sign(str "sheaders", str "spayload", str "keypath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_sign'>📖 kamailio.cfg::function::secsipid_sign()</a>
+
+#### KSR.secsipid.secsipid_sign_prvkey() ####
+
+```cpp
+int KSR.secsipid.secsipid_sign_prvkey(str "sheaders", str "spayload", str "keydata");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.secsipid_sign_prvkey'>📖 kamailio.cfg::function::secsipid_sign_prvkey()</a>
 
 ## sipcapture ##
 
@@ -8287,6 +8260,7 @@ Exported functions:
   * [KSR.siputils.cmp_aor()](#ksrsiputilscmp_aor)
   * [KSR.siputils.cmp_hdr_name()](#ksrsiputilscmp_hdr_name)
   * [KSR.siputils.cmp_uri()](#ksrsiputilscmp_uri)
+  * [KSR.siputils.contact_param_check()](#ksrsiputilscontact_param_check)
   * [KSR.siputils.contact_param_decode()](#ksrsiputilscontact_param_decode)
   * [KSR.siputils.contact_param_decode_ruri()](#ksrsiputilscontact_param_decode_ruri)
   * [KSR.siputils.contact_param_encode()](#ksrsiputilscontact_param_encode)
@@ -8344,6 +8318,14 @@ int KSR.siputils.cmp_uri(str "uri1", str "uri2");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.cmp_uri'>📖 kamailio.cfg::function::cmp_uri()</a>
+
+#### KSR.siputils.contact_param_check() ####
+
+```cpp
+int KSR.siputils.contact_param_check(str "nparam");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_check'>📖 kamailio.cfg::function::contact_param_check()</a>
 
 #### KSR.siputils.contact_param_decode() ####
 
@@ -8552,6 +8534,7 @@ int KSR.siputils.uri_param_value(str "sparam", str "svalue");
 Exported functions:
 
   * [KSR.sl.send_reply()](#ksrslsend_reply)
+  * [KSR.sl.send_reply_error()](#ksrslsend_reply_error)
   * [KSR.sl.send_reply_mode()](#ksrslsend_reply_mode)
   * [KSR.sl.sl_forward_reply()](#ksrslsl_forward_reply)
   * [KSR.sl.sl_reply_error()](#ksrslsl_reply_error)
@@ -8564,6 +8547,14 @@ int KSR.sl.send_reply(int code, str "reason");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sl.html#sl.f.send_reply'>📖 kamailio.cfg::function::send_reply()</a>
+
+#### KSR.sl.send_reply_error() ####
+
+```cpp
+int KSR.sl.send_reply_error();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sl.html#sl.f.send_reply_error'>📖 kamailio.cfg::function::send_reply_error()</a>
 
 #### KSR.sl.send_reply_mode() ####
 
@@ -10104,6 +10095,7 @@ Exported functions:
   * [KSR.tm.t_release()](#ksrtmt_release)
   * [KSR.tm.t_replicate()](#ksrtmt_replicate)
   * [KSR.tm.t_reply()](#ksrtmt_reply)
+  * [KSR.tm.t_reply_error()](#ksrtmt_reply_error)
   * [KSR.tm.t_reset_fr()](#ksrtmt_reset_fr)
   * [KSR.tm.t_reset_max_lifetime()](#ksrtmt_reset_max_lifetime)
   * [KSR.tm.t_reset_retr()](#ksrtmt_reset_retr)
@@ -10425,6 +10417,14 @@ int KSR.tm.t_reply(int code, str "reason");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tm.html#tm.f.t_reply'>📖 kamailio.cfg::function::t_reply()</a>
+
+#### KSR.tm.t_reply_error() ####
+
+```cpp
+int KSR.tm.t_reply_error();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tm.html#tm.f.t_reply_error'>📖 kamailio.cfg::function::t_reply_error()</a>
 
 #### KSR.tm.t_reset_fr() ####
 
