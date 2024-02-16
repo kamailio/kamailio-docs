@@ -3197,6 +3197,49 @@ int KSR.ims_qos.Rx_AAR_Register(str "route", str "domain");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_qos.html#ims_qos.f.Rx_AAR_Register'>📖 kamailio.cfg::function::Rx_AAR_Register()</a>
 
+## influxdbc ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/influxdbc.html'>📖 kamailio.cfg::module::influxdbc.html</a>
+
+Exported functions:
+
+  * [KSR.influxdbc.ic_long()](#ksrinfluxdbcic_long)
+  * [KSR.influxdbc.measure()](#ksrinfluxdbcmeasure)
+  * [KSR.influxdbc.measureend()](#ksrinfluxdbcmeasureend)
+  * [KSR.influxdbc.push()](#ksrinfluxdbcpush)
+
+#### KSR.influxdbc.ic_long() ####
+
+```cpp
+int KSR.influxdbc.ic_long(str "name", int val);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/influxdbc.html#influxdbc.f.ic_long'>📖 kamailio.cfg::function::ic_long()</a>
+
+#### KSR.influxdbc.measure() ####
+
+```cpp
+int KSR.influxdbc.measure(str "name");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/influxdbc.html#influxdbc.f.measure'>📖 kamailio.cfg::function::measure()</a>
+
+#### KSR.influxdbc.measureend() ####
+
+```cpp
+int KSR.influxdbc.measureend();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/influxdbc.html#influxdbc.f.measureend'>📖 kamailio.cfg::function::measureend()</a>
+
+#### KSR.influxdbc.push() ####
+
+```cpp
+int KSR.influxdbc.push();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/influxdbc.html#influxdbc.f.push'>📖 kamailio.cfg::function::push()</a>
+
 ## ipops ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ipops.html'>📖 kamailio.cfg::module::ipops.html</a>
@@ -7704,6 +7747,13 @@ Exported functions:
   * [KSR.sdpops.sdp_content_flags()](#ksrsdpopssdp_content_flags)
   * [KSR.sdpops.sdp_get()](#ksrsdpopssdp_get)
   * [KSR.sdpops.sdp_get_line_startswith()](#ksrsdpopssdp_get_line_startswith)
+  * [KSR.sdpops.sdp_iterator_append()](#ksrsdpopssdp_iterator_append)
+  * [KSR.sdpops.sdp_iterator_end()](#ksrsdpopssdp_iterator_end)
+  * [KSR.sdpops.sdp_iterator_insert()](#ksrsdpopssdp_iterator_insert)
+  * [KSR.sdpops.sdp_iterator_next()](#ksrsdpopssdp_iterator_next)
+  * [KSR.sdpops.sdp_iterator_rm()](#ksrsdpopssdp_iterator_rm)
+  * [KSR.sdpops.sdp_iterator_start()](#ksrsdpopssdp_iterator_start)
+  * [KSR.sdpops.sdp_iterator_value()](#ksrsdpopssdp_iterator_value)
   * [KSR.sdpops.sdp_print()](#ksrsdpopssdp_print)
   * [KSR.sdpops.sdp_transport()](#ksrsdpopssdp_transport)
   * [KSR.sdpops.sdp_with_active_media()](#ksrsdpopssdp_with_active_media)
@@ -7793,6 +7843,62 @@ int KSR.sdpops.sdp_get_line_startswith(str "aname", str "sline");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_get_line_startswith'>📖 kamailio.cfg::function::sdp_get_line_startswith()</a>
+
+#### KSR.sdpops.sdp_iterator_append() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_append(str "iname", str "text");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_append'>📖 kamailio.cfg::function::sdp_iterator_append()</a>
+
+#### KSR.sdpops.sdp_iterator_end() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_end(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_end'>📖 kamailio.cfg::function::sdp_iterator_end()</a>
+
+#### KSR.sdpops.sdp_iterator_insert() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_insert(str "iname", str "text");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_insert'>📖 kamailio.cfg::function::sdp_iterator_insert()</a>
+
+#### KSR.sdpops.sdp_iterator_next() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_next(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_next'>📖 kamailio.cfg::function::sdp_iterator_next()</a>
+
+#### KSR.sdpops.sdp_iterator_rm() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_rm(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_rm'>📖 kamailio.cfg::function::sdp_iterator_rm()</a>
+
+#### KSR.sdpops.sdp_iterator_start() ####
+
+```cpp
+int KSR.sdpops.sdp_iterator_start(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_start'>📖 kamailio.cfg::function::sdp_iterator_start()</a>
+
+#### KSR.sdpops.sdp_iterator_value() ####
+
+```cpp
+xval KSR.sdpops.sdp_iterator_value(str "iname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_iterator_value'>📖 kamailio.cfg::function::sdp_iterator_value()</a>
 
 #### KSR.sdpops.sdp_print() ####
 
@@ -11586,6 +11692,7 @@ Exported functions:
   * [KSR.xlog.xerr()](#ksrxlogxerr)
   * [KSR.xlog.xinfo()](#ksrxlogxinfo)
   * [KSR.xlog.xlog()](#ksrxlogxlog)
+  * [KSR.xlog.xlog_facility()](#ksrxlogxlog_facility)
   * [KSR.xlog.xnotice()](#ksrxlogxnotice)
   * [KSR.xlog.xwarn()](#ksrxlogxwarn)
 
@@ -11636,6 +11743,14 @@ int KSR.xlog.xlog(str "slevel", str "lmsg");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xlog.html#xlog.f.xlog'>📖 kamailio.cfg::function::xlog()</a>
+
+#### KSR.xlog.xlog_facility() ####
+
+```cpp
+int KSR.xlog.xlog_facility(str "lfacility", str "slevel", str "lmsg");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xlog.html#xlog.f.xlog_facility'>📖 kamailio.cfg::function::xlog_facility()</a>
 
 #### KSR.xlog.xnotice() ####
 
