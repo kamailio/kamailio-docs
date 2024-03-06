@@ -1,6 +1,6 @@
 # Kamailio v5.8 - Install Guide #
 
-**Guide to install Kamailio SIP Server v5.8 (devel) from Git repository.**
+**Guide to install Kamailio SIP Server v5.9 (devel) from Git repository.**
 
 For more about Kamailio Project visit: [kamailio.org](https://www.kamailio.org).
 
@@ -18,7 +18,7 @@ server development version using the sources downloaded from GIT repository -
 the choice for those willing to write code for Kamailio or to try the new
 features to be released in the future with the next major stable version.
 
-*This document focuses on Kamailio devel (at this time it is the upcoming v5.8.0)
+*This document focuses on Kamailio devel (at this time it is the upcoming v5.9.0)
 with MySQL/MariaDB support, using a Debian unstable system.*
 
 To be able to follow the guidelines from this document you need `root` access.
