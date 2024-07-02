@@ -6117,6 +6117,7 @@ Exported functions:
   * [KSR.pvx.xavp_seti()](#ksrpvxxavp_seti)
   * [KSR.pvx.xavp_sets()](#ksrpvxxavp_sets)
   * [KSR.pvx.xavp_slist_explode()](#ksrpvxxavp_slist_explode)
+  * [KSR.pvx.xavp_xparams_explode()](#ksrpvxxavp_xparams_explode)
   * [KSR.pvx.xavu_child_get()](#ksrpvxxavu_child_get)
   * [KSR.pvx.xavu_child_gete()](#ksrpvxxavu_child_gete)
   * [KSR.pvx.xavu_child_getw()](#ksrpvxxavu_child_getw)
@@ -6653,6 +6654,14 @@ int KSR.pvx.xavp_slist_explode(str "slist", str "sep", str "mode", str "sxname")
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_slist_explode'>📖 kamailio.cfg::function::xavp_slist_explode()</a>
+
+#### KSR.pvx.xavp_xparams_explode() ####
+
+```cpp
+int KSR.pvx.xavp_xparams_explode(str "sparams", str "sep", str "sxname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_xparams_explode'>📖 kamailio.cfg::function::xavp_xparams_explode()</a>
 
 #### KSR.pvx.xavu_child_get() ####
 
