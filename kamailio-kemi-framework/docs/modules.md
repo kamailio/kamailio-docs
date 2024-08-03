@@ -3233,7 +3233,17 @@ int KSR.ims_diameter_server.diameter_request_async(str "peer", int appid, int co
 Exported functions:
 
   * [KSR.ims_qos.Rx_AAR()](#ksrims_qosRx_AAR)
+  * [KSR.ims_qos.Rx_AAR()](#ksrims_qosRx_AAR)
   * [KSR.ims_qos.Rx_AAR_Register()](#ksrims_qosRx_AAR_Register)
+  * [KSR.ims_qos.Rx_AAR_Register()](#ksrims_qosRx_AAR_Register)
+
+#### KSR.ims_qos.Rx_AAR() ####
+
+```cpp
+int KSR.ims_qos.Rx_AAR(str "route", str "dir", str "c_id", int id_type, str "sessionId");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_qos.html#ims_qos.f.Rx_AAR'>📖 kamailio.cfg::function::Rx_AAR()</a>
 
 #### KSR.ims_qos.Rx_AAR() ####
 
@@ -3242,6 +3252,14 @@ int KSR.ims_qos.Rx_AAR(str "route", str "dir", str "c_id", int id_type);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_qos.html#ims_qos.f.Rx_AAR'>📖 kamailio.cfg::function::Rx_AAR()</a>
+
+#### KSR.ims_qos.Rx_AAR_Register() ####
+
+```cpp
+int KSR.ims_qos.Rx_AAR_Register(str "route", str "domain");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/ims_qos.html#ims_qos.f.Rx_AAR_Register'>📖 kamailio.cfg::function::Rx_AAR_Register()</a>
 
 #### KSR.ims_qos.Rx_AAR_Register() ####
 
@@ -4955,6 +4973,7 @@ Exported functions:
 
   * [KSR.msrp.cmap_lookup()](#ksrmsrpcmap_lookup)
   * [KSR.msrp.cmap_save()](#ksrmsrpcmap_save)
+  * [KSR.msrp.forward()](#ksrmsrpforward)
   * [KSR.msrp.is_reply()](#ksrmsrpis_reply)
   * [KSR.msrp.is_request()](#ksrmsrpis_request)
   * [KSR.msrp.relay()](#ksrmsrprelay)
@@ -4978,6 +4997,14 @@ int KSR.msrp.cmap_save();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msrp.html#msrp.f.cmap_save'>📖 kamailio.cfg::function::cmap_save()</a>
+
+#### KSR.msrp.forward() ####
+
+```cpp
+int KSR.msrp.forward(str "tpath", str "fpath");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/msrp.html#msrp.f.forward'>📖 kamailio.cfg::function::forward()</a>
 
 #### KSR.msrp.is_reply() ####
 
@@ -9575,6 +9602,7 @@ Exported functions:
   * [KSR.textops.subst_hf()](#ksrtextopssubst_hf)
   * [KSR.textops.subst_uri()](#ksrtextopssubst_uri)
   * [KSR.textops.subst_user()](#ksrtextopssubst_user)
+  * [KSR.textops.subst_v()](#ksrtextopssubst_v)
 
 #### KSR.textops.append_body_part() ####
 
@@ -10015,6 +10043,14 @@ int KSR.textops.subst_user(str "subst");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.subst_user'>📖 kamailio.cfg::function::subst_user()</a>
+
+#### KSR.textops.subst_v() ####
+
+```cpp
+int KSR.textops.subst_v(str "itext", str "subex", str "opv");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.subst_v'>📖 kamailio.cfg::function::subst_v()</a>
 
 ## textopsx ##
 
