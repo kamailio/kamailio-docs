@@ -5562,6 +5562,7 @@ int KSR.permissions.allow_trusted();
 Exported functions:
 
   * [KSR.phonenum.match()](#ksrphonenummatch)
+  * [KSR.phonenum.match_cn()](#ksrphonenummatch_cn)
 
 #### KSR.phonenum.match() ####
 
@@ -5570,6 +5571,14 @@ int KSR.phonenum.match(str "tomatch", str "pvclass");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/phonenum.html#phonenum.f.match'>📖 kamailio.cfg::function::match()</a>
+
+#### KSR.phonenum.match_cn() ####
+
+```cpp
+int KSR.phonenum.match_cn(str "tomatch", str "cnc", str "pvclass");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/phonenum.html#phonenum.f.match_cn'>📖 kamailio.cfg::function::match_cn()</a>
 
 ## pike ##
 
