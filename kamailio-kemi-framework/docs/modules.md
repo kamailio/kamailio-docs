@@ -1250,6 +1250,8 @@ Exported functions:
   * [KSR.corex.append_branch_uri_q()](#ksrcorexappend_branch_uri_q)
   * [KSR.corex.file_read()](#ksrcorexfile_read)
   * [KSR.corex.file_write()](#ksrcorexfile_write)
+  * [KSR.corex.forward_uac()](#ksrcorexforward_uac)
+  * [KSR.corex.forward_uac_uri()](#ksrcorexforward_uac_uri)
   * [KSR.corex.has_ruri_user()](#ksrcorexhas_ruri_user)
   * [KSR.corex.has_user_agent()](#ksrcorexhas_user_agent)
   * [KSR.corex.is_faked_msg()](#ksrcorexis_faked_msg)
@@ -1308,6 +1310,22 @@ int KSR.corex.file_write(str "fname", str "fdata");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/corex.html#corex.f.file_write'>📖 kamailio.cfg::function::file_write()</a>
+
+#### KSR.corex.forward_uac() ####
+
+```cpp
+int KSR.corex.forward_uac();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/corex.html#corex.f.forward_uac'>📖 kamailio.cfg::function::forward_uac()</a>
+
+#### KSR.corex.forward_uac_uri() ####
+
+```cpp
+int KSR.corex.forward_uac_uri(str "vuri");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/corex.html#corex.f.forward_uac_uri'>📖 kamailio.cfg::function::forward_uac_uri()</a>
 
 #### KSR.corex.has_ruri_user() ####
 
@@ -8665,6 +8683,7 @@ Exported functions:
   * [KSR.siputils.is_uri()](#ksrsiputilsis_uri)
   * [KSR.siputils.is_user()](#ksrsiputilsis_user)
   * [KSR.siputils.options_reply()](#ksrsiputilsoptions_reply)
+  * [KSR.siputils.sip_parse_headers()](#ksrsiputilssip_parse_headers)
   * [KSR.siputils.uri_param()](#ksrsiputilsuri_param)
   * [KSR.siputils.uri_param_any()](#ksrsiputilsuri_param_any)
   * [KSR.siputils.uri_param_rm()](#ksrsiputilsuri_param_rm)
@@ -8893,6 +8912,14 @@ int KSR.siputils.options_reply();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.options_reply'>📖 kamailio.cfg::function::options_reply()</a>
+
+#### KSR.siputils.sip_parse_headers() ####
+
+```cpp
+int KSR.siputils.sip_parse_headers();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.sip_parse_headers'>📖 kamailio.cfg::function::sip_parse_headers()</a>
 
 #### KSR.siputils.uri_param() ####
 
