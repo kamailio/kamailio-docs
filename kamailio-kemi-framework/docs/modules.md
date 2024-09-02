@@ -8256,6 +8256,94 @@ int KSR.sdpops.sdp_with_transport_like(str "transport");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sdpops.html#sdpops.f.sdp_with_transport_like'>📖 kamailio.cfg::function::sdp_with_transport_like()</a>
 
+## secfilter ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html'>📖 kamailio.cfg::module::secfilter.html</a>
+
+Exported functions:
+
+  * [KSR.secfilter.secf_check_contact_hdr()](#ksrsecfiltersecf_check_contact_hdr)
+  * [KSR.secfilter.secf_check_country()](#ksrsecfiltersecf_check_country)
+  * [KSR.secfilter.secf_check_dst()](#ksrsecfiltersecf_check_dst)
+  * [KSR.secfilter.secf_check_from_hdr()](#ksrsecfiltersecf_check_from_hdr)
+  * [KSR.secfilter.secf_check_ip()](#ksrsecfiltersecf_check_ip)
+  * [KSR.secfilter.secf_check_sqli_all()](#ksrsecfiltersecf_check_sqli_all)
+  * [KSR.secfilter.secf_check_to_hdr()](#ksrsecfiltersecf_check_to_hdr)
+  * [KSR.secfilter.secf_check_ua()](#ksrsecfiltersecf_check_ua)
+  * [KSR.secfilter.secf_sqli_hdr()](#ksrsecfiltersecf_sqli_hdr)
+
+#### KSR.secfilter.secf_check_contact_hdr() ####
+
+```cpp
+int KSR.secfilter.secf_check_contact_hdr();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_contact_hdr'>📖 kamailio.cfg::function::secf_check_contact_hdr()</a>
+
+#### KSR.secfilter.secf_check_country() ####
+
+```cpp
+int KSR.secfilter.secf_check_country(str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_country'>📖 kamailio.cfg::function::secf_check_country()</a>
+
+#### KSR.secfilter.secf_check_dst() ####
+
+```cpp
+int KSR.secfilter.secf_check_dst(str "val");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_dst'>📖 kamailio.cfg::function::secf_check_dst()</a>
+
+#### KSR.secfilter.secf_check_from_hdr() ####
+
+```cpp
+int KSR.secfilter.secf_check_from_hdr();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_from_hdr'>📖 kamailio.cfg::function::secf_check_from_hdr()</a>
+
+#### KSR.secfilter.secf_check_ip() ####
+
+```cpp
+int KSR.secfilter.secf_check_ip();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_ip'>📖 kamailio.cfg::function::secf_check_ip()</a>
+
+#### KSR.secfilter.secf_check_sqli_all() ####
+
+```cpp
+int KSR.secfilter.secf_check_sqli_all();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_sqli_all'>📖 kamailio.cfg::function::secf_check_sqli_all()</a>
+
+#### KSR.secfilter.secf_check_to_hdr() ####
+
+```cpp
+int KSR.secfilter.secf_check_to_hdr();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_to_hdr'>📖 kamailio.cfg::function::secf_check_to_hdr()</a>
+
+#### KSR.secfilter.secf_check_ua() ####
+
+```cpp
+int KSR.secfilter.secf_check_ua();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_check_ua'>📖 kamailio.cfg::function::secf_check_ua()</a>
+
+#### KSR.secfilter.secf_sqli_hdr() ####
+
+```cpp
+int KSR.secfilter.secf_sqli_hdr(str "cval");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secfilter.html#secfilter.f.secf_sqli_hdr'>📖 kamailio.cfg::function::secf_sqli_hdr()</a>
+
 ## secsipid ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/secsipid.html'>📖 kamailio.cfg::module::secsipid.html</a>
