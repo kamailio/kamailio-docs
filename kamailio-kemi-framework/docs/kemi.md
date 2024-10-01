@@ -483,6 +483,8 @@ The documentation for `app_ruby` is available at:
 
 ### Squirrel KEMI Interpreter ###
 
+**IMPORTANT: this module has been archived, it is no longer in the main git repository.**
+
 It is implemented by `app_sqlang` module. The Squirrel language interpreter is imported inside the module from
 [Squirrel](http://www.squirrel-lang.org) project, therefore it doesn't require to install any external libraries.
 
