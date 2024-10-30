@@ -991,6 +991,40 @@ int KSR.carrierroute.cr_user_carrier(str "user", str "domain", str "dstvar");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/carrierroute.html#carrierroute.f.cr_user_carrier'>📖 kamailio.cfg::function::cr_user_carrier()</a>
 
+## cdp ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cdp.html'>📖 kamailio.cfg::module::cdp.html</a>
+
+Exported functions:
+
+  * [KSR.cdp.cdp_check_peer()](#ksrcdpcdp_check_peer)
+  * [KSR.cdp.cdp_has_app()](#ksrcdpcdp_has_app)
+  * [KSR.cdp.cdp_has_app2()](#ksrcdpcdp_has_app2)
+
+#### KSR.cdp.cdp_check_peer() ####
+
+```cpp
+int KSR.cdp.cdp_check_peer(str "peer");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cdp.html#cdp.f.cdp_check_peer'>📖 kamailio.cfg::function::cdp_check_peer()</a>
+
+#### KSR.cdp.cdp_has_app() ####
+
+```cpp
+int KSR.cdp.cdp_has_app(str "appid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cdp.html#cdp.f.cdp_has_app'>📖 kamailio.cfg::function::cdp_has_app()</a>
+
+#### KSR.cdp.cdp_has_app2() ####
+
+```cpp
+int KSR.cdp.cdp_has_app2(str "vendor", str "appid");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cdp.html#cdp.f.cdp_has_app2'>📖 kamailio.cfg::function::cdp_has_app2()</a>
+
 ## cfgutils ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html'>📖 kamailio.cfg::module::cfgutils.html</a>
@@ -10492,6 +10526,22 @@ int KSR.textopsx.remove_hf_value2(str "hexp", str "val");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textopsx.html#textopsx.f.remove_hf_value2'>📖 kamailio.cfg::function::remove_hf_value2()</a>
+
+## timer ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/timer.html'>📖 kamailio.cfg::module::timer.html</a>
+
+Exported functions:
+
+  * [KSR.timer.timer_enable()](#ksrtimertimer_enable)
+
+#### KSR.timer.timer_enable() ####
+
+```cpp
+int KSR.timer.timer_enable(str "timerid", int enable);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/timer.html#timer.f.timer_enable'>📖 kamailio.cfg::function::timer_enable()</a>
 
 ## tls ##
 
