@@ -486,6 +486,9 @@ Exported functions:
   * [KSR.auth.has_credentials()](#ksrauthhas_credentials)
   * [KSR.auth.proxy_challenge()](#ksrauthproxy_challenge)
   * [KSR.auth.pv_auth_check()](#ksrauthpv_auth_check)
+  * [KSR.auth.pv_proxy_authenticate()](#ksrauthpv_proxy_authenticate)
+  * [KSR.auth.pv_www_authenticate()](#ksrauthpv_www_authenticate)
+  * [KSR.auth.pv_www_authenticate_method()](#ksrauthpv_www_authenticate_method)
   * [KSR.auth.www_challenge()](#ksrauthwww_challenge)
 
 #### KSR.auth.auth_algorithm() ####
@@ -543,6 +546,30 @@ int KSR.auth.pv_auth_check(str "srealm", str "spasswd", int vflags, int vchecks)
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.pv_auth_check'>📖 kamailio.cfg::function::pv_auth_check()</a>
+
+#### KSR.auth.pv_proxy_authenticate() ####
+
+```cpp
+int KSR.auth.pv_proxy_authenticate(str "realm", str "passwd", int flags);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.pv_proxy_authenticate'>📖 kamailio.cfg::function::pv_proxy_authenticate()</a>
+
+#### KSR.auth.pv_www_authenticate() ####
+
+```cpp
+int KSR.auth.pv_www_authenticate(str "realm", str "passwd", int flags);
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.pv_www_authenticate'>📖 kamailio.cfg::function::pv_www_authenticate()</a>
+
+#### KSR.auth.pv_www_authenticate_method() ####
+
+```cpp
+int KSR.auth.pv_www_authenticate_method(str "realm", str "passwd", int flags, str "method");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/auth.html#auth.f.pv_www_authenticate_method'>📖 kamailio.cfg::function::pv_www_authenticate_method()</a>
 
 #### KSR.auth.www_challenge() ####
 
@@ -1615,10 +1642,12 @@ Exported functions:
   * [KSR.dialog.dlg_reset_property()](#ksrdialogdlg_reset_property)
   * [KSR.dialog.dlg_resetflag()](#ksrdialogdlg_resetflag)
   * [KSR.dialog.dlg_set_property()](#ksrdialogdlg_set_property)
+  * [KSR.dialog.dlg_set_state()](#ksrdialogdlg_set_state)
   * [KSR.dialog.dlg_set_timeout()](#ksrdialogdlg_set_timeout)
   * [KSR.dialog.dlg_set_timeout_id()](#ksrdialogdlg_set_timeout_id)
   * [KSR.dialog.dlg_set_var()](#ksrdialogdlg_set_var)
   * [KSR.dialog.dlg_setflag()](#ksrdialogdlg_setflag)
+  * [KSR.dialog.dlg_update_state()](#ksrdialogdlg_update_state)
   * [KSR.dialog.get_profile_size()](#ksrdialogget_profile_size)
   * [KSR.dialog.get_profile_size_static()](#ksrdialogget_profile_size_static)
   * [KSR.dialog.is_in_profile()](#ksrdialogis_in_profile)
@@ -1723,6 +1752,14 @@ int KSR.dialog.dlg_set_property(str "pval");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_set_property'>📖 kamailio.cfg::function::dlg_set_property()</a>
 
+#### KSR.dialog.dlg_set_state() ####
+
+```cpp
+int KSR.dialog.dlg_set_state(str "state");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_set_state'>📖 kamailio.cfg::function::dlg_set_state()</a>
+
 #### KSR.dialog.dlg_set_timeout() ####
 
 ```cpp
@@ -1754,6 +1791,14 @@ int KSR.dialog.dlg_setflag(int val);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_setflag'>📖 kamailio.cfg::function::dlg_setflag()</a>
+
+#### KSR.dialog.dlg_update_state() ####
+
+```cpp
+int KSR.dialog.dlg_update_state();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_update_state'>📖 kamailio.cfg::function::dlg_update_state()</a>
 
 #### KSR.dialog.get_profile_size() ####
 
