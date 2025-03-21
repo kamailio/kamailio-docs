@@ -8737,6 +8737,67 @@ int KSR.siprepo.sr_msg_rm(str "callid", str "msgid");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siprepo.html#siprepo.f.sr_msg_rm'>📖 kamailio.cfg::function::sr_msg_rm()</a>
 
+## sipt ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html'>📖 kamailio.cfg::module::sipt.html</a>
+
+Exported functions:
+
+  * [KSR.sipt.destination()](#ksrsiptdestination)
+  * [KSR.sipt.destination_terminator()](#ksrsiptdestination_terminator)
+  * [KSR.sipt.forwarding()](#ksrsiptforwarding)
+  * [KSR.sipt.has_isup_body()](#ksrsipthas_isup_body)
+  * [KSR.sipt.set_bci_1()](#ksrsiptset_bci_1)
+  * [KSR.sipt.set_calling()](#ksrsiptset_calling)
+
+#### KSR.sipt.destination() ####
+
+```cpp
+bool KSR.sipt.destination(str "_destination", str "_hops", str "_nai");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.destination'>📖 kamailio.cfg::function::destination()</a>
+
+#### KSR.sipt.destination_terminator() ####
+
+```cpp
+bool KSR.sipt.destination_terminator(str "_destination", str "_hops", str "_nai", str "_terminator");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.destination_terminator'>📖 kamailio.cfg::function::destination_terminator()</a>
+
+#### KSR.sipt.forwarding() ####
+
+```cpp
+bool KSR.sipt.forwarding(str "_fwdnumber", str "_nai");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.forwarding'>📖 kamailio.cfg::function::forwarding()</a>
+
+#### KSR.sipt.has_isup_body() ####
+
+```cpp
+bool KSR.sipt.has_isup_body();
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.has_isup_body'>📖 kamailio.cfg::function::has_isup_body()</a>
+
+#### KSR.sipt.set_bci_1() ####
+
+```cpp
+bool KSR.sipt.set_bci_1(str "_charge_indicator", str "_called_status", str "_called_category", str "_e2e_indicator");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.set_bci_1'>📖 kamailio.cfg::function::set_bci_1()</a>
+
+#### KSR.sipt.set_calling() ####
+
+```cpp
+bool KSR.sipt.set_calling(str "_origin", str "_nai", str "_pres", str "_screen");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/sipt.html#sipt.f.set_calling'>📖 kamailio.cfg::function::set_calling()</a>
+
 ## siptrace ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siptrace.html'>📖 kamailio.cfg::module::siptrace.html</a>
