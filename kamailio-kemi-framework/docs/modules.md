@@ -9671,6 +9671,7 @@ Exported functions:
 
   * [KSR.tcpops.tcp_close_connection()](#ksrtcpopstcp_close_connection)
   * [KSR.tcpops.tcp_close_connection_id()](#ksrtcpopstcp_close_connection_id)
+  * [KSR.tcpops.tcp_con_alive()](#ksrtcpopstcp_con_alive)
   * [KSR.tcpops.tcp_conid_alive()](#ksrtcpopstcp_conid_alive)
   * [KSR.tcpops.tcp_conid_state()](#ksrtcpopstcp_conid_state)
   * [KSR.tcpops.tcp_enable_closed_event()](#ksrtcpopstcp_enable_closed_event)
@@ -9700,6 +9701,14 @@ int KSR.tcpops.tcp_close_connection_id(int conid);
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_close_connection_id'>📖 kamailio.cfg::function::tcp_close_connection_id()</a>
+
+#### KSR.tcpops.tcp_con_alive() ####
+
+```cpp
+int KSR.tcpops.tcp_con_alive(str "saddr");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/tcpops.html#tcpops.f.tcp_con_alive'>📖 kamailio.cfg::function::tcp_con_alive()</a>
 
 #### KSR.tcpops.tcp_conid_alive() ####
 
