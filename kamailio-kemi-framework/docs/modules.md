@@ -8891,6 +8891,7 @@ Exported functions:
   * [KSR.siputils.contact_param_decode()](#ksrsiputilscontact_param_decode)
   * [KSR.siputils.contact_param_decode_ruri()](#ksrsiputilscontact_param_decode_ruri)
   * [KSR.siputils.contact_param_encode()](#ksrsiputilscontact_param_encode)
+  * [KSR.siputils.contact_param_encode_alias()](#ksrsiputilscontact_param_encode_alias)
   * [KSR.siputils.contact_param_rm()](#ksrsiputilscontact_param_rm)
   * [KSR.siputils.decode_contact()](#ksrsiputilsdecode_contact)
   * [KSR.siputils.decode_contact_header()](#ksrsiputilsdecode_contact_header)
@@ -8980,6 +8981,14 @@ int KSR.siputils.contact_param_encode(str "nparam", str "saddr");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_encode'>📖 kamailio.cfg::function::contact_param_encode()</a>
+
+#### KSR.siputils.contact_param_encode_alias() ####
+
+```cpp
+int KSR.siputils.contact_param_encode_alias(str "nparam", str "saddr");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/siputils.html#siputils.f.contact_param_encode_alias'>📖 kamailio.cfg::function::contact_param_encode_alias()</a>
 
 #### KSR.siputils.contact_param_rm() ####
 
