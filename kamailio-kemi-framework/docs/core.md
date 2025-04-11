@@ -599,6 +599,18 @@ if KSR.is_TCP() then
 end
 ```
 
+### KSR.is_TCPX() ###
+
+`bool is_TCPX()`
+
+Return true if the incoming base protocol is TCP (TCP, TLS, WS, WSS).
+
+```Lua
+if KSR.is_TCPX() then
+  ...
+end
+```
+
 ### KSR.is_TLS() ###
 
 `bool is_TLS()`
