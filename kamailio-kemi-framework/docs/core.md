@@ -23,7 +23,7 @@ KSR.hdr.remove("Route");
 
 Note: if a function exported by the core to native Kamailio configuration file is missing here,
 check the exports of `KSR.corex` submodule, some of them have alternatives there
-(e.g., `force_send_socket()` can be done with `KSR.corex.set_send_scoket()`).
+(e.g., `force_send_socket()` can be done with `KSR.corex.set_send_socket()`).
 
 Exported functions from core directly to KSR module, KSR.pv or KSR.hdr submodules are listed in the next sections.
 
