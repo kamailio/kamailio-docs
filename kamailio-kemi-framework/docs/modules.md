@@ -1062,7 +1062,7 @@ Exported functions:
   * [KSR.cfgutils.check_route_exists()](#ksrcfgutilscheck_route_exists)
   * [KSR.cfgutils.core_hash()](#ksrcfgutilscore_hash)
   * [KSR.cfgutils.lock()](#ksrcfgutilslock)
-  * [KSR.cfgutils.lock()](#ksrcfgutilslock)
+  * [KSR.cfgutils.lock_key2()](#ksrcfgutilslock_key2)
   * [KSR.cfgutils.pkg_status()](#ksrcfgutilspkg_status)
   * [KSR.cfgutils.pkg_summary()](#ksrcfgutilspkg_summary)
   * [KSR.cfgutils.rand_event()](#ksrcfgutilsrand_event)
@@ -1074,9 +1074,9 @@ Exported functions:
   * [KSR.cfgutils.shm_summary()](#ksrcfgutilsshm_summary)
   * [KSR.cfgutils.sleep()](#ksrcfgutilssleep)
   * [KSR.cfgutils.trylock()](#ksrcfgutilstrylock)
-  * [KSR.cfgutils.trylock()](#ksrcfgutilstrylock)
+  * [KSR.cfgutils.trylock_key2()](#ksrcfgutilstrylock_key2)
   * [KSR.cfgutils.unlock()](#ksrcfgutilsunlock)
-  * [KSR.cfgutils.unlock()](#ksrcfgutilsunlock)
+  * [KSR.cfgutils.unlock_key2()](#ksrcfgutilsunlock_key2)
   * [KSR.cfgutils.usleep()](#ksrcfgutilsusleep)
 
 #### KSR.cfgutils.abort() ####
@@ -1111,13 +1111,13 @@ int KSR.cfgutils.lock(str "lkey");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.lock'>📖 kamailio.cfg::function::lock()</a>
 
-#### KSR.cfgutils.lock() ####
+#### KSR.cfgutils.lock_key2() ####
 
 ```cpp
-int KSR.cfgutils.lock(str "lkey", str "lkey2");
+int KSR.cfgutils.lock_key2(str "lkey", str "lkey2");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.lock'>📖 kamailio.cfg::function::lock()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.lock_key2'>📖 kamailio.cfg::function::lock_key2()</a>
 
 #### KSR.cfgutils.pkg_status() ####
 
@@ -1207,13 +1207,13 @@ int KSR.cfgutils.trylock(str "lkey");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.trylock'>📖 kamailio.cfg::function::trylock()</a>
 
-#### KSR.cfgutils.trylock() ####
+#### KSR.cfgutils.trylock_key2() ####
 
 ```cpp
-int KSR.cfgutils.trylock(str "lkey", str "lkey2");
+int KSR.cfgutils.trylock_key2(str "lkey", str "lkey2");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.trylock'>📖 kamailio.cfg::function::trylock()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.trylock_key2'>📖 kamailio.cfg::function::trylock_key2()</a>
 
 #### KSR.cfgutils.unlock() ####
 
@@ -1223,13 +1223,13 @@ int KSR.cfgutils.unlock(str "lkey");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.unlock'>📖 kamailio.cfg::function::unlock()</a>
 
-#### KSR.cfgutils.unlock() ####
+#### KSR.cfgutils.unlock_key2() ####
 
 ```cpp
-int KSR.cfgutils.unlock(str "lkey", str "lkey2");
+int KSR.cfgutils.unlock_key2(str "lkey", str "lkey2");
 ```
 
-  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.unlock'>📖 kamailio.cfg::function::unlock()</a>
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/cfgutils.html#cfgutils.f.unlock_key2'>📖 kamailio.cfg::function::unlock_key2()</a>
 
 #### KSR.cfgutils.usleep() ####
 
@@ -6223,6 +6223,7 @@ Exported functions:
   * [KSR.pvx.xavi_getw()](#ksrpvxxavi_getw)
   * [KSR.pvx.xavi_is_null()](#ksrpvxxavi_is_null)
   * [KSR.pvx.xavi_rm()](#ksrpvxxavi_rm)
+  * [KSR.pvx.xavi_rm_all()](#ksrpvxxavi_rm_all)
   * [KSR.pvx.xavi_seti()](#ksrpvxxavi_seti)
   * [KSR.pvx.xavi_sets()](#ksrpvxxavi_sets)
   * [KSR.pvx.xavp_child_get()](#ksrpvxxavp_child_get)
@@ -6247,6 +6248,7 @@ Exported functions:
   * [KSR.pvx.xavp_params_implode_qval()](#ksrpvxxavp_params_implode_qval)
   * [KSR.pvx.xavp_push_dst()](#ksrpvxxavp_push_dst)
   * [KSR.pvx.xavp_rm()](#ksrpvxxavp_rm)
+  * [KSR.pvx.xavp_rm_all()](#ksrpvxxavp_rm_all)
   * [KSR.pvx.xavp_seti()](#ksrpvxxavp_seti)
   * [KSR.pvx.xavp_sets()](#ksrpvxxavp_sets)
   * [KSR.pvx.xavp_slist_explode()](#ksrpvxxavp_slist_explode)
@@ -6572,6 +6574,14 @@ int KSR.pvx.xavi_rm(str "rname");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_rm'>📖 kamailio.cfg::function::xavi_rm()</a>
 
+#### KSR.pvx.xavi_rm_all() ####
+
+```cpp
+int KSR.pvx.xavi_rm_all(str "rname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavi_rm_all'>📖 kamailio.cfg::function::xavi_rm_all()</a>
+
 #### KSR.pvx.xavi_seti() ####
 
 ```cpp
@@ -6763,6 +6773,14 @@ int KSR.pvx.xavp_rm(str "rname");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_rm'>📖 kamailio.cfg::function::xavp_rm()</a>
+
+#### KSR.pvx.xavp_rm_all() ####
+
+```cpp
+int KSR.pvx.xavp_rm_all(str "rname");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pv.html#pv.f.xavp_rm_all'>📖 kamailio.cfg::function::xavp_rm_all()</a>
 
 #### KSR.pvx.xavp_seti() ####
 
