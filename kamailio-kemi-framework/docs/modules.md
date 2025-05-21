@@ -1,8 +1,8 @@
 <!-- This file is auto-generated. Any manual modifications will be deleted -->
 # KEMI Module Functions #
 
-The following sections lists all exported KEMI functions. More information regarding
-the function can be found by clicking the KEMI prototype which will take you
+The following sections list all exported KEMI functions. More information regarding
+a function can be found by clicking the KEMI prototype, which will take you to
 the original module's documentation.
 
 Because the native `kamailio.cfg` scripting language allows variadic functions,
@@ -9894,6 +9894,7 @@ Exported functions:
   * [KSR.textops.set_body_multipart_mode()](#ksrtextopsset_body_multipart_mode)
   * [KSR.textops.set_reply_body()](#ksrtextopsset_reply_body)
   * [KSR.textops.starts_with()](#ksrtextopsstarts_with)
+  * [KSR.textops.str_all_in()](#ksrtextopsstr_all_in)
   * [KSR.textops.str_any_in()](#ksrtextopsstr_any_in)
   * [KSR.textops.str_find()](#ksrtextopsstr_find)
   * [KSR.textops.str_ifind()](#ksrtextopsstr_ifind)
@@ -10279,6 +10280,14 @@ int KSR.textops.starts_with(str "s1", str "s2");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.starts_with'>📖 kamailio.cfg::function::starts_with()</a>
+
+#### KSR.textops.str_all_in() ####
+
+```cpp
+int KSR.textops.str_all_in(str "txt", str "clist");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.str_all_in'>📖 kamailio.cfg::function::str_all_in()</a>
 
 #### KSR.textops.str_any_in() ####
 
