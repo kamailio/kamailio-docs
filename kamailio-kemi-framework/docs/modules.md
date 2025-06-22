@@ -1639,6 +1639,7 @@ Exported functions:
   * [KSR.dialog.dlg_get_var()](#ksrdialogdlg_get_var)
   * [KSR.dialog.dlg_isflagset()](#ksrdialogdlg_isflagset)
   * [KSR.dialog.dlg_manage()](#ksrdialogdlg_manage)
+  * [KSR.dialog.dlg_req_within4()](#ksrdialogdlg_req_within4)
   * [KSR.dialog.dlg_reset_property()](#ksrdialogdlg_reset_property)
   * [KSR.dialog.dlg_resetflag()](#ksrdialogdlg_resetflag)
   * [KSR.dialog.dlg_set_property()](#ksrdialogdlg_set_property)
@@ -1727,6 +1728,14 @@ int KSR.dialog.dlg_manage();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_manage'>📖 kamailio.cfg::function::dlg_manage()</a>
+
+#### KSR.dialog.dlg_req_within4() ####
+
+```cpp
+int KSR.dialog.dlg_req_within4(str "side", str "method", str "content_type", str "content");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_req_within4'>📖 kamailio.cfg::function::dlg_req_within4()</a>
 
 #### KSR.dialog.dlg_reset_property() ####
 
@@ -1978,6 +1987,7 @@ Exported functions:
   * [KSR.dispatcher.ds_list_exists()](#ksrdispatcherds_list_exists)
   * [KSR.dispatcher.ds_load_unset()](#ksrdispatcherds_load_unset)
   * [KSR.dispatcher.ds_load_update()](#ksrdispatcherds_load_update)
+  * [KSR.dispatcher.ds_mark_addr()](#ksrdispatcherds_mark_addr)
   * [KSR.dispatcher.ds_mark_dst()](#ksrdispatcherds_mark_dst)
   * [KSR.dispatcher.ds_mark_dst_state()](#ksrdispatcherds_mark_dst_state)
   * [KSR.dispatcher.ds_next_domain()](#ksrdispatcherds_next_domain)
@@ -2065,6 +2075,14 @@ int KSR.dispatcher.ds_load_update();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_load_update'>📖 kamailio.cfg::function::ds_load_update()</a>
+
+#### KSR.dispatcher.ds_mark_addr() ####
+
+```cpp
+int KSR.dispatcher.ds_mark_addr(str "vstate", int vgroup, str "vuri");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dispatcher.html#dispatcher.f.ds_mark_addr'>📖 kamailio.cfg::function::ds_mark_addr()</a>
 
 #### KSR.dispatcher.ds_mark_dst() ####
 
@@ -5575,6 +5593,22 @@ int KSR.path.add_path_user_params(str "_user", str "_params");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/path.html#path.f.add_path_user_params'>📖 kamailio.cfg::function::add_path_user_params()</a>
 
+## pdb ##
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pdb.html'>📖 kamailio.cfg::module::pdb.html</a>
+
+Exported functions:
+
+  * [KSR.pdb.pdb_query()](#ksrpdbpdb_query)
+
+#### KSR.pdb.pdb_query() ####
+
+```cpp
+int KSR.pdb.pdb_query(str "number", str "dstvar");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pdb.html#pdb.f.pdb_query'>📖 kamailio.cfg::function::pdb_query()</a>
+
 ## pdt ##
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/pdt.html'>📖 kamailio.cfg::module::pdt.html</a>
@@ -7438,6 +7472,7 @@ Exported functions:
   * [KSR.rtpengine.block_media()](#ksrrtpengineblock_media)
   * [KSR.rtpengine.block_media0()](#ksrrtpengineblock_media0)
   * [KSR.rtpengine.block_media2()](#ksrrtpengineblock_media2)
+  * [KSR.rtpengine.play_dtmf()](#ksrrtpengineplay_dtmf)
   * [KSR.rtpengine.play_media()](#ksrrtpengineplay_media)
   * [KSR.rtpengine.play_media2()](#ksrrtpengineplay_media2)
   * [KSR.rtpengine.rtpengine_answer()](#ksrrtpenginertpengine_answer)
@@ -7456,6 +7491,9 @@ Exported functions:
   * [KSR.rtpengine.rtpengine_query0()](#ksrrtpenginertpengine_query0)
   * [KSR.rtpengine.rtpengine_query2()](#ksrrtpenginertpengine_query2)
   * [KSR.rtpengine.rtpengine_query_v()](#ksrrtpenginertpengine_query_v)
+  * [KSR.rtpengine.rtpengine_subscribe_answer()](#ksrrtpenginertpengine_subscribe_answer)
+  * [KSR.rtpengine.rtpengine_subscribe_request()](#ksrrtpenginertpengine_subscribe_request)
+  * [KSR.rtpengine.rtpengine_unsubscribe()](#ksrrtpenginertpengine_unsubscribe)
   * [KSR.rtpengine.set_rtpengine_set()](#ksrrtpengineset_rtpengine_set)
   * [KSR.rtpengine.set_rtpengine_set2()](#ksrrtpengineset_rtpengine_set2)
   * [KSR.rtpengine.silence_media()](#ksrrtpenginesilence_media)
@@ -7523,6 +7561,14 @@ int KSR.rtpengine.block_media2(str "flags", str "viabranch");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.block_media2'>📖 kamailio.cfg::function::block_media2()</a>
+
+#### KSR.rtpengine.play_dtmf() ####
+
+```cpp
+int KSR.rtpengine.play_dtmf(str "flags");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.play_dtmf'>📖 kamailio.cfg::function::play_dtmf()</a>
 
 #### KSR.rtpengine.play_media() ####
 
@@ -7667,6 +7713,30 @@ int KSR.rtpengine.rtpengine_query_v(str "fmt", str "dpv");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_query_v'>📖 kamailio.cfg::function::rtpengine_query_v()</a>
+
+#### KSR.rtpengine.rtpengine_subscribe_answer() ####
+
+```cpp
+int KSR.rtpengine.rtpengine_subscribe_answer(str "flags");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_subscribe_answer'>📖 kamailio.cfg::function::rtpengine_subscribe_answer()</a>
+
+#### KSR.rtpengine.rtpengine_subscribe_request() ####
+
+```cpp
+int KSR.rtpengine.rtpengine_subscribe_request(str "flags", str "sdp_spv", str "to_tag_spv", str "stream_xavp");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_subscribe_request'>📖 kamailio.cfg::function::rtpengine_subscribe_request()</a>
+
+#### KSR.rtpengine.rtpengine_unsubscribe() ####
+
+```cpp
+int KSR.rtpengine.rtpengine_unsubscribe(str "flags");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_unsubscribe'>📖 kamailio.cfg::function::rtpengine_unsubscribe()</a>
 
 #### KSR.rtpengine.set_rtpengine_set() ####
 
