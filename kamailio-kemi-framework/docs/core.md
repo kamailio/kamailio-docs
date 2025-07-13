@@ -175,7 +175,7 @@ end
 Add rport parameter to the top Via of the incoming request and sent the
 SIP response to source port.
 
-### KSR.is_method() ###
+### KSR.is_method(...) ###
 
 `bool is_method(str "vmethod")`
 
@@ -188,7 +188,7 @@ if(KSR.is_method("INVITE")) {
 }
 ```
 
-### KSR.is_method_in() ###
+### KSR.is_method_in(...) ###
 
 `bool is_method_in(str "vmethod")`
 
@@ -882,13 +882,13 @@ Example:
 KSR.setdsturi("sip:voip.com:5061;transport=tls");
 ```
 
-### KSR.resetdsturi(...) ###
+### KSR.resetdsturi() ###
 
 `bool KSR.resetdsturi()`
 
 Reset the destination URI (aka: outbound proxy address, dst_uri, $du).
 
-### KSR.isdsturiset(...) ###
+### KSR.isdsturiset() ###
 
 `bool KSR.isdsturiset()`
 

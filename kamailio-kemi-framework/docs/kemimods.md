@@ -25,7 +25,7 @@ this function, check if it has fixup and fixup-free functions in the C code in o
 If you are not sure how to do the check, ask on sr-users mailing list if it is safe to use it for a specific
 module function.
 
-### KSR.x.exit(...) ###
+### KSR.x.exit() ###
 
 `void KSR.x.exit()`
 
@@ -49,7 +49,7 @@ from the main KEMI callback functions (e.g., for SIP request routing do `return`
 IMPORTANT: be careful with the native `exit` functions in some KEMI interpreters, such as Lua, because they
 can trigger the stop of the application, in this case stopping Kamailio completely.
 
-### KSR.x.drop(...) ###
+### KSR.x.drop() ###
 
 `void KSR.x.drop()`
 
