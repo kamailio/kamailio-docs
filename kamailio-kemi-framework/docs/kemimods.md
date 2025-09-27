@@ -11,8 +11,8 @@ The functions exported by these modules are listed in the next sections.
 
 `int KSR.x.modf(str "fname", params...)`
 
-Execute a function (specified by `fname`) exported by a Kamailio module. Additional parameters must be string and
-they are passed to the Kamailio module function.
+Execute a function (specified by `fname`) exported by a Kamailio module. Additional parameters
+must be string and they are passed to the Kamailio module function.
 
 Example:
 
@@ -20,10 +20,11 @@ Example:
 KSR.x.modf("sl_send_reply", "200", "OK");
 ```
 
-Important note: try not to use this function, prefer the use of dedicated KSR functions. If you have to use
-this function, check if it has fixup and fixup-free functions in the C code in order to avoid memory leaks.
-If you are not sure how to do the check, ask on sr-users mailing list if it is safe to use it for a specific
-module function.
+Important note: try not to use this function, instead use the dedicated KSR functions. If you have to use
+`KSR.x.modf()`, check the function that is going to be executed to have fixup and fixup-free functions
+in the C code in order to avoid memory leaks, as well as it does not crash, because not all module functions
+can be safely executed with it. If you are not sure how to do the check, ask on sr-users mailing list
+if it is safe to use it for a specific module function.
 
 ### KSR.x.exit() ###
 
