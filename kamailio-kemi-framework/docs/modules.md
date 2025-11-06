@@ -1639,6 +1639,8 @@ Exported functions:
   * [KSR.dialog.dlg_get_var()](#ksrdialogdlg_get_var)
   * [KSR.dialog.dlg_isflagset()](#ksrdialogdlg_isflagset)
   * [KSR.dialog.dlg_manage()](#ksrdialogdlg_manage)
+  * [KSR.dialog.dlg_refer_cid()](#ksrdialogdlg_refer_cid)
+  * [KSR.dialog.dlg_refer_did()](#ksrdialogdlg_refer_did)
   * [KSR.dialog.dlg_req_within4()](#ksrdialogdlg_req_within4)
   * [KSR.dialog.dlg_reset_property()](#ksrdialogdlg_reset_property)
   * [KSR.dialog.dlg_resetflag()](#ksrdialogdlg_resetflag)
@@ -1728,6 +1730,22 @@ int KSR.dialog.dlg_manage();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_manage'>📖 kamailio.cfg::function::dlg_manage()</a>
+
+#### KSR.dialog.dlg_refer_cid() ####
+
+```cpp
+int KSR.dialog.dlg_refer_cid(str "callid", str "side", str "to");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_refer_cid'>📖 kamailio.cfg::function::dlg_refer_cid()</a>
+
+#### KSR.dialog.dlg_refer_did() ####
+
+```cpp
+int KSR.dialog.dlg_refer_did(int h_entry, int h_id, str "side", str "to");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/dialog.html#dialog.f.dlg_refer_did'>📖 kamailio.cfg::function::dlg_refer_did()</a>
 
 #### KSR.dialog.dlg_req_within4() ####
 
@@ -3838,9 +3856,9 @@ int KSR.kex.setdebug(int lval);
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/kemi.html'>📖 kamailio.cfg::module::kemi.html</a>
 
-Functions exported by `kemix` module are available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string, boolean or
-integer values for most commonly used variables or runtime environment attributes.
+Functions exported by `kemix` module and available in KEMI language under
+`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
+values for most commonly used variables or runtime environment attributes.
 
 Exported functions:
 
@@ -9958,11 +9976,13 @@ Exported functions:
   * [KSR.textops.search_hf()](#ksrtextopssearch_hf)
   * [KSR.textops.search_str()](#ksrtextopssearch_str)
   * [KSR.textops.set_body()](#ksrtextopsset_body)
+  * [KSR.textops.set_body_hex()](#ksrtextopsset_body_hex)
   * [KSR.textops.set_body_multipart()](#ksrtextopsset_body_multipart)
   * [KSR.textops.set_body_multipart_boundary()](#ksrtextopsset_body_multipart_boundary)
   * [KSR.textops.set_body_multipart_content()](#ksrtextopsset_body_multipart_content)
   * [KSR.textops.set_body_multipart_mode()](#ksrtextopsset_body_multipart_mode)
   * [KSR.textops.set_reply_body()](#ksrtextopsset_reply_body)
+  * [KSR.textops.set_reply_body_hex()](#ksrtextopsset_reply_body_hex)
   * [KSR.textops.starts_with()](#ksrtextopsstarts_with)
   * [KSR.textops.str_all_in()](#ksrtextopsstr_all_in)
   * [KSR.textops.str_any_in()](#ksrtextopsstr_any_in)
@@ -10303,6 +10323,14 @@ int KSR.textops.set_body(str "nb", str "nc");
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.set_body'>📖 kamailio.cfg::function::set_body()</a>
 
+#### KSR.textops.set_body_hex() ####
+
+```cpp
+int KSR.textops.set_body_hex(str "htxt", str "ct");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.set_body_hex'>📖 kamailio.cfg::function::set_body_hex()</a>
+
 #### KSR.textops.set_body_multipart() ####
 
 ```cpp
@@ -10342,6 +10370,14 @@ int KSR.textops.set_reply_body(str "nb", str "nc");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.set_reply_body'>📖 kamailio.cfg::function::set_reply_body()</a>
+
+#### KSR.textops.set_reply_body_hex() ####
+
+```cpp
+int KSR.textops.set_reply_body_hex(str "htxt", str "ct");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/textops.html#textops.f.set_reply_body_hex'>📖 kamailio.cfg::function::set_reply_body_hex()</a>
 
 #### KSR.textops.starts_with() ####
 
@@ -12163,6 +12199,10 @@ Exported functions:
   * [KSR.xhttp_prom.counter_reset_l2()](#ksrxhttp_promcounter_reset_l2)
   * [KSR.xhttp_prom.counter_reset_l3()](#ksrxhttp_promcounter_reset_l3)
   * [KSR.xhttp_prom.dispatch()](#ksrxhttp_promdispatch)
+  * [KSR.xhttp_prom.gauge_inc_l0()](#ksrxhttp_promgauge_inc_l0)
+  * [KSR.xhttp_prom.gauge_inc_l1()](#ksrxhttp_promgauge_inc_l1)
+  * [KSR.xhttp_prom.gauge_inc_l2()](#ksrxhttp_promgauge_inc_l2)
+  * [KSR.xhttp_prom.gauge_inc_l3()](#ksrxhttp_promgauge_inc_l3)
   * [KSR.xhttp_prom.gauge_reset_l0()](#ksrxhttp_promgauge_reset_l0)
   * [KSR.xhttp_prom.gauge_reset_l1()](#ksrxhttp_promgauge_reset_l1)
   * [KSR.xhttp_prom.gauge_reset_l2()](#ksrxhttp_promgauge_reset_l2)
@@ -12255,6 +12295,38 @@ int KSR.xhttp_prom.dispatch();
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.dispatch'>📖 kamailio.cfg::function::dispatch()</a>
+
+#### KSR.xhttp_prom.gauge_inc_l0() ####
+
+```cpp
+int KSR.xhttp_prom.gauge_inc_l0(str "s_name", str "s_number");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_inc_l0'>📖 kamailio.cfg::function::gauge_inc_l0()</a>
+
+#### KSR.xhttp_prom.gauge_inc_l1() ####
+
+```cpp
+int KSR.xhttp_prom.gauge_inc_l1(str "s_name", str "s_number", str "l1");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_inc_l1'>📖 kamailio.cfg::function::gauge_inc_l1()</a>
+
+#### KSR.xhttp_prom.gauge_inc_l2() ####
+
+```cpp
+int KSR.xhttp_prom.gauge_inc_l2(str "s_name", str "s_number", str "l1", str "l2");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_inc_l2'>📖 kamailio.cfg::function::gauge_inc_l2()</a>
+
+#### KSR.xhttp_prom.gauge_inc_l3() ####
+
+```cpp
+int KSR.xhttp_prom.gauge_inc_l3(str "s_name", str "s_number", str "l1", str "l2", str "l3");
+```
+
+  * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xhttp_prom.html#xhttp_prom.f.gauge_inc_l3'>📖 kamailio.cfg::function::gauge_inc_l3()</a>
 
 #### KSR.xhttp_prom.gauge_reset_l0() ####
 
