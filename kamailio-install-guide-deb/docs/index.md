@@ -28,12 +28,38 @@ development versions, is presented at:
 
   * [Kamailio APT Repos: Debian - Ubuntu](https://deb.kamailio.org/)
 
-For example, if you want to install Kamailio v5.5.x on Debian Buster (10.x), add the next
+Adding the signing key for the repository:
+
+```
+wget -O- https://deb.kamailio.org/kamailiodebkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/kamailio.gpg
+```
+
+For example, if you want to install Kamailio v6.0.x on Debian Bullseye (11.x), add the next
 URLs to APT configuration:
 
 ```
-deb     http://deb.kamailio.org/kamailio55 buster main
-deb-src http://deb.kamailio.org/kamailio55 buster main
+deb     [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio60 bullseye main
+deb-src [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio60 bullseye main
+```
+
+For Debian Bookworm (12.x):
+
+```
+deb     [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio60 bookworm main
+deb-src [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio60 bookworm main
+```
+
+For older Debian/Ubuntu versions, adding signing key for the repository is done with:
+
+```
+wget -O- http://deb.kamailio.org/kamailiodebkey.gpg | sudo apt-key add -
+```
+
+The repository URLs are:
+
+```
+deb     http://deb.kamailio.org/kamailio60 buster main
+deb-src http://deb.kamailio.org/kamailio60 buster main
 ```
 
 ### APT Repositories Archive ###
@@ -44,10 +70,10 @@ an older version or rollback to an older version, use the repositories listed at
 
   * [APT Repositories Archive](https://deb-archive.kamailio.org/)
 
-For example, to install Kamailio v5.5.1, add the next URL to APT configuration:
+For example, to install Kamailio v6.0.2, add the next URL to APT configuration:
 
 ```
-deb https://deb-archive.kamailio.org/repos/kamailio-5.5.1
+deb https://deb-archive.kamailio.org/repos/kamailio-6.0.2
 ```
 
 ## APT Install Commands ###
@@ -195,7 +221,7 @@ and password set in the above command.
 Questions about how to use Kamailio and the content of kamailio.cfg can be
 addressed via email to:
 
-  * [sr-users@lists.kamailio.org](http://lists.kamailio.org/cgi-bin/mailman/listinfo/sr-users)
+  * [sr-users@lists.kamailio.org](https://lists.kamailio.org/cgi-bin/mailman/listinfo/sr-users)
 
 More documentation resources can be found at:
 
