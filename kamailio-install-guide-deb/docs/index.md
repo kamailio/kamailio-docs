@@ -75,6 +75,16 @@ deb-src http://deb.kamailio.org/kamailio61 buster main
 To install Kamailio `6.0.x` series instead of `6.1.x`, replace `kamailio61` with
 `kamailio60` in the URLs above.
 
+### Deb Nightly Builds ###
+
+Packages are also built on a nightly basis from the `6.1` stable branch and are
+available at `kamailio61-nightly` target. As an example, for Debian Bookworm (12.x):
+
+```
+deb     [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio61-nightly bookworm main
+deb-src [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio61-nightly bookworm main
+```
+
 ### APT Repositories Archive ###
 
 The APT repositories linked in the previous session contain only the packages for
