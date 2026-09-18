@@ -155,7 +155,16 @@ detailed the section **Create Database**).
 ### kamailio.cfg ###
 
 The `/etc/kamailio/kamailio.cfg` is the configuration file for `kamailio`.
-Edit it to enable some of the features shipped with it.
+
+It has to be edited to activate the instance by adding the next line after its first line.
+
+```C
+#!define ACTIVE
+```
+
+Without this line, `Kamailio` (as of end of August 2026) drops any SIP message.
+
+Edit it further to enable some of the features shipped with it.
 
 To enable use of `MySQL` server backend, user authentication and persistent user
 location, add after the first line:
