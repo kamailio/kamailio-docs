@@ -292,8 +292,19 @@ configuration file.
   /usr/local/etc/kamailio/kamailio.cfg
 ```
 
-Follow the instruction in the comments to enable usage of MySQL. Basically you
-have to add several lines at the top of config file, like:
+It has to be edited to activate the instance by adding the next line after its first line.
+
+```C
+#!define ACTIVE
+```
+
+Without this line, `Kamailio` (as of end of August 2026) drops any SIP message.
+
+Edit it further to enable some of the features shipped with it.
+
+Follow the instruction in the comments to enable MySQL backend, user authentication
+and persistence for user location. Basically you have to add several lines at the
+top of config file, like:
 
 ```c
 #!define WITH_MYSQL
