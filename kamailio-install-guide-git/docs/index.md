@@ -324,28 +324,11 @@ There are couple of variants for starting/stopping/restarting Kamailio,
 the recommended ones being via `init.d` script or `systemd` unit, a matter of
 what the Debian OS is configured to use.
 
-### Init.d Script ###
-
-To install the `init.d` script, run in Kamailio source code directory:
-
-```
-make install-initd-debian
-```
-
-Follow any instructions that may be printed by the above command.
-
-Then you can start/stop Kamailio using the following commands:
-
-```Shell
-  /etc/init.d/kamailio start
-  /etc/init.d/kamailio stop
-```
-
 ### Systemd Unit ###
 
 To install the `systemd` unit, run in Kamailio source code directory:
 
-```
+```Shell
 make install-systemd-debian
 ```
 
@@ -356,6 +339,24 @@ Then you can start/stop Kamailio using the following commands:
 ```Shell
   systemctl start kamailio
   systemctl stop kamailio
+```
+
+### Init.d Script ###
+
+For older Debian/Ubuntu versions, you can install the `init.d` script, run in
+Kamailio source code directory:
+
+```Shell
+make install-initd-debian
+```
+
+Follow any instructions that may be printed by the above command.
+
+Then you can start/stop Kamailio using the following commands:
+
+```Shell
+  /etc/init.d/kamailio start
+  /etc/init.d/kamailio stop
 ```
 
 ### Kamctl ###
