@@ -12552,4 +12552,3 @@ int KSR.xmlrpc.xmlrpc_reply(int rcode, str "reason");
 ```
 
   * <a target='_blank' href='https://kamailio.org/docs/modules/devel/modules/xmlrpc.html#xmlrpc.f.xmlrpc_reply'>📖 kamailio.cfg::function::xmlrpc_reply()</a>
-
