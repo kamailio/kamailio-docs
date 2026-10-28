@@ -5,6 +5,9 @@
     }
   },
   "plugins": {
+    "per-file-ignores": {
+      "kamailio-kemi-framework/docs/modules/**/*.*.md": ["MD041","MD051"]
+    },
     "MD004": {
       "enabled": true,
       "style": "sublist"
