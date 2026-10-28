@@ -4,6 +4,6 @@ pseudo-variable (without `$`).
 
 Example:
 
-```
+```lua
 local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
 ```
