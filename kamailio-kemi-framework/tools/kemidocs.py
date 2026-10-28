@@ -85,17 +85,11 @@ class ModuleDocGenerator(object):
         return True
 
     def markdown_section_heading(self, module):
-        self.markdown_string += "## " + module + " ##\n\n"
+        self.markdown_string += f"## {module} ##\n\n"
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
-        self.markdown_string += (
-            "  * <a target='_blank' href='"
-            + KAMWEBURL
-            + "/docs/modules/devel/modules/"
-            + kmodname
-            + ".html'>📖 kamailio.cfg::module::"
-            + kmodname
-            + ".html</a>\n\n"
-        )
+        tdesc = f"kamailio.cfg::module::{kmodname}.html"
+        turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html"
+        self.markdown_string += f"  * 📖[{tdesc}]({turl})\n\n"
         self.markdown_string += self.read_file_to_string(
             module + "/" + module + ".header.md"
         )
@@ -112,16 +106,10 @@ class ModuleDocGenerator(object):
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
 
         for value in methods:
-            kmodtoc += (
-                "  * [KSR."
-                + module_prefix
-                + value["name"]
-                + "()](#ksr"
-                + module_prefix.replace(".", "")
-                + value["name"]
-                + ")\n"
-            )
-            kmodtext += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
+            tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
+            turl = "#ksr" + module_prefix.replace(".", "") + value["name"]
+            kmodtoc += f"  * [{tdesc}]({turl})\n"
+            kmodtext += f"#### KSR.{module_prefix}{value['name']}\\(\\) ####\n\n"
 
             # Sanitize the return values
             if value["return"] == "none":
@@ -136,33 +124,14 @@ class ModuleDocGenerator(object):
                 params_value = value["params"]
 
             # Generate the output string for the markdown page
-            kmodtext += (
-                "```cpp\n"
-                + return_value
-                + " KSR."
-                + module_prefix
-                + value["name"]
-                + "("
-                + params_value
-                + ");\n```\n\n"
-            )
+            kmodtext += f"```cpp\n{return_value} KSR.{module_prefix}{value['name']}({params_value});\n```\n\n"
             kfuncname = value["name"]
             if kmodname in MODMAPFUNC:
                 if value["name"] in MODMAPFUNC[kmodname]:
                     kfuncname = MODMAPFUNC[kmodname][value["name"]]
-            kmodtext += (
-                "  * <a target='_blank' href='"
-                + KAMWEBURL
-                + "/docs/modules/devel/modules/"
-                + kmodname
-                + ".html#"
-                + kmodname
-                + ".f."
-                + kfuncname
-                + "'>📖 kamailio.cfg::function::"
-                + kfuncname
-                + "()</a>\n\n"
-            )
+            tdesc = f"kamailio.cfg::function::{kfuncname}\\(\\)"
+            turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html#{kmodname}.f.{kfuncname}"
+            kmodtext += f"  * 📖[{tdesc}]({turl})\n\n"
 
             func_doc = self.read_file_to_string(
                 module + "/" + module + "." + value["name"] + ".md"
