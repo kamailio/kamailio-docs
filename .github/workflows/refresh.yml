@@ -31,6 +31,10 @@ jobs:
         working-directory: ./kamailio-docs/kamailio-kemi-framework/tools
         run: python3 kemidocs.py ${{ github.workspace }}/kamailio/src
 
+      - name: Add possible changes
+        working-directory: ./kamailio-docs
+        run: git add kamailio-kemi-framework/docs
+
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@v1.5.0
         with:
