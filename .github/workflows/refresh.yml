@@ -1,0 +1,46 @@
+---
+name: update kemi docs
+on:
+  schedule:
+    - cron: '0 0 * * 0' # weekly
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: checkout kamailio
+        uses: actions/checkout@v7
+        with:
+          repository: kamailio/kamailio
+          path: kamailio
+
+      - name: checkout kamailio-docs
+        uses: actions/checkout@v7
+        with:
+          path: kamailio-docs
+
+      - name: create branch
+        working-directory: ./kamailio-docs
+        run: git checkout -b update-kemi
+
+      - name: execute kemidocs
+        working-directory: ./kamailio-docs/kamailio-kemi-framework/tools
+        run: python3 kemidocs.py ${{ github.workspace }}/kamailio/src
+
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@v1.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository_path: ./kamailio-docs
+          commit_message: 'kamailio-kemi-framework: update KEMI exports'
+
+      - name: Create pull request
+        uses: devops-infra/action-pull-request@v1.4.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository_path: ./kamailio-docs
+          target_branch: master
