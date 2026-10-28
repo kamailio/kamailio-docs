@@ -1,0 +1,46 @@
+---
+name: md_lint
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # to fetch code (actions/checkout)
+    strategy:
+      matrix:
+        directory:
+          - kamailio-5.8-install-guide-git
+          - kamailio-6.0-install-guide-git
+          - kamailio-6.1-install-guide-git
+          - kamailio-install-guide-deb
+          - kamailio-install-guide-git
+          - kamailio-kemi-framework
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            ${{ matrix.directory }}
+          fetch-depth: 2
+
+      - name: Get all changed markdown files
+        id: changed-markdown-files
+        uses: tj-actions/changed-files@v47
+        with:
+          files: |
+             ${{ matrix.directory }}/docs/**.md
+          since_last_remote_commit: true
+
+      - uses: DavidAnson/markdownlint-cli2-action@v24.2.0
+        with:
+          config: .markdownlint-cli2.yaml
+          globs: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          separator: ' '
+        if: steps.changed-markdown-files.outputs.all_changed_files != ''
