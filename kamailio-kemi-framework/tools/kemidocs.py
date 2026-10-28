@@ -1,13 +1,13 @@
 # tool to generate the modules.md content
 #
 
-import os
 import json
 import sys
 import time
 import fnmatch
 import re
-import importlib
+from pathlib import Path
+import copy
 
 KAMWEBURL = "https://kamailio.org"
 
@@ -29,9 +29,108 @@ MODMAPFUNC = {
 }
 
 
-class ModuleDocGenerator(object):
-    PATH_GENERATED_MARKDOWN = "../docs/modules.md"
-    PATH_MODULES_DOCS = "../docs/modules/"
+class DocGenerator(object):
+    PATH_MODULES_DOCS = Path("../docs/modules/")
+    markdown_string = ""
+
+    def read_file_to_string(self, filename):
+        path = self.PATH_MODULES_DOCS / filename
+        if path.is_file():
+            with path.open("r") as myfile:
+                return myfile.read() + "\n"
+        return ""
+
+    def markdown_header(self):
+        self.markdown_string += self.read_file_to_string("header.md")
+
+    def markdown_write(self, msg):
+        parent = self.PATH_GENERATED_MARKDOWN.parent
+        parent.mkdir(mode=0o776, parents=True, exist_ok=True)
+        with open(self.PATH_GENERATED_MARKDOWN, "w") as f:
+            f.write(self.markdown_string)
+        print(f"{msg} {self.PATH_GENERATED_MARKDOWN}")
+
+
+class ModuleDocGenerator(DocGenerator):
+    module = "unknown"
+    output = ""
+
+    def __init__(self, module, methods):
+        self.module = module
+        self.methods = methods
+        self.PATH_GENERATED_MARKDOWN = (
+            self.PATH_MODULES_DOCS / f"{module}" / f"{module}.md"
+        )
+
+    def execute(self):
+        self.markdown_section_heading()
+        self.markdown_section_content()
+        self.markdown_write("Markdown doc created successfully at")
+        return self.output
+
+    def markdown_section_heading(self):
+        self.markdown_string += f"## {self.module} ##\n\n"
+        kmodname = MODMAPNAME[self.module] if self.module in MODMAPNAME else self.module
+        tdesc = f"kamailio.cfg::module::{kmodname}.html"
+        turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html"
+        self.markdown_string += f"* 📖[{tdesc}]({turl})\n\n"
+        self.markdown_string += self.read_file_to_string(
+            f"{self.module}/{self.module}.header.md"
+        )
+        self.output = copy.deepcopy(self.markdown_string)
+
+    def markdown_section_content(self):
+        if self.module == "core":
+            module_prefix = ""
+        else:
+            module_prefix = self.module + "."
+
+        kmodtoc = "Exported functions:\n\n"
+        kmodtoc_out = "Exported functions:\n\n"
+        kmodtext = ""
+        kmodname = MODMAPNAME[self.module] if self.module in MODMAPNAME else self.module
+
+        for value in self.methods:
+            tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
+            turl = "#ksr" + module_prefix.replace(".", "") + value["name"]
+            turl_ext = f"modules/{self.module}.md{turl}"
+            kmodtoc += f"* [{tdesc}]({turl})\n"
+            kmodtoc_out += f"* [{tdesc}]({turl_ext})\n"
+            kmodtext += f"#### KSR.{module_prefix}{value['name']}\\(\\) ####\n\n"
+
+            # Sanitize the return values
+            if value["return"] == "none":
+                return_value = "void"
+            else:
+                return_value = value["return"]
+
+            # Sanitize the parameter values
+            if value["params"] == "none":
+                params_value = ""
+            else:
+                params_value = value["params"]
+
+            # Generate the output string for the markdown page
+            kmodtext += f"```cpp\n{return_value} KSR.{module_prefix}{value['name']}({params_value});\n```\n\n"
+            kfuncname = value["name"]
+            if kmodname in MODMAPFUNC:
+                if value["name"] in MODMAPFUNC[kmodname]:
+                    kfuncname = MODMAPFUNC[kmodname][value["name"]]
+            tdesc = f"kamailio.cfg::function::{kfuncname}\\(\\)"
+            turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html#{kmodname}.f.{kfuncname}"
+            kmodtext += f"* 📖[{tdesc}]({turl})\n\n"
+
+            func_doc = self.read_file_to_string(
+                f"{self.module}/{self.module}.header.md"
+            ).strip()
+            if len(func_doc) > 0:
+                kmodtext += func_doc + "\n\n"
+        self.markdown_string += kmodtoc + "\n" + kmodtext
+        self.output += kmodtoc_out + "\n"
+
+
+class IndexDocGenerator(DocGenerator):
+    PATH_GENERATED_MARKDOWN = Path("../docs/modules.md")
 
     # Contains the output until it should be written to disk
     markdown_string = ""
@@ -40,12 +139,9 @@ class ModuleDocGenerator(object):
         # Validate that we got some methods back. 155 is an arbitrary large number.
         if len(data) < 1:
             print("ERR: Invalid data")
-            exit()
-
+            sys.exit()
         functions_parsed = self.parse_function_list(data)
         self.output_markdown(functions_parsed)
-
-        print("Markdown doc created successfully at " + self.PATH_GENERATED_MARKDOWN)
 
     def parse_function_list(self, functions):
         data = {}
@@ -73,86 +169,9 @@ class ModuleDocGenerator(object):
             methods = data[key]
             # Sort the functions by name alphabetically
             methods = sorted(methods, key=lambda k: k["name"])
-
-            self.markdown_section_heading(key)
-            self.markdown_section_content(key, methods)
-            self.markdown_write()
-
-        return True
-
-    def markdown_header(self):
-        self.markdown_string += self.read_file_to_string("header.md")
-        return True
-
-    def markdown_section_heading(self, module):
-        self.markdown_string += f"## {module} ##\n\n"
-        kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
-        tdesc = f"kamailio.cfg::module::{kmodname}.html"
-        turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html"
-        self.markdown_string += f"* 📖[{tdesc}]({turl})\n\n"
-        self.markdown_string += self.read_file_to_string(
-            module + "/" + module + ".header.md"
-        )
-        return True
-
-    def markdown_section_content(self, module, methods):
-        if module == "core":
-            module_prefix = ""
-        else:
-            module_prefix = module + "."
-
-        kmodtoc = "Exported functions:\n\n"
-        kmodtext = ""
-        kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
-
-        for value in methods:
-            tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
-            turl = "#ksr" + module_prefix.replace(".", "") + value["name"]
-            kmodtoc += f"* [{tdesc}]({turl})\n"
-            kmodtext += f"#### KSR.{module_prefix}{value['name']}\\(\\) ####\n\n"
-
-            # Sanitize the return values
-            if value["return"] == "none":
-                return_value = "void"
-            else:
-                return_value = value["return"]
-
-            # Sanitize the parameter values
-            if value["params"] == "none":
-                params_value = ""
-            else:
-                params_value = value["params"]
-
-            # Generate the output string for the markdown page
-            kmodtext += f"```cpp\n{return_value} KSR.{module_prefix}{value['name']}({params_value});\n```\n\n"
-            kfuncname = value["name"]
-            if kmodname in MODMAPFUNC:
-                if value["name"] in MODMAPFUNC[kmodname]:
-                    kfuncname = MODMAPFUNC[kmodname][value["name"]]
-            tdesc = f"kamailio.cfg::function::{kfuncname}\\(\\)"
-            turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html#{kmodname}.f.{kfuncname}"
-            kmodtext += f"* 📖[{tdesc}]({turl})\n\n"
-
-            func_doc = self.read_file_to_string(
-                module + "/" + module + "." + value["name"] + ".md"
-            ).strip()
-            if len(func_doc) > 0:
-                kmodtext += func_doc + "\n\n"
-        self.markdown_string += kmodtoc + "\n" + kmodtext
-        return True
-
-    def markdown_write(self):
-        f = open(self.PATH_GENERATED_MARKDOWN, "w")
-        f.write(self.markdown_string)
-        f.close()
-        return True
-
-    def read_file_to_string(self, filename):
-        path = self.PATH_MODULES_DOCS + filename
-        if os.path.isfile(path):
-            with open(path, "r") as myfile:
-                return myfile.read() + "\n"
-        return ""
+            mg = ModuleDocGenerator(key, methods)
+            self.markdown_string += mg.execute()
+        self.markdown_write("Markdown doc index created successfully at")
 
 
 class KemiFileExportParser(object):
@@ -265,7 +284,7 @@ class KemiFileExportParser(object):
 
             if len(function_lines_split) < 2:
                 print("ERR: Incorrect function line", func)
-                exit()
+                sys.exit()
 
             declarations = function_lines_split[0].split(",")
             params = function_lines_split[1]
@@ -290,7 +309,7 @@ class KemiFileExportParser(object):
                 val_return = "xval"
             else:
                 print("ERR: Invalid return value", declarations[2], func)
-                exit()
+                sys.exit()
 
             val_c_function = declarations[3].strip()
 
@@ -311,11 +330,11 @@ class KemiFileExportParser(object):
                     continue
                 else:
                     print("Invalid return value", declarations[2], func)
-                    exit()
+                    sys.exit()
 
             if itr != 6:
                 print("ERR: Couldn't iterate the params: ", params)
-                exit()
+                sys.exit()
 
             param_string = self.find_c_function_params(
                 filename, val_c_function, val_return
@@ -354,7 +373,7 @@ class KemiFileExportParser(object):
                 "KEMI:",
                 kemi_types,
             )
-            exit()
+            sys.exit()
 
         for declared, type in zip(params, kemi_types):
             declared = declared.replace("*", "")
@@ -372,7 +391,7 @@ class KemiFileExportParser(object):
                     " Type: ",
                     type,
                 )
-                exit()
+                sys.exit()
 
         param_string = ""
 
@@ -397,7 +416,7 @@ class KemiFileExportParser(object):
         if param_string:
             return param_string
         else:
-            files = self.list_c_files_in_directory(os.path.dirname(filename))
+            files = self.list_c_files_in_directory(filename.parent)
             for file in files:
                 param_string = self.search_file_for_function_declaration(
                     file, function_name, return_type
@@ -414,7 +433,7 @@ class KemiFileExportParser(object):
             function_name,
             return_type,
         )
-        exit()
+        sys.exit()
 
     def search_file_for_function_declaration(
         self, filename, function_name, return_type
@@ -455,25 +474,26 @@ class KemiFileExportParser(object):
 
     def list_c_files_in_directory(self, path):
         matches = []
-        for root, dirnames, filenames in os.walk(path):
+        for root, dirnames, filenames in path.walk():
             for filename in fnmatch.filter(filenames, "*.c"):
-                matches.append(os.path.join(root, filename))
+                matches.append(root / filename)
         return matches
 
 
 if __name__ == "__main__":
     try:
-        if not os.path.isdir(sys.argv[1]):
+        kam_src = Path(sys.argv[1])
+        if not kam_src.is_dir():
             raise Exception("Not a valid directory")
     except Exception:
         print(
             "Please provide the path to the Kamailio src folder as the first argument"
         )
-        exit()
+        sys.exit()
 
     print("Parsing the source")
     parser = KemiFileExportParser()
-    data = parser.generate_kemi_export_list(sys.argv[1].rstrip("/"))
-    fgen = ModuleDocGenerator()
+    data = parser.generate_kemi_export_list(kam_src)
+    fgen = IndexDocGenerator()
     fgen.execute(data)
     print("Done")
