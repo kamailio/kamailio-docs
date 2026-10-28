@@ -19,6 +19,16 @@ xval KSR.tls.cget(str "aname");
 
 * 📖[kamailio.cfg::function::cget\(\)](https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.cget)
 
+Return values corresponding the pseudo-variables exported by TLS module, related
+to TLS connection and certificates. The parameter has to be the name of the
+pseudo-variable (without `$`).
+
+Example:
+
+```
+local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
+```
+
 ## KSR.tls.cget ##
 
 ```cpp
@@ -26,6 +36,16 @@ xval KSR.tls.cget(str "aname");
 ```
 
 * 📖[kamailio.cfg::function::cget\(\)](https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.cget)
+
+Return values corresponding the pseudo-variables exported by TLS module, related
+to TLS connection and certificates. The parameter has to be the name of the
+pseudo-variable (without `$`).
+
+Example:
+
+```
+local vPeerSubjectCn = KSR.tls.cget("tls_peer_subject_cn");
+```
 
 ## KSR.tls.is_peer_verified ##
 
