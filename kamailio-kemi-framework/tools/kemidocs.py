@@ -199,6 +199,7 @@ class KemiFileExportParser(object):
         # {"filename": "kemi.c", "export": "_sr_kemi_hdr", "folder": "/core/"},
         # {"filename": "app_lua_mod.c", "export": "sr_kemi_app_lua_rpc_exports", "folder": "/modules/app_lua/"}
     ]
+    special_modules = ["kx", "pvx", "pua"]
 
     def generate_kemi_export_list(self, source_path):
         files = self.list_c_files_in_directory(source_path)
@@ -269,6 +270,18 @@ class KemiFileExportParser(object):
 
         return parsed_list
 
+    def check_module_export(self, module, filename):
+        if module in self.special_modules:
+            return True
+        re_mod = rf"/src/modules/{module}/"
+        m = re.search(re_mod, f"{filename}")
+        if not m:
+            print(
+                f"WARN: module:{module} doesn't match path file:{filename}, skip it!!"
+            )
+            return False
+        return True
+
     def parse_kemi_export_c_lines(self, filename, lines):
         elements = []
         function_lines = []
@@ -299,6 +312,8 @@ class KemiFileExportParser(object):
             # Extract the content from the definitions
             val_module = declarations[0]
             val_module = val_module[val_module.find('("') + 2 : val_module.find('")')]
+            if not self.check_module_export(val_module, filename):
+                continue
             val_function = declarations[1]
             val_function = val_function[
                 val_function.find('("') + 2 : val_function.find('")')
