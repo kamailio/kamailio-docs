@@ -9,3 +9,4 @@
 site/
 # macos local files
 .DS_Store
+.ruff_cache
