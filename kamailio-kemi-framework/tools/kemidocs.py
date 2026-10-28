@@ -100,7 +100,7 @@ class ModuleDocGenerator(DocGenerator):
             thdr = f"KSR.{module_prefix}{value['name']}"
             tlink = replace_punctuation(thdr, "").lower()
             tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
-            turl_ext = f"modules/{self.module}.md#{tlink}"
+            turl_ext = f"modules/{self.module}/{self.module}.md#{tlink}"
             kmodtoc += f"* [{tdesc}](#{tlink})\n"
             kmodtoc_out += f"* [{tdesc}]({turl_ext})\n"
             kmodtext += f"## {thdr} ##\n\n"
