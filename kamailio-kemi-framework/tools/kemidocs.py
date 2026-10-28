@@ -2,11 +2,12 @@
 #
 
 
-import sys
+import copy
 import fnmatch
 import re
+import string
+import sys
 from pathlib import Path
-import copy
 
 KAMWEBURL = "https://kamailio.org"
 
@@ -26,6 +27,11 @@ MODMAPFUNC = {
         "run": "jsdt_run",
     },
 }
+MARKDOWN_PUNT = string.punctuation.replace("_", "")
+
+
+def replace_punctuation(text, replace):
+    return re.sub("[%s]" % re.escape(MARKDOWN_PUNT), replace, text)
 
 
 class DocGenerator(object):
@@ -68,7 +74,7 @@ class ModuleDocGenerator(DocGenerator):
         return self.output
 
     def markdown_section_heading(self):
-        self.markdown_string += f"## {self.module} ##\n\n"
+        self.markdown_string += f"# {self.module} #\n\n"
         kmodname = MODMAPNAME[self.module] if self.module in MODMAPNAME else self.module
         tdesc = f"kamailio.cfg::module::{kmodname}.html"
         turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html"
@@ -76,7 +82,8 @@ class ModuleDocGenerator(DocGenerator):
         self.markdown_string += self.read_file_to_string(
             f"{self.module}/{self.module}.header.md"
         )
-        self.output = copy.deepcopy(self.markdown_string)
+        # one header level lower for index
+        self.output = copy.deepcopy(self.markdown_string.replace("#", "##"))
 
     def markdown_section_content(self):
         if self.module == "core":
@@ -90,12 +97,13 @@ class ModuleDocGenerator(DocGenerator):
         kmodname = MODMAPNAME[self.module] if self.module in MODMAPNAME else self.module
 
         for value in self.methods:
+            thdr = f"KSR.{module_prefix}{value['name']}"
+            tlink = replace_punctuation(thdr, "").lower()
             tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
-            turl = "#ksr" + module_prefix.replace(".", "") + value["name"]
-            turl_ext = f"modules/{self.module}.md{turl}"
-            kmodtoc += f"* [{tdesc}]({turl})\n"
+            turl_ext = f"modules/{self.module}.md#{tlink}"
+            kmodtoc += f"* [{tdesc}](#{tlink})\n"
             kmodtoc_out += f"* [{tdesc}]({turl_ext})\n"
-            kmodtext += f"#### KSR.{module_prefix}{value['name']}\\(\\) ####\n\n"
+            kmodtext += f"## {thdr} ##\n\n"
 
             # Sanitize the return values
             if value["return"] == "none":
