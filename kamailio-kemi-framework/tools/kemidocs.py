@@ -128,7 +128,7 @@ class ModuleDocGenerator(DocGenerator):
             kmodtext += f"* 📖[{tdesc}]({turl})\n\n"
 
             func_doc = self.read_file_to_string(
-                f"{self.module}/{self.module}.header.md"
+                f"{self.module}/{self.module}.{value['name']}.md"
             ).strip()
             if len(func_doc) > 0:
                 kmodtext += func_doc + "\n\n"
