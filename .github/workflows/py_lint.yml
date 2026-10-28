@@ -1,13 +1,17 @@
-name: Lint
+name: py_lint
 on:
   push:
     branches:
       - master
+    paths:
+      - '**.py'
   pull_request:
     branches:
       - master
+    paths:
+      - '**.py'
 jobs:
-  lint:
+  py_lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
