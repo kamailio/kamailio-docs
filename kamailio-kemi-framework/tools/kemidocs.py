@@ -1,9 +1,8 @@
 # tool to generate the modules.md content
 #
 
-import json
+
 import sys
-import time
 import fnmatch
 import re
 from pathlib import Path
