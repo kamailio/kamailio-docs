@@ -86,10 +86,6 @@ xval KSR.kx.get_au();
 
 * 📖[kamailio.cfg::function::get_au\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_au)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_body ##
 
 ```cpp
@@ -98,9 +94,7 @@ xval KSR.kx.get_body();
 
 * 📖[kamailio.cfg::function::get_body\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_body)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the body of the SIP message (the value of $rb).
 
 ## KSR.kx.get_bodylen ##
 
@@ -110,10 +104,6 @@ int KSR.kx.get_bodylen();
 
 * 📖[kamailio.cfg::function::get_bodylen\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_bodylen)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_callid ##
 
 ```cpp
@@ -121,10 +111,6 @@ xval KSR.kx.get_callid();
 ```
 
 * 📖[kamailio.cfg::function::get_callid\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_callid)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_conid ##
 
@@ -134,9 +120,7 @@ int KSR.kx.get_conid();
 
 * 📖[kamailio.cfg::function::get_conid\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_conid)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the connection id for TCP, TLS and WebSocket, or -1 if no stream connection corresponds to current SIP message.
 
 ## KSR.kx.get_cturi ##
 
@@ -146,10 +130,6 @@ xval KSR.kx.get_cturi();
 
 * 📖[kamailio.cfg::function::get_cturi\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_cturi)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_def ##
 
 ```cpp
@@ -157,10 +137,6 @@ xval KSR.kx.get_def(str "dname");
 ```
 
 * 📖[kamailio.cfg::function::get_def\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_def)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_defn ##
 
@@ -170,10 +146,6 @@ int KSR.kx.get_defn(str "dname");
 
 * 📖[kamailio.cfg::function::get_defn\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_defn)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_duri ##
 
 ```cpp
@@ -182,9 +154,7 @@ xval KSR.kx.get_duri();
 
 * 📖[kamailio.cfg::function::get_duri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_duri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the value of destination URI ($du).
 
 ## KSR.kx.get_env ##
 
@@ -194,10 +164,6 @@ xval KSR.kx.get_env(str "envname");
 
 * 📖[kamailio.cfg::function::get_env\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_env)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_envn ##
 
 ```cpp
@@ -205,10 +171,6 @@ int KSR.kx.get_envn(str "envname");
 ```
 
 * 📖[kamailio.cfg::function::get_envn\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_envn)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_fhost ##
 
@@ -218,9 +180,7 @@ xval KSR.kx.get_fhost();
 
 * 📖[kamailio.cfg::function::get_fhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_fhost)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return From-URI domain ($fd).
 
 ## KSR.kx.get_furi ##
 
@@ -230,9 +190,7 @@ xval KSR.kx.get_furi();
 
 * 📖[kamailio.cfg::function::get_furi\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_furi)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the From URI($fu).
 
 ## KSR.kx.get_fuser ##
 
@@ -242,9 +200,7 @@ xval KSR.kx.get_fuser();
 
 * 📖[kamailio.cfg::function::get_fuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_fuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the From-URI username ($fU).
 
 ## KSR.kx.get_method ##
 
@@ -254,9 +210,7 @@ xval KSR.kx.get_method();
 
 * 📖[kamailio.cfg::function::get_method\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_method)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the SIP method ($rm).
 
 ## KSR.kx.get_msgbuf ##
 
@@ -266,10 +220,6 @@ xval KSR.kx.get_msgbuf();
 
 * 📖[kamailio.cfg::function::get_msgbuf\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msgbuf)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_msglen ##
 
 ```cpp
@@ -277,10 +227,6 @@ int KSR.kx.get_msglen();
 ```
 
 * 📖[kamailio.cfg::function::get_msglen\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msglen)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_msgtype ##
 
@@ -290,10 +236,6 @@ int KSR.kx.get_msgtype();
 
 * 📖[kamailio.cfg::function::get_msgtype\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_msgtype)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_nhuri ##
 
 ```cpp
@@ -301,10 +243,6 @@ xval KSR.kx.get_nhuri();
 ```
 
 * 📖[kamailio.cfg::function::get_nhuri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_nhuri)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_ouri ##
 
@@ -314,10 +252,6 @@ xval KSR.kx.get_ouri();
 
 * 📖[kamailio.cfg::function::get_ouri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ouri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_proto ##
 
 ```cpp
@@ -325,10 +259,6 @@ xval KSR.kx.get_proto();
 ```
 
 * 📖[kamailio.cfg::function::get_proto\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_proto)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_protoid ##
 
@@ -338,10 +268,6 @@ int KSR.kx.get_protoid();
 
 * 📖[kamailio.cfg::function::get_protoid\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_protoid)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_rcv_sock_name ##
 
 ```cpp
@@ -349,10 +275,6 @@ xval KSR.kx.get_rcv_sock_name();
 ```
 
 * 📖[kamailio.cfg::function::get_rcv_sock_name\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcv_sock_name)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_rcvaddr_sock ##
 
@@ -362,10 +284,6 @@ xval KSR.kx.get_rcvaddr_sock();
 
 * 📖[kamailio.cfg::function::get_rcvaddr_sock\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvaddr_sock)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_rcvadvip ##
 
 ```cpp
@@ -373,10 +291,6 @@ xval KSR.kx.get_rcvadvip();
 ```
 
 * 📖[kamailio.cfg::function::get_rcvadvip\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvadvip)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_rcvadvport ##
 
@@ -386,10 +300,6 @@ xval KSR.kx.get_rcvadvport();
 
 * 📖[kamailio.cfg::function::get_rcvadvport\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvadvport)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_rcvip ##
 
 ```cpp
@@ -397,10 +307,6 @@ xval KSR.kx.get_rcvip();
 ```
 
 * 📖[kamailio.cfg::function::get_rcvip\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvip)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_rcvport ##
 
@@ -410,10 +316,6 @@ xval KSR.kx.get_rcvport();
 
 * 📖[kamailio.cfg::function::get_rcvport\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rcvport)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_rhost ##
 
 ```cpp
@@ -422,9 +324,7 @@ xval KSR.kx.get_rhost();
 
 * 📖[kamailio.cfg::function::get_rhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_rhost)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the Request URI host (domain) part ($rd).
 
 ## KSR.kx.get_ruri ##
 
@@ -434,9 +334,7 @@ xval KSR.kx.get_ruri();
 
 * 📖[kamailio.cfg::function::get_ruri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ruri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the Request URI ($ru).
 
 ## KSR.kx.get_ruser ##
 
@@ -446,9 +344,7 @@ xval KSR.kx.get_ruser();
 
 * 📖[kamailio.cfg::function::get_ruser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ruser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the Request URI user part ($rU).
 
 ## KSR.kx.get_send_sock ##
 
@@ -458,10 +354,6 @@ xval KSR.kx.get_send_sock();
 
 * 📖[kamailio.cfg::function::get_send_sock\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_send_sock_name ##
 
 ```cpp
@@ -469,10 +361,6 @@ xval KSR.kx.get_send_sock_name();
 ```
 
 * 📖[kamailio.cfg::function::get_send_sock_name\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock_name)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_send_sock_port ##
 
@@ -482,10 +370,6 @@ int KSR.kx.get_send_sock_port();
 
 * 📖[kamailio.cfg::function::get_send_sock_port\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_send_sock_port)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_srcaddr_sock ##
 
 ```cpp
@@ -493,10 +377,6 @@ xval KSR.kx.get_srcaddr_sock();
 ```
 
 * 📖[kamailio.cfg::function::get_srcaddr_sock\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcaddr_sock)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_srcip ##
 
@@ -506,10 +386,6 @@ xval KSR.kx.get_srcip();
 
 * 📖[kamailio.cfg::function::get_srcip\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcip)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_srcport ##
 
 ```cpp
@@ -517,10 +393,6 @@ xval KSR.kx.get_srcport();
 ```
 
 * 📖[kamailio.cfg::function::get_srcport\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcport)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_srcuri ##
 
@@ -530,10 +402,6 @@ xval KSR.kx.get_srcuri();
 
 * 📖[kamailio.cfg::function::get_srcuri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_srcuri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_status ##
 
 ```cpp
@@ -541,10 +409,6 @@ int KSR.kx.get_status();
 ```
 
 * 📖[kamailio.cfg::function::get_status\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_status)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.get_thost ##
 
@@ -554,9 +418,7 @@ xval KSR.kx.get_thost();
 
 * 📖[kamailio.cfg::function::get_thost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_thost)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the To-URI host (domain) part ($td).
 
 ## KSR.kx.get_timestamp ##
 
@@ -566,10 +428,6 @@ int KSR.kx.get_timestamp();
 
 * 📖[kamailio.cfg::function::get_timestamp\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_timestamp)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.get_turi ##
 
 ```cpp
@@ -578,9 +436,7 @@ xval KSR.kx.get_turi();
 
 * 📖[kamailio.cfg::function::get_turi\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_turi)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the To URI ($tu).
 
 ## KSR.kx.get_tuser ##
 
@@ -590,9 +446,7 @@ xval KSR.kx.get_tuser();
 
 * 📖[kamailio.cfg::function::get_tuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_tuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
+Return the To-URI user part ($tU).
 
 ## KSR.kx.get_ua ##
 
@@ -602,10 +456,6 @@ xval KSR.kx.get_ua();
 
 * 📖[kamailio.cfg::function::get_ua\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.get_ua)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_au ##
 
 ```cpp
@@ -613,10 +463,6 @@ xval KSR.kx.gete_au();
 ```
 
 * 📖[kamailio.cfg::function::gete_au\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_au)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gete_body ##
 
@@ -626,10 +472,6 @@ xval KSR.kx.gete_body();
 
 * 📖[kamailio.cfg::function::gete_body\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_body)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_cturi ##
 
 ```cpp
@@ -637,10 +479,6 @@ xval KSR.kx.gete_cturi();
 ```
 
 * 📖[kamailio.cfg::function::gete_cturi\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_cturi)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gete_duri ##
 
@@ -650,10 +488,6 @@ xval KSR.kx.gete_duri();
 
 * 📖[kamailio.cfg::function::gete_duri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_duri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_fhost ##
 
 ```cpp
@@ -661,10 +495,6 @@ xval KSR.kx.gete_fhost();
 ```
 
 * 📖[kamailio.cfg::function::gete_fhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_fhost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gete_fuser ##
 
@@ -674,10 +504,6 @@ xval KSR.kx.gete_fuser();
 
 * 📖[kamailio.cfg::function::gete_fuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_fuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_rhost ##
 
 ```cpp
@@ -685,10 +511,6 @@ xval KSR.kx.gete_rhost();
 ```
 
 * 📖[kamailio.cfg::function::gete_rhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_rhost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gete_ruser ##
 
@@ -698,10 +520,6 @@ xval KSR.kx.gete_ruser();
 
 * 📖[kamailio.cfg::function::gete_ruser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_ruser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_thost ##
 
 ```cpp
@@ -709,10 +527,6 @@ xval KSR.kx.gete_thost();
 ```
 
 * 📖[kamailio.cfg::function::gete_thost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_thost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gete_tuser ##
 
@@ -722,10 +536,6 @@ xval KSR.kx.gete_tuser();
 
 * 📖[kamailio.cfg::function::gete_tuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_tuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.gete_ua ##
 
 ```cpp
@@ -733,10 +543,6 @@ xval KSR.kx.gete_ua();
 ```
 
 * 📖[kamailio.cfg::function::gete_ua\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gete_ua)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.gets_status ##
 
@@ -746,10 +552,6 @@ xval KSR.kx.gets_status();
 
 * 📖[kamailio.cfg::function::gets_status\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.gets_status)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_au ##
 
 ```cpp
@@ -757,10 +559,6 @@ xval KSR.kx.getw_au();
 ```
 
 * 📖[kamailio.cfg::function::getw_au\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_au)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.getw_body ##
 
@@ -770,10 +568,6 @@ xval KSR.kx.getw_body();
 
 * 📖[kamailio.cfg::function::getw_body\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_body)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_cturi ##
 
 ```cpp
@@ -781,10 +575,6 @@ xval KSR.kx.getw_cturi();
 ```
 
 * 📖[kamailio.cfg::function::getw_cturi\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_cturi)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.getw_duri ##
 
@@ -794,10 +584,6 @@ xval KSR.kx.getw_duri();
 
 * 📖[kamailio.cfg::function::getw_duri\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_duri)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_fhost ##
 
 ```cpp
@@ -805,10 +591,6 @@ xval KSR.kx.getw_fhost();
 ```
 
 * 📖[kamailio.cfg::function::getw_fhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_fhost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.getw_fuser ##
 
@@ -818,10 +600,6 @@ xval KSR.kx.getw_fuser();
 
 * 📖[kamailio.cfg::function::getw_fuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_fuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_rhost ##
 
 ```cpp
@@ -829,10 +607,6 @@ xval KSR.kx.getw_rhost();
 ```
 
 * 📖[kamailio.cfg::function::getw_rhost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_rhost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.getw_ruser ##
 
@@ -842,10 +616,6 @@ xval KSR.kx.getw_ruser();
 
 * 📖[kamailio.cfg::function::getw_ruser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_ruser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_thost ##
 
 ```cpp
@@ -853,10 +623,6 @@ xval KSR.kx.getw_thost();
 ```
 
 * 📖[kamailio.cfg::function::getw_thost\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_thost)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.getw_tuser ##
 
@@ -866,10 +632,6 @@ xval KSR.kx.getw_tuser();
 
 * 📖[kamailio.cfg::function::getw_tuser\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_tuser)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.getw_ua ##
 
 ```cpp
@@ -877,10 +639,6 @@ xval KSR.kx.getw_ua();
 ```
 
 * 📖[kamailio.cfg::function::getw_ua\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.getw_ua)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
 
 ## KSR.kx.ifdef ##
 
@@ -890,10 +648,6 @@ bool KSR.kx.ifdef(str "dname");
 
 * 📖[kamailio.cfg::function::ifdef\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.ifdef)
 
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
-
 ## KSR.kx.ifndef ##
 
 ```cpp
@@ -901,7 +655,3 @@ bool KSR.kx.ifndef(str "dname");
 ```
 
 * 📖[kamailio.cfg::function::ifndef\(\)](https://kamailio.org/docs/modules/devel/modules/kemi.html#kemi.f.ifndef)
-
-Functions exported by `kemix` module and available in KEMI language under
-`KSR.kx`. They aim to provide a convenient way to retrieve string or integer
-values for most commonly used variables or runtime environment attributes.
