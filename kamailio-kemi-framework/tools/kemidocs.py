@@ -89,7 +89,7 @@ class ModuleDocGenerator(object):
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
         tdesc = f"kamailio.cfg::module::{kmodname}.html"
         turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html"
-        self.markdown_string += f"  * 📖[{tdesc}]({turl})\n\n"
+        self.markdown_string += f"* 📖[{tdesc}]({turl})\n\n"
         self.markdown_string += self.read_file_to_string(
             module + "/" + module + ".header.md"
         )
@@ -108,7 +108,7 @@ class ModuleDocGenerator(object):
         for value in methods:
             tdesc = f"KSR.{module_prefix}{value['name']}\\(\\)"
             turl = "#ksr" + module_prefix.replace(".", "") + value["name"]
-            kmodtoc += f"  * [{tdesc}]({turl})\n"
+            kmodtoc += f"* [{tdesc}]({turl})\n"
             kmodtext += f"#### KSR.{module_prefix}{value['name']}\\(\\) ####\n\n"
 
             # Sanitize the return values
@@ -131,7 +131,7 @@ class ModuleDocGenerator(object):
                     kfuncname = MODMAPFUNC[kmodname][value["name"]]
             tdesc = f"kamailio.cfg::function::{kfuncname}\\(\\)"
             turl = f"{KAMWEBURL}/docs/modules/devel/modules/{kmodname}.html#{kmodname}.f.{kfuncname}"
-            kmodtext += f"  * 📖[{tdesc}]({turl})\n\n"
+            kmodtext += f"* 📖[{tdesc}]({turl})\n\n"
 
             func_doc = self.read_file_to_string(
                 module + "/" + module + "." + value["name"] + ".md"
