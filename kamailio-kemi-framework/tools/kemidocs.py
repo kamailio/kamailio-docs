@@ -1,6 +1,14 @@
 # tool to generate the modules.md content
 #
 
+import os
+import json
+import sys
+import time
+import fnmatch
+import re
+import importlib
+
 KAMWEBURL = "https://kamailio.org"
 
 MODMAPNAME = {
@@ -20,7 +28,6 @@ MODMAPFUNC = {
     },
 }
 
-import os, json, sys, time, fnmatch, re, importlib
 
 class ModuleDocGenerator(object):
     PATH_GENERATED_MARKDOWN = "../docs/modules.md"
@@ -38,7 +45,7 @@ class ModuleDocGenerator(object):
         functions_parsed = self.parse_function_list(data)
         self.output_markdown(functions_parsed)
 
-        print ("Markdown doc created successfully at " + self.PATH_GENERATED_MARKDOWN)
+        print("Markdown doc created successfully at " + self.PATH_GENERATED_MARKDOWN)
 
     def parse_function_list(self, functions):
         data = {}
@@ -53,7 +60,9 @@ class ModuleDocGenerator(object):
             if module not in data:
                 data[module] = []
 
-            data[module].append({"name": elem["name"], "return": elem["ret"], "params": elem["params"]})
+            data[module].append(
+                {"name": elem["name"], "return": elem["ret"], "params": elem["params"]}
+            )
 
         return data
 
@@ -63,7 +72,7 @@ class ModuleDocGenerator(object):
         for key in sorted(data):
             methods = data[key]
             # Sort the functions by name alphabetically
-            methods = sorted(methods, key = lambda k: k['name'])
+            methods = sorted(methods, key=lambda k: k["name"])
 
             self.markdown_section_heading(key)
             self.markdown_section_content(key, methods)
@@ -78,9 +87,18 @@ class ModuleDocGenerator(object):
     def markdown_section_heading(self, module):
         self.markdown_string += "## " + module + " ##\n\n"
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
-        self.markdown_string += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" \
-                        + kmodname + ".html'>📖 kamailio.cfg::module::" + kmodname + ".html</a>\n\n"
-        self.markdown_string += self.read_file_to_string(module + "/" + module + ".header.md")
+        self.markdown_string += (
+            "  * <a target='_blank' href='"
+            + KAMWEBURL
+            + "/docs/modules/devel/modules/"
+            + kmodname
+            + ".html'>📖 kamailio.cfg::module::"
+            + kmodname
+            + ".html</a>\n\n"
+        )
+        self.markdown_string += self.read_file_to_string(
+            module + "/" + module + ".header.md"
+        )
         return True
 
     def markdown_section_content(self, module, methods):
@@ -94,7 +112,15 @@ class ModuleDocGenerator(object):
         kmodname = MODMAPNAME[module] if module in MODMAPNAME else module
 
         for value in methods:
-            kmodtoc += "  * [KSR." + module_prefix + value["name"] + "()](#ksr" + module_prefix.replace('.', '') + value["name"] + ")\n"
+            kmodtoc += (
+                "  * [KSR."
+                + module_prefix
+                + value["name"]
+                + "()](#ksr"
+                + module_prefix.replace(".", "")
+                + value["name"]
+                + ")\n"
+            )
             kmodtext += "#### KSR." + module_prefix + value["name"] + "() ####\n\n"
 
             # Sanitize the return values
@@ -110,18 +136,38 @@ class ModuleDocGenerator(object):
                 params_value = value["params"]
 
             # Generate the output string for the markdown page
-            kmodtext += "```cpp\n" + return_value + " KSR." + module_prefix + value["name"] \
-                                    + "(" + params_value + ");\n```\n\n" \
-
+            kmodtext += (
+                "```cpp\n"
+                + return_value
+                + " KSR."
+                + module_prefix
+                + value["name"]
+                + "("
+                + params_value
+                + ");\n```\n\n"
+            )
             kfuncname = value["name"]
             if kmodname in MODMAPFUNC:
                 if value["name"] in MODMAPFUNC[kmodname]:
                     kfuncname = MODMAPFUNC[kmodname][value["name"]]
-            kmodtext += "  * <a target='_blank' href='" + KAMWEBURL + "/docs/modules/devel/modules/" + kmodname + ".html#" \
-                                    + kmodname + ".f." + kfuncname + "'>📖 kamailio.cfg::function::" + kfuncname + "()</a>\n\n"
+            kmodtext += (
+                "  * <a target='_blank' href='"
+                + KAMWEBURL
+                + "/docs/modules/devel/modules/"
+                + kmodname
+                + ".html#"
+                + kmodname
+                + ".f."
+                + kfuncname
+                + "'>📖 kamailio.cfg::function::"
+                + kfuncname
+                + "()</a>\n\n"
+            )
 
-            func_doc = self.read_file_to_string(module + "/" + module + "." + value["name"] + ".md").strip()
-            if len(func_doc)>0:
+            func_doc = self.read_file_to_string(
+                module + "/" + module + "." + value["name"] + ".md"
+            ).strip()
+            if len(func_doc) > 0:
                 kmodtext += func_doc + "\n\n"
         self.markdown_string += kmodtoc + "\n" + kmodtext
         return True
@@ -135,7 +181,7 @@ class ModuleDocGenerator(object):
     def read_file_to_string(self, filename):
         path = self.PATH_MODULES_DOCS + filename
         if os.path.isfile(path):
-            with open(path, 'r') as myfile:
+            with open(path, "r") as myfile:
                 return myfile.read() + "\n"
         return ""
 
@@ -148,15 +194,15 @@ class KemiFileExportParser(object):
         "t_set_disable_6xx": "int state",
         "t_set_disable_failover": "int state",
         "t_set_no_e2e_cancel_reason": "int state",
-        "t_set_disable_internal_reply": "int state"
+        "t_set_disable_internal_reply": "int state",
     }
 
     # These files export the KEMI functions in a special way so we map them manually
     # TODO: Discuss with @miconda if core/HDR/pv/x should be added as well or not
     special_exports = [
-        #{"filename": "kemi.c", "export": "_sr_kemi_core", "folder": "/core/"},
-        #{"filename": "kemi.c", "export": "_sr_kemi_hdr", "folder": "/core/"},
-        #{"filename": "app_lua_mod.c", "export": "sr_kemi_app_lua_rpc_exports", "folder": "/modules/app_lua/"}
+        # {"filename": "kemi.c", "export": "_sr_kemi_core", "folder": "/core/"},
+        # {"filename": "kemi.c", "export": "_sr_kemi_hdr", "folder": "/core/"},
+        # {"filename": "app_lua_mod.c", "export": "sr_kemi_app_lua_rpc_exports", "folder": "/modules/app_lua/"}
     ]
 
     def generate_kemi_export_list(self, source_path):
@@ -164,21 +210,27 @@ class KemiFileExportParser(object):
         lists = []
 
         for file in files:
-            with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+            with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 lines = f.readlines()
 
             export_name = self.find_c_file_kemi_export(file, lines)
             if export_name:
-                export_functions = self.extract_c_file_kemi_export_lines(file, lines, export_name)
+                export_functions = self.extract_c_file_kemi_export_lines(
+                    file, lines, export_name
+                )
                 lists = lists + export_functions
-                print ("Found ", len(export_functions), "functions", "Total:", len(lists))
+                print(
+                    "Found ", len(export_functions), "functions", "Total:", len(lists)
+                )
 
         # Handle some special files separately
         for elem in self.special_exports:
             file = source_path + elem["folder"] + elem["filename"]
             with open(file) as f:
                 lines = f.readlines()
-            lists = lists + self.extract_c_file_kemi_export_lines(file, lines, elem["export"])
+            lists = lists + self.extract_c_file_kemi_export_lines(
+                file, lines, elem["export"]
+            )
 
         return lists
 
@@ -190,12 +242,12 @@ class KemiFileExportParser(object):
                 line = line.lstrip(" ")
                 line = line.lstrip("\t")
                 if line.find("sr_kemi_modules_add") == 0:
-                    param = line[line.find("(") + 1:line.find(")")]
-                    print ("INFO: ---- Found export", filename, param)
+                    param = line[line.find("(") + 1 : line.find(")")]
+                    print("INFO: ---- Found export", filename, param)
                     break
                 else:
                     if line != "int sr_kemi_modules_add(sr_kemi_t *klist)\n":
-                        print ("ERR: Possible error at line: ", filename, line)
+                        print("ERR: Possible error at line: ", filename, line)
                         exit()
 
         return param
@@ -215,7 +267,7 @@ class KemiFileExportParser(object):
                 list_functions.append(line)
 
         if len(list_functions) < 1:
-            print ("ERR: Couldn't parse file for exported functions: ", export_name)
+            print("ERR: Couldn't parse file for exported functions: ", export_name)
             exit()
 
         parsed_list = self.parse_kemi_export_c_lines(filename, list_functions)
@@ -243,7 +295,7 @@ class KemiFileExportParser(object):
             function_lines_split = func.split(",{")
 
             if len(function_lines_split) < 2:
-                print ("ERR: Incorrect function line", func)
+                print("ERR: Incorrect function line", func)
                 exit()
 
             declarations = function_lines_split[0].split(",")
@@ -251,9 +303,11 @@ class KemiFileExportParser(object):
 
             # Extract the content from the definitions
             val_module = declarations[0]
-            val_module = val_module[val_module.find('("') + 2:val_module.find('")')]
+            val_module = val_module[val_module.find('("') + 2 : val_module.find('")')]
             val_function = declarations[1]
-            val_function = val_function[val_function.find('("') + 2:val_function.find('")')]
+            val_function = val_function[
+                val_function.find('("') + 2 : val_function.find('")')
+            ]
 
             if declarations[2] == "SR_KEMIP_INT":
                 val_return = "int"
@@ -294,10 +348,21 @@ class KemiFileExportParser(object):
                 print("ERR: Couldn't iterate the params: ", params)
                 exit()
 
-            param_string = self.find_c_function_params(filename, val_c_function, val_return)
-            param_string = self.prettify_params_list(val_function, param_string, val_params)
+            param_string = self.find_c_function_params(
+                filename, val_c_function, val_return
+            )
+            param_string = self.prettify_params_list(
+                val_function, param_string, val_params
+            )
 
-            elements.append({"module": val_module, "name": val_function, "ret": val_return, "params": param_string})
+            elements.append(
+                {
+                    "module": val_module,
+                    "name": val_function,
+                    "ret": val_return,
+                    "params": param_string,
+                }
+            )
 
         return elements
 
@@ -312,14 +377,32 @@ class KemiFileExportParser(object):
             params.pop(0)
 
         if len(params) != len(kemi_types):
-            print("ERR: Mismatching quantity of params. Declaration for", function_name, ":", function_declaration, "KEMI:", kemi_types)
+            print(
+                "ERR: Mismatching quantity of params. Declaration for",
+                function_name,
+                ":",
+                function_declaration,
+                "KEMI:",
+                kemi_types,
+            )
             exit()
 
         for declared, type in zip(params, kemi_types):
             declared = declared.replace("*", "")
             declared = declared.strip().split(" ")[0]
             if declared != type:
-                print("ERR: Mismatching type of params for", function_name, ":", function_declaration, " | ", kemi_types, " | Declared: ", declared, " Type: ", type)
+                print(
+                    "ERR: Mismatching type of params for",
+                    function_name,
+                    ":",
+                    function_declaration,
+                    " | ",
+                    kemi_types,
+                    " | Declared: ",
+                    declared,
+                    " Type: ",
+                    type,
+                )
                 exit()
 
         param_string = ""
@@ -338,26 +421,37 @@ class KemiFileExportParser(object):
 
     def find_c_function_params(self, filename, function_name, return_type):
         # First we try with the same file to find the declaration
-        param_string = self.search_file_for_function_declaration(filename, function_name, return_type)
+        param_string = self.search_file_for_function_declaration(
+            filename, function_name, return_type
+        )
         # If we couldn't find it, let's try all files in the same folder as the first file
         if param_string:
             return param_string
         else:
             files = self.list_c_files_in_directory(os.path.dirname(filename))
             for file in files:
-                param_string = self.search_file_for_function_declaration(file, function_name, return_type)
+                param_string = self.search_file_for_function_declaration(
+                    file, function_name, return_type
+                )
                 if param_string:
                     return param_string
 
         if function_name in self.macro_functions:
             return self.macro_functions[function_name]
 
-        print("ERR: Couldn't find the function declaration", filename, function_name, return_type)
+        print(
+            "ERR: Couldn't find the function declaration",
+            filename,
+            function_name,
+            return_type,
+        )
         exit()
 
-    def search_file_for_function_declaration(self, filename, function_name, return_type):
+    def search_file_for_function_declaration(
+        self, filename, function_name, return_type
+    ):
         # print "Searching file", filename, "for", function_name
-        with open(filename, 'r', encoding='utf-8', errors='ignore') as f:
+        with open(filename, "r", encoding="utf-8", errors="ignore") as f:
             lines = f.readlines()
 
         param_string = None
@@ -370,10 +464,12 @@ class KemiFileExportParser(object):
             return_match = "int"
 
         if return_type == "xval":
-            return_match = "sr_kemi_xval_t([ \t])*\*"
+            return_match = r"sr_kemi_xval_t([ \t])*\*"
 
         # Look for declarations in format:    static? return_type function_name(
-        r = re.compile("^(?:static )?" + return_match + "[ \t]*(" + function_name + ")[ \t]*\(")
+        r = re.compile(
+            r"^(?:static )?" + return_match + r"[ \t]*(" + function_name + r")[ \t]*\("
+        )
         for line in lines:
             m = r.match(line)
             if m:
@@ -381,7 +477,9 @@ class KemiFileExportParser(object):
             if found:
                 temp_string += line
                 if line.find("{") >= 0:
-                    param_string = temp_string[temp_string.find('(') + 1:temp_string.find(')')]
+                    param_string = temp_string[
+                        temp_string.find("(") + 1 : temp_string.find(")")
+                    ]
                     break
 
         return param_string
@@ -389,7 +487,7 @@ class KemiFileExportParser(object):
     def list_c_files_in_directory(self, path):
         matches = []
         for root, dirnames, filenames in os.walk(path):
-            for filename in fnmatch.filter(filenames, '*.c'):
+            for filename in fnmatch.filter(filenames, "*.c"):
                 matches.append(os.path.join(root, filename))
         return matches
 
@@ -397,9 +495,11 @@ class KemiFileExportParser(object):
 if __name__ == "__main__":
     try:
         if not os.path.isdir(sys.argv[1]):
-            raise Exception('Not a valid directory')
-    except:
-        print("Please provide the path to the Kamailio src folder as the first argument")
+            raise Exception("Not a valid directory")
+    except Exception:
+        print(
+            "Please provide the path to the Kamailio src folder as the first argument"
+        )
         exit()
 
     print("Parsing the source")
