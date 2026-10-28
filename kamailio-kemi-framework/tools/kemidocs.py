@@ -146,7 +146,7 @@ class IndexDocGenerator(DocGenerator):
         # Validate that we got some methods back. 155 is an arbitrary large number.
         if len(data) < 1:
             print("ERR: Invalid data")
-            sys.exit()
+            sys.exit(1)
         functions_parsed = self.parse_function_list(data)
         self.output_markdown(functions_parsed)
 
@@ -243,7 +243,7 @@ class KemiFileExportParser(object):
                 else:
                     if line != "int sr_kemi_modules_add(sr_kemi_t *klist)\n":
                         print("ERR: Possible error at line: ", filename, line)
-                        exit()
+                        sys.exit(1)
 
         return param
 
@@ -263,7 +263,7 @@ class KemiFileExportParser(object):
 
         if len(list_functions) < 1:
             print("ERR: Couldn't parse file for exported functions: ", export_name)
-            exit()
+            sys.exit(1)
 
         parsed_list = self.parse_kemi_export_c_lines(filename, list_functions)
 
@@ -291,7 +291,7 @@ class KemiFileExportParser(object):
 
             if len(function_lines_split) < 2:
                 print("ERR: Incorrect function line", func)
-                sys.exit()
+                sys.exit(1)
 
             declarations = function_lines_split[0].split(",")
             params = function_lines_split[1]
@@ -316,7 +316,7 @@ class KemiFileExportParser(object):
                 val_return = "xval"
             else:
                 print("ERR: Invalid return value", declarations[2], func)
-                sys.exit()
+                sys.exit(1)
 
             val_c_function = declarations[3].strip()
 
@@ -337,11 +337,11 @@ class KemiFileExportParser(object):
                     continue
                 else:
                     print("Invalid return value", declarations[2], func)
-                    sys.exit()
+                    sys.exit(1)
 
             if itr != 6:
                 print("ERR: Couldn't iterate the params: ", params)
-                sys.exit()
+                sys.exit(1)
 
             param_string = self.find_c_function_params(
                 filename, val_c_function, val_return
@@ -380,7 +380,7 @@ class KemiFileExportParser(object):
                 "KEMI:",
                 kemi_types,
             )
-            sys.exit()
+            sys.exit(1)
 
         for declared, type in zip(params, kemi_types):
             declared = declared.replace("*", "")
@@ -398,7 +398,7 @@ class KemiFileExportParser(object):
                     " Type: ",
                     type,
                 )
-                sys.exit()
+                sys.exit(1)
 
         param_string = ""
 
@@ -440,7 +440,7 @@ class KemiFileExportParser(object):
             function_name,
             return_type,
         )
-        sys.exit()
+        sys.exit(1)
 
     def search_file_for_function_declaration(
         self, filename, function_name, return_type
@@ -496,7 +496,7 @@ if __name__ == "__main__":
         print(
             "Please provide the path to the Kamailio src folder as the first argument"
         )
-        sys.exit()
+        sys.exit(1)
 
     print("Parsing the source")
     parser = KemiFileExportParser()
