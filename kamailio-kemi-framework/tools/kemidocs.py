@@ -52,7 +52,7 @@ class DocGenerator(object):
         parent = self.PATH_GENERATED_MARKDOWN.parent
         parent.mkdir(mode=0o776, parents=True, exist_ok=True)
         with open(self.PATH_GENERATED_MARKDOWN, "w") as f:
-            f.write(self.markdown_string)
+            f.write(self.markdown_string.removesuffix("\n\n") + "\n")
         print(f"{msg} {self.PATH_GENERATED_MARKDOWN}")
 
 
