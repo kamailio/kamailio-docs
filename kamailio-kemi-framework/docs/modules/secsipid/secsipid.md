@@ -4,7 +4,6 @@
 
 Exported functions:
 
-* [KSR.secsipid.result_str\(\)](#ksrsecsipidresult_str)
 * [KSR.secsipid.secsipid_add_identity\(\)](#ksrsecsipidsecsipid_add_identity)
 * [KSR.secsipid.secsipid_build_identity\(\)](#ksrsecsipidsecsipid_build_identity)
 * [KSR.secsipid.secsipid_build_identity_prvkey\(\)](#ksrsecsipidsecsipid_build_identity_prvkey)
@@ -16,14 +15,6 @@ Exported functions:
 * [KSR.secsipid.secsipid_sign\(\)](#ksrsecsipidsecsipid_sign)
 * [KSR.secsipid.secsipid_sign_prvkey\(\)](#ksrsecsipidsecsipid_sign_prvkey)
 * [KSR.secsipid.secsipid_verify\(\)](#ksrsecsipidsecsipid_verify)
-
-## KSR.secsipid.result_str ##
-
-```cpp
-int KSR.secsipid.result_str(str "attrname", str "avpname");
-```
-
-* 📖[kamailio.cfg::function::result_str\(\)](https://kamailio.org/docs/modules/devel/modules/secsipid.html#secsipid.f.result_str)
 
 ## KSR.secsipid.secsipid_add_identity ##
 
