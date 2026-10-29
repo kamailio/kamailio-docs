@@ -44,14 +44,10 @@ jobs:
           - kamailio-install-guide-git
           - kamailio-kemi-framework
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.x'
-
       - uses: actions/checkout@v7
         with:
           sparse-checkout: |
+            .github/actions
             ${{ matrix.directory }}
             .pymarkdown
           fetch-depth: ${{ needs.depth-value.outputs.pr_depth }}
@@ -67,11 +63,8 @@ jobs:
           write_output_files: true
           output_dir: ".github/outputs"
 
-      - name: Install pymarkdown
-        if: steps.changed-markdown-files.outputs.all_changed_files != ''
-        run: pip install pymarkdownlnt
-
       - name: Run pymarkdown
         if: steps.changed-markdown-files.outputs.all_changed_files != ''
-        run: |
-          pymarkdown --config .pymarkdown scan ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+        uses: ./.github/actions/md-lint
+        with:
+          changes-path: .github/outputs/all_changed_files.txt
