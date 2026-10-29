@@ -746,8 +746,6 @@ Exported functions:
 Exported functions:
 
 * [KSR.ims_qos.Rx_AAR\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar)
-* [KSR.ims_qos.Rx_AAR\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar)
-* [KSR.ims_qos.Rx_AAR_Register\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar_register)
 * [KSR.ims_qos.Rx_AAR_Register\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar_register)
 
 ## influxdbc ##
@@ -1744,7 +1742,6 @@ Exported functions:
 
 Exported functions:
 
-* [KSR.secsipid.result_str\(\)](modules/secsipid/secsipid.md#ksrsecsipidresult_str)
 * [KSR.secsipid.secsipid_add_identity\(\)](modules/secsipid/secsipid.md#ksrsecsipidsecsipid_add_identity)
 * [KSR.secsipid.secsipid_build_identity\(\)](modules/secsipid/secsipid.md#ksrsecsipidsecsipid_build_identity)
 * [KSR.secsipid.secsipid_build_identity_prvkey\(\)](modules/secsipid/secsipid.md#ksrsecsipidsecsipid_build_identity_prvkey)
@@ -2141,10 +2138,7 @@ Exported functions:
 Exported functions:
 
 * [KSR.tls.cget\(\)](modules/tls/tls.md#ksrtlscget)
-* [KSR.tls.cget\(\)](modules/tls/tls.md#ksrtlscget)
 * [KSR.tls.is_peer_verified\(\)](modules/tls/tls.md#ksrtlsis_peer_verified)
-* [KSR.tls.is_peer_verified\(\)](modules/tls/tls.md#ksrtlsis_peer_verified)
-* [KSR.tls.set_connect_server_id\(\)](modules/tls/tls.md#ksrtlsset_connect_server_id)
 * [KSR.tls.set_connect_server_id\(\)](modules/tls/tls.md#ksrtlsset_connect_server_id)
 
 ## tm ##
