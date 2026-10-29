@@ -27,3 +27,5 @@ int KSR.dispatcher.ds_is_from_list(int groupid);
 int KSR.dispatcher.ds_is_from_list_mode(int groupid, int mode);
 int KSR.dispatcher.ds_is_from_list_uri(int groupid, int mode, str "uri");
 ```
+
+<a href="">this should be failing</a>
