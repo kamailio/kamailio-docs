@@ -7,6 +7,7 @@ Exported functions:
 * [KSR.tls.cget\(\)](#ksrtlscget)
 * [KSR.tls.is_peer_verified\(\)](#ksrtlsis_peer_verified)
 * [KSR.tls.set_connect_server_id\(\)](#ksrtlsset_connect_server_id)
+* [KSR.tls.set_connect_server_name\(\)](#ksrtlsset_connect_server_name)
 
 ## KSR.tls.cget ##
 
@@ -41,3 +42,11 @@ int KSR.tls.set_connect_server_id(str "srvid");
 ```
 
 * 📖[kamailio.cfg::function::set_connect_server_id\(\)](https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.set_connect_server_id)
+
+## KSR.tls.set_connect_server_name ##
+
+```cpp
+int KSR.tls.set_connect_server_name(str "sname");
+```
+
+* 📖[kamailio.cfg::function::set_connect_server_name\(\)](https://kamailio.org/docs/modules/devel/modules/tls.html#tls.f.set_connect_server_name)
