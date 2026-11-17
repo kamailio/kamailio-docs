@@ -748,6 +748,14 @@ Exported functions:
 * [KSR.ims_qos.Rx_AAR\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar)
 * [KSR.ims_qos.Rx_AAR_Register\(\)](modules/ims_qos/ims_qos.md#ksrims_qosrx_aar_register)
 
+## ims_registrar_scscf ##
+
+* 📖[kamailio.cfg::module::ims_registrar_scscf.html](https://kamailio.org/docs/modules/devel/modules/ims_registrar_scscf.html)
+
+Exported functions:
+
+* [KSR.ims_registrar_scscf.orig_impu_has_contact\(\)](modules/ims_registrar_scscf/ims_registrar_scscf.md#ksrims_registrar_scscforig_impu_has_contact)
+
 ## influxdbc ##
 
 * 📖[kamailio.cfg::module::influxdbc.html](https://kamailio.org/docs/modules/devel/modules/influxdbc.html)
@@ -1595,6 +1603,7 @@ Exported functions:
 * [KSR.rtpengine.rtpengine_subscribe_answer\(\)](modules/rtpengine/rtpengine.md#ksrrtpenginertpengine_subscribe_answer)
 * [KSR.rtpengine.rtpengine_subscribe_request\(\)](modules/rtpengine/rtpengine.md#ksrrtpenginertpengine_subscribe_request)
 * [KSR.rtpengine.rtpengine_unsubscribe\(\)](modules/rtpengine/rtpengine.md#ksrrtpenginertpengine_unsubscribe)
+* [KSR.rtpengine.rtpengine_xquery_v\(\)](modules/rtpengine/rtpengine.md#ksrrtpenginertpengine_xquery_v)
 * [KSR.rtpengine.set_rtpengine_set\(\)](modules/rtpengine/rtpengine.md#ksrrtpengineset_rtpengine_set)
 * [KSR.rtpengine.set_rtpengine_set2\(\)](modules/rtpengine/rtpengine.md#ksrrtpengineset_rtpengine_set2)
 * [KSR.rtpengine.silence_media\(\)](modules/rtpengine/rtpengine.md#ksrrtpenginesilence_media)
@@ -2140,6 +2149,7 @@ Exported functions:
 * [KSR.tls.cget\(\)](modules/tls/tls.md#ksrtlscget)
 * [KSR.tls.is_peer_verified\(\)](modules/tls/tls.md#ksrtlsis_peer_verified)
 * [KSR.tls.set_connect_server_id\(\)](modules/tls/tls.md#ksrtlsset_connect_server_id)
+* [KSR.tls.set_connect_server_name\(\)](modules/tls/tls.md#ksrtlsset_connect_server_name)
 
 ## tm ##
 

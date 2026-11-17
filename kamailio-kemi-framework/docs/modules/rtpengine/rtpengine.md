@@ -38,6 +38,7 @@ Exported functions:
 * [KSR.rtpengine.rtpengine_subscribe_answer\(\)](#ksrrtpenginertpengine_subscribe_answer)
 * [KSR.rtpengine.rtpengine_subscribe_request\(\)](#ksrrtpenginertpengine_subscribe_request)
 * [KSR.rtpengine.rtpengine_unsubscribe\(\)](#ksrrtpenginertpengine_unsubscribe)
+* [KSR.rtpengine.rtpengine_xquery_v\(\)](#ksrrtpenginertpengine_xquery_v)
 * [KSR.rtpengine.set_rtpengine_set\(\)](#ksrrtpengineset_rtpengine_set)
 * [KSR.rtpengine.set_rtpengine_set2\(\)](#ksrrtpengineset_rtpengine_set2)
 * [KSR.rtpengine.silence_media\(\)](#ksrrtpenginesilence_media)
@@ -311,6 +312,14 @@ int KSR.rtpengine.rtpengine_unsubscribe(str "flags");
 ```
 
 * 📖[kamailio.cfg::function::rtpengine_unsubscribe\(\)](https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_unsubscribe)
+
+## KSR.rtpengine.rtpengine_xquery_v ##
+
+```cpp
+int KSR.rtpengine.rtpengine_xquery_v(str "flags", str "fmt", str "dpv");
+```
+
+* 📖[kamailio.cfg::function::rtpengine_xquery_v\(\)](https://kamailio.org/docs/modules/devel/modules/rtpengine.html#rtpengine.f.rtpengine_xquery_v)
 
 ## KSR.rtpengine.set_rtpengine_set ##
 
