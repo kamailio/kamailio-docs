@@ -3,7 +3,6 @@
 
 
 import copy
-import fnmatch
 import re
 import string
 import sys
@@ -495,11 +494,7 @@ class KemiFileExportParser(object):
         return param_string
 
     def list_c_files_in_directory(self, path):
-        matches = []
-        for root, dirnames, filenames in path.walk():
-            for filename in fnmatch.filter(filenames, "*.c"):
-                matches.append(root / filename)
-        return matches
+        return list(path.rglob("*.c"))
 
 
 if __name__ == "__main__":
